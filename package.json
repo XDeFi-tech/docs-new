@@ -1,5 +1,5 @@
 {
-  "license":"UNLICENSED",
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
