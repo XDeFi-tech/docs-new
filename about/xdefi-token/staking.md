@@ -1,0 +1,1 @@
+# Staking $XDEFI token
