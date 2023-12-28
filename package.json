@@ -1,11 +1,12 @@
 {
+  "license":"UNLICENSED",
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
     "preview": "vitepress preview",
     "prepare": "husky install",
     "lint": "eslint --fix",
-    "lint:md": "markdownlint '**/*.md'",
+    "lint:md": "markdownlint '**/*.md' --disable MD013",
     "format": "prettier --write '**/*.{js,jsx,ts,tsx,md,json,css,scss}'",
     "import-blobstream": "node importBlobstream.mjs"
   },

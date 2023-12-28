@@ -184,7 +184,9 @@ export default {
       const tomatogroteskRegularFont = assets.find(
         (file) => /TomatoGrotesk-Regular\.\w+\.otf/,
       );
-      const tomatogroteskBoldFont = assets.find((file) => /TomatoGrotesk-Bold\.\w+\.otf/);
+      const tomatogroteskBoldFont = assets.find(
+        (file) => /TomatoGrotesk-Bold\.\w+\.otf/,
+      );
 
       const headConfig: HeadConfig[] = [];
 
@@ -264,7 +266,10 @@ function nav() {
               text: "Install Extension Wallet",
               link: "https://xdefi.io",
             },
-            { text: "Extension Wallet", link: "/developers/extension-integration" },
+            {
+              text: "Extension Wallet",
+              link: "/developers/extension-integration",
+            },
             {
               text: "Install Mobile Wallet",
               link: "https://xdefi.io",
@@ -398,7 +403,7 @@ function sidebarHome() {
             { text: "Solana", link: "/developers/build-dapp-solana" },
             { text: "UTXO", link: "/developers/build-dapp-utxo" },
           ],
-        },  
+        },
         {
           text: "Build a Cosmos dApp",
           collapsed: true,
@@ -406,7 +411,7 @@ function sidebarHome() {
             { text: "Configuration", link: "/developers/configuration-cosmos" },
             { text: "Let's dev", link: "/developers/lets-dev-cosmos" },
           ],
-        }, 
+        },
       ],
     },
     {
@@ -416,7 +421,10 @@ function sidebarHome() {
         { text: "Overview", link: "/routing/overview" },
         { text: "Endpoints", link: "/routing/endpoints" },
         { text: "Routing Graph QL API", link: "/routing/routing-graph-ql-api" },
-        { text: "Query and Mutation details", link: "/routing/query-mutation-details" },
+        {
+          text: "Query and Mutation details",
+          link: "/routing/query-mutation-details",
+        },
         { text: "Step-by-step Swap example", link: "/routing/swap-example" },
         {
           text: "Integration",
@@ -446,5 +454,3 @@ function sidebarHome() {
     },
   ];
 }
-
-

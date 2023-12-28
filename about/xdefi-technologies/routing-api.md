@@ -7,6 +7,7 @@ XDEFI Technologies build and maintain an in house Routing API to make seamless t
 The routing API integrate a multitude of AMMs, DEX aggregators and Bridge solutions.
 
 The list below retrieve all the current integrations supported:
+
 - 1inch
 - Circle Bridge
 - Jupiter
@@ -24,10 +25,13 @@ You can request a new integration by sending us an [email](mailto:routing@xdefi.
 ## Current platforms using the Routing API
 
 The list below retrieve all the current platforms using XDEFI Technologies Routing API:
+
 ### Wallets
+
 - [XDEFI Wallet](https://www.xdefi.io)
 
 ### Applications
+
 - [XDEFI WebApp](https://www.app.xdefi.io)
 
 ## Integrate it on your platform

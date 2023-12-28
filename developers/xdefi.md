@@ -23,17 +23,17 @@ testnet, and the same workflow can be used for any Celestia network.
 
 ## Install XDEFI
 
-XDEFI is the leading self custodial multichain wallet that allow users to interact with more than 200 blockchains in an all in platform where you can easily manage your assets, nft's and directly in the wallet. 
+XDEFI is the leading self custodial multichain wallet that allow users to interact with more than 200 blockchains in an all in platform where you can easily manage your assets, nft's and directly in the wallet.
 
 You can learn more and download XDEFI on
 [the XDEFI Wallet website](https://www.xdefi.io/).
 
 Alternatively, you can
-[download and install the Chrome extension directly]().
+download and install the Chrome extension directly.
 
 ## Add Celestia network parameters
 
-Click on the ```Settings``` icon in the right bottom corner of the extension. You should be able to see a ```Manage Networks``` lign.
+Click on the `Settings` icon in the right bottom corner of the extension. You should be able to see a `Manage Networks` lign.
 
 You can
 then add the following parameters:

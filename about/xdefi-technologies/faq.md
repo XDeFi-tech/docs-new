@@ -17,25 +17,26 @@ XDEFI Wallet **doesn't** have access to your secret phrase, password or recovery
 
 You are in **complete control of your information and your wallet**, so please keep your secret phrase safe and store it offline!
 
-## How do I connect to a dApp if I don't see the XDEFI Wallet logo? 
+## How do I connect to a dApp if I don't see the XDEFI Wallet logo?
 
-XDEFI Wallet can connect to all dApps on all [supported blockchains](./supported-blockchains.md). 
+XDEFI Wallet can connect to all dApps on all [supported blockchains](./supported-blockchains.md).
 
 In many cases you will see the XDEFI Wallet logo when you go to `connect wallet`.  
-If you do not see it, you can still connect to the dapp by clicking on the first wallet in the list, usually MetaMask, Keplr or Phantom. 
+If you do not see it, you can still connect to the dapp by clicking on the first wallet in the list, usually MetaMask, Keplr or Phantom.
 Please make sure you have **prioritize XDEFI** feature turned on in your XDEFI Wallet settings.
 
 ## Can I migrate my MetaMask or Keplr wallet to XDEFI Wallet?
 
 **Yes**, you can migrate any wallet to XDEFI Wallet using your wallet's seed phrase. This process only takes a few seconds, and all of your assets and NFTs will immediately appear in XDEFI Wallet.
 
-Please see our quick start guides here: https://www.xdefi.io/support-category/xdefi-wallet-quick-start/
+Please see our quick start guides here: <https://www.xdefi.io/support-category/xdefi-wallet-quick-start/>
 
 ## How do I join the XDEFI Referral Program?
 
 The program is currently available on our [WebApp](https://www.app.xdefi.io/referral) and makes you **earn 30% commission** on all swaps made by your referrees.
 
 ### To create your own reference, just follow the steps below
+
 1. Head to the [referral tab](https://www.app.xdefi.io/referral) into our WebApp.
 2. Connect your **Ethereum wallet** by clicking on the Connect` button.
 3. Sign the **message request** to allow your address to interact with our WebApp.
@@ -58,7 +59,7 @@ Each referrer will receive a unique referral link, such as go.xdefi.io/reference
 
 Please use your personal link when inviting people to install XDEFI Wallet, you don't wanna comissions from them!
 
-## How do I stake my $XDEFI tokens? 
+## How do I stake my $XDEFI tokens?
 
 You can stake your **$XDEFI** tokens on the [stake tab](https://www.app.xdefi.io/stake) of our WebApp.
 
