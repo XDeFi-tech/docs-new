@@ -451,11 +451,11 @@ portion of the specs.
 
 ### The Celestia square
 
-![Square](/img/blobstream/blobstream-square.png)
+<!-- ![Square](/img/blobstream/blobstream-square.png) -->
 
 ### The commitment scheme
 
-![Blobstream Commitment Diagram](/img/blobstream/blobstream-commitment-diagram.png)
+<!-- ![Blobstream Commitment Diagram](/img/blobstream/blobstream-commitment-diagram.png) -->
 
 ## Conclusion
 
