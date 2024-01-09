@@ -1,11 +1,6 @@
 # FAQ
 
-- [Does XDEFI have control of my coins?](faq#does-xdefi-have-control-of-my-coins)
-- [How do I connect to a dApp if I don't see the XDEFI Wallet logo?](faq#how-do-i-connect-to-a-dapp-if-i-don-t-see-the-xdefi-wallet-logo)
-- [Can I migrate my MetaMask or Keplr wallet to XDEFI Wallet?](faq#can-i-migrate-my-metamask-or-keplr-wallet-to-xdefi-wallet)
-- [How do I join the XDEFI Referral Program?](faq#how-do-i-join-the-xdefi-referral-program)
-- [How do I stake my $XDEFI tokens?](faq#how-do-i-stake-my-xdefi-tokens)
-- [What is a non-custodial wallet?](faq#what-is-a-non-custodial-wallet)
+[[toc]]
 
 ## Does XDEFI have control of my coins?
 

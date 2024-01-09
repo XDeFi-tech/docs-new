@@ -1,0 +1,38 @@
+# Routing API
+*Comprehensive description of the routing service and its endpoints*
+
+## Summary
+
+- [Introduction](#introduction)
+- [Endpoints](./endpoints)
+- [Routing Graph QL API](./routing-graph-ql-api)
+- [Query and Mutation details](./query-mutation-details)
+- [Step by step Swap example](./swap-example)
+- [Integration](./integration)
+
+## Introduction
+
+This project provides a multi-step process to request and execute cross-chain swaps via a REST API.
+
+First, given a pair tokenA/tokenB, with assets belonging to the same chain or separate chains, an optimal route is found to swap from tokenA to tokenB. Once the route is found, the necessary transaction data are returned for signing and execution.
+
+## Connecting to the API
+Before connecting to the API, one needs to go through the XDEFI VPN to access it or to whitelist the IP address.
+API endpoints share the same root URL: https://routingapi.xdefiservices.com/.
+
+To check the health status of the API just send a GET request to the above URL:
+::: code-group
+```ts [Request]
+import requests
+
+URL = "https://routingapi.xdefiservices.com"
+
+response = requests.get(URL)
+
+print(response.json())
+```
+
+```ts [Response]
+{'status': 'OK'}
+```
+:::
