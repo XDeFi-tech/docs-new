@@ -1,0 +1,1 @@
+# Extension Wallet Binance Integration

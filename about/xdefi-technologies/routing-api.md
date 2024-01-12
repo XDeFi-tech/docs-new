@@ -1,8 +1,8 @@
 # Routing API
 
-## Overview
+## Introduction
 
-XDEFI Technologies build and maintain an in house Routing API to make seamless transfer accross all the [blockchains supported](./supported-blockchains) by XDEFI Wallet. The Routing API has been developed to be quickly and easily implemented on any platform using [different format to fit developers needs](/routing/overview).
+XDEFI Technologies build and maintain an in house Routing API to make seamless transfer accross all the [blockchains supported](./supported-blockchains) by XDEFI Wallet. The Routing API has been developed to be quickly and easily implemented on any platform using [different format to fit developers needs](/routing/introduction).
 
 The routing API integrate a multitude of AMMs, DEX aggregators and Bridge solutions.
 
@@ -28,8 +28,8 @@ The list below retrieve all the current platforms using XDEFI Technologies Routi
 - [XDEFI Wallet](https://www.xdefi.io)
 
 ### Applications
-- [XDEFI WebApp](https://www.app.xdefi.io)
+- [XDEFI Web App](https://www.app.xdefi.io)
 
 ## Integrate it on your platform
 
-See more on [Adding XDEFI Technologies Routing API on your platform](/routing/overview) documentation.
+See more on [Adding XDEFI Technologies Routing API on your platform](/routing/introduction) documentation.

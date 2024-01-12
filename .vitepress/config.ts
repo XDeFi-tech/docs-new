@@ -253,10 +253,11 @@ function nav() {
     {
       text: "Quick start",
       items: [
-        { text: "About XDEFI", link: "/about/xdefi-technologies/overview" },
-        { text: "Developers", link: "/developers/overview" },
-        { text: "Routing", link: "/routing/overview" },
-        { text: "Community", link: "/community/overview" },
+        { text: "About XDEFI Technologies", link: "/about/xdefi-technologies/introduction" },
+        { text: "About $XDEFI token", link: "/about/xdefi-token/introduction" },
+        { text: "Developers", link: "/developers/introduction" },
+        { text: "Routing", link: "/routing/introduction" },
+        { text: "Community", link: "/community/introduction" },
         {
           text: "Quick integration",
           items: [
@@ -270,6 +271,7 @@ function nav() {
               link: "https://xdefi.io",
             },
             { text: "Mobile Wallet", link: "/developers/mobile-integration" },
+            { text: "Routing API", link: "/routing/widget" },
           ],
         },
       ],
@@ -288,12 +290,23 @@ function sidebarHome() {
           collapsed: true,
           items: [
             {
-              text: "Overview",
-              link: "/about/xdefi-technologies/overview.mdx",
+              text: "Introduction",
+              link: "/about/xdefi-technologies/introduction",
             },
             {
               text: "Blockchains",
               link: "/about/xdefi-technologies/supported-blockchains",
+              collapsed: true,
+              items: [
+                {
+                  text: "Native integration",
+                  link: "/about/xdefi-technologies/native-integration",
+                },
+                {
+                  text: "Custom integration",
+                  link: "/about/xdefi-technologies/custom-integration",
+                },
+              ],
             },
             {
               text: "FAQ",
@@ -309,13 +322,17 @@ function sidebarHome() {
               items: [
                 {
                   text: "Add a Custom Network",
-                  link: "/about/xdefi-technologies/add-custom-network",
+                  link: "/about/xdefi-technologies/how-to-add-custom-network",
                 },
                 {
-                  text: "Customise RPC",
-                  link: "/about/xdefi-technologies/customise-rpc",
+                  text: "Change Custom RPC",
+                  link: "/about/xdefi-technologies/change-custom-rpc",
                 },
               ],
+            },
+            {
+              text: "NFT's",
+              link: "/about/xdefi-technologies/supported-nfts",
             },
             {
               text: "Products",
@@ -332,6 +349,10 @@ function sidebarHome() {
                 {
                   text: "Routing API",
                   link: "/about/xdefi-technologies/routing-api",
+                },
+                {
+                  text: "Web App",
+                  link: "/about/xdefi-technologies/web-app",
                 },
               ],
             },
@@ -356,8 +377,8 @@ function sidebarHome() {
           collapsed: true,
           items: [
             {
-              text: "Overview",
-              link: "/about/xdefi-token/xdefi",
+              text: "Introduction",
+              link: "/about/xdefi-token/introduction",
             },
             {
               text: "How to Buy",
@@ -368,7 +389,7 @@ function sidebarHome() {
               link: "/about/xdefi-token/revenue",
             },
             {
-              text: "Staking $XDEFI",
+              text: "Staking",
               link: "/about/xdefi-token/staking",
             },
             {
@@ -387,33 +408,108 @@ function sidebarHome() {
       text: "Developers",
       collapsed: true,
       items: [
-        { text: "Overview", link: "/developers/overview" },
+        { text: "Introduction", link: "/developers/introduction" },
+        {
+          text: "Extension Wallet",  link: "/developers/extension-wallet",
+          collapsed: true,
+          items: [
+            { text: "Arbitrum", link: "/developers/extension-arbitrum" },
+            { text: "Avalanche", link: "/developers/extension-avalanche" },
+            { text: "Binance", link: "/developers/extension-binance" },
+            { text: "Bitcoin", link: "/developers/extension-bitcoin" },
+            { text: "Bitcoin Cash", link: "/developers/extension-bitcoin-cash" },
+            { text: "Cosmos", link: "/developers/extension-cosmos" },
+            { text: "Dogecoin", link: "/developers/extension-dogecoin" },
+            { text: "Ethereum", link: "/developers/extension-ethereum" },
+            { text: "Litecoin", link: "/developers/extension-litecoin" },
+            { text: "Near", link: "/developers/extension-near" },
+            { text: "Optimism", link: "/developers/extension-optimism" },
+            { text: "Polygon", link: "/developers/extension-polygon" },
+            { text: "Solana", link: "/developers/extension-solana" },
+            { text: "Terra", link: "/developers/extension-terra" },
+            { text: "Testnets", link: "/developers/extension-testnets" },
+            { text: "Thorchain", link: "/developers/extension-thorchain" },
+            { text: "Zetachain", link: "/developers/extension-zetachain" },
+
+          ],
+        }, 
+        {
+          text: "Mobile Wallet",  link: "/developers/mobile-wallet",
+          collapsed: true,
+          items: [
+            { text: "Arbitrum", link: "/developers/mobile-arbitrum" },
+            { text: "Avalanche", link: "/developers/mobile-avalanche" },
+            { text: "Binance", link: "/developers/mobile-binance" },
+            { text: "Bitcoin", link: "/developers/mobile-bitcoin" },
+            { text: "Bitcoin Cash", link: "/developers/mobile-bitcoin-cash" },
+            { text: "Cosmos", link: "/developers/mobile-cosmos" },
+            { text: "Dogecoin", link: "/developers/mobile-dogecoin" },
+            { text: "Ethereum", link: "/developers/mobile-ethereum" },
+            { text: "Litecoin", link: "/developers/mobile-litecoin" },
+            { text: "Near", link: "/developers/mobile-near" },
+            { text: "Optimism", link: "/developers/mobile-optimism" },
+            { text: "Polygon", link: "/developers/mobile-polygon" },
+            { text: "Solana", link: "/developers/mobile-solana" },
+            { text: "Terra", link: "/developers/mobile-terra" },
+            { text: "Testnets", link: "/developers/mobile-testnets" },
+            { text: "Thorchain", link: "/developers/mobile-thorchain" },
+            { text: "Zetachain", link: "/developers/mobile-zetachain" },
+
+          ],
+        }, 
+        {
+          text: "How to",
+          collapsed: true,
+          items: [
+            { text: "Arbitrum", link: "/developers/how-to-arbitrum" },
+            { text: "Avalanche", link: "/developers/how-to-avalanche" },
+            { text: "Binance", link: "/developers/how-to-binance" },
+            { text: "Bitcoin", link: "/developers/how-to-bitcoin" },
+            { text: "Bitcoin Cash", link: "/developers/how-to-bitcoin-cash" },
+            { text: "Cosmos", link: "/developers/how-to-cosmos" },
+            { text: "Dogecoin", link: "/developers/how-to-dogecoin" },
+            { text: "Ethereum", link: "/developers/how-to-ethereum" },
+            { text: "Litecoin", link: "/developers/how-to-litecoin" },
+            { text: "Near", link: "/developers/how-to-near" },
+            { text: "Optimism", link: "/developers/how-to-optimism" },
+            { text: "Polygon", link: "/developers/how-to-polygon" },
+            { text: "Solana", link: "/developers/how-to-solana" },
+            { text: "Terra", link: "/developers/how-to-terra" },
+            { text: "Testnets", link: "/developers/how-to-testnets" },
+            { text: "Thorchain", link: "/developers/how-to-thorchain" },
+            { text: "Zetachain", link: "/developers/how-to-zetachain" },
+          ],
+        },
         {
           text: "Build a dApp",
           collapsed: true,
           items: [
+            { text: "Arbitrum", link: "/developers/build-dapp-arbitrum" },
+            { text: "Avalanche", link: "/developers/build-dapp-avalanche" },
+            { text: "Binance", link: "/developers/build-dapp-binance" },
+            { text: "Bitcoin", link: "/developers/build-dapp-bitcoin" },
+            { text: "Bitcoin Cash", link: "/developers/build-dapp-bitcoin-cash" },
             { text: "Cosmos", link: "/developers/build-dapp-cosmos" },
-            { text: "EVM", link: "/developers/build-dapp-evm" },
+            { text: "Dogecoin", link: "/developers/build-dapp-dogecoin" },
+            { text: "Ethereum", link: "/developers/build-dapp-ethereum" },
+            { text: "Litecoin", link: "/developers/build-dapp-litecoin" },
             { text: "Near", link: "/developers/build-dapp-near" },
+            { text: "Optimism", link: "/developers/build-dapp-optimism" },
+            { text: "Polygon", link: "/developers/build-dapp-polygon" },
             { text: "Solana", link: "/developers/build-dapp-solana" },
-            { text: "UTXO", link: "/developers/build-dapp-utxo" },
+            { text: "Terra", link: "/developers/build-dapp-terra" },
+            { text: "Testnets", link: "/developers/build-dapp-testnets" },
+            { text: "Thorchain", link: "/developers/build-dapp-thorchain" },
+            { text: "Zetachain", link: "/developers/build-dapp-zetachain" },
           ],
-        },  
-        {
-          text: "Build a Cosmos dApp",
-          collapsed: true,
-          items: [
-            { text: "Configuration", link: "/developers/configuration-cosmos" },
-            { text: "Let's dev", link: "/developers/lets-dev-cosmos" },
-          ],
-        }, 
+        },   
       ],
     },
     {
       text: "Routing",
       collapsed: true,
       items: [
-        { text: "Overview", link: "/routing/overview" },
+        { text: "Introduction", link: "/routing/introduction" },
         { text: "Endpoints", link: "/routing/endpoints" },
         { text: "Routing Graph QL API", link: "/routing/routing-graph-ql-api" },
         { text: "Query and Mutation details", link: "/routing/query-mutation-details" },
@@ -422,7 +518,6 @@ function sidebarHome() {
           text: "Integration",
           collapsed: true,
           items: [
-            { text: "Snipet", link: "/routing/snipet" },
             { text: "Widget", link: "/routing/widget" },
           ],
         },
@@ -432,7 +527,7 @@ function sidebarHome() {
       text: "Community",
       collapsed: true,
       items: [
-        { text: "Overview", link: "/community/overview" },
+        { text: "Introduction", link: "/community/introduction" },
         {
           text: "Channels",
           collapsed: true,

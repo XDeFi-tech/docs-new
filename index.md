@@ -13,26 +13,26 @@ hero:
   actions:
     - theme: brand
       text: Build with XDEFI
-      link: /developers/overview
+      link: /developers/introduction
     - theme: alt
       text: Introduction
-      link: /about/xdefi-technologies/overview
+      link: /about/xdefi-technologies/introduction
 
 features:
   - title: About XDEFI
     details: Discover XDEFI technologies tools for building the future of interopable networks and dApps. 
-    link: /about/xdefi-technologies/overview
+    link: /about/xdefi-technologies/introduction
      
   - title: Developers
     details: The next generation Bible for developping and interacting in a multichain world.
-    link: /developers/overview
+    link: /developers/introduction
      
   - title: Routing
     details: Swap and bridge any assets accross all existing blockchains. Use it as a widget or iframe.
-    link: /routing/overview
+    link: /routing/introduction
      
   - title: Community
     details: Join the XDEFI community to connect, collaborate, and contribute to a multichain future.
-    link: /community/overview
+    link: /community/introduction
 
 ---

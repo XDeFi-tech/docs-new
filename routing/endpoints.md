@@ -1,8 +1,12 @@
 # Endpoints
 
+[[toc]]
+
 In this page, we list the main API public endpoints. 
 
-Please note that, for the sake of avoiding redundancy, some endpoints, returning the same data or serving the same functions as our Graph QL API, are not listed here.
+::: info
+For the sake of avoiding redundancy, some endpoints, returning the same data or serving the same functions as our Graph QL API, are not listed here.
+:::
 
 ## chains/
 Returns a list of supported chains (i.e. chains you can swap assets within or chains you can bridge to). List of supported chain as of Q2 2023:
@@ -43,7 +47,7 @@ Returns a list of all supported tokens in the following format:
 "decimal": 18
 ```
 
-:::tip NOTE
+::: info
 - `id` is an internal uid for a given crypto asset
 - `chain` is one of the supported chains found in endpoint chains/
 - `name` is the token name in the chain.symbol format
@@ -62,7 +66,7 @@ List of available providers for swapping and bridging:
 }
 ```
 
-:::tip NOTE
+::: info
 - `id` is an internal uid
 - `name` is the provider's name
 - `time` is the typical duration of for a swap/bridge to complete for a given a provider

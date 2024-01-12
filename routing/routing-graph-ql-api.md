@@ -1,6 +1,10 @@
 # Routing Graph QL API
 
-The Routing Graph QL schema offers queries and mutations to generate routes and the subsequent transaction(s) hex data necessary to accomplish them, to be signed and broadcast on chain. Additionally, "helper" queries are available to get information about available chains and tokens to swap from or to.
+[[toc]]
+
+The Routing Graph QL schema offers queries and mutations to generate routes and the subsequent transaction(s) hex data necessary to accomplish them, to be signed and broadcast on chain. 
+
+Additionally, "helper" queries are available to get information about available chains and tokens to swap from or to.
 
 ## Routing schema
 In this section, we present the Graph QL schema upon which the routing API is built. The schema gives the full picture of what data can be queried with what parameters.
@@ -22,8 +26,8 @@ type RoutingTypeV2 {
 }
 ```
 
-:::tip NOTE
-- `tokenV2` and `tokensV2` queries fetch information about specific token(s) given an `id` or a name (list of names)
+::: info
+- `tokenV2` and `tokensV2` queries fetch information about specific token(s) given an `id` or a `name (list of names)
 - `chainV2` and `chainsV2` fetch info about a given chain or all available chains and assets available in them
 - `bridgeableTokens` fetches a list of chains' assets one can bridge to given an input token belonging to a source chain
 - `addressCheckV2` will verify the address belonging to a given chain is correct
@@ -43,7 +47,7 @@ type Mutation {
 }
 ```
 
-:::tip NOTE
+::: info
 - `transactionsV2` generates trade and route records in the database
 - `transactionHashV2` generates trade status and route status records in the database
 - `claimFees` generates a fee claim request (if you're part of the referral programme)
@@ -51,8 +55,61 @@ type Mutation {
 
 ## Querying the Graph QL endpoint
 This endpoint is similar to the ones discussed earlier but needs extra parameters, and sometimes a header with authentication token, to perform certain read/write operations (queries vs. mutations).
+
 Querying this endpoint to fetch the list of tokens/chains one can bridge to from `ETH.USDC` would look like this in Python:
 
-IMPORT LA DATA MANQUANTE
+::: code-group
+```ts [Request]
+import requests
+
+GRAPHQL_ENDPOINT = "https://gql-router.staging.xdefiservices.com/graphql"
+
+query = """
+query BridgeableTokens($bridgeToken: BridgeTokenInput) {
+  routingV2 {
+    bridgeableTokens(bridgeToken: $bridgeToken) {
+      asset {
+        id
+        chain
+        name
+      }
+    }
+  }
+}"""
+
+vars = {
+    "bridgeToken" : {
+        "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        "name": "ETH.USDC"
+      }
+}
+
+response = requests.post(GRAPHQL_ENDPOINT,
+             json = {"query": query, "variables": vars})
+
+print(response.json())
+```
+
+```ts [Response]
+{'data': {'routingV2': {'bridgeableTokens': [{'asset': {'id': '53056b61-998a-4da5-a3f1-00e38182438a',
+      'chain': 'Avalanche',
+      'name': 'USD Coin'}},
+    {'asset': {'id': '53056b61-998a-4da5-a3f1-00e38182438a',
+      'chain': 'Fantom',
+      'name': 'USD Coin'}},
+    {'asset': {'id': '02fb8e38-58dc-4f06-b85f-f84b4a17e0bc',
+      'chain': 'Avalanche',
+      'name': 'USD Coin Avalanche Bridged (USDC.e)'}},
+    {'asset': {'id': '53056b61-998a-4da5-a3f1-00e38182438a',
+      'chain': 'Arbitrum',
+      'name': 'USD Coin'}},
+    {'asset': {'id': '53056b61-998a-4da5-a3f1-00e38182438a',
+      'chain': 'BinanceSmartChain',
+      'name': 'USD Coin'}},
+    {'asset': {'id': '53056b61-998a-4da5-a3f1-00e38182438a',
+      'chain': 'Polygon',
+      'name': 'USD Coin'}}]}}}
+```
+:::
 
 A comprehensive routing example, from requesting a route to getting transaction data, is shown in the [Overview](./overview) section.
