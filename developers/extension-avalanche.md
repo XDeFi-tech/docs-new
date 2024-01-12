@@ -1,1 +1,0 @@
-# Extension Wallet Avalanche Integration
