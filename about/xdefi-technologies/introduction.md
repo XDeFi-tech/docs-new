@@ -1,3 +1,9 @@
+---
+prev:
+  text: "About XDEFI"
+  link: "/about/xdefi"
+---
+
 # XDEFI Technologies
 
 ## Summary

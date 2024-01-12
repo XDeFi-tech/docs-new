@@ -14,3 +14,4 @@ XDEFI Wallet injects into the window object to dapps multiple wallet providers t
   - window.xfi.thorchain: [Thorchain provider](./extension-thorchain)
 - window.ethereum : [Ethereum provider](./extension-evms)
 - window.keplr : [Keplr/Cosmos chains provider](./extension-cosmos)
+

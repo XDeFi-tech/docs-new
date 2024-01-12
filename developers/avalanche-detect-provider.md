@@ -1,0 +1,1 @@
+# Avalanche - Detect the Provider

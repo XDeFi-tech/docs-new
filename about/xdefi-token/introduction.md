@@ -1,11 +1,19 @@
 ---
 prev:
-  text: "XDEFI Technologies"
-  link: "/about/xdefi-technologies/introduction"
+  text: "About XDEFI"
+  link: "/about/xdefi"
 ---
 
-# $XDEFI token
+# $XDEFI Token
 
-[[toc]]
+## Summary
+
+- [Introduction](#introduction)
+- [Buy $XDEFI](./buy-xdefi)
+- [Revenue](./revenue)
+- [Staking](./staking)
+- [Tokenomics](./tokenomics)
+- [Utility](./utility)
+
 
 ## Introduction
