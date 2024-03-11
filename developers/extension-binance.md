@@ -2,7 +2,7 @@
 
 Develop Binance dApps
 
-## Transfer request
+### Transfer request
 
 - [Parameters description](https://docs.xdefi.io/docs/technical-documentation/xdefi-extension-integration/detect-xdefi-providers#parameters)
 
@@ -40,7 +40,7 @@ window.xfi.binance.request({
 });
 ```
 
-## Accounts request
+### Accounts request
 
 ```javascript
 if (window.xfi && window.xfi.binance) {
@@ -51,7 +51,7 @@ if (window.xfi && window.xfi.binance) {
 }
 ```
 
-### Result example
+#### Result example
 
 ```json
 {
@@ -60,9 +60,9 @@ if (window.xfi && window.xfi.binance) {
 }
 ```
 
-## Events
+### Events
 
-### chainChanged
+#### chainChanged
 
 ```javascript
 if (window.xfi && window.xfi.binance) {

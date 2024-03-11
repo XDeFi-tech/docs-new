@@ -4,7 +4,7 @@ Develop Bitcoin dApps
 
 Our BTC connection also implements the [sats-connect](https://docs.xverse.app/sats-connect/) interface for signing transactions. To use please install this [library](https://www.npmjs.com/package/@xdefi/btc-connect).
 
-## Transfer request
+### Transfer request
 
 - [Parameters description](https://docs.xdefi.io/docs/technical-documentation/xdefi-extension-integration)
 
@@ -29,14 +29,14 @@ window.xfi.bitcoin.request(
 );
 ```
 
-## Change network
+### Change network
 
 ```javascript
 window.xfi.bitcoin.changeNetwork("testnet"); //active network becomes testnet
 window.xfi.bitcoin.changeNetwork("mainnet"); //active network becomes mainnet
 ```
 
-## Accounts request (Mainnet)
+### Accounts request (Mainnet)
 
 ```javascript
 if (window.xfi && window.xfi.bitcoin) {
@@ -47,7 +47,7 @@ if (window.xfi && window.xfi.bitcoin) {
 }
 ```
 
-### Result example
+#### Result example
 
 ```json
 {
@@ -56,7 +56,7 @@ if (window.xfi && window.xfi.bitcoin) {
 }
 ```
 
-## Accounts Request (Testnet)
+### Accounts Request (Testnet)
 
 ```javascript
 if (window.xfi && window.xfi.bitcoin) {
@@ -68,7 +68,7 @@ if (window.xfi && window.xfi.bitcoin) {
 }
 ```
 
-### Result example
+#### Result example
 
 ```json
 {
@@ -77,9 +77,9 @@ if (window.xfi && window.xfi.bitcoin) {
 }
 ```
 
-## Events
+### Events
 
-### chainChanged
+#### chainChanged
 
 ```javascript
 if (window.xfi && window.xfi.bitcoin) {
@@ -90,7 +90,7 @@ if (window.xfi && window.xfi.bitcoin) {
 }
 ```
 
-### accountsChanged
+#### accountsChanged
 
 ```javascript
 if (window.xfi && window.xfi.bitcoin) {

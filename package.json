@@ -39,7 +39,7 @@
     "vue-clipboard2": "^0.3.3"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,md}": [
+    "*.{js,jsx,ts,tsx}": [
       "yarn lint",
       "yarn format"
     ]

@@ -14,13 +14,13 @@ It allows dApps to be developed on Cosmos based chains.
 
 It injects a Keplr Provider in `window.xfi.keplr` and if Keplr isn't instantiated, takes Keplr wallet `window.keplr` object and allow you to use its basic API via CosmJS.
 
-## Use cosmos-kit
+### Use cosmos-kit
 
 XDEFI Wallet is part of [cosmos-kit](https://github.com/cosmology-tech/cosmos-kit) package to help you connect to many different wallets.
 
 Here is an [example](https://github.com/cosmology-tech/cosmos-kit/blob/main/packages/example/pages/_app.tsx#L34) of how to use cosmos-kit.
 
-## How to detect XDEFI’s Keplr provider
+### How to detect XDEFI’s Keplr provider
 
 As the official Keplr guide mentioned [here](https://docs.keplr.app/api/);
 
@@ -55,7 +55,7 @@ window.onload = async () => {
 };
 ```
 
-### Differentiate Keplr and XDEFI `window.keplr`
+#### Differentiate Keplr and XDEFI `window.keplr`
 
 If you’d like to differentiate Keplr and XDEFI `window.keplr`, you can use `window.keplr.isXDEFI` to check if it’s XDEFI’s Keplr provider.
 
@@ -67,7 +67,7 @@ if (window.keplr.isXDEFI) {
 }
 ```
 
-### Chains supported on XDEFI
+#### Chains supported on XDEFI
 
 As of release v26, XDEFI supports the following chains (chainId).
 
@@ -85,11 +85,11 @@ As of release v26, XDEFI supports the following chains (chainId).
 - Stride, `stride-1`
 - Mars Protocol, `mars-1`
 
-## Basic API
+### Basic API
 
 Please find the Full Basic API on [Keplr website](https://docs.keplr.app/api/)
 
-### Using with Typescript
+#### Using with Typescript
 
 ```javascript
 import { Window as KeplrWindow } from "@keplr-wallet/types";
@@ -101,7 +101,7 @@ declare global {
 
 The `@keplr-wallet/types` package has the type definition related to Keplr. If you’re using TypeScript, run `npm install --save-dev @keplr-wallet/types` or `yarn add -D @keplr-wallet/types` to install `@keplr-wallet/types`. Then, you can add the `@keplr-wallet/types` window to a global window object and register the Keplr related types.
 
-### Connect using `enable`
+#### Connect using `enable`
 
 ```javascript
 enable(chainIds: string[]): Promise<void>
@@ -109,7 +109,7 @@ enable(chainIds: string[]): Promise<void>
 
 The `window.keplr.enable(chainIds)` method requests the extension to be unlocked if it’s currently locked. If the user hasn’t given permission to the webpage, it will ask the user to give permission for the webpage to access XDEFI.
 
-### Get Address / Public Key
+#### Get Address / Public Key
 
 ```javascript
 getKey(chainId: string): Promise<{
@@ -122,7 +122,7 @@ getKey(chainId: string): Promise<{
 }>
 ```
 
-### Sign Amino
+#### Sign Amino
 
 ```javascript
 signAmino(chainId: string, signer: string, signDoc: StdSignDoc): Promise<AminoSignResponse>
@@ -130,7 +130,7 @@ signAmino(chainId: string, signer: string, signDoc: StdSignDoc): Promise<AminoSi
 
 Similar to CosmJS OfflineSigner’s signAmino, but Keplr’s signAmino takes the chain-id as a required parameter. Signs Amino-encoded StdSignDoc.
 
-### Sign Direct (Protobuf)
+#### Sign Direct (Protobuf)
 
 ```javascript
 signDirect(chainId:string, signer:string, signDoc: {
@@ -150,7 +150,7 @@ signDirect(chainId:string, signer:string, signDoc: {
 
 Similar to CosmJS OfflineDirectSigner’s signDirect, but Keplr’s signDirect takes the chain-id as a required parameter. Signs Proto-encoded StdSignDoc.
 
-### Request Transaction Broadcasting
+#### Request Transaction Broadcasting
 
 ```javascript
 sendTx(
@@ -162,7 +162,7 @@ sendTx(
 
 This function requests Keplr to delegates the broadcasting of the transaction to Keplr’s LCD endpoints (rather than the webpage broadcasting the transaction). This method returns the transaction hash if it succeeds to broadcast, if else the method will throw an error. When Keplr broadcasts the transaction, Keplr will send the notification on the transaction’s progress.
 
-### Request Signature for Arbitrary Message
+#### Request Signature for Arbitrary Message
 
 ```javascript
 signArbitrary(
@@ -180,7 +180,7 @@ verifyArbitrary(
 
 See [Keplr Docs](https://docs.keplr.app/api/#request-signature-for-arbitrary-message)
 
-### Limitations
+#### Limitations
 
 We don’t support yet (13-Jan-2023)
 
@@ -188,7 +188,7 @@ We don’t support yet (13-Jan-2023)
 - Secret Network / SecretJS
 - Suggest Chain `experimentalSuggestChain`
 
-## Use with CosmJS
+### Use with CosmJS
 
 Please find how to use XDEFI’s Keplr Provider using CosmJS on [Keplr website](https://docs.keplr.app/api/cosmjs.html)
 
@@ -216,7 +216,7 @@ const cosmJS = new SigningCosmosClient(
 );
 ```
 
-## Suggest Chain _(Experimental Feature)_
+### Suggest Chain _(Experimental Feature)_
 
 XDEFI follows the same `suggest-chain`, `suggest-chain-info` interface as [Keplr's suggest-chain method](https://docs.keplr.app/api/suggest-chain.html). This allows frontends to add their chain to the wallet, if the user should accept it.
 

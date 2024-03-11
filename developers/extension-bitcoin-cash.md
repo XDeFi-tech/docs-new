@@ -2,7 +2,7 @@
 
 Develop BitcoinCash dApps
 
-## Transfer request
+### Transfer request
 
 - [Parameters description](https://docs.xdefi.io/docs/technical-documentation/xdefi-extension-integration/detect-xdefi-providers#parameters)
 
@@ -27,7 +27,7 @@ window.xfi.bitcoincash.request(
 );
 ```
 
-## Accounts request
+### Accounts request
 
 ```javascript
 if (window.xfi && window.xfi.bitcoincash) {
@@ -38,7 +38,7 @@ if (window.xfi && window.xfi.bitcoincash) {
 }
 ```
 
-### Result example
+#### Result example
 
 ```json
 {
@@ -47,9 +47,9 @@ if (window.xfi && window.xfi.bitcoincash) {
 }
 ```
 
-## Events
+### Events
 
-### chainChanged
+#### chainChanged
 
 ```javascript
 if (window.xfi && window.xfi.bitcoincash) {
@@ -60,7 +60,7 @@ if (window.xfi && window.xfi.bitcoincash) {
 }
 ```
 
-### accountsChanged
+#### accountsChanged
 
 ```javascript
 if (window.xfi && window.xfi.bitcoincash) {

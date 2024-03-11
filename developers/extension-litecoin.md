@@ -2,7 +2,7 @@
 
 Develop Litecoin dApps
 
-## Transfer request
+### Transfer request
 
 - [Parameters description](https://docs.xdefi.io/docs/technical-documentation/xdefi-extension-integration/detect-xdefi-providers#parameters)
   ​​
@@ -28,7 +28,7 @@ window.xfi.litecoin.request(
 );
 ```
 
-## Accounts request
+### Accounts request
 
 ```javascript
 if (window.xfi && window.xfi.litecoin) {
@@ -39,7 +39,7 @@ if (window.xfi && window.xfi.litecoin) {
 }
 ```
 
-### Result example
+#### Result example
 
 ```json
 {
@@ -48,9 +48,9 @@ if (window.xfi && window.xfi.litecoin) {
 }
 ```
 
-## Events
+### Events
 
-### chainChanged
+#### chainChanged
 
 ```javascript
 if (window.xfi && window.xfi.litecoin) {
@@ -61,7 +61,7 @@ if (window.xfi && window.xfi.litecoin) {
 }
 ```
 
-### accountsChanged
+#### accountsChanged
 
 ```javascript
 if (window.xfi && window.xfi.litecoin) {

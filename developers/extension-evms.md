@@ -2,18 +2,18 @@
 
 Develop EVM based dApps
 
-## Introduction
+### Introduction
 
 - [web3.js introduction](https://web3js.readthedocs.io/en/v1.3.4/getting-started.html)
 - [ether.js introduction](https://docs.ethers.io/v5/getting-started/)
 
-## Example dApp
+### Example dApp
 
 - [web3 vue example](https://github.com/XDeFi-tech/examples-dapps-sdk/tree/main/ethereum/web3/web3-example-vue)
 
-## Integrate Ethereum dApps with XDEFI
+### Integrate Ethereum dApps with XDEFI
 
-### `window.xfi.ethereum`
+#### `window.xfi.ethereum`
 
 XDEFI injects `window.xfi.ethereum` as an [EIP-1193](https://eips.ethereum.org/EIPS/eip-1193) compatible provider;
 
@@ -48,7 +48,7 @@ if (!provider) {
 }
 ```
 
-### `window.ethereum`
+#### `window.ethereum`
 
 If **Pretend to be MetaMask** option is enabled in the dApps Settings Providers page, this would make XDEFI overrides `window.ethereum` and pretend to be MetaMask by having `window.ethereum.isMetaMask` and `window.ethereum._metamask` set to `true`
 
@@ -64,7 +64,7 @@ let web3 = new Web3(window.ethereum);
 const provider = new ethers.providers.Web3Provider(window.ethereum)
 ```
 
-### Using onboard.js
+#### Using onboard.js
 
 Follow the getting started tutorial: [https://docs.blocknative.com/onboard](https://docs.blocknative.com/onboard)
 

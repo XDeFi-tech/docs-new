@@ -2,7 +2,7 @@
 
 Develop Dogecoin dApps
 
-## Accounts request
+### Accounts request
 
 ```javascript
 if (window.xfi && window.xfi.dogecoin) {
@@ -13,7 +13,7 @@ if (window.xfi && window.xfi.dogecoin) {
 }
 ```
 
-### Result example
+#### Result example
 
 ```json
 {
@@ -22,7 +22,7 @@ if (window.xfi && window.xfi.dogecoin) {
 }
 ```
 
-## Transfer request
+### Transfer request
 
 ```javascript
 const { asset, from, recipient, amount, memo } = {
@@ -60,9 +60,9 @@ window.xfi.dogecoin.request(
 );
 ```
 
-## Events
+### Events
 
-### chainChanged
+#### chainChanged
 
 ```javascript
 if (window.xfi && window.xfi.dogecoin) {
@@ -73,7 +73,7 @@ if (window.xfi && window.xfi.dogecoin) {
 }
 ```
 
-### accountsChanged
+#### accountsChanged
 
 ```javascript
 if (window.xfi && window.xfi.dogecoin) {

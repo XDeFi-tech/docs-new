@@ -1,6 +1,6 @@
 # Extension Wallet Thorchain Integration
 
-## Develop Thorchain dApps
+### Develop Thorchain dApps
 
 - [Transfer request](https://docs.xdefi.io/docs/technical-documentation/xdefi-extension-integration/detect-xdefi-providers#parameters)
   ​​
@@ -42,7 +42,7 @@ window.xfi.thorchain.request(
 );
 ```
 
-## Deposit request
+### Deposit request
 
 - [Parameters description](https://sdk.xdefi.io/docs/HEAD/detect_providers.html#params)
   ​​
@@ -84,7 +84,7 @@ window.xfi.thorchain.request(
 );
 ```
 
-## Accounts request
+### Accounts request
 
 ```javascript
 if (window.xfi && window.xfi.thorchain) {
@@ -95,7 +95,7 @@ if (window.xfi && window.xfi.thorchain) {
 }
 ```
 
-### Result example
+#### Result example
 
 ```json
 {
@@ -104,9 +104,9 @@ if (window.xfi && window.xfi.thorchain) {
 }
 ```
 
-## Events
+### Events
 
-### chainChanged
+#### chainChanged
 
 ```javascript
 if (window.xfi && window.xfi.thorchain) {
@@ -117,7 +117,7 @@ if (window.xfi && window.xfi.thorchain) {
 }
 ```
 
-### accountsChanged
+#### accountsChanged
 
 ```javascript
 if (window.xfi && window.xfi.thorchain) {

@@ -2,11 +2,11 @@
 
 The XDeFi browser extension will inject objects called `xfi` and `ethereum` on the `window` object of any web application the user visits. To detect if a browser extension using this API is installed, you can check for the existence of the `xfi` and `ethereum` object.
 
-## Multichain dApp example
+### Multichain dApp example
 
 [Multichain vue example](https://github.com/XDeFi-tech/examples-dapps-sdk/tree/main/multichain/multichain-vue-example)
 
-## Detection example
+### Detection example
 
 ```javascript
 if ("xfi" in window) {
@@ -18,7 +18,7 @@ if ("xfi" in window) {
 }
 ```
 
-## Request parameters description
+### Request parameters description
 
 `from` - the address from which the request is coming
 
