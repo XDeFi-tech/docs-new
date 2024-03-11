@@ -7,12 +7,15 @@
 This particular route (swap) consists of two transactions. However, the number of transactions required for swapping different coins and across different chains may vary and depend on several factors such as the source coin, the destination coin, and the number of available addresses for signing transactions.
 
 ### Step 1
+
 In this step, we prepare the data for the chains and assets that our routing system supports. This data enables us to display the source and destination tokens to users and query and display swap route in the next step.
 
 #### 1.1 Get list of supported chains
+
 [Explorer query ChainsV2](https://gql-router.xdefiservices.com/graphql?explorerURLState=N4IgJg9gxgrgtgUwHYBcQC4QEcYIE4CeABAMIAWAhgJZIDOAagExHAA6SRReEMKNA5kxbtOnKJRoNmbDqM5IKiEaIC%2BytUhUgVQA)
 
 ::: code-group
+
 ```ts [Query]
 query ChainsV2 {
   routingV2 {
@@ -50,13 +53,15 @@ query ChainsV2 {
   }
 }
 ```
+
 :::
 
-
 #### 1.2 Get list of assets for supported chain
+
 [Explorer query ChainsV2](https://gql-router.xdefiservices.com/graphql?explorerURLState=N4IgJg9gxgrgtgUwHYBcQC4QEcYIE4CeABAMIAWAhgJZIBqATABQAkSFi6RAyinjQOYBCAJRFgAHSREieCDBQCGYydOlRKNBozYcirdglESpq6ToQrTRFBADWyAM7KTVohQcOEKZ69NQIqHgUUCiWvkQOBHAARhAANmFWAL6J0ikuROlpkkkgADQgAG4UfBTRcQgOGCDG0uIg5vWc9QCCtC0AGvU5IElAA)
 
 ::: code-group
+
 ```ts [Query]
 query ChainV2($name: String!) {
   routingV2 {
@@ -106,14 +111,17 @@ query ChainV2($name: String!) {
   }
 }
 ```
+
 :::
 
 ### Step 2
+
 Query swap route. This query returns a `tradesRoute` collection, along with other properties. Based on this data, we can show the user which providers we will use, the amount of fees in dollars and assets for each transaction, and thus calculate the total fees and approximate transaction time in seconds.
 
 [Explorer query RouteV2](https://gql-router.xdefiservices.com/graphql?explorerURLState=N4IgJg9gxgrgtgUwHYBcQC4QEcYIE4CeABAEoQwoIBqATABQAkAznlACoQDWy6RAyijwBLJAHMAhABoiDMAiYoO3JLwHCxUmUwA2QgA56AhqISrBIidIaGwYPPKbzeAbQCCt%2B0yZkKCAJJIehRsBHrUNOIAupqy8ijudg5m6pYyhnDkqHzkrKb85mJWIgBmIkKUrgZ4EABuhtq8AEIQENoIhkgAlETAADpIRETVFBa0Pf2Dg8OUtHQs7Fw8WqxKyNJyCqsqMhuKi0jSOvpGJrzMugbGCNI2iV5OaR4O8utxCZ5MZ7vvDjcZMFkclA8tZ-oCYLlpCUyhUqrV6mdoUhyghKnpqnVtN0%2BgNJoNbh95ONcXjBlAABaGEQTUn4p5eGl4gC%2BjMm33pTFZg3RQmBJEMlC5RB5fIFCDYCAAHighUdLiYhSL-HAjFAZSTJulMigAkLBDZ5D5KMTadyMUI5HgTabBhahYMWRq8VqATqkPaiC7UAB5CgeuAiVxglAkBDAoQ1BBgD2Ge5u602u1OyaOm2xxwoX0oBOmpM21Om4oIBA52lIBAoADuEDwnAAYsWACKtbSGPAewblqs1%2BvF1xxjtEEQAI0yYAbCGb2lb7eTeJHY4n-Yzg6YlcMegng6LCH5lDYeA6TEMaqEEHdc8mkrkpT4683xcH14Qt-vE6nM49BdpSr3CAAqkwYDLhWWYer%2BYqAcBca6pe%2BpyCEYRCt%2BkyiLGAAKwjApyyYbui8LaAEpTIpQdatqIQr4NUeCNDAQjaGAFhGggrIFo6TIgJIIB1MIhjDm0TAYCAOKDL0IDzFsYm8GJrhUK4AAaAB0AAMkoAGwAMyGAA7DQAAcylqcpACcenDmAGlgMZACsNDKVAUAACwaRp1lqbY2l6YYRbWRZenucZYmSDSYm7JJGBEDJclKapUDaQAjKZznaaZ9nKY58VQAZ1mGPFUZQMOhjWfZmUIL5w42fF8V6UFIXiRcJwsRFYnxbVuJiQSzychFzgiaaYkUlS7rNSAskKW1NodRyUmRSAqnWRpNDGQgw4AMLWcZykacOACi8WrUVjmOdpak0Il8Uac5dZGTtjbDtZq3GQdGliaxkTBe14BvNNI3zYty1rRtW27fth3Had52XRp13Kbd92Pc9E2zV6KDZBCwIzWJymKTQL2cXVSIomiGL1DNSAwNO-QcUyQA)
 
 ::: code-group
+
 ```ts [Query]
 query RouteV2($srcToken: String!, $destToken: String!, $slippage: String!, $addresses: [AddressRouteInputTypeV2!]!, $destAddress: String!, $amountSource: String, $infiniteApproval: Boolean) {
   routingV2 {
@@ -266,15 +274,17 @@ query RouteV2($srcToken: String!, $destToken: String!, $slippage: String!, $addr
 
 ```ts [Snippets]
 enum TradeType {
-  APPROVAL = 'APPROVAL',
-  BRIDGE = 'BRIDGE',
-  REDEEM = 'REDEEM',
-  SWAP = 'SWAP',
+  APPROVAL = "APPROVAL",
+  BRIDGE = "BRIDGE",
+  REDEEM = "REDEEM",
+  SWAP = "SWAP",
 }
 ```
+
 :::
 
 **Variables:**
+
 - `chainName`: This variable is obtained from step [1.1](#1.1-get-list-of-supported-chains).
 - `contract`: This variable is obtained from step [1.2](#1.2-get-list-of-assets-for-supported-chain.
 - `srcToken`: This variable has the format `${chainName}.${contract} and represents the token to be swapped.
@@ -287,10 +297,12 @@ enum TradeType {
 - `infiniteApproval`: Using this prop is not mandatory, but it allows users to avoid approving trades when swapping ERC20 tokens. However, it's important to note that the first approval still needs to be granted.
 
 **Response:**
+
 - `networkFeeDollar`: Provider fee. 1Inch in example.
 - `networkFeeAsset`: Provider fee in asset value.
 - `inboundFeeDollar`: Network fee for transaction. Cost of Avalanche transaction.
 - `inboundFeeAsset`: Network fee for transaction in native token. AVAX in example.
 
 **Snippets:**
+
 - Enum describes all possible values for `tradeType` property from the response.

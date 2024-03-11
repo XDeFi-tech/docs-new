@@ -15,5 +15,4 @@ prev:
 - [Tokenomics](./tokenomics)
 - [Utility](./utility)
 
-
 ## Introduction

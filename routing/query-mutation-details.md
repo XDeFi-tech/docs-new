@@ -1,19 +1,22 @@
 # Query Mutation Details
-*Deep-dive into our Graph QL schema*
+
+_Deep-dive into our Graph QL schema_
 
 [[toc]]
 
-In the [previous section](./routing-graph-ql-api), we saw an overview of queries and mutations publicly available. 
+In the [previous section](./routing-graph-ql-api), we saw an overview of queries and mutations publicly available.
 
 Here we'll zoom into each one of them and present their inputs and outputs and also show some usage examples.
 A step-by-step full example of how routing works is available in the [next section](./swap-example).
 
 ### chainsV2 & chainV2
+
 Both of these queries return information about assets available in one (chain, given a chain name) or all available chains.
 
 While `chainsV2` has no parameters, `chainV2` takes one of the following chain names:
 
 ::: code-group
+
 ```ts [Request]
 import requests
 
@@ -25,8 +28,27 @@ print(response.json())
 ```
 
 ```ts [Response]
-['BNB', 'BTC', 'BCH', 'LTC', 'ETH', 'THOR', 'DOGE', 'BSC', 'POLYGON', 'FTM', 'AVAX', 'ARBITRUM', 'AURORA', 'NEAR', 'SOL', 'COSMOS', 'OSMOSIS']
+[
+  "BNB",
+  "BTC",
+  "BCH",
+  "LTC",
+  "ETH",
+  "THOR",
+  "DOGE",
+  "BSC",
+  "POLYGON",
+  "FTM",
+  "AVAX",
+  "ARBITRUM",
+  "AURORA",
+  "NEAR",
+  "SOL",
+  "COSMOS",
+  "OSMOSIS",
+];
 ```
+
 :::
 
 Both queries return objects of type `RoutingChainTypeV2` defined as:
@@ -66,11 +88,14 @@ type CryptoAsset {
 ```
 
 ## tokenV2 & tokensV2
+
 Both queries return objects of type `RoutingTokenTypeV2` defined in the above section but take different parameters:
+
 - `tokenV2` takes a routing specific uid
 - `tokensV2` takes either a list of uids or symbols (of the `chain.symbol` format)
 
 ::: code-group
+
 ```ts [tokenV2 request]
 import requests
 
@@ -184,9 +209,11 @@ print(response.json())
   }
 }
 ```
+
 :::
 
 ## bridgeableTokens
+
 This query takes a `BridgeTokenInput` object or a routing-specific uid as input. For more details on usage, see example provided in the previous section.
 
 A `RoutingTokenTypeV2` object is returned if the asset is available on another chain.
@@ -199,7 +226,9 @@ input BridgeTokenInput {
 ```
 
 ## routeV2
+
 A collection of inputs needs to be provided here in order to return a route:
+
 - `srcToken` and `destToken`: source and destination token in the `chain.symbol` format
 - `amountSource`: amount of srcToken` one wants to swap/bridge
 - `slippage`: price slippage tolerance in %
@@ -222,7 +251,7 @@ input ReferralInputType {
 
 This query return a `RouteTypeV2` object with all the relevant route information:
 
-```ts 
+```ts
 type RouteTypeV2 {
   addresses: [AddressRouteTypeV2!]!
   destAddress: String!
@@ -286,7 +315,6 @@ For a full routing example check the [routing API section](./introduction).
 
 `tradeV2` and `tradesV2` take as input a trade id (integer?) and a route id (uid) respectively and return one or more objects of `RouteTransactionTradeTypeV2` type.
 
-
 ```ts
 type RouteTransactionTradeTypeV2 {
   transaction: RouteTransactionTypeV2
@@ -324,6 +352,7 @@ For a full routing example, with the above queries, check the [routing API secti
 ## addressCheckV2
 
 This query takes a AddressRouteInputTypeV2 object as an input:
+
 ```ts
 input AddressRouteInputTypeV2 {
   chain: String!
@@ -334,6 +363,7 @@ input AddressRouteInputTypeV2 {
 The address is then checked:
 
 ::: code-group
+
 ```ts [Request]
 import requests
 
@@ -376,6 +406,7 @@ print(response.json())
   }
 }
 ```
+
 :::
 
 ## referrerSummary
@@ -383,6 +414,7 @@ print(response.json())
 Rather than taking an input, this query relies on the header being passed through the `POST` request.
 
 ::: code-group
+
 ```ts [Request]
 import requests
 
@@ -442,6 +474,7 @@ print(response.json())
   }
 }
 ```
+
 :::
 
 This query returns a `ReferralFeeSummary` object:
@@ -467,6 +500,7 @@ type ReferralFeeSummary {
 This query takes a date in the format `"YYYY-MM-DD"` and return for each date after `startDate` the daily swap volume.
 
 ::: code-group
+
 ```ts [Request]
 import requests
 
@@ -578,6 +612,7 @@ print(response.json())
   }
 }
 ```
+
 :::
 
 ## transactionsV2
@@ -655,6 +690,7 @@ type PostRouteTypeV2 {
 ## transactionHashV2
 
 This mutation returns a string if trade status has been added/updated successfully. It takes the following elements as inputs:
+
 - `routeId`: `id` returned in the previous step
 - `tradeId`: `id` returned by **tradeV2** query
 - `transactionHash`: hash of the broadcast transaction data
@@ -663,17 +699,18 @@ This mutation returns a string if trade status has been added/updated successful
 
 For referral programme participants, this triggers a claim of a fraction of the fees generated through referred swaps. A **ClaimStatus** object is returned:
 
-```ts 
+```ts
 type ClaimStatus {
   claimId: String!
   status: String!
   amountUsd: Float!
 }
-``` 
+```
 
 This mutation does not take an input but rather relies on the header which should include an `Authorization` field (similar to the `referralSummary` query)
 
 ::: code-group
+
 ```ts [Request]
 import requests
 
@@ -681,12 +718,12 @@ ACCOUNT_ADDRESS = "Input your registered account address here"
 SIGNED_MESSAGE = "Input the message signed with registered address"
 
 query = """
-mutation claimFees { 
-  claimFees { 
-    claimId 
-    status 
-    amountUsd 
-    } 
+mutation claimFees {
+  claimFees {
+    claimId
+    status
+    amountUsd
+    }
   }
 """
 
@@ -708,4 +745,4 @@ print(response.json())
     }
   }
 }
-``` 
+```
