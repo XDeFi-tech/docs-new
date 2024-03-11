@@ -1,3 +1,9 @@
+---
+prev:
+  text: "Developers"
+  link: "/developers/introduction"
+---
+
 # Extension Wallet Integration
 
 XDEFI Wallet injects into the window object to dapps multiple wallet providers to send requests (signing, send and broadcast, get accounts information) to the browser extension.
@@ -14,4 +20,3 @@ XDEFI Wallet injects into the window object to dapps multiple wallet providers t
   - window.xfi.thorchain: [Thorchain provider](./extension-thorchain)
 - window.ethereum : [Ethereum provider](./extension-evms)
 - window.keplr : [Keplr/Cosmos chains provider](./extension-cosmos)
-
