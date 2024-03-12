@@ -1,6 +1,6 @@
 # Solana Adapter XDEFI Integration
 
-First, your app need to install dependencies for Solana Adapter and XDEFI, These imports include event emitters, error types, transaction-related types, and the PublicKey class.
+First, your app need to install dependencies for Solana Adapter and XDEFI. These imports include event emitters, error types, transaction-related types, and the PublicKey class.
 
 - `@solana/wallet-adapter-base`
 - `@solana/web3.js`
