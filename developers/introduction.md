@@ -18,8 +18,8 @@ Don't hesitate to join our [Discord channel](https://discord.gg/xdefi) and ask a
 
 ## XDEFI Wallet integration
 
-
 Here is our current list of XDEFI Wallet integration:
+
 - [Extension Wallet](./extension-wallet)
 - [Mobile Wallet](./mobile-wallet)
 
@@ -28,6 +28,7 @@ Here is our current list of XDEFI Wallet integration:
 XDEFI is the largest multichain wallet that provide hundreds of blockchains accessibility.
 
 You can access a single ecosystem integration with his set of tutorial from here:
+
 - [Arbitrum](./arbitrum)
 - [Avalanche](./avalanche)
 - [Binance](./binance)
@@ -51,6 +52,7 @@ You can access a single ecosystem integration with his set of tutorial from here
 XDEFI Wallet is also integrated in a large panel of libraries to make it accessible to any developer's needs.
 
 You can acces the list from here:
+
 - [BlockNative](./blocknative-xdefi-integration
 - [Cosmos Kit](./cosmoskit-xdefi-integration)
 - [Rainbowkit](./rainbowkit-xdefi-integration)

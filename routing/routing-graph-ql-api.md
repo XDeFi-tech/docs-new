@@ -2,11 +2,12 @@
 
 [[toc]]
 
-The Routing Graph QL schema offers queries and mutations to generate routes and the subsequent transaction(s) hex data necessary to accomplish them, to be signed and broadcast on chain. 
+The Routing Graph QL schema offers queries and mutations to generate routes and the subsequent transaction(s) hex data necessary to accomplish them, to be signed and broadcast on chain.
 
 Additionally, "helper" queries are available to get information about available chains and tokens to swap from or to.
 
 ## Routing schema
+
 In this section, we present the Graph QL schema upon which the routing API is built. The schema gives the full picture of what data can be queried with what parameters.
 Here's a list of publicly available queries (root view):
 
@@ -27,6 +28,7 @@ type RoutingTypeV2 {
 ```
 
 ::: info
+
 - `tokenV2` and `tokensV2` queries fetch information about specific token(s) given an `id` or a `name (list of names)
 - `chainV2` and `chainsV2` fetch info about a given chain or all available chains and assets available in them
 - `bridgeableTokens` fetches a list of chains' assets one can bridge to given an input token belonging to a source chain
@@ -35,7 +37,7 @@ type RoutingTypeV2 {
 - `dailyVolume` returns daily volumes of swaps facilitated through XDEFI's Routing API
 - `routeV2` finds the best route to swap from `srcToken` to `destToken`
 - `tradeV2` and `tradesV2 will fetch trade(s) associated to a given ID
-:::
+  :::
 
 In addition to the above read-only operations, mutations are made available to add new routes and trades, and alter transactions statuses.
 
@@ -48,17 +50,20 @@ type Mutation {
 ```
 
 ::: info
+
 - `transactionsV2` generates trade and route records in the database
 - `transactionHashV2` generates trade status and route status records in the database
 - `claimFees` generates a fee claim request (if you're part of the referral programme)
-:::
+  :::
 
 ## Querying the Graph QL endpoint
+
 This endpoint is similar to the ones discussed earlier but needs extra parameters, and sometimes a header with authentication token, to perform certain read/write operations (queries vs. mutations).
 
 Querying this endpoint to fetch the list of tokens/chains one can bridge to from `ETH.USDC` would look like this in Python:
 
 ::: code-group
+
 ```ts [Request]
 import requests
 
@@ -110,6 +115,7 @@ print(response.json())
       'chain': 'Polygon',
       'name': 'USD Coin'}}]}}}
 ```
+
 :::
 
 A comprehensive routing example, from requesting a route to getting transaction data, is shown in the [Overview](./overview) section.

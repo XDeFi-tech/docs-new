@@ -1,1 +1,0 @@
-# Cosmos Kit XDEFI Integration

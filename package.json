@@ -1,4 +1,6 @@
 {
+  "name": "docs-new",
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
@@ -40,9 +42,9 @@
     "*.{js,jsx,ts,tsx}": [
       "yarn lint",
       "yarn format"
-    ],
-    "*.md": [
-      "yarn lint:md"
     ]
-  }
+  },
+  "*.md": [
+    "yarn format"
+  ]
 }
