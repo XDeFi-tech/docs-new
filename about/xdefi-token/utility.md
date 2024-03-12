@@ -1,9 +1,10 @@
 # Utility
 
-**$XDEFI** token has four main utilities: 
+**$XDEFI** token has four main utilities:
 [[toc]]
 
-## Staking 
+## Staking
+
 **XDEFI Technologies** created a staking contract that follows a **veModel**, which is a design originally pioneered by Curve. It allows token holders to stake and earn a share of XDEFI Technologies products revenues.
 
 **XDEFI** generates revenue from swaps (both in-wallet and [platforms integrating the Routing API](../xdefi-technologies/routing-api#current-platforms-using-the-routing-api)), as well as single-sided staking (Zaps), which is a feature of our Web App.
@@ -17,21 +18,23 @@ In the near-term, **$XDEFI** staking rewards will continue to be supplemented wi
 :::
 
 ## Governance rights
-Today, **$XDEFI** token holders and stakers can vote on community proposals such as native chain integrations, new product features, and fee distribution. 
+
+Today, **$XDEFI** token holders and stakers can vote on community proposals such as native chain integrations, new product features, and fee distribution.
 
 This gives holders a say in the development of the platform.
 
 You can vote, view historical governance proposals and results on [Snapshot website](https://snapshot.org/#/xdefigovernance.eth).
 
 ## Gas abstraction
-*est. Q1 2024*
 
-This feature will permit **$XDEFI** tokens to be locked up in a gas tank to cover gas costs for transaction signing within the wallet and when interacting with external dApps. 
+_est. Q1 2024_
+
+This feature will permit **$XDEFI** tokens to be locked up in a gas tank to cover gas costs for transaction signing within the wallet and when interacting with external dApps.
 
 This is done to provide a seamless and simplified user experience, without having to worry about storing gas tokens on each address.
 
-
 ## Premium Features
-*est. 2024*
+
+_est. 2024_
 
 In the future, further utility for **$XDEFI** token holders will be launched including for example wallet skins & preferential access to certain XDEFI Campaigns.

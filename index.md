@@ -20,19 +20,18 @@ hero:
 
 features:
   - title: About XDEFI
-    details: Discover XDEFI technologies tools for building the future of interopable networks and dApps. 
+    details: Discover XDEFI technologies tools for building the future of interopable networks and dApps.
     link: /about/xdefi-technologies/introduction
-     
+
   - title: Developers
     details: Learn how to create multichain and crosschain applications using the most powerfull wallet.
     link: /developers/introduction
-     
+
   - title: Routing
     details: Implement our Widget to swap and bridge any assets accross our supported networks.
     link: /routing/introduction
-     
+
   - title: Community
     details: Join the XDEFI community to connect, collaborate, and contribute with other developers.
     link: /community/introduction
-
 ---

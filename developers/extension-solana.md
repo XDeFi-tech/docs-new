@@ -1,59 +1,35 @@
 # Extension Wallet Solana Integration
 
-[[toc]]
+Develop Solana dApps
 
-## Using Solana Adapter
-### Solana Adapter not installed
+Example dApp using Solana: [https://xdefi-example-dapps.herokuapp.com/multichain/](https://xdefi-example-dapps.herokuapp.com/multichain/) ( [https://github.com/XDeFi-tech/examples-dapps-sdk](https://github.com/XDeFi-tech/examples-dapps-sdk) )
 
-Install the latest wallets package:
-```bash
-npm install @solana/wallet-adapter-xdefi@latest
-```
+### Solana Provider
 
-Once installed, you can add XDEFI Wallet by making adding this part of code:
-```js:line-numbers {0}
-import { XDEFIWalletAdapter } from `@solana/wallet-adapter-xdefi`;
-import { /* ... other adapters ... */ } from `@solana/wallet-adapter-wallets`;
+Similarly to the Phantom Provider, XDEFI Wallet provider exposes different methods in `window.solana` or `window.xfi.solana`
 
-const wallets = useMemo(
-	() => [
-		new XDEFIWalletAdapter(), 
-		// ... other adapters ...
-		  ],
-	[]
-);
+Below are the different functions exposed in the provider `window.solana` `window.xfi.solana`.
 
-<WalletProvider autoConnect wallets={wallets}>
-```
+#### `isXDEFI`
 
-### Solana Adapter already installed
+`isXDEFI` returns true if the provider is XDEFI.
 
-Install the latest wallets package:
-```bash
-npm install @solana/wallet-adapter-wallets@latest
-```
+#### `connect(): Promise<{publicKey: PublicKey}>`
 
-Once installed, you can add XDEFI Wallet by making 2 changes:
-```js:line-numbers {0}
-import {
-	XDEFIWalletAdapter, // [!code ++]
-	/* ... other adapters ... */
-} from `@solana/wallet-adapter-wallets`;
+It returns the current PublicKey of the connected account.
 
-const wallets = useMemo(
-	() => [
-		new XDEFIWalletAdapter(), // [!code ++]
-		// ... other adapters ...
-		  ],
-	[]
-);
+#### `disconnect(): Promise<void>`
 
-<WalletProvider autoConnect wallets={wallets}>
-```
+Disconnect the wallet.
 
-## Using XDEFI Provider
+#### `signTransaction(transaction: Transaction): Promise<Transaction>`
 
+Add a signature to `@solana/web3.js` `Transaction` object;
 
-## Using XDEFI SDK
+#### `signAllTransactions(transactions: Transaction[]): Promise<Transaction[]>`
 
-TBD
+Add a signature for each `@solana/web3.js` `Transaction` object passed in parameters;
+
+#### `signMessage(message: string | Uint8Array, display?: DisplayEncoding | undefined): Promise<{signature:string, publicKey: string}>`
+
+Returns a `signature` and the `publicKey` who signed the `message`;

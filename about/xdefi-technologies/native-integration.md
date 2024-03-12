@@ -1,6 +1,7 @@
 # Native integration
 
 ## Summary
+
 - [UTXO's](#utxo-s)
 - [EVM's](#evm-s)
 - [Cosmos chains](#cosmos-chains)
@@ -8,18 +9,20 @@
 - [Solana](#solana)
 
 ## UTXO's
+
 - Bitcoin (BTC)
 - Bitcoin Cash (BCH)
 - Dogecoin (DOGE)
 - Litecoin (LTC)
 
 ## EVM's
+
 - Aurora (AURORA)
 - Avalanche (AVAX)
 - BNB Beacon Chain (BNB)
 - BNB Smart Chain (BNB)
 - Canto (CANTO)
-- Cronos (CRO) 
+- Cronos (CRO)
 - Ethereum (ETH)
 - Fantom (FTM)
 - Gnosis (xDAI)
@@ -35,9 +38,10 @@ See more on [Building an EVM dApp](/developers/build-evm-dapp) with XDEFI docume
 
 You can request an EVM native integration by sending us an [email](mailto:integration@xdefi.io).
 
-*(Note that native integration requiere an upfront payment to start implementing it)*
+_(Note that native integration requiere an upfront payment to start implementing it)_
 
 ## Cosmos chains
+
 - Akash (AKT)
 - Cosmos (ATOM)
 - Crescent (CRE)
@@ -61,14 +65,16 @@ See more on [Building a Cosmos dApp](/developers/build-cosmos-dapp) with XDEFI d
 
 You can request a Cosmos native integration by sending us an [email](mailto:integration@xdefi.io).
 
-*(Note that native integration requiere an upfront payment to start implementing it)*
+_(Note that native integration requiere an upfront payment to start implementing it)_
 
 ## Near
+
 - Near Protocol (NEAR)
 
 See more on [Building a Near dApp](/developers/build-near-dapp) with XDEFI documentation.
 
 ## Solana
+
 - Solana (SOL)
 
 See more on [Building a Solana dApp](/developers/build-solana-dapp) with XDEFI documentation.
