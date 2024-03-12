@@ -53,7 +53,7 @@ XDEFI Wallet is also integrated in a large panel of libraries to make it accessi
 
 You can acces the list from here:
 
-- [BlockNative](./blocknative-xdefi-integration
-- [Cosmos Kit](./cosmoskit-xdefi-integration)
-- [Rainbowkit](./rainbowkit-xdefi-integration)
+- [BlockNative](./blocknative-xdefi-integration)
+- [CosmosKit](./cosmoskit-xdefi-integration)
+- [RainbowKit](./rainbowkit-xdefi-integration)
 - [Solana Adapter](./solana-adapter-xdefi-integration)

@@ -422,7 +422,7 @@ function sidebarHome() {
       collapsed: true,
       items: [
         {
-          text: "XDEFI Wallet integration",
+          text: "XDEFI Wallet Integration",
           link: "/developers/xdefi-wallet-integration",
           collapsed: true,
           items: [
@@ -499,7 +499,7 @@ function sidebarHome() {
           ],
         },
         {
-          text: "Blockhains Integration",
+          text: "Blockchains Integration",
           link: "/developers/blockchains-integration",
           collapsed: true,
           items: [
@@ -566,7 +566,7 @@ function sidebarHome() {
           ],
         },
         {
-          text: "Libraries integration",
+          text: "Libraries Integration",
           link: "/developers/libraries-integration",
           collapsed: true,
           items: [
@@ -576,11 +576,11 @@ function sidebarHome() {
               link: "/developers/blocknative-xdefi-integration",
             },
             {
-              text: "Cosmos Kit",
+              text: "CosmosKit",
               link: "/developers/cosmoskit-xdefi-integration",
             },
             {
-              text: "Rainbowkit",
+              text: "RainbowKit",
               link: "/developers/rainbowkit-xdefi-integration",
             },
             {
