@@ -12,7 +12,7 @@ It will prompt you for a project name, generate a new directory containing a Nex
 
 ### Add XDEFI Wallet
 
-You can import individual wallets from `'@rainbow-me/rainbowkit/wallets'` to build your own list of wallets with their necessary connectors. This way you have full control over which wallets to display, and in which order. Wallets will appear on the wallets list in the order you pass them in config.
+You can import individual wallets from `@rainbow-me/rainbowkit/wallets` to build your own list of wallets with their necessary connectors. This way you have full control over which wallets to display, and in which order. Wallets will appear on the wallets list in the order you pass them in config.
 
 For example, you can choose to only show Rainbow along with generic fallback wallets.
 
