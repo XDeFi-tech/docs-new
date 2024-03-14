@@ -186,6 +186,28 @@ function MyApp({ Component, pageProps }: AppProps) {
 }
 ```
 
+### RainbowKit theming
+
+Once we have set up our wallets list, it's time to pick a proper theme.
+RainbowKit has prebuilt light, dark and midnight themes. We'll be using prebuilt dark theme in this guide. For further theme customizations please refer to [RainbowKit theming docs](https://www.rainbowkit.com/docs/theming).
+
+```javascript
+import {
+  darkTheme, // [!code ++]
+} from "@rainbow-me/rainbowkit";
+        ...
+        <RainbowKitProvider theme={darkTheme()}> // [!code ++]
+          <Component {...pageProps} />
+        </RainbowKitProvider>
+        ...
+```
+
+### We're Done! Time to explore results
+
+![Expected result](images/rainbowkit/rainbowkit_integration_result.jpg)
+
+> Please note: If you have wallet already installed, it will be listed in "Installed" instead of "Recommended". Installed group appears automatically
+
 ### Additional resources
 
 - [RainbowKit docs](https://www.rainbowkit.com/docs/)
