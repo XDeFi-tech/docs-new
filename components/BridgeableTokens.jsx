@@ -72,14 +72,19 @@ export default function BridgeableTokens() {
           ) : (
             <>
               <PlayIcon />
-              Fetch
+              Test the query
             </>
           )}
         </button>
       </div>
-      <pre className="my-4 p-5 rounded-lg max-h-[600px] overflow-auto bg-[#F6F6F7] text-[#24292E] dark:bg-[#161618] dark:text-[#E1E4E8]">
-        {JSON.stringify(response, null, 2)}
-      </pre>
+      <div className="my-4 rounded-lg max-h-[600px] overflow-auto bg-[#F6F6F7] text-[#24292E] dark:bg-[#161618] dark:text-[#E1E4E8]">
+        <div className="px-5 border-b border-[#e2e2e3] dark:border-black">
+          <span className="inline-block border-b-2 border-[#3451b2] dark:border-[#a8b1ff] text-[14px] leading-[48px]">Response</span>
+        </div>
+        <pre className="p-5">
+          {JSON.stringify(response, null, 2)}
+        </pre>
+      </div>
     </>
   );
 }

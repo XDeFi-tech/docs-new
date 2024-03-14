@@ -19,7 +19,7 @@ While `chainsV2` has no parameters, `chainV2` takes one of the following chain n
 const ENDPOINT = "https://routingapi.xdefiservices.com/";
 
 const fetchChainsV2 = async () => {
-  fetch(ENDPOINT + "chains/")
+  fetch(ENDPOINT + "chains")
     .then((response) => response.json())
     .then((result) => {
       console.log(result);
