@@ -1,5 +1,7 @@
 # RainbowKit XDEFI Integration
 
+### Built-in XDEFI Wallet
+
 You can import individual wallets from `'@rainbow-me/rainbowkit/wallets'` along with the `connectorsForWallets` function to build your own list of wallets with their necessary connectors. This way you have full control over which wallets to display, and in which order.
 
 For example, you can choose to only show Rainbow along with generic fallback wallets.
@@ -7,15 +9,15 @@ For example, you can choose to only show Rainbow along with generic fallback wal
 ```javascript
 import { connectorsForWallets } from "@rainbow-me/rainbowkit";
 import {
-  rainbowWallet,
-  walletConnectWallet,
+  xdefiWallet,
+  // other wallets
 } from "@rainbow-me/rainbowkit/wallets";
 
 const connectors = connectorsForWallets(
   [
     {
       groupName: "Recommended",
-      wallets: [rainbowWallet, walletConnectWallet],
+      wallets: [xdefiWallet],
     },
   ],
   {
@@ -51,42 +53,28 @@ const App = () => (
 );
 ```
 
-### Built-in XDEFI Wallets
-
-First, you need to install the `@rainbow-me/rainbowkit/wallets` package and then import the dApp:
-
-```javascript
-import { xdefiWallet } from "@rainbow-me/rainbowkit/wallets";
-```
-
 ### Examples
 
-Here are examples: Show Rainbow, MetaMask, Coinbase and XDEFI along with generic fallback wallets.
+Here are examples: Show XDEFI Wallet along with generic fallback wallets.
 
 ```javascript
-import { connectorsForWallets } from '@rainbow-me/rainbowkit';
+import { connectorsForWallets } from "@rainbow-me/rainbowkit";
 import {
-  rainbowWallet,
-  xdefiWallet
-  metaMaskWallet,
-  coinbaseWallet,
-  walletConnectWallet,
-} from '@rainbow-me/rainbowkit/wallets';
+  xdefiWallet,
+  // other wallets
+} from "@rainbow-me/rainbowkit/wallets";
 
 const connectors = connectorsForWallets(
   [
     {
-      groupName: 'Suggested',
+      groupName: "Suggested",
       wallets: [
-        rainbowWallet,
         xdefiWallet,
-        metaMaskWallet,
-        coinbaseWallet,
-        walletConnectWallet,
+        // other wallets
       ],
     },
   ],
-  { appName: 'RainbowKit App', projectId: 'YOUR_PROJECT_ID' },
+  { appName: "RainbowKit App", projectId: "YOUR_PROJECT_ID" },
 );
 ```
 
@@ -94,27 +82,26 @@ const connectors = connectorsForWallets(
 
 You also can use the `groupName` key to name different wallet groups. This is useful if you want to communicate to your users which wallets you recommend, as well as other possible wallets.
 
-Recommend Rainbow and MetaMask, but also offer Coinbase along with generic fallback wallets.
+Recommend XDEFI Wallet along with other wallets in a separate group
 
 ```javascript
 import { connectorsForWallets } from "@rainbow-me/rainbowkit";
 import {
-  rainbowWallet,
   xdefiWallet,
-  metaMaskWallet,
-  coinbaseWallet,
-  walletConnectWallet,
+  // other wallets
 } from "@rainbow-me/rainbowkit/wallets";
 
 const connectors = connectorsForWallets(
   [
     {
       groupName: "Recommended",
-      wallets: [rainbowWallet, metaMaskWallet],
+      wallets: [xdefiWallet],
     },
     {
       groupName: "Others",
-      wallets: [xdefiWallet, coinbaseWallet, walletConnectWallet],
+      wallets: [
+        // other wallets
+      ],
     },
   ],
   { appName: "RainbowKit App", projectId: "YOUR_PROJECT_ID" },
