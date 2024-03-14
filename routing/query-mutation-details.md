@@ -15,75 +15,46 @@ Both of these queries return information about assets available in one (chain, g
 
 While `chainsV2` has no parameters, `chainV2` takes one of the following chain names:
 
-::: code-group
+```js [JavaScript]
+const ENDPOINT = "https://routingapi.xdefiservices.com/";
 
-```ts [Request]
-import requests
-
-URL = "https://routingapi.xdefiservices.com/"
-
-response = requests.get(URL + "chains/")
-
-print(response.json())
+const fetchChainsV2 = async () => {
+  fetch(ENDPOINT + "chains")
+    .then((response) => response.json())
+    .then((result) => {
+      console.log(result);
+    });
+};
 ```
 
-```ts [Response]
-[
-  "BNB",
-  "BTC",
-  "BCH",
-  "LTC",
-  "ETH",
-  "THOR",
-  "DOGE",
-  "BSC",
-  "POLYGON",
-  "FTM",
-  "AVAX",
-  "ARBITRUM",
-  "AURORA",
-  "NEAR",
-  "SOL",
-  "COSMOS",
-  "OSMOSIS",
-];
-```
-
-:::
+<div ref='refChainsV2' />
 
 Both queries return objects of type `RoutingChainTypeV2` defined as:
 
 ```ts
-type RoutingChainTypeV2 {
-  name: String!
-  tokens: [RoutingTokenTypeV2]!
+interface RoutingChainTypeV2 {
+  name: string;
+  tokens: RoutingTokenTypeV2[];
 }
 
-type RoutingTokenTypeV2 {
-  id: String!
-  asset: CryptoAsset!
-  listProviders: [String!]!
+interface RoutingTokenTypeV2 {
+  id: string;
+  asset: CryptoAsset;
+  listProviders: string[];
 }
 
-type CryptoAsset {
-  """Unique asset identifier"""
-  id: ID
+interface CryptoAsset {
+  id?: string;
+  name?: string;
+  symbol?: string;
+  image?: string;
+  chain: string;
+  contract: string;
+  price: AssetAmountType;
+}
 
-  """Known name that identifies token"""
-  name: String
-
-  """The symbol that identifies token"""
-  symbol: String
-
-  """Asset image"""
-  image: String
-
-  """supported list of chain are in [`Chain`] enum"""
-  chain: String
-
-  """ID of token (contract address in most chain)"""
-  contract: String
-  price: AssetAmountType
+interface AssetAmountType {
+  // Define the properties of AssetAmountType here if necessary
 }
 ```
 
@@ -91,17 +62,15 @@ type CryptoAsset {
 
 Both queries return objects of type `RoutingTokenTypeV2` defined in the above section but take different parameters:
 
-- `tokenV2` takes a routing specific uid
-- `tokensV2` takes either a list of uids or symbols (of the `chain.symbol` format)
+### `tokenV2`
+
+`tokenV2` takes a routing specific uid
 
 ::: code-group
 
-```ts [tokenV2 request]
-import requests
-
-GRAPHQL_ENDPOINT = "https://gql-router.staging.xdefiservices.com/graphql"
-
-query = """
+```js [JavaScript]
+const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
+const query = `
 query TokenV2($tokenV2Id: String!) {
   routingV2 {
     tokenV2(id: $tokenV2Id) {
@@ -116,101 +85,92 @@ query TokenV2($tokenV2Id: String!) {
       }
     }
   }
-}"""
+}`;
 
-vars = {
-  "tokenV2Id": "2a1456da-6642-4293-b383-baefcdf4c22e"
-}
+const vars = {
+  tokenV2Id: "2a1456da-6642-4293-b383-baefcdf4c22e",
+};
+const fetchTokenV2 = async () => {
+  await fetch(GRAPHQL_ENDPOINT, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      query,
+      variables: vars,
+    }),
+  })
+    .then((response) => response.json())
+    .then((result) => {
+      console.log(result);
+    });
+};
 
-response = requests.post(GRAPHQL_ENDPOINT,
-             json = {"query": query, "variables": vars})
-
-print(response.json())
+fetchTokenV2();
 ```
 
-```ts [tokenV2 response]
+```js [Variables]
 {
-  "data": {
-    "routingV2": {
-      "tokenV2": {
-        "id": "2a1456da-6642-4293-b383-baefcdf4c22e",
-        "asset": {
-          "id": "13f2d52b-3f12-42cd-9295-acd862f941be",
-          "name": "Binance USD",
-          "symbol": "BUSD",
-          "chain": "Avalanche",
-          "contract": "0x19860ccb0a68fd4213ab9d8266f7bbf05a8dde98",
-          "image": "https://assets.coingecko.com/coins/images/9576/thumb/BUSD.png?1568947766"
-        }
-      }
-    }
-  }
-}
-```
-
-```ts [tokenV2 request]
-import requests
-
-GRAPHQL_ENDPOINT = "https://gql-router.staging.xdefiservices.com/graphql"
-
-query = """
-query TokensV2($names: [String!]) {
-  routingV2 {
-    tokensV2(names: $names) {
-      id
-      asset {
-        chain
-        contract
-        id
-        name
-        symbol
-      }
-    }
-  }
-}"""
-
-vars = {
-  "names": ["AVAX.AVAX", "AVAX.STG"]
-}
-
-response = requests.post(GRAPHQL_ENDPOINT,
-             json = {"query": query, "variables": vars})
-
-print(response.json())
-```
-
-```ts [tokenV2 response]
-{
-  "data": {
-    "routingV2": {
-      "tokensV2": [
-        {
-          "id": "ac9437fb-4429-4240-b8f9-077dd7fe0a4f",
-          "asset": {
-            "chain": "Avalanche",
-            "contract": "AVAX",
-            "id": "a0e2d381-dde0-4bb3-a5a1-f227eec4b89c",
-            "name": "Avalanche",
-            "symbol": "AVAX"
-          }
-        },
-        {
-          "id": "6ddf09f6-515b-49b8-9c34-e8ad5b8f3f52",
-          "asset": {
-            "chain": "Avalanche",
-            "contract": "0x2f6f07cdcf3588944bf4c42ac74ff24bf56e7590",
-            "id": "705cd798-944f-402d-93a7-8df0e88f66aa",
-            "name": "Stargate Finance",
-            "symbol": "STG"
-          }
-        }
-      ]
-    }
-  }
+  tokenV2Id: "2a1456da-6642-4293-b383-baefcdf4c22e",
 }
 ```
 
 :::
+
+<div ref='refTokenV2' />
+
+### `tokensV2`
+
+`tokensV2` takes either a list of uids or symbols (of the `chain.symbol` format)
+
+::: code-group
+
+```js [JavaScript]
+const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
+const query = `
+query TokensV2($names: [String!]) {
+  routingV2 {
+    tokensV2(names: $names) {
+      isValid
+      address
+      chain
+    }
+  }
+}`;
+
+const vars = {
+  names: ["AVAX.AVAX", "AVAX.STG"],
+};
+const fetchTokensV2 = async () => {
+  await fetch(GRAPHQL_ENDPOINT, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      query,
+      variables: vars,
+    }),
+  })
+    .then((response) => response.json())
+    .then((result) => {
+      console.log(result);
+    });
+};
+
+fetchTokensV2();
+```
+
+```js [Variables]
+{
+  names: ["AVAX.AVAX", "AVAX.STG"],
+}
+```
+
+:::
+
+<div ref='refTokensV2' />
 
 ## bridgeableTokens
 
@@ -364,64 +324,74 @@ The address is then checked:
 
 ::: code-group
 
-```ts [Request]
-import requests
-
-GRAPHQL_ENDPOINT = "https://gql-router.staging.xdefiservices.com/graphql"
-
-query = """
+```js [JavaScript]
+const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
+const query = `
 query AddressCheckV2($address: AddressRouteInputTypeV2!) {
   routingV2 {
     addressCheckV2(address: $address) {
-      isValid
-      address
-      chain
-    }
-  }
-}"""
-
-vars = {
-  "address": {
-    "address": "0x7045916CEEFf58547E80E31d2c60ae5F67D63027",
-    "chain": "ETH"
-  }
-}
-
-response = requests.post(GRAPHQL_ENDPOINT,
-             json = {"query": query, "variables": vars})
-
-print(response.json())
-```
-
-```ts [Response]
-{
-  "data": {
-    "routingV2": {
-      "addressCheckV2": {
-        "isValid": true,
-        "address": "0x7045916CEEFf58547E80E31d2c60ae5F67D63027",
-        "chain": "ETH"
+      id
+      asset {
+        id
+        name
+        symbol
+        chain
+        contract
+        image
       }
     }
   }
+}`;
+
+const vars = {
+  address: {
+    address: "0x7045916CEEFf58547E80E31d2c60ae5F67D63027",
+    chain: "ETH",
+  },
+};
+const fetchAddressCheckV2 = async () => {
+  await fetch(GRAPHQL_ENDPOINT, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      query,
+      variables: vars,
+    }),
+  })
+    .then((response) => response.json())
+    .then((result) => {
+      console.log(result);
+    });
+};
+
+fetchAddressCheckV2();
+```
+
+```js [Variables]
+{
+  address: {
+    address: "0x7045916CEEFf58547E80E31d2c60ae5F67D63027",
+    chain: "ETH",
+  },
 }
 ```
 
 :::
 
+<div ref='refAddressCheckV2' />
+
 ## referrerSummary
 
 Rather than taking an input, this query relies on the header being passed through the `POST` request.
 
-::: code-group
+```js
+const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
+const ACCOUNT_ADDRESS = "Your account address";
+const SIGNED_MESSAGE = "The message signed with registered address";
 
-```ts [Request]
-import requests
-
-ACCOUNT_ADDRESS = "Input your registered account address here"
-SIGNED_MESSAGE = "Input the message signed with registered address"
-
-referralSummaryQuery = """
+const query = `
 query ReferralFeeSummary {
   routingV2 {
     referrerSummary {
@@ -442,40 +412,25 @@ query ReferralFeeSummary {
       userType
     }
   }
-}
-"""
+}`;
 
-auth_header = f"{ACCOUNT_ADDRESS}:{SIGNED_MESSAGE}"
-
-response = requests.post("https://gql-router.dev.xdefiservices.com/graphql", headers={"Authorization": auth_header},
-                    json={"query":referralSummaryQuery})
-
-print(response.json())
+const fetchReferrerSummary = async () => {
+  await fetch(GRAPHQL_ENDPOINT, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `${ACCOUNT_ADDRESS}:${SIGNED_MESSAGE}`,
+    },
+    query: JSON.stringify({
+      query: query,
+    }),
+  })
+    .then((response) => response.json())
+    .then((result) => {
+      console.log(result);
+    });
+};
 ```
-
-```ts [Response]
-{
-  "data": {
-    "routingV2": {
-      "referrerSummary": {
-        "referrerId": "29fde42d-edd6-495b-9fbc-26f7d60a8c23",
-        "url": "cryptodev",
-        "lifetimeFees": "3.93",
-        "last7dFees": "0.0",
-        "last30dFees": "3.93",
-        "claimableFees": "3.93",
-        "feeTier": "0.5000",
-        "totalReferralVolume": "1563.45",
-        "totalAssociatedAddresses": 1,
-        "claimHistory": [],
-        "userType": "referrer"
-      }
-    }
-  }
-}
-```
-
-:::
 
 This query returns a `ReferralFeeSummary` object:
 
@@ -501,12 +456,10 @@ This query takes a date in the format `"YYYY-MM-DD"` and return for each date af
 
 ::: code-group
 
-```ts [Request]
-import requests
-
-GRAPHQL_ENDPOINT = "https://gql-router.staging.xdefiservices.com/graphql"
-
-query = """
+```js [JavaScript]
+import moment from "moment";
+const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
+const query = `
 query Volume($startDate: String!) {
   routingV2 {
     dailyVolume(startDate: $startDate) {
@@ -514,106 +467,42 @@ query Volume($startDate: String!) {
       volume
     }
   }
-}"""
+}`;
 
-vars = {
-  "startDate": "2023-02-10"
-}
+const vars = {
+  startDate: moment().subtract(1, "weeks").format("YYYY-MM-DD"),
+};
+const fetchDailyVolume = async () => {
+  await fetch(GRAPHQL_ENDPOINT, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      query,
+      variables: vars,
+    }),
+  })
+    .then((response) => response.json())
+    .then((result) => {
+      console.log(result);
+    });
+};
 
-response = requests.post(GRAPHQL_ENDPOINT,
-             json = {"query": query, "variables": vars})
-
-print(response.json())
+fetchDailyVolume();
 ```
 
-```ts [Response]
+```js [Variables]
 {
-  "data": {
-    "routingV2": {
-      "dailyVolume": [
-        {
-          "date": "2023-02-10  00:00:00",
-          "volume": "0"
-        },
-        {
-          "date": "2023-02-11  00:00:00",
-          "volume": "0"
-        },
-        {
-          "date": "2023-02-12  00:00:00",
-          "volume": "0"
-        },
-        {
-          "date": "2023-02-13  00:00:00",
-          "volume": "0"
-        },
-        {
-          "date": "2023-02-14  00:00:00",
-          "volume": "542168235.4621111283289613321"
-        },
-        {
-          "date": "2023-02-15  00:00:00",
-          "volume": "0"
-        },
-        {
-          "date": "2023-02-16  00:00:00",
-          "volume": "1.36766277387363113848884"
-        },
-        {
-          "date": "2023-02-17  00:00:00",
-          "volume": "0"
-        },
-        {
-          "date": "2023-02-18  00:00:00",
-          "volume": "0"
-        },
-        {
-          "date": "2023-02-19  00:00:00",
-          "volume": "0"
-        },
-        {
-          "date": "2023-02-20  00:00:00",
-          "volume": "541.5600506040581120064440045"
-        },
-        {
-          "date": "2023-02-21  00:00:00",
-          "volume": "53996.82460348166920058343796"
-        },
-        {
-          "date": "2023-02-22  00:00:00",
-          "volume": "1242.267101413565768895289237"
-        },
-        {
-          "date": "2023-02-23  00:00:00",
-          "volume": "0.4174599441870186719936558866"
-        },
-        {
-          "date": "2023-02-24  00:00:00",
-          "volume": "0"
-        },
-        {
-          "date": "2023-02-25  00:00:00",
-          "volume": "54.06038287335565896855478036"
-        },
-        {
-          "date": "2023-02-26  00:00:00",
-          "volume": "0"
-        },
-        {
-          "date": "2023-02-27  00:00:00",
-          "volume": "0"
-        },
-        {
-          "date": "2023-02-28  00:00:00",
-          "volume": "258.4792191407147582760637100"
-        }
-      ]
-    }
-  }
+  startDate: "YYYY-MM-DD",
 }
 ```
 
 :::
+
+In demo startDate is set to 1 week ago.
+
+<div ref='refDailyVolume' />
 
 ## transactionsV2
 
@@ -697,7 +586,46 @@ This mutation returns a string if trade status has been added/updated successful
 
 ## claimFees
 
-For referral programme participants, this triggers a claim of a fraction of the fees generated through referred swaps. A **ClaimStatus** object is returned:
+For referral programme participants, this triggers a claim of a fraction of the fees generated through referred swaps.
+
+This mutation does not take an input but rather relies on the header which should include an `Authorization` field (similar to the `referralSummary` query)
+
+```js
+const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
+const ACCOUNT_ADDRESS = "Your account address";
+const SIGNED_MESSAGE = "The message signed with registered address";
+
+const query = `
+mutation claimFees {
+  claimFees {
+      claimId
+      status
+      amountUsd
+    }
+  }
+`;
+
+const fetchClaimFees = async () => {
+  await fetch(GRAPHQL_ENDPOINT, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `${ACCOUNT_ADDRESS}:${SIGNED_MESSAGE}`,
+    },
+    query: JSON.stringify({
+      query: query,
+    }),
+  })
+    .then((response) => response.json())
+    .then((result) => {
+      console.log(result);
+    });
+};
+
+fetchClaimFees();
+```
+
+This query returns a **ClaimStatus** object is returned:
 
 ```ts
 type ClaimStatus {
@@ -707,42 +635,36 @@ type ClaimStatus {
 }
 ```
 
-This mutation does not take an input but rather relies on the header which should include an `Authorization` field (similar to the `referralSummary` query)
+<script setup>
+import { createElement } from 'react'
+import { createRoot } from 'react-dom/client'
+import { ref, onMounted } from 'vue'
 
-::: code-group
+import ChainsV2 from '../components/ChainsV2.jsx'
+import TokenV2 from '../components/TokenV2.jsx'
+import TokensV2 from '../components/TokensV2.jsx'
+import AddressCheckV2 from '../components/AddressCheckV2.jsx'
+import DailyVolume from '../components/DailyVolume.jsx'
 
-```ts [Request]
-import requests
+const refChainsV2 = ref()
+const refTokenV2 = ref()
+const refTokensV2 = ref()
+const refAddressCheckV2 = ref()
+const refDailyVolume = ref()
+onMounted(() => {
+  const rootChainsV2 = createRoot(refChainsV2.value)
+  rootChainsV2.render(createElement(ChainsV2, {}, null))
 
-ACCOUNT_ADDRESS = "Input your registered account address here"
-SIGNED_MESSAGE = "Input the message signed with registered address"
+  const rootTokenV2 = createRoot(refTokenV2.value)
+  rootTokenV2.render(createElement(TokenV2, {}, null))
 
-query = """
-mutation claimFees {
-  claimFees {
-    claimId
-    status
-    amountUsd
-    }
-  }
-"""
+  const rootTokensV2 = createRoot(refTokensV2.value)
+  rootTokensV2.render(createElement(TokensV2, {}, null))
 
-auth_header = f"{ACCOUNT_ADDRESS}:{SIGNED_MESSAGE}"
+  const rootAddressCheckV2 = createRoot(refAddressCheckV2.value)
+  rootAddressCheckV2.render(createElement(AddressCheckV2, {}, null))
 
-response = requests.post("https://gql-router.dev.xdefiservices.com/graphql", headers={"Authorization": auth_header},
-                    json={"query":query})
-
-print(response.json())
-```
-
-```ts [Response]
-{
-  "data": {
-    "claimFees": {
-      "claimId": "6beb9dbc-6dd9-4f7c-8c66-2d951b6590be",
-      "status": "PENDING",
-      "amountUsd": 3.93
-    }
-  }
-}
-```
+  const rootDailyVolume = createRoot(refDailyVolume.value)
+  rootDailyVolume.render(createElement(DailyVolume, {}, null))
+})
+</script>
