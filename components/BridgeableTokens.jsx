@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import LoadingIcon from "./LoadingIcon";
 import PlayIcon from "./PlayIcon";
 
@@ -51,10 +51,6 @@ export default function BridgeableTokens() {
         setLoading(false);
       });
   };
-
-  useEffect(() => {
-    fetchBridgeableTokens();
-  }, []);
 
   return (
     <>

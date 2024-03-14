@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import LoadingIcon from "./LoadingIcon";
 import PlayIcon from "./PlayIcon";
 
@@ -39,10 +39,6 @@ export default function ChainsV2GraphQL() {
         setLoading(false);
       });
   };
-
-  useEffect(() => {
-    fetchChainsV2();
-  }, []);
 
   return (
     <>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import LoadingIcon from "./LoadingIcon";
 import PlayIcon from "./PlayIcon";
 import moment from "moment";
@@ -46,10 +46,6 @@ export default function DailyVolume() {
         setLoading(false);
       });
   };
-
-  useEffect(() => {
-    fetchDailyVolume();
-  }, []);
 
   return (
     <>
