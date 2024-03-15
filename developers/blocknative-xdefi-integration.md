@@ -8,7 +8,7 @@ yarn add @web3-onboard/core @web3-onboard/injected-wallets ethers
 
 Then initialize in your app:
 
-```javascript
+```js
 import Onboard from "@web3-onboard/core";
 import xdefiWalletModule from "@web3-onboard/xdefi";
 

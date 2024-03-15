@@ -1,3 +1,12 @@
+---
+prev:
+  text: "Mobile Wallet Integration"
+  link: "./mobile-wallet"
+next:
+  text: "Akash (AKT)"
+  link: "./akash"
+---
+
 # Blockchains Integration
 
 ### Native blockchains support
