@@ -1,1 +1,1 @@
-# Avalanche
+# Avalanche (AVAX)

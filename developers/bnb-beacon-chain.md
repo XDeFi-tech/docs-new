@@ -1,0 +1,1 @@
+# BNB Beacon Chain (BNB)
