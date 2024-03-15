@@ -2,8 +2,7 @@
 
 ### Develop Thorchain dApps
 
-- [Transfer request](https://docs.xdefi.io/docs/technical-documentation/xdefi-extension-integration/detect-xdefi-providers#parameters)
-  ​​
+- [Transfer request](/extension-detect-xdefi-providers#request-parameters-description)
 
 ```javascript
 const { asset, from, recipient, amount, memo, gasLimit } = {
@@ -44,7 +43,7 @@ window.xfi.thorchain.request(
 
 ### Deposit request
 
-- [Parameters description](https://sdk.xdefi.io/docs/HEAD/detect_providers.html#params)
+- [Parameters description](./extension-detect-xdefi-providers#request-parameters-description)
   ​​
 
 ```javascript

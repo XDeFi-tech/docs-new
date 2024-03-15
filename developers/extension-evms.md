@@ -76,4 +76,4 @@ And add the entry of `xdefi` to the `wallets` option.
 }
 ```
 
-Example of integration with onboard.js: [https://github.com/blocknative/react-demo/blob/master/src/services.js#L71](https://github.com/blocknative/react-demo/blob/master/src/services.js#L71) ( live demo [https://reactdemo.blocknative.com/](https://reactdemo.blocknative.com/))
+Example of integration with onboard.js: [https://github.com/blocknative/react-demo/blob/master/src/services.js#L71](https://github.com/blocknative/react-demo/blob/master/src/services.js#L71) (live demo [https://reactdemo.blocknative.com/](https://reactdemo.blocknative.com/))
