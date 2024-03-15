@@ -711,6 +711,10 @@ function sidebarHome() {
             },
           ],
         },
+        {
+          text: "Campaigns Service API",
+          link: "/developers/campaigns-service-api",
+        },
       ],
     },
     {
