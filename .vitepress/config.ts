@@ -538,182 +538,181 @@ function sidebarHome() {
                 // },
               ],
             },
+            {
+              text: "Libraries Integration",
+              link: "/developers/libraries-integration",
+              collapsed: true,
+              items: [
+                {
+                  text: "Introduction",
+                  link: "/developers/libraries-integration",
+                },
+                {
+                  text: "BlockNative",
+                  link: "/developers/blocknative-xdefi-integration",
+                },
+                {
+                  text: "CosmosKit",
+                  link: "/developers/cosmoskit-xdefi-integration",
+                },
+                {
+                  text: "RainbowKit",
+                  link: "/developers/rainbowkit-xdefi-integration",
+                },
+                {
+                  text: "Solana Adapter",
+                  link: "/developers/solana-adapter-xdefi-integration",
+                },
+              ],
+            },
+            {
+              text: "Blockchains Integration",
+              link: "/developers/blockchains-integration",
+              collapsed: true,
+              items: [
+                {
+                  text: "Akash (AKT)",
+                  link: "/developers/akash",
+                },
+                {
+                  text: "Arbitrum (AETH)",
+                  link: "/developers/arbitrum",
+                },
+                {
+                  text: "Aurora (AURORA)",
+                  link: "/developers/aurora",
+                },
+                {
+                  text: "Avalanche (AVAX)",
+                  link: "/developers/avalanche",
+                },
+                {
+                  text: "Axelar (AXL)",
+                  link: "/developers/axelar",
+                },
+                {
+                  text: "Bitcoin (BTC)",
+                  link: "/developers/bitcoin",
+                },
+                {
+                  text: "Bitcoin Cash (BCH)",
+                  link: "/developers/bitcoin-cash",
+                },
+                {
+                  text: "BNB Beacon Chain (BNB)",
+                  link: "/developers/bnb-beacon-chain",
+                },
+                {
+                  text: "BNB Smart Chain (BNB)",
+                  link: "/developers/bnb-smart-chain",
+                },
+                {
+                  text: "Canto (CANTO)",
+                  link: "/developers/canto",
+                },
+                {
+                  text: "Cosmos (ATOM)",
+                  link: "/developers/cosmos",
+                },
+                {
+                  text: "Crescent (CRE)",
+                  link: "/developers/crescent",
+                },
+                {
+                  text: "Cronos (CRO)",
+                  link: "/developers/cronos",
+                },
+                {
+                  text: "Dogecoin (DOGE)",
+                  link: "/developers/dogecoin",
+                },
+                {
+                  text: "Ethereum (ETH)",
+                  link: "/developers/ethereum",
+                },
+                {
+                  text: "Fantom (FTM)",
+                  link: "/developers/fantom",
+                },
+                {
+                  text: "Gnosis (xDAI)",
+                  link: "/developers/gnosis",
+                },
+                {
+                  text: "Juno (JUNO)",
+                  link: "/developers/juno",
+                },
+                {
+                  text: "Kava (KAVA)",
+                  link: "/developers/kava",
+                },
+                {
+                  text: "Klaytn (KLAY)",
+                  link: "/developers/klaytn",
+                },
+                {
+                  text: "Kujira (KUJI)",
+                  link: "/developers/kujira",
+                },
+                {
+                  text: "Litecoin (LTC)",
+                  link: "/developers/litecoin",
+                },
+                {
+                  text: "Mars (MARS)",
+                  link: "/developers/mars",
+                },
+                {
+                  text: "Maya Protocol (MAYA)",
+                  link: "/developers/maya",
+                },
+                {
+                  text: "Near Protocol (NEAR)",
+                  link: "/developers/near",
+                },
+                {
+                  text: "Optimism (ETH)",
+                  link: "/developers/optimism",
+                },
+                {
+                  text: "Osmosis (OSMO)",
+                  link: "/developers/osmosis",
+                },
+                {
+                  text: "Polygon (MATIC)",
+                  link: "/developers/polygon",
+                },
+                {
+                  text: "Sei Testnet (SEI)",
+                  link: "/developers/sei",
+                },
+                {
+                  text: "Solana (SOL)",
+                  link: "/developers/solana",
+                },
+                {
+                  text: "Stargaze (STARS)",
+                  link: "/developers/stargaze",
+                },
+                {
+                  text: "Stride (STRD)",
+                  link: "/developers/stride",
+                },
+                {
+                  text: "Terra (LUNA)",
+                  link: "/developers/terra",
+                },
+                {
+                  text: "THORChain (RUNE)",
+                  link: "/developers/thorchain",
+                },
+                {
+                  text: "Tron (TRX)",
+                  link: "/developers/tron",
+                },
+              ],
+            },
           ],
-        },
-        {
-          text: "Blockchains Integration",
-          link: "/developers/blockchains-integration",
-          collapsed: true,
-          items: [
-            // {
-            //   text: "Akash (AKT)",
-            //   link: "/developers/akash",
-            // },
-            // {
-            //   text: "Arbitrum (AETH)",
-            //   link: "/developers/arbitrum",
-            // },
-            // {
-            //   text: "Aurora (AURORA)",
-            //   link: "/developers/aurora",
-            // },
-            // {
-            //   text: "Avalanche (AVAX)",
-            //   link: "/developers/avalanche",
-            // },
-            // {
-            //   text: "Axelar (AXL)",
-            //   link: "/developers/axelar",
-            // },
-            // {
-            //   text: "Bitcoin (BTC)",
-            //   link: "/developers/bitcoin",
-            // },
-            // {
-            //   text: "Bitcoin Cash (BCH)",
-            //   link: "/developers/bitcoin-cash",
-            // },
-            // {
-            //   text: "BNB Beacon Chain (BNB)",
-            //   link: "/developers/bnb-beacon-chain",
-            // },
-            // {
-            //   text: "BNB Smart Chain (BNB)",
-            //   link: "/developers/bnb-smart-chain",
-            // },
-            // {
-            //   text: "Canto (CANTO)",
-            //   link: "/developers/canto",
-            // },
-            // {
-            //   text: "Cosmos (ATOM)",
-            //   link: "/developers/cosmos",
-            // },
-            // {
-            //   text: "Crescent (CRE)",
-            //   link: "/developers/crescent",
-            // },
-            // {
-            //   text: "Cronos (CRO)",
-            //   link: "/developers/cronos",
-            // },
-            // {
-            //   text: "Dogecoin (DOGE)",
-            //   link: "/developers/dogecoin",
-            // },
-            {
-              text: "Ethereum (ETH)",
-              link: "/developers/ethereum",
-            },
-            // {
-            //   text: "Fantom (FTM)",
-            //   link: "/developers/fantom",
-            // },
-            // {
-            //   text: "Gnosis (xDAI)",
-            //   link: "/developers/gnosis",
-            // },
-            // {
-            //   text: "Juno (JUNO)",
-            //   link: "/developers/juno",
-            // },
-            // {
-            //   text: "Kava (KAVA)",
-            //   link: "/developers/kava",
-            // },
-            // {
-            //   text: "Klaytn (KLAY)",
-            //   link: "/developers/klaytn",
-            // },
-            // {
-            //   text: "Kujira (KUJI)",
-            //   link: "/developers/kujira",
-            // },
-            // {
-            //   text: "Litecoin (LTC)",
-            //   link: "/developers/litecoin",
-            // },
-            // {
-            //   text: "Mars (MARS)",
-            //   link: "/developers/mars",
-            // },
-            // {
-            //   text: "Maya Protocol (MAYA)",
-            //   link: "/developers/maya",
-            // },
-            // {
-            //   text: "Near Protocol (NEAR)",
-            //   link: "/developers/near",
-            // },
-            // {
-            //   text: "Optimism (ETH)",
-            //   link: "/developers/optimism",
-            // },
-            // {
-            //   text: "Osmosis (OSMO)",
-            //   link: "/developers/osmosis",
-            // },
-            // {
-            //   text: "Polygon (MATIC)",
-            //   link: "/developers/polygon",
-            // },
-            // {
-            //   text: "Sei Testnet (SEI)",
-            //   link: "/developers/sei",
-            // },
-            // {
-            //   text: "Solana (SOL)",
-            //   link: "/developers/solana",
-            // },
-            // {
-            //   text: "Stargaze (STARS)",
-            //   link: "/developers/stargaze",
-            // },
-            // {
-            //   text: "Stride (STRD)",
-            //   link: "/developers/stride",
-            // },
-            // {
-            //   text: "Terra (LUNA)",
-            //   link: "/developers/terra",
-            // },
-            // {
-            //   text: "THORChain (RUNE)",
-            //   link: "/developers/thorchain",
-            // },
-            // {
-            //   text: "Tron (TRX)",
-            //   link: "/developers/tron",
-            // },
-          ],
-        },
-        {
-          text: "Libraries Integration",
-          link: "/developers/libraries-integration",
-          collapsed: true,
-          items: [
-            { text: "Introduction", link: "/developers/libraries-integration" },
-            {
-              text: "BlockNative",
-              link: "/developers/blocknative-xdefi-integration",
-            },
-            {
-              text: "CosmosKit",
-              link: "/developers/cosmoskit-xdefi-integration",
-            },
-            {
-              text: "RainbowKit",
-              link: "/developers/rainbowkit-xdefi-integration",
-            },
-            {
-              text: "Solana Adapter",
-              link: "/developers/solana-adapter-xdefi-integration",
-            },
-          ],
-        },
-        {
-          text: "Campaigns Service API",
-          link: "/developers/campaigns-service-api",
         },
       ],
     },
@@ -731,11 +730,14 @@ function sidebarHome() {
         },
         { text: "Step-by-step Swap example", link: "/routing/swap-example" },
         {
-          text: "Integration",
-          collapsed: true,
-          items: [{ text: "Widget", link: "/routing/widget" }],
+          text: "Integration Widget",
+          link: "/routing/widget",
         },
       ],
+    },
+    {
+      text: "Campaigns Service API",
+      link: "/developers/campaigns-service-api",
     },
     {
       text: "Community",
