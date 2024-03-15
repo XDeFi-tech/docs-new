@@ -57,3 +57,9 @@ You can acces the list from here:
 - [CosmosKit](./cosmoskit-xdefi-integration)
 - [RainbowKit](./rainbowkit-xdefi-integration)
 - [Solana Adapter](./solana-adapter-xdefi-integration)
+
+## Campaigns Service API
+
+XDEFI Wallet is also providing a Campaigns Service API to make it easier for developers to integrate their dApps with XDEFI Wallet.
+
+- [Campaigns Service API](./campaigns-service-api)
