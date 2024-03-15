@@ -158,7 +158,7 @@ export default {
     },
 
     editLink: {
-      pattern: "https://github.com/XDeFi-tech/docs/edit/main/:path",
+      pattern: "https://github.com/XDeFi-tech/docs-new/edit/main/:path",
       text: "Edit this page on GitHub",
     },
 
@@ -171,7 +171,7 @@ export default {
     siteTitle: false,
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/XDeFi-tech/docs" },
+      { icon: "github", link: "https://github.com/XDeFi-tech" },
       { icon: "twitter", link: "https://twitter.com/xdefi_wallet" },
       { icon: "discord", link: "https://discord.com/invite/xdefiwallet" },
       { icon: { svg: telegramSVG }, link: "https://t.me/xdefi_announcements" },
