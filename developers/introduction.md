@@ -6,8 +6,6 @@ prev:
 
 # Developers
 
-[[toc]]
-
 ## Introduction
 
 Welcome developers! You are now ready to implement XDEFI and level up the reach and scalability of your dApp in an interopable and non stop evolving ecosystem of blockchains.
@@ -57,9 +55,3 @@ You can acces the list from here:
 - [CosmosKit](./cosmoskit-xdefi-integration)
 - [RainbowKit](./rainbowkit-xdefi-integration)
 - [Solana Adapter](./solana-adapter-xdefi-integration)
-
-## Campaigns Service API
-
-XDEFI Wallet is also providing a Campaigns Service API to make it easier for developers to integrate their dApps with XDEFI Wallet.
-
-- [Campaigns Service API](./campaigns-service-api)
