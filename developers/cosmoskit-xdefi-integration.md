@@ -25,7 +25,7 @@ import { wallets as xdefi } from "@cosmos-kit/xdefi";
 
 ### add to your provider
 
-```javascript
+```js
 function MyCosmosApp({ Component, pageProps }: AppProps) {
   return (
       <ChainProvider

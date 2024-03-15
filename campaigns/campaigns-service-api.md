@@ -1,7 +1,8 @@
 ---
 prev:
-  text: Libraries Integration
-  link: /developers/libraries-integration
+  text: Routing API
+  link: /routing/introduction
+next: false
 ---
 
 # Campaigns Service API
