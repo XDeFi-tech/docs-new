@@ -492,50 +492,50 @@ function sidebarHome() {
                   text: "Introduction",
                   link: "/developers/mobile-wallet",
                 },
-                // {
-                //   text: "Binance",
-                //   link: "/developers/mobile-binance",
-                // },
-                // {
-                //   text: "Bitcoin",
-                //   link: "/developers/mobile-bitcoin",
-                // },
-                // {
-                //   text: "Bitcoin Cash",
-                //   link: "/developers/mobile-bitcoin-cash",
-                // },
-                // {
-                //   text: "Dogecoin",
-                //   link: "/developers/mobile-dogecoin",
-                // },
-                // {
-                //   text: "Litecoin",
-                //   link: "/developers/mobile-litecoin",
-                // },
-                // {
-                //   text: "NEAR",
-                //   link: "/developers/mobile-near",
-                // },
-                // {
-                //   text: "Solana",
-                //   link: "/developers/mobile-solana",
-                // },
-                // {
-                //   text: "Terra",
-                //   link: "/developers/mobile-terra",
-                // },
-                // {
-                //   text: "Thorchain",
-                //   link: "/developers/mobile-thorchain",
-                // },
-                // {
-                //   text: "Ethereum (EVM's)",
-                //   link: "/developers/mobile-ethereum",
-                // },
-                // {
-                //   text: "Cosmos",
-                //   link: "/developers/mobile-cosmos",
-                // },
+                {
+                  text: "Binance",
+                  link: "/developers/mobile-binance",
+                },
+                {
+                  text: "Bitcoin",
+                  link: "/developers/mobile-bitcoin",
+                },
+                {
+                  text: "Bitcoin Cash",
+                  link: "/developers/mobile-bitcoin-cash",
+                },
+                {
+                  text: "Dogecoin",
+                  link: "/developers/mobile-dogecoin",
+                },
+                {
+                  text: "Litecoin",
+                  link: "/developers/mobile-litecoin",
+                },
+                {
+                  text: "NEAR",
+                  link: "/developers/mobile-near",
+                },
+                {
+                  text: "Solana",
+                  link: "/developers/mobile-solana",
+                },
+                {
+                  text: "Terra",
+                  link: "/developers/mobile-terra",
+                },
+                {
+                  text: "Thorchain",
+                  link: "/developers/mobile-thorchain",
+                },
+                {
+                  text: "Ethereum (EVM's)",
+                  link: "/developers/mobile-ethereum",
+                },
+                {
+                  text: "Cosmos",
+                  link: "/developers/mobile-cosmos",
+                },
               ],
             },
             {
