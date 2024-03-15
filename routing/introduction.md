@@ -26,12 +26,11 @@ To check the health status of the API just send a GET request to the above URL:
 ::: code-group
 
 ```ts [Request]
-URL = "https://routingapi.xdefiservices.com"
+URL = "https://routingapi.xdefiservices.com";
 
-response = await fetch(URL)
+response = await fetch(URL);
 
-console.log(response.status)
-
+console.log(response.status);
 ```
 
 ```ts [Response]
