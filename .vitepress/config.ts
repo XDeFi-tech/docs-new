@@ -262,7 +262,6 @@ function nav() {
         { text: "About $XDEFI token", link: "/about/xdefi-token/xdefi-token" },
         { text: "Developers", link: "/developers/introduction" },
         { text: "Routing", link: "/routing/introduction" },
-        { text: "Community", link: "/community/introduction" },
         {
           text: "Quick integration",
           items: [
@@ -292,7 +291,6 @@ function sidebarHome() {
     {
       text: "About XDEFI",
       link: "/about/xdefi",
-
       collapsed: true,
       items: [
         {
@@ -476,7 +474,7 @@ function sidebarHome() {
                   link: "/developers/extension-thorchain",
                 },
                 {
-                  text: "EVM's",
+                  text: "Ethereum (EVM's)",
                   link: "/developers/extension-evms",
                 },
                 {
@@ -613,18 +611,16 @@ function sidebarHome() {
     },
     {
       text: "Community",
-      link: "/community/introduction",
       collapsed: true,
       items: [
-        { text: "Introduction", link: "/community/introduction" },
+        { text: "X", link: "https://twitter.com/xdefi_wallet" },
+        { text: "Discord", link: "https://discord.gg/xdefi" },
+        { text: "Telegram", link: "https://t.me/xdefi_announcements" },
+        { text: "GitHub", link: "https://github.com/XDeFi-tech" },
+        { text: "Blog", link: "https://xdefi.io/blog" },
         {
-          text: "Channels",
-          collapsed: true,
-          items: [
-            { text: "Discord", link: "/community/discord" },
-            { text: "Telegram", link: "/community/telegram" },
-            { text: "X", link: "/community/x" },
-          ],
+          text: "$XDEFI on Coingecko",
+          link: "https://www.coingecko.com/en/coins/xdefi",
         },
       ],
     },
