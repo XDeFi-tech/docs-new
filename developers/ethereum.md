@@ -305,8 +305,6 @@ window.ethereum.on("data", data => {
 
 ### Events
 
-#### List of Events
-
 Currently we only support some action events from Wallet
 
 ```javascript
@@ -316,7 +314,7 @@ window.ethereum.on('close', () => window.location.reload());
 window.ethereum.on('accountsChanged', () => window.location.reload());
 ```
 
-**Event List**
+#### Events supported
 | Events | Trigger |
 | --- | --- |
 | `accountsChanged` | Receive when active account changed in Wallet |
@@ -325,9 +323,9 @@ window.ethereum.on('accountsChanged', () => window.location.reload());
 | `close` | Alias for disconnect event |
 | `disconnect` | Receive when disconnecting from Wallet |
 
-**Methods supported**
+#### Methods supported
 
-| Methods | Description |
-| --- | --- |
-| `on(event, callback)` | Add event listener |
+| Methods                | Description           |
+| ---------------------- | --------------------- |
+| `on(event, callback)`  | Add event listener    |
 | `off(event, callback)` | Remove event listener |
