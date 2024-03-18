@@ -1,29 +1,29 @@
 # Ethereum (ETH)
 
-Welcome to the xDeFi Wallet Ethereum integration guide. This guide will help you to integrate your Ethereum-based DApp with xDeFi Wallet.
+Welcome to the XDEFI Wallet Ethereum integration guide. This guide will help you to integrate your Ethereum-based DApp with XDEFI Wallet.
 
-### Detect XDeFi Wallet with Ethereum
+### Detect XDEFI Wallet with Ethereum
 
-To detect whether your browser is running XDeFi Wallet, you can use the following code:
+To detect whether your browser is running XDEFI Wallet, you can use the following code:
 
 ```javascript
 if (
-  (typeof window.ethereum !== "undefined" && window.ethereum?.isXDeFi) ||
+  (typeof window.ethereum !== "undefined" && window.ethereum?.isXDEFI) ||
   window.xdefi
 ) {
-  console.log("XDeFi Wallet detected");
+  console.log("XDEFI Wallet detected");
   // Your code here
 }
 ```
 
 Notice:
 
-- `window.ethereum` is a standard Ethereum provider object, and `window.ethereum.isXDeFi` is a property added by XDeFi Wallet. If `window.ethereum` is not available, you can also check `window.xdefi` which is a global object added by XDeFi Wallet.
-- The XDeFi Wallet on Ethereum JavaScript provider API is specified by [EIP-1193](https://eips.ethereum.org/EIPS/eip-1193) and [EIP-6963](https://eips.ethereum.org/EIPS/eip-6963). Support `window.ethereum` only and removal `window.web3`
+- `window.ethereum` is a standard Ethereum provider object, and `window.ethereum.isXDEFI` is a property added by XDEFI Wallet. If `window.ethereum` is not available, you can also check `window.xdefi` which is a global object added by XDEFI Wallet.
+- The XDEFI Wallet on Ethereum JavaScript provider API is specified by [EIP-1193](https://eips.ethereum.org/EIPS/eip-1193) and [EIP-6963](https://eips.ethereum.org/EIPS/eip-6963). Support `window.ethereum` only and removal `window.web3`
 
-### Connect/Disconnect to XDeFi Wallet
+### Connect/Disconnect to XDEFI Wallet
 
-To connect to XDeFi Wallet (access the user's [blockchain - like Ethereum] account(s)), you can use the following code:
+To connect to XDEFI Wallet (access the user's [blockchain - like Ethereum] account(s)), you can use the following code:
 
 ```javascript
 // Connect & get accounts
@@ -38,7 +38,7 @@ window.ethereum.request({method: 'wallet_getPermissions'});
 window.ethereum.request({method: 'wallet_requestPermissions'});
 ```
 
-To disconnect from XDeFi Wallet, please use:
+To disconnect from XDEFI Wallet, please use:
 
 ```javascript
 window.ethereum.disconnect();
@@ -46,7 +46,7 @@ window.ethereum.disconnect();
 
 ### Experience functions
 
-When your account is connected to XDeFi Wallet, let's start experiencing more functions.
+When your account is connected to XDEFI Wallet, let's start experiencing more functions.
 
 #### Get the current account
 
@@ -315,13 +315,14 @@ window.ethereum.on('accountsChanged', () => window.location.reload());
 ```
 
 #### Events supported
-| Events | Trigger |
-| --- | --- |
+
+| Events            | Trigger                                       |
+| ----------------- | --------------------------------------------- |
 | `accountsChanged` | Receive when active account changed in Wallet |
-| `networkChanged` | Receive when active network changed in Wallet |
-| `chainChanged` | Receive when active chain changed in Wallet |
-| `close` | Alias for disconnect event |
-| `disconnect` | Receive when disconnecting from Wallet |
+| `networkChanged`  | Receive when active network changed in Wallet |
+| `chainChanged`    | Receive when active chain changed in Wallet   |
+| `close`           | Alias for disconnect event                    |
+| `disconnect`      | Receive when disconnecting from Wallet        |
 
 #### Methods supported
 
