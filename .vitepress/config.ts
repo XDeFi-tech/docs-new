@@ -9,7 +9,7 @@ const { BASE: base = "/" } = process.env;
 // https://vitepress.dev/concepts/site-config
 export default {
   lang: "en-US",
-  title: "XDEFI Docs",
+  title: "XDEFI Dev Docs",
   description: "One Wallet for all your assets.",
   lastUpdated: true,
   cleanUrls: true,
@@ -31,15 +31,6 @@ export default {
         type: "image/svg+xml",
       },
     ],
-    // [
-    //   "link",
-    //   {
-    //     rel: "icon",
-    //     type: "image/svg+xml",
-    //     href: "/favicons/favicon-dark.svg",
-    //     media: "(prefers-color-scheme: dark)",
-    //   },
-    // ],
     [
       "link",
       {
@@ -48,15 +39,6 @@ export default {
         type: "image/png",
       },
     ],
-    // [
-    //   "link",
-    //   {
-    //     rel: "icon",
-    //     type: "image/png",
-    //     href: "/favicons/favicon-dark.png",
-    //     media: "(prefers-color-scheme: dark)",
-    //   },
-    // ],
     [
       "link",
       {
@@ -65,15 +47,6 @@ export default {
         type: "image/x-icon",
       },
     ],
-    // [
-    //   "link",
-    //   {
-    //     rel: "icon",
-    //     type: "image/x-icon",
-    //     href: "/favicons/favicon-dark.ico",
-    //     media: "(prefers-color-scheme: dark)",
-    //   },
-    // ],
     ["meta", { name: "msapplication-TileColor", content: "#fff" }],
     ["meta", { name: "theme-color", content: "#fff" }],
     [
@@ -84,8 +57,6 @@ export default {
           "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no",
       },
     ],
-    // ['meta', { property: 'og:title', content: 'XDEFI' }],
-    // ['meta', { property: 'og:description', content: 'One Wallet for all your assets.' }],
     [
       "meta",
       {
@@ -140,7 +111,7 @@ export default {
   ],
 
   themeConfig: {
-    // https://vitepress.dev/concepts/default-theme-config
+    // https://vitepress.dev/reference/default-theme-config#default-theme-config
     nav: nav(),
     outline: {
       level: "deep",
@@ -158,20 +129,14 @@ export default {
     },
 
     editLink: {
-      pattern: "https://github.com/XDeFi-tech/docs/edit/main/:path",
+      pattern: "https://github.com/XDeFi-tech/docs-new/edit/main/:path",
       text: "Edit this page on GitHub",
     },
 
-    logo: {
-      alt: "XDEFI Logo",
-      light: "/img/logo-light.svg",
-      dark: "/img/logo-dark.svg",
-    },
-
-    siteTitle: false,
+    siteTitle: "XDEFI Dev Docs",
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/XDeFi-tech/docs" },
+      { icon: "github", link: "https://github.com/XDeFi-tech" },
       { icon: "twitter", link: "https://twitter.com/xdefi_wallet" },
       { icon: "discord", link: "https://discord.com/invite/xdefiwallet" },
       { icon: { svg: telegramSVG }, link: "https://t.me/xdefi_announcements" },
@@ -239,8 +204,8 @@ export default {
         name: "og:title",
         content:
           pageData.frontmatter.layout === "home"
-            ? `XDEFI Docs`
-            : `${pageData.title} | XDEFI Docs`,
+            ? `XDEFI Dev Docs`
+            : `${pageData.title} | XDEFI Dev Docs`,
       },
       {
         name: "og:description",
@@ -261,25 +226,25 @@ function nav() {
         },
         { text: "About $XDEFI token", link: "/about/xdefi-token/xdefi-token" },
         { text: "Developers", link: "/developers/introduction" },
-        { text: "Routing", link: "/routing/introduction" },
-        { text: "Community", link: "/community/introduction" },
         {
-          text: "Quick integration",
+          text: "XDEFI Wallet Integration",
+          link: "/developers/xdefi-wallet-integration",
+        },
+        { text: "Routing API", link: "/routing/introduction" },
+        {
+          text: "Campaigns Service API",
+          link: "/campaigns/campaigns-service-api",
+        },
+        {
           items: [
             {
               text: "Install Extension Wallet",
               link: "https://xdefi.io",
             },
             {
-              text: "Extension Wallet",
-              link: "/developers/extension-integration",
-            },
-            {
               text: "Install Mobile Wallet",
               link: "https://xdefi.io",
             },
-            { text: "Mobile Wallet", link: "/developers/mobile-integration" },
-            { text: "Routing API", link: "/routing/widget" },
           ],
         },
       ],
@@ -292,7 +257,6 @@ function sidebarHome() {
     {
       text: "About XDEFI",
       link: "/about/xdefi",
-
       collapsed: true,
       items: [
         {
@@ -419,149 +383,124 @@ function sidebarHome() {
     {
       text: "Developers",
       link: "/developers/introduction",
+      items: [],
+    },
+    {
+      text: "XDEFI Wallet Integration",
+      link: "/developers/xdefi-wallet-integration",
       collapsed: true,
       items: [
         {
-          text: "XDEFI Wallet Integration",
-          link: "/developers/xdefi-wallet-integration",
+          text: "Extension",
+          link: "/developers/extension-wallet",
           collapsed: true,
           items: [
             {
-              text: "Extension",
+              text: "Introduction",
               link: "/developers/extension-wallet",
-              collapsed: true,
-              items: [
-                {
-                  text: "Introduction",
-                  link: "/developers/extension-wallet",
-                },
-                {
-                  text: "Detect XDEFI Providers",
-                  link: "/developers/extension-detect-xdefi-providers",
-                },
-                {
-                  text: "Binance",
-                  link: "/developers/extension-binance",
-                },
-                {
-                  text: "Bitcoin",
-                  link: "/developers/extension-bitcoin",
-                },
-                {
-                  text: "Bitcoin Cash",
-                  link: "/developers/extension-bitcoin-cash",
-                },
-                {
-                  text: "Dogecoin",
-                  link: "/developers/extension-dogecoin",
-                },
-                {
-                  text: "Litecoin",
-                  link: "/developers/extension-litecoin",
-                },
-                {
-                  text: "NEAR",
-                  link: "/developers/extension-near",
-                },
-                {
-                  text: "Solana",
-                  link: "/developers/extension-solana",
-                },
-                {
-                  text: "Terra",
-                  link: "/developers/extension-terra",
-                },
-                {
-                  text: "Thorchain",
-                  link: "/developers/extension-thorchain",
-                },
-                {
-                  text: "EVM's",
-                  link: "/developers/extension-evms",
-                },
-                {
-                  text: "Cosmos",
-                  link: "/developers/extension-cosmos",
-                },
-              ],
             },
             {
-              text: "Mobile",
-              link: "/developers/mobile-wallet",
-              collapsed: true,
-              items: [
-                {
-                  text: "Introduction",
-                  link: "/developers/mobile-wallet",
-                },
-              ],
+              text: "Detect XDEFI Providers",
+              link: "/developers/extension-detect-xdefi-providers",
+            },
+            {
+              text: "Binance",
+              link: "/developers/extension-binance",
+            },
+            {
+              text: "Bitcoin",
+              link: "/developers/extension-bitcoin",
+            },
+            {
+              text: "Bitcoin Cash",
+              link: "/developers/extension-bitcoin-cash",
+            },
+            {
+              text: "Dogecoin",
+              link: "/developers/extension-dogecoin",
+            },
+            {
+              text: "Litecoin",
+              link: "/developers/extension-litecoin",
+            },
+            {
+              text: "NEAR",
+              link: "/developers/extension-near",
+            },
+            {
+              text: "Solana",
+              link: "/developers/extension-solana",
+            },
+            {
+              text: "Terra",
+              link: "/developers/extension-terra",
+            },
+            {
+              text: "Thorchain",
+              link: "/developers/extension-thorchain",
+            },
+            {
+              text: "Ethereum (EVM's)",
+              link: "/developers/extension-evms",
+            },
+            {
+              text: "Cosmos",
+              link: "/developers/extension-cosmos",
             },
           ],
         },
         {
-          text: "Blockchains Integration",
-          link: "/developers/blockchains-integration",
+          text: "Mobile",
+          link: "/developers/mobile-wallet",
           collapsed: true,
           items: [
             {
-              text: "Avalanche",
-              link: "/developers/avalanche",
-              collapsed: true,
-              items: [
-                { text: "Introduction", link: "/developers/avalanche" },
-                {
-                  text: "Signing a Message",
-                  link: "/developers/avalanche-signing-message",
-                },
-                {
-                  text: "Provider API Reference",
-                  link: "/developers/avalanche-provider-api-reference",
-                },
-                {
-                  text: "Build a dApp",
-                  link: "/developers/avalanche-dapp-building",
-                },
-              ],
+              text: "Introduction",
+              link: "/developers/mobile-wallet",
             },
             {
-              text: "Arbitrum",
-              link: "/developers/arbitrum",
-              collapsed: true,
-              items: [
-                { text: "Introduction", link: "/developers/arbitrum" },
-                {
-                  text: "Extension Wallet",
-                  link: "/developers/arbitrum-extension-wallet",
-                },
-                {
-                  text: "Mobile Wallet",
-                  link: "/developers/arbitrum-mobile-wallet",
-                },
-                {
-                  text: "Detect the Provider",
-                  link: "/developers/arbitrum-detect-provider",
-                },
-                {
-                  text: "Estabilish a Connection",
-                  link: "/developers/arbitrum-establish-connection",
-                },
-                {
-                  text: "Sending a Transaction",
-                  link: "/developers/arbitrum-sending-transaction",
-                },
-                {
-                  text: "Signing a Message",
-                  link: "/developers/arbitrum-signing-message",
-                },
-                {
-                  text: "Provider API Reference",
-                  link: "/developers/arbitrum-provider-api-reference",
-                },
-                {
-                  text: "Build a dApp",
-                  link: "/developers/arbitrum-dapp-building",
-                },
-              ],
+              text: "Binance",
+              link: "/developers/mobile-binance",
+            },
+            {
+              text: "Bitcoin",
+              link: "/developers/mobile-bitcoin",
+            },
+            {
+              text: "Bitcoin Cash",
+              link: "/developers/mobile-bitcoin-cash",
+            },
+            {
+              text: "Dogecoin",
+              link: "/developers/mobile-dogecoin",
+            },
+            {
+              text: "Litecoin",
+              link: "/developers/mobile-litecoin",
+            },
+            {
+              text: "NEAR",
+              link: "/developers/mobile-near",
+            },
+            {
+              text: "Solana",
+              link: "/developers/mobile-solana",
+            },
+            {
+              text: "Terra",
+              link: "/developers/mobile-terra",
+            },
+            {
+              text: "Thorchain",
+              link: "/developers/mobile-thorchain",
+            },
+            {
+              text: "Ethereum (EVM's)",
+              link: "/developers/mobile-ethereum",
+            },
+            {
+              text: "Cosmos",
+              link: "/developers/mobile-cosmos",
             },
           ],
         },
@@ -570,7 +509,10 @@ function sidebarHome() {
           link: "/developers/libraries-integration",
           collapsed: true,
           items: [
-            { text: "Introduction", link: "/developers/libraries-integration" },
+            {
+              text: "Introduction",
+              link: "/developers/libraries-integration",
+            },
             {
               text: "BlockNative",
               link: "/developers/blocknative-xdefi-integration",
@@ -589,10 +531,161 @@ function sidebarHome() {
             },
           ],
         },
+        {
+          text: "Blockchains Integration",
+          link: "/developers/blockchains-integration",
+          collapsed: true,
+          items: [
+            {
+              text: "Introduction",
+              link: "/developers/blockchains-integration",
+            },
+            {
+              text: "Akash (AKT)",
+              link: "/developers/akash",
+            },
+            {
+              text: "Arbitrum (AETH)",
+              link: "/developers/arbitrum",
+            },
+            {
+              text: "Aurora (AURORA)",
+              link: "/developers/aurora",
+            },
+            {
+              text: "Avalanche (AVAX)",
+              link: "/developers/avalanche",
+            },
+            {
+              text: "Axelar (AXL)",
+              link: "/developers/axelar",
+            },
+            {
+              text: "Bitcoin (BTC)",
+              link: "/developers/bitcoin",
+            },
+            {
+              text: "Bitcoin Cash (BCH)",
+              link: "/developers/bitcoin-cash",
+            },
+            {
+              text: "BNB Beacon Chain (BNB)",
+              link: "/developers/bnb-beacon-chain",
+            },
+            {
+              text: "BNB Smart Chain (BNB)",
+              link: "/developers/bnb-smart-chain",
+            },
+            {
+              text: "Canto (CANTO)",
+              link: "/developers/canto",
+            },
+            {
+              text: "Cosmos (ATOM)",
+              link: "/developers/cosmos",
+            },
+            {
+              text: "Crescent (CRE)",
+              link: "/developers/crescent",
+            },
+            {
+              text: "Cronos (CRO)",
+              link: "/developers/cronos",
+            },
+            {
+              text: "Dogecoin (DOGE)",
+              link: "/developers/dogecoin",
+            },
+            {
+              text: "Ethereum (ETH)",
+              link: "/developers/ethereum",
+            },
+            {
+              text: "Fantom (FTM)",
+              link: "/developers/fantom",
+            },
+            {
+              text: "Gnosis (xDAI)",
+              link: "/developers/gnosis",
+            },
+            {
+              text: "Juno (JUNO)",
+              link: "/developers/juno",
+            },
+            {
+              text: "Kava (KAVA)",
+              link: "/developers/kava",
+            },
+            {
+              text: "Klaytn (KLAY)",
+              link: "/developers/klaytn",
+            },
+            {
+              text: "Kujira (KUJI)",
+              link: "/developers/kujira",
+            },
+            {
+              text: "Litecoin (LTC)",
+              link: "/developers/litecoin",
+            },
+            {
+              text: "Mars (MARS)",
+              link: "/developers/mars",
+            },
+            {
+              text: "Maya Protocol (MAYA)",
+              link: "/developers/maya",
+            },
+            {
+              text: "Near Protocol (NEAR)",
+              link: "/developers/near",
+            },
+            {
+              text: "Optimism (ETH)",
+              link: "/developers/optimism",
+            },
+            {
+              text: "Osmosis (OSMO)",
+              link: "/developers/osmosis",
+            },
+            {
+              text: "Polygon (MATIC)",
+              link: "/developers/polygon",
+            },
+            {
+              text: "Sei Testnet (SEI)",
+              link: "/developers/sei",
+            },
+            {
+              text: "Solana (SOL)",
+              link: "/developers/solana",
+            },
+            {
+              text: "Stargaze (STARS)",
+              link: "/developers/stargaze",
+            },
+            {
+              text: "Stride (STRD)",
+              link: "/developers/stride",
+            },
+            {
+              text: "Terra (LUNA)",
+              link: "/developers/terra",
+            },
+            {
+              text: "THORChain (RUNE)",
+              link: "/developers/thorchain",
+            },
+            {
+              text: "Tron (TRX)",
+              link: "/developers/tron",
+            },
+          ],
+        },
       ],
     },
     {
-      text: "Routing",
+      text: "Routing API",
       link: "/routing/introduction",
       collapsed: true,
       items: [
@@ -605,28 +698,35 @@ function sidebarHome() {
         },
         { text: "Step-by-step Swap example", link: "/routing/swap-example" },
         {
-          text: "Integration",
-          collapsed: true,
-          items: [{ text: "Widget", link: "/routing/widget" }],
+          text: "Integration Widget",
+          link: "/routing/widget-integration",
         },
       ],
     },
     {
+      text: "Campaigns Service API",
+      link: "/campaigns/campaigns-service-api",
+      items: [],
+    },
+    {
       text: "Community",
-      link: "/community/introduction",
       collapsed: true,
       items: [
-        { text: "Introduction", link: "/community/introduction" },
+        { text: "X", link: "https://twitter.com/xdefi_wallet" },
+        { text: "Discord", link: "https://discord.gg/xdefi" },
+        { text: "Telegram", link: "https://t.me/xdefi_announcements" },
+        { text: "GitHub", link: "https://github.com/XDeFi-tech" },
+        { text: "Blog", link: "https://xdefi.io/blog" },
         {
-          text: "Channels",
-          collapsed: true,
-          items: [
-            { text: "Discord", link: "/community/discord" },
-            { text: "Telegram", link: "/community/telegram" },
-            { text: "X", link: "/community/x" },
-          ],
+          text: "$XDEFI on Coingecko",
+          link: "https://www.coingecko.com/en/coins/xdefi",
         },
       ],
+    },
+    {
+      text: "User Documentation",
+      link: "https://docs.xdefi.io",
+      items: [],
     },
   ];
 }

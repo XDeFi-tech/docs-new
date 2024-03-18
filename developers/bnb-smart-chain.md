@@ -1,0 +1,1 @@
+# BNB Smart Chain (BNB)

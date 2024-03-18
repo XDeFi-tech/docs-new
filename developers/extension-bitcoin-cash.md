@@ -4,7 +4,7 @@ Develop BitcoinCash dApps
 
 ### Transfer request
 
-- [Parameters description](https://docs.xdefi.io/docs/technical-documentation/xdefi-extension-integration/detect-xdefi-providers#parameters)
+- [Parameters description](./extension-detect-xdefi-providers#request-parameters-description)
 
 ```javascript
 window.xfi.bitcoincash.request(

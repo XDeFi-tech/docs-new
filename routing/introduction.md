@@ -1,3 +1,11 @@
+---
+prev:
+  text: "XDEFI Wallet Integration"
+  link: "/developers/xdefi-wallet-integration"
+next:
+  text: "Endpoints"
+  link: "./endpoints"
+---
 # Routing API
 
 _Comprehensive description of the routing service and its endpoints_
@@ -9,7 +17,7 @@ _Comprehensive description of the routing service and its endpoints_
 - [Routing Graph QL API](./routing-graph-ql-api)
 - [Query and Mutation details](./query-mutation-details)
 - [Step by step Swap example](./swap-example)
-- [Integration](./integration)
+- [Widget Integration](./widget-integration)
 
 ## Introduction
 
@@ -26,13 +34,11 @@ To check the health status of the API just send a GET request to the above URL:
 ::: code-group
 
 ```ts [Request]
-import requests
+URL = "https://routingapi.xdefiservices.com";
 
-URL = "https://routingapi.xdefiservices.com"
+response = await fetch(URL);
 
-response = requests.get(URL)
-
-print(response.json())
+console.log(response.status);
 ```
 
 ```ts [Response]

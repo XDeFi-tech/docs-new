@@ -2,6 +2,9 @@
 prev:
   text: "Extension Wallet Integration"
   link: "/developers/extension-wallet"
+next:
+  text: "Binance"
+  link: "./mobile-binance"
 ---
 
 # Mobile Wallet Integration

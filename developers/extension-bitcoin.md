@@ -6,7 +6,7 @@ Our BTC connection also implements the [sats-connect](https://docs.xverse.app/sa
 
 ### Transfer request
 
-- [Parameters description](https://docs.xdefi.io/docs/technical-documentation/xdefi-extension-integration)
+- [Parameters description](./extension-detect-xdefi-providers#request-parameters-description)
 
 ```javascript
 window.xfi.bitcoin.request(

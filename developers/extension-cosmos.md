@@ -1,9 +1,3 @@
----
-next:
-  text: "Mobile Wallet Integration"
-  link: "/developers/mobile-wallet"
----
-
 # Extension Wallet Cosmos Integration
 
 Develop Cosmos based chains dApps

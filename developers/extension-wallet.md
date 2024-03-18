@@ -2,6 +2,9 @@
 prev:
   text: "Developers"
   link: "/developers/introduction"
+next:
+  text: "Detect XDEFI Providers"
+  link: "./extension-detect-xdefi-providers"
 ---
 
 # Extension Wallet Integration

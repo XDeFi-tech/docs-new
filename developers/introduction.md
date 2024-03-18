@@ -6,8 +6,6 @@ prev:
 
 # Developers
 
-[[toc]]
-
 ## Introduction
 
 Welcome developers! You are now ready to implement XDEFI and level up the reach and scalability of your dApp in an interopable and non stop evolving ecosystem of blockchains.

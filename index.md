@@ -27,11 +27,11 @@ features:
     details: Learn how to create multichain and crosschain applications using the most powerfull wallet.
     link: /developers/introduction
 
-  - title: Routing
+  - title: Routing API
     details: Implement our Widget to swap and bridge any assets accross our supported networks.
     link: /routing/introduction
 
-  - title: Community
-    details: Join the XDEFI community to connect, collaborate, and contribute with other developers.
-    link: /community/introduction
+  - title: Campaigns Service API
+    details: Allow third-party websites to connect a list of addresses from an external source to the XDEFI
+    link: /campaigns/campaigns-service-api
 ---
