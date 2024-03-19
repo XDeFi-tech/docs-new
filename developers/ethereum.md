@@ -203,7 +203,7 @@ Return `Promise<void>` with the result
 Return `Promise<void>` with the result, and an error otherwise
 
 ```javascript
-try{
+try {
   await window.await ethereum.request({
   method: 'wallet_switchEthereumChain',
     params: [{ chainId: '0xf00' }],
@@ -344,7 +344,7 @@ const refConnectWallet = ref()
 onMounted(() => {
   const rootDetectWallet = createRoot(refDetectWallet.value)
   rootDetectWallet.render(createElement(DetectWallet, {
-    network: 'ethereum',
+    chainId: 'ethereum',
   }, null))
 })
 </script>
