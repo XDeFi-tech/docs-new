@@ -8,18 +8,19 @@ To detect whether your browser is running XDEFI Wallet, you can use the followin
 
 ```javascript
 if (
-  (typeof window.ethereum !== "undefined" && window.ethereum?.isXDEFI) ||
-  window.xdefi
+  (typeof window.ethereum !== "undefined" && window.ethereum?._XDEFI) ||
+  window.xfi
 ) {
   console.log("XDEFI Wallet detected");
   // Your code here
 }
 ```
 
-Notice:
+Notice: `window.ethereum` is a standard Ethereum provider object, and `window.ethereum._XDEFI` is a property added by XDEFI Wallet. If `window.ethereum` is not available, you can also check `window.xfi` which is a global object added by XDEFI Wallet.
 
-- `window.ethereum` is a standard Ethereum provider object, and `window.ethereum.isXDEFI` is a property added by XDEFI Wallet. If `window.ethereum` is not available, you can also check `window.xdefi` which is a global object added by XDEFI Wallet.
-- The XDEFI Wallet on Ethereum JavaScript provider API is specified by [EIP-1193](https://eips.ethereum.org/EIPS/eip-1193) and [EIP-6963](https://eips.ethereum.org/EIPS/eip-6963). Support `window.ethereum` only and removal `window.web3`
+The XDEFI Wallet on Ethereum JavaScript provider API is specified by [EIP-1193](https://eips.ethereum.org/EIPS/eip-1193) and [EIP-6963](https://eips.ethereum.org/EIPS/eip-6963). Support `window.ethereum` only and removal `window.web3`
+
+<div ref="refDetectWallet"/>
 
 ### Connect/Disconnect to XDEFI Wallet
 
@@ -330,3 +331,20 @@ window.ethereum.on('accountsChanged', () => window.location.reload());
 | ---------------------- | --------------------- |
 | `on(event, callback)`  | Add event listener    |
 | `off(event, callback)` | Remove event listener |
+
+<script setup>
+import { createElement } from 'react'
+import { createRoot } from 'react-dom/client'
+import { ref, onMounted } from 'vue'
+
+import DetectWallet from '../components/DetectWallet.jsx'
+
+const refDetectWallet = ref()
+const refConnectWallet = ref()
+onMounted(() => {
+  const rootDetectWallet = createRoot(refDetectWallet.value)
+  rootDetectWallet.render(createElement(DetectWallet, {
+    network: 'ethereum',
+  }, null))
+})
+</script>
