@@ -11,7 +11,7 @@ next:
 
 XDEFI is the largest multichain wallet that provides hundreds of blockchains accessibility.
 
-- [EVM's and Ethereum](./ethereum)
+- [Ethereum and EVM's](./ethereum)
   - Ethereum(ETH)
   - Arbitrum(AETH)
   - Aurora(AURORA)
