@@ -541,96 +541,12 @@ function sidebarHome() {
               link: "/developers/blockchains-integration",
             },
             {
-              text: "Arbitrum (AETH)",
-              link: "/developers/arbitrum",
-            },
-            {
-              text: "Aurora (AURORA)",
-              link: "/developers/aurora",
-            },
-            {
-              text: "Avalanche (AVAX)",
-              link: "/developers/avalanche",
-            },
-            {
-              text: "Bitcoin (BTC)",
-              link: "/developers/bitcoin",
-            },
-            {
-              text: "Bitcoin Cash (BCH)",
-              link: "/developers/bitcoin-cash",
-            },
-            {
-              text: "BNB Beacon Chain (BNB)",
-              link: "/developers/bnb-beacon-chain",
-            },
-            {
-              text: "BNB Smart Chain (BNB)",
-              link: "/developers/bnb-smart-chain",
-            },
-            {
-              text: "Canto (CANTO)",
-              link: "/developers/canto",
-            },
-            {
-              text: "Cosmos (ATOM)",
-              link: "/developers/cosmos",
-            },
-            {
-              text: "Cronos (CRO)",
-              link: "/developers/cronos",
-            },
-            {
-              text: "Dogecoin (DOGE)",
-              link: "/developers/dogecoin",
-            },
-            {
-              text: "Ethereum (ETH)",
+              text: "Ethereum (EVM's)",
               link: "/developers/ethereum",
             },
             {
-              text: "Fantom (FTM)",
-              link: "/developers/fantom",
-            },
-            {
-              text: "Gnosis (xDAI)",
-              link: "/developers/gnosis",
-            },
-            {
-              text: "Klaytn (KLAY)",
-              link: "/developers/klaytn",
-            },
-            {
-              text: "Litecoin (LTC)",
-              link: "/developers/litecoin",
-            },
-            {
-              text: "Maya Protocol (MAYA)",
-              link: "/developers/maya",
-            },
-            {
-              text: "Near Protocol (NEAR)",
-              link: "/developers/near",
-            },
-            {
-              text: "Optimism (ETH)",
-              link: "/developers/optimism",
-            },
-            {
-              text: "Polygon (MATIC)",
-              link: "/developers/polygon",
-            },
-            {
-              text: "Solana (SOL)",
-              link: "/developers/solana",
-            },
-            {
-              text: "Terra (LUNA)",
-              link: "/developers/terra",
-            },
-            {
-              text: "THORChain (RUNE)",
-              link: "/developers/thorchain",
+              text: "Other Blockchains",
+              link: "/developers/other-blockchains",
             },
           ],
         },

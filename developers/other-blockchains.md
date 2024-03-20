@@ -1,8 +1,22 @@
-# Bitcoin (BTC)
+# Other Blockchains
 
-Welcome to the XDEFI Wallet Bitcoin integration guide.
+Native blockchains supported
 
-### Detect XDEFI Wallet with Bitcoin
+| Blockchain       | Chain ID      | xfi[chainId]             |
+| ---------------- | ------------- | ------------------------ |
+| BNB Beacon Chain | `binance`     | `window.xfi.binance`     |
+| Bitcoin          | `bitcoin`     | `window.xfi.bitcoin`     |
+| Bitcoin Cash     | `bitcoincash` | `window.xfi.bitcoincash` |
+| Cosmos           | `cosmos`      | `window.xfi.cosmos`      |
+| Dogecoin         | `dogecoin`    | `window.xfi.dogecoin`    |
+| Litecoin         | `litecoin`    | `window.xfi.litecoin`    |
+| Maya Protocol    | `mayachain`   | `window.xfi.mayachain`   |
+| NEAR Protocol    | `near`        | `window.xfi.near`        |
+| Solana           | `solana`      | `window.xfi.solana`      |
+| Terra            | `terra`       | `window.xfi.terra`       |
+| THORChain        | `thorchain`   | `window.xfi.thorchain`   |
+
+### Detect XDEFI Wallet
 
 To detect whether your browser is running XDEFI Wallet, you can use the following code:
 
@@ -15,6 +29,8 @@ if (window.xfi) {
 
 Notice: `window.xfi` which is a global object added by XDEFI Wallet.
 
+Below is an example of how to detect XDEFI Wallet with Bitcoin (BTC): `window.xfi.bitcoin`
+
 <div ref="refDetectWallet"/>
 
 ### Connect to XDEFI Wallet
@@ -23,7 +39,7 @@ To connect to XDEFI Wallet (access the user's [blockchain - like Ethereum] accou
 
 ```javascript
 // Connect & get accounts
-window.xfi.bitcoin.request(
+window.xfi[chainId].request(
   { method: "request_accounts", params: [] },
   (error, accounts) => {
     if (error) {
@@ -43,7 +59,7 @@ When your account is connected to XDEFI Wallet, let's start experiencing more fu
 #### Get the current account
 
 ```javascript
-window.xfi.bitcoin.request(
+window.xfi[chainId].request(
   { method: "request_accounts", params: [] },
   (error, accounts) => {
     if (error) {
@@ -63,7 +79,7 @@ Above code will return `Promise<Signature | RPC: 2.0>`
 #### Transfer
 
 ```javascript
-window.xfi.bitcoin.request(
+window.xfi[chainId].request(
   {
     method: "transfer",
     params: [
@@ -93,10 +109,10 @@ Return `Promise<String>` with the transaction hash
 Currently we only support some action events from Wallet
 
 ```javascript
-window.xfi.bitcoin.on('event_name', callback);
+window.xfi[chainId].on('event_name', callback);
 ​//Example
-window.xfi.bitcoin.on('close', () => window.location.reload());
-window.xfi.bitcoin.on('accountsChanged', () => window.location.reload());
+window.xfi[chainId].on('close', () => window.location.reload());
+window.xfi[chainId].on('accountsChanged', () => window.location.reload());
 ```
 
 #### Events supported
