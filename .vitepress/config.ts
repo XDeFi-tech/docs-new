@@ -541,12 +541,99 @@ function sidebarHome() {
               link: "/developers/blockchains-integration",
             },
             {
-              text: "Ethereum (EVM's)",
+              text: "EVM's",
               link: "/developers/ethereum",
+              collapsed: true,
+              items: [
+                {
+                  text: "Ethereum(ETH)",
+                  link: "/developers/ethereum",
+                },
+                {
+                  text: "Arbitrum(AETH)",
+                  link: "/developers/arbitrum",
+                },
+                {
+                  text: "Aurora (AURORA)",
+                  link: "/developers/aurora",
+                },
+                {
+                  text: "Avalanche (AVAX)",
+                  link: "/developers/avalanche",
+                },
+                {
+                  text: "BNB Smart Chain (BNB)",
+                  link: "/developers/bnb-smart-chain",
+                },
+                {
+                  text: "Canto (CANTO)",
+                  link: "/developers/canto",
+                },
+                {
+                  text: "Cronos (CRO)",
+                  link: "/developers/cronos",
+                },
+                {
+                  text: "Fantom (FTM)",
+                  link: "/developers/fantom",
+                },
+                {
+                  text: "Gnosis (xDAI)",
+                  link: "/developers/gnosis",
+                },
+                {
+                  text: "Optimism (ETH)",
+                  link: "/developers/optimism",
+                },
+                {
+                  text: "Polygon (MATIC)",
+                  link: "/developers/polygon",
+                },
+              ],
             },
             {
-              text: "Other Blockchains",
-              link: "/developers/other-blockchains",
+              text: "Bitcoin (BTC)",
+              link: "/developers/bitcoin",
+            },
+            {
+              text: "Bitcoin Cash (BCH)",
+              link: "/developers/bitcoin-cash",
+            },
+            {
+              text: "BNB Beacon Chain (BNB)",
+              link: "/developers/bnb-beacon-chain",
+            },
+            {
+              text: "Cosmos (ATOM)",
+              link: "/developers/cosmos",
+            },
+            {
+              text: "Dogecoin (DOGE)",
+              link: "/developers/dogecoin",
+            },
+            {
+              text: "Litecoin (LTC)",
+              link: "/developers/litecoin",
+            },
+            {
+              text: "Maya Protocol (MAYA)",
+              link: "/developers/maya",
+            },
+            {
+              text: "NEAR (NEAR)",
+              link: "/developers/near",
+            },
+            {
+              text: "Solana (SOL)",
+              link: "/developers/solana",
+            },
+            {
+              text: "Terra (LUNA)",
+              link: "/developers/terra",
+            },
+            {
+              text: "Thorchain (RUNE)",
+              link: "/developers/thorchain",
             },
           ],
         },
