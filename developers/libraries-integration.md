@@ -6,6 +6,7 @@ next:
   text: "BlockNative"
   link: "./blocknative-xdefi-integration"
 ---
+
 # Libraries Integration
 
 XDEFI Wallet is also integrated in a large panel of libraries to make it accessible to any developer's needs.

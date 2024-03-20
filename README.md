@@ -32,13 +32,14 @@ making a pull request.
 
 ## Directory Structure
 
+- /.vitepress: Configuration files for the VitePress site.
 - /about: A category for learning more about XDEFI Technologies and $XDEFI token.
+- /campaigns: A category for Campaigns Service API
 - /developers: A category with tutorials and guides for deploying
   dApps and connect with XDEFI Wallet.
 - /routing: Technical reference materials for integrating our Routing aggregator API.
-<!-- * /guides [WIP]: In-depth articles that cover specific topics in detail. -->
-- /community: A category for the XDEFI community.
 - /public: Images, diagrams, and other media files used in the documentation.
+- /components: Custom components used in the documentation.
 
 ## Feedback & Suggestions
 

@@ -27,23 +27,17 @@ XDEFI is the largest multichain wallet that provide hundreds of blockchains acce
 
 You can access a single ecosystem integration with his set of tutorial from here:
 
-- [Arbitrum](./arbitrum)
-- [Avalanche](./avalanche)
-- [Binance](./binance)
-- [Bitcoin](./bitcoin)
-- [Bitcoin Cash](./bitcoin-cash)
-- [Cosmos](./cosmos)
-- [Dogecoin](./dogecoin)
-- [Ethereum](./ethereum)
-- [Litcoin](./litecoin)
-- [Near](./near)
-- [Optimism](./optimism)
-- [Polygon](./polygon)
-- [Solana](./solana)
-- [Terra](./terra)
-- [Testnets](./testnets)
-- [Thorchain](./thorchcain)
-- [Zetachain](./zetachain)
+- BNB Smart Chain
+- Bitcoin
+- Bitcoin Cash
+- Cosmos
+- Dogecoin
+- Litecoin
+- Maya Protocol
+- NEAR Protocol
+- Solana
+- Terra
+- THORChain
 
 ## Libraries integration
 
