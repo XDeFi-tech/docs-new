@@ -109,5 +109,3 @@ window.xfi[chainId].on('accountsChanged', () => window.location.reload());
 | ---------------------- | --------------------- |
 | `on(event, callback)`  | Add event listener    |
 | `off(event, callback)` | Remove event listener |
-
-<!-- endregion -->
