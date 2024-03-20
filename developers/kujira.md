@@ -1,1 +1,0 @@
-# Kujira (KUJI)

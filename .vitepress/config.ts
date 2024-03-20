@@ -541,10 +541,6 @@ function sidebarHome() {
               link: "/developers/blockchains-integration",
             },
             {
-              text: "Akash (AKT)",
-              link: "/developers/akash",
-            },
-            {
               text: "Arbitrum (AETH)",
               link: "/developers/arbitrum",
             },
@@ -555,10 +551,6 @@ function sidebarHome() {
             {
               text: "Avalanche (AVAX)",
               link: "/developers/avalanche",
-            },
-            {
-              text: "Axelar (AXL)",
-              link: "/developers/axelar",
             },
             {
               text: "Bitcoin (BTC)",
@@ -585,10 +577,6 @@ function sidebarHome() {
               link: "/developers/cosmos",
             },
             {
-              text: "Crescent (CRE)",
-              link: "/developers/crescent",
-            },
-            {
               text: "Cronos (CRO)",
               link: "/developers/cronos",
             },
@@ -609,28 +597,12 @@ function sidebarHome() {
               link: "/developers/gnosis",
             },
             {
-              text: "Juno (JUNO)",
-              link: "/developers/juno",
-            },
-            {
-              text: "Kava (KAVA)",
-              link: "/developers/kava",
-            },
-            {
               text: "Klaytn (KLAY)",
               link: "/developers/klaytn",
             },
             {
-              text: "Kujira (KUJI)",
-              link: "/developers/kujira",
-            },
-            {
               text: "Litecoin (LTC)",
               link: "/developers/litecoin",
-            },
-            {
-              text: "Mars (MARS)",
-              link: "/developers/mars",
             },
             {
               text: "Maya Protocol (MAYA)",
@@ -645,28 +617,12 @@ function sidebarHome() {
               link: "/developers/optimism",
             },
             {
-              text: "Osmosis (OSMO)",
-              link: "/developers/osmosis",
-            },
-            {
               text: "Polygon (MATIC)",
               link: "/developers/polygon",
             },
             {
-              text: "Sei Testnet (SEI)",
-              link: "/developers/sei",
-            },
-            {
               text: "Solana (SOL)",
               link: "/developers/solana",
-            },
-            {
-              text: "Stargaze (STARS)",
-              link: "/developers/stargaze",
-            },
-            {
-              text: "Stride (STRD)",
-              link: "/developers/stride",
             },
             {
               text: "Terra (LUNA)",
@@ -675,10 +631,6 @@ function sidebarHome() {
             {
               text: "THORChain (RUNE)",
               link: "/developers/thorchain",
-            },
-            {
-              text: "Tron (TRX)",
-              link: "/developers/tron",
             },
           ],
         },
