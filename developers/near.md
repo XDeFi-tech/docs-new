@@ -1,8 +1,6 @@
 # NEAR (NEAR)
 
-<!--@include: ./_xfi.md{,12}-->
-
-And `near` is the `chainId` for NEAR Protocol.
+<!--@include: ./_xfi.md{,12}--> And `near` is the `chainId` for NEAR Protocol.
 
 <div ref="refDetectWallet"/>
 

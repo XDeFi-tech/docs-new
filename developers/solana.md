@@ -1,8 +1,6 @@
 # Solana (SOL)
 
-<!--@include: ./_xfi.md{,12}-->
-
-And `solana` is the `chainId` for Solana.
+<!--@include: ./_xfi.md{,12}--> And `solana` is the `chainId` for Solana.
 
 <div ref="refDetectWallet"/>
 

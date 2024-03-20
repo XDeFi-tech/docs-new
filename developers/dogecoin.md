@@ -1,8 +1,6 @@
 # Dogecoin (DOGE)
 
-<!--@include: ./_xfi.md{,12}-->
-
-And `dogecoin` is the `chainId` for Dogecoin.
+<!--@include: ./_xfi.md{,12}--> And `dogecoin` is the `chainId` for Dogecoin.
 
 <div ref="refDetectWallet"/>
 

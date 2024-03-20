@@ -1,8 +1,6 @@
 # Thorchain (RUNE)
 
-<!--@include: ./_xfi.md{,12}-->
-
-And `thorchain` is the `chainId` for Thorchain.
+<!--@include: ./_xfi.md{,12}--> And `thorchain` is the `chainId` for Thorchain.
 
 <div ref="refDetectWallet"/>
 

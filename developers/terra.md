@@ -1,8 +1,6 @@
 # Terra (LUNA)
 
-<!--@include: ./_xfi.md{,12}-->
-
-And `terra` is the `chainId` for Terra.
+<!--@include: ./_xfi.md{,12}--> And `terra` is the `chainId` for Terra.
 
 <div ref="refDetectWallet"/>
 

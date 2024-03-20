@@ -1,8 +1,6 @@
 # Litecoin (LTC)
 
-<!--@include: ./_xfi.md{,12}-->
-
-And `litecoin` is the `chainId` for Litecoin.
+<!--@include: ./_xfi.md{,12}--> And `litecoin` is the `chainId` for Litecoin.
 
 <div ref="refDetectWallet"/>
 

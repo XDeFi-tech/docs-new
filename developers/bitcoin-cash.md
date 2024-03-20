@@ -1,8 +1,6 @@
 # Bitcoin Cash (BCH)
 
-<!--@include: ./_xfi.md{,12}-->
-
-And `bitcoincash` is the `chainId` for Bitcoin Cash.
+<!--@include: ./_xfi.md{,12}--> And `bitcoincash` is the `chainId` for Bitcoin Cash.
 
 <div ref="refDetectWallet"/>
 

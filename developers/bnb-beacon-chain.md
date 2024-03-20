@@ -1,8 +1,6 @@
 # BNB Beacon Chain (BNB)
 
-<!--@include: ./_xfi.md{,12}-->
-
-And `binance` is the `chainId` for BNB Beacon Chain.
+<!--@include: ./_xfi.md{,12}--> And `binance` is the `chainId` for BNB Beacon Chain.
 
 <div ref="refDetectWallet"/>
 

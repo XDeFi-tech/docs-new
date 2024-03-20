@@ -1,8 +1,6 @@
 # Maya Protocol (MAYA)
 
-<!--@include: ./_xfi.md{,12}-->
-
-And `mayachain` is the `chainId` for Maya Protocol.
+<!--@include: ./_xfi.md{,12}--> And `mayachain` is the `chainId` for Maya Protocol.
 
 <div ref="refDetectWallet"/>
 

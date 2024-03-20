@@ -1,8 +1,6 @@
 # Bitcoin (BTC)
 
-<!--@include: ./_xfi.md{,12}-->
-
-And `bitcoin` is the `chainId` for Bitcoin.
+<!--@include: ./_xfi.md{,12}--> And `bitcoin` is the `chainId` for Bitcoin.
 
 <div ref="refDetectWallet"/>
 
