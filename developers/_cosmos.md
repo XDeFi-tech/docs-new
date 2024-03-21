@@ -18,7 +18,7 @@ To connect to XDEFI Wallet (access the user's [blockchain - like Ethereum] accou
 ```javascript
 // Connect & get accounts
 await window.xfi.keplr.enable(subChainId);
-const offlineSigner = window.keplr.getOfflineSigner(subChainId);
+const offlineSigner = window.xfi.keplr.getOfflineSigner(subChainId);
 const accounts = offlineSigner.getAccounts();
 console.log("Account connected:", accounts[0].address);
 ```
@@ -35,7 +35,7 @@ When your account is connected to XDEFI Wallet, let's start experiencing more fu
 
 ```javascript
 await window.xfi.keplr.enable(subChainId);
-const offlineSigner = window.keplr.getOfflineSigner(subChainId);
+const offlineSigner = window.xfi.keplr.getOfflineSigner(subChainId);
 await offlineSigner
   .getAccounts()
   .then((accounts) => {
@@ -52,7 +52,7 @@ Above code will return `Promise<Signature | RPC: 2.0>`
 #### Get Address / Public Key
 
 ```javascript
-window.keplr
+window.xfi.keplr
   .getKey(subChainId)()
   .then((data) => {
     console.log(data);
@@ -77,7 +77,7 @@ If the webpage has permission and Keplr is unlocked, this function will return t
 #### Sign Direct / Protobuf
 
 ```typescript
-window.keplr.signDirect(
+window.xfi.keplr.signDirect(
     chainId:string,
     signer:string,
     signDoc: {
@@ -101,7 +101,7 @@ window.keplr.signDirect(
 #### Request Transaction Broadcasting
 
 ```typescript
-window.keplr.sendTx(
+window.xfi.keplr.sendTx(
     chainId: subChainId,
     tx: Uint8Array,
     mode: BroadcastMode
