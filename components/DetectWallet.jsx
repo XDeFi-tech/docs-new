@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const DetectWallet = ({ chainId }) => {
+const DetectWallet = ({ chainId, subChainId }) => {
   const [address, setAddress] = useState(undefined);
 
   const detectWallet = async () => {
@@ -13,6 +13,15 @@ const DetectWallet = ({ chainId }) => {
         await window.ethereum
           .request({ method: "eth_requestAccounts" })
           .then((accounts) => setAddress(accounts[0]));
+        return;
+      }
+      if (subChainId) {
+        await window.xfi.keplr.enable(subChainId);
+        const offlineSigner = window.keplr.getOfflineSigner(subChainId);
+        await offlineSigner
+          .getAccounts()
+          .then((accounts) => setAddress(accounts[0].address))
+          .catch((error) => console.log(error));
         return;
       }
       await window.xfi[chainId].request(

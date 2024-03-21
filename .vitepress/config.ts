@@ -541,7 +541,7 @@ function sidebarHome() {
               link: "/developers/blockchains-integration",
             },
             {
-              text: "EVM's",
+              text: "EVM Chains",
               link: "/developers/ethereum",
               collapsed: true,
               items: [
@@ -592,6 +592,65 @@ function sidebarHome() {
               ],
             },
             {
+              text: "Comos Chains",
+              link: "/developers/cosmos",
+              collapsed: true,
+              items: [
+                {
+                  text: "Cosmos Hub (ATOM)",
+                  link: "/developers/cosmos",
+                },
+                {
+                  text: "Akash (AKT)",
+                  link: "/developers/akash",
+                },
+                {
+                  text: "Axelar (AXL)",
+                  link: "/developers/axelar",
+                },
+                {
+                  text: "Crescent (CRE)",
+                  link: "/developers/crescent",
+                },
+                {
+                  text: "Crypto.Org (CRO)",
+                  link: "/developers/crypto-org",
+                },
+                {
+                  text: "Juno (JUNO)",
+                  link: "/developers/juno",
+                },
+                {
+                  text: "Kava (KAVA)",
+                  link: "/developers/kava",
+                },
+                {
+                  text: "Kujira (KUJI)",
+                  link: "/developers/kujira",
+                },
+                {
+                  text: "Mars (MARS)",
+                  link: "/developers/mars",
+                },
+                {
+                  text: "Osmosis (OSMO)",
+                  link: "/developers/osmosis",
+                },
+                {
+                  text: "Sei Testnet (SEI)",
+                  link: "/developers/sei",
+                },
+                {
+                  text: "Stargaze (STARS)",
+                  link: "/developers/stargaze",
+                },
+                {
+                  text: "Stride (STRD)",
+                  link: "/developers/stride",
+                },
+              ],
+            },
+            {
               text: "Bitcoin (BTC)",
               link: "/developers/bitcoin",
             },
@@ -602,10 +661,6 @@ function sidebarHome() {
             {
               text: "BNB Beacon Chain (BNB)",
               link: "/developers/bnb-beacon-chain",
-            },
-            {
-              text: "Cosmos (ATOM)",
-              link: "/developers/cosmos",
             },
             {
               text: "Dogecoin (DOGE)",

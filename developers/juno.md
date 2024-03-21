@@ -1,16 +1,12 @@
----
-next:
-  text: "Akash (AKT)"
-  link: "./akash"
----
+# Juno (JUNO)
 
-# Cosmos Hub (ATOM)
-
-<!--@include: ./_cosmos.md{,12}--> And `cosmoshub-4` is the `subChainId` for Cosmos Hub.
+<!--@include: ./_cosmos.md{,12}--> And `juno-1` is the `subChainId` for Juno.
 
 <div ref="refDetectWallet"/>
 
 <!--@include: ./_cosmos.md{14,}-->
+
+<div ref="refDetectWallet"/>
 
 <script setup>
 import { createElement } from 'react'
@@ -25,7 +21,7 @@ onMounted(() => {
   const rootDetectWallet = createRoot(refDetectWallet.value)
   rootDetectWallet.render(createElement(DetectWallet, {
     chainId: 'cosmos',
-    subChainId: 'cosmoshub-4',
+    subChainId: 'juno-1',
   }, null))
 })
 </script>

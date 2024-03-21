@@ -11,7 +11,7 @@ next:
 
 XDEFI is the largest multichain wallet that provides hundreds of blockchains accessibility.
 
-- EVM's
+- EVM Chains
   - [Ethereum (ETH)](./ethereum)
   - [Arbitrum (AETH)](./arbitrum)
   - [Aurora (AURORA)](./aurora)
@@ -23,7 +23,23 @@ XDEFI is the largest multichain wallet that provides hundreds of blockchains acc
   - [Gnosis (xDAI)](./gnosis)
   - [Optimism (OPTIMISM)](./optimism)
   - [Polygon (MATIC)](./polygon)
-- Other Blockchains
+  - ...
+- Cosmos Chains
+  - [Cosmos Hub (ATOM)](./cosmos)
+  - [Akash (AKT)](./akash)
+  - [Axelar (AXL)](./axelar)
+  - [Crescent (CRE)](./crescent)
+  - [Crypto.Org (CRO)](./crypto-org)
+  - [Juno (JUNO)](./juno)
+  - [Kava (KAVA)](./kava)
+  - [Kujira (KUJI)](./kujira)
+  - [Mars (MARS)](./mars)
+  - [Osmosis (OSMO)](./osmosis)
+  - [Sei Testnet (SEI)](./sei)
+  - [Stargaze (STARS)](./stargaze)
+  - [Stride (STRD)](./stride)
+  - ...
+- Other Chains
   - [BNB Beacon Chain (BNB)](./bnb-beacon-chain)
   - [Bitcoin (BTC)](./bitcoin)
   - [Bitcoin Cash (BCH)](./bitcoin-cash)
@@ -35,3 +51,4 @@ XDEFI is the largest multichain wallet that provides hundreds of blockchains acc
   - [Solana (SOL)](./solana)
   - [Terra (LUNA)](./terra)
   - [THORChain (RUNE)](./thorchain)
+  - More coming ...
