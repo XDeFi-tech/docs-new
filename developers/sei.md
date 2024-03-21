@@ -1,12 +1,6 @@
----
-next:
-  text: "Akash (AKT)"
-  link: "./akash"
----
+# Sei Testnet (SEI)
 
-# Cosmos Hub (ATOM)
-
-<!--@include: ./_cosmos.md{,12}--> And `cosmoshub-4` is the `subChainId` for Cosmos Hub.
+<!--@include: ./_cosmos.md{,12}--> And `atlantic-2` is the `subChainId` for Sei Testnet.
 
 <div ref="refDetectWallet"/>
 
@@ -25,7 +19,7 @@ onMounted(() => {
   const rootDetectWallet = createRoot(refDetectWallet.value)
   rootDetectWallet.render(createElement(DetectWallet, {
     chainId: 'cosmos',
-    subChainId: 'cosmoshub-4',
+    subChainId: 'atlantic-2',
   }, null))
 })
 </script>

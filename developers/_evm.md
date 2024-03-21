@@ -1,4 +1,4 @@
-### Detect XDEFI Wallet with Ethereum
+### Detect XDEFI Wallet with Ethereum Base Chain
 
 To detect whether your browser is running XDEFI Wallet, you can use the following code:
 
