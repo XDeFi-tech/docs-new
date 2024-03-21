@@ -592,7 +592,7 @@ function sidebarHome() {
               ],
             },
             {
-              text: "Comos Chains",
+              text: "Cosmos Chains",
               link: "/developers/cosmos",
               collapsed: true,
               items: [
