@@ -6,8 +6,6 @@
 
 <!--@include: ./_cosmos.md{14,}-->
 
-<div ref="refDetectWallet"/>
-
 <script setup>
 import { createElement } from 'react'
 import { createRoot } from 'react-dom/client'

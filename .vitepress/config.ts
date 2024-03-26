@@ -297,7 +297,7 @@ function sidebarHome() {
               items: [
                 {
                   text: "Add a Custom Network",
-                  link: "/about/xdefi-technologies/how-to-add-custom-network",
+                  link: "/about/xdefi-technologies/add-custom-network",
                 },
                 {
                   text: "Change Custom RPC",
@@ -716,6 +716,11 @@ function sidebarHome() {
     {
       text: "Campaigns Service API",
       link: "/campaigns/campaigns-service-api",
+      items: [],
+    },
+    {
+      text: "Assets and Prices API",
+      link: "/assets-services/assets-and-prices-api",
       items: [],
     },
     {
