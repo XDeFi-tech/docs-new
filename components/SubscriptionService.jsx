@@ -43,6 +43,14 @@ const SubscriptionServices = () => {
     ids: [],
   };
 
+  const generateID = () => {
+    return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (c) => {
+      const r = (Math.random() * 16) | 0,
+        v = c == "x" ? r : (r & 0x3) | 0x8;
+      return v.toString(16);
+    });
+  };
+
   const subscriptionServices = async () => {
     if (loading) {
       socket.close();
@@ -52,34 +60,34 @@ const SubscriptionServices = () => {
     setLoading(true);
     setResponse({});
 
-    socket.onopen = async () => {
-      socket.send(
-        JSON.stringify({
-          type: "connection_init",
-          payload: {},
-        }),
-      );
+    socket.send(
+      JSON.stringify({
+        type: "connection_init",
+        payload: {},
+      }),
+    );
 
-      socket.send(
-        JSON.stringify({
-          type: "subscribe",
-          payload: {
-            operationId: "117",
-            operationName: "Subscription",
-            httpMultipartParams: {
-              includeCookies: true,
-            },
-            query,
-            variables: vars,
+    socket.send(
+      JSON.stringify({
+        type: "subscribe",
+        id: generateID(),
+        payload: {
+          operationName: "Subscription",
+          httpMultipartParams: {
+            includeCookies: true,
           },
-        }),
-      );
-    };
+          query,
+          variables: vars,
+        },
+      }),
+    );
+    // socket.onopen = async () => {
+    // };
   };
 
   useEffect(() => {
-    socket.onmessage = (event) => {
-      setResponse(event.payload.data);
+    socket.onmessage = (message) => {
+      setResponse(message.payload.data);
       setLoading(false);
     };
   }, []);
