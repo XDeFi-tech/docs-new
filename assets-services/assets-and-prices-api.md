@@ -458,8 +458,9 @@ When you subscribe to the service, you will receive real-time updates for the as
 ::: code-group
 
 ```javascript [Example]
-const GRAPHQL_ENDPOINT =
-  "https://subscription-service.dev.xdefi.services/graphql";
+const socket = new WebSocket(
+  "wss://subscription-service.dev.xdefi.services/graphql",
+);
 const query = `
   subscription Subscription($ids: [String!]) {
     price(ids: $ids) {
@@ -495,18 +496,33 @@ const vars = {
 };
 
 const subscriptionServices = async () => {
-  await fetch(GRAPHQL_ENDPOINT, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      query: query,
-      variables: vars,
+  socket.send(
+    JSON.stringify({
+      type: "connection_init",
+      payload: {},
     }),
-  }).then((result) => {
-    console.log(result);
-  });
+  );
+
+  socket.send(
+    JSON.stringify({
+      type: "subscribe",
+      payload: {
+        operationId: "117",
+        operationName: "Subscription",
+        httpMultipartParams: {
+          includeCookies: true,
+        },
+        query,
+        variables: vars,
+      },
+    }),
+  );
+};
+
+socket.onmessage = (event) => {
+  const data = JSON.parse(event.data);
+  console.log(data);
+  // Handle the data
 };
 
 subscriptionServices();

@@ -1,15 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import LoadingIcon from "./LoadingIcon";
 import PlayIcon from "./PlayIcon";
 
 const SubscriptionServices = () => {
-  const GRAPHQL_ENDPOINT =
-    "https://subscription-service.dev.xdefi.services/graphql";
   const [response, setResponse] = useState({});
   const [loading, setLoading] = useState(false);
 
-  const query = `
-  subscription Subscription($ids: [String!]) {
+  const socket = new WebSocket(
+    "wss://subscription-service.dev.xdefi.services/graphql",
+  );
+
+  const query = `subscription Subscription($ids: [String!]) {
     price(ids: $ids) {
       chain
       id
@@ -43,29 +44,45 @@ const SubscriptionServices = () => {
   };
 
   const subscriptionServices = async () => {
+    if (loading) {
+      socket.close();
+      setLoading(false);
+      return;
+    }
     setLoading(true);
     setResponse({});
 
-    await fetch(GRAPHQL_ENDPOINT, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        query: query,
-        variables: vars,
-      }),
-    })
-      .then((result) => {
-        console.log(result);
-      })
-      .catch((error) => {
-        setResponse(error);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
+    socket.onopen = async () => {
+      socket.send(
+        JSON.stringify({
+          type: "connection_init",
+          payload: {},
+        }),
+      );
+
+      socket.send(
+        JSON.stringify({
+          type: "subscribe",
+          payload: {
+            operationId: "117",
+            operationName: "Subscription",
+            httpMultipartParams: {
+              includeCookies: true,
+            },
+            query,
+            variables: vars,
+          },
+        }),
+      );
+    };
   };
+
+  useEffect(() => {
+    socket.onmessage = (event) => {
+      setResponse(event.payload.data);
+      setLoading(false);
+    };
+  }, []);
 
   return (
     <>
@@ -73,17 +90,16 @@ const SubscriptionServices = () => {
         <button
           onClick={subscriptionServices}
           className="flex justify-center items-center gap-2 bg-[#2770CB] text-white px-2 py-1 rounded"
-          disabled={loading}
         >
           {loading ? (
             <>
               <LoadingIcon />
-              Fetching...
+              Listening...
             </>
           ) : (
             <>
               <PlayIcon />
-              Test the query
+              Subscription
             </>
           )}
         </button>
