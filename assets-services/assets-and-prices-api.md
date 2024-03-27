@@ -14,9 +14,7 @@ The API is available for a wide range of blockchains, including Ethereum, Binanc
 
 The base URL for all API endpoints is: `https://gql-router.xdefiservices.com/graphql`.
 
-## Assets Services
-
-### Get Assets Tokens
+## Get Assets Tokens
 
 Get Assets Tokens provides information about tokens on various blockchains, including Ethereum, Binance Smart Chain, and Solana. The API returns data such as the token's name, symbol, icon, market cap, price, and contracts.
 
@@ -127,7 +125,7 @@ getAssetsTokens();
 
 <div ref="refAssetsTokens"/>
 
-### Get Assets Crypto Currencies
+## Get Assets Crypto Currencies
 
 Get Assets Crypto Currencies provides information about cryptocurrencies on various blockchains, including Ethereum, Binance Smart Chain, and Solana. The API returns data such as the cryptocurrency's name, symbol, icon, type, external data, scaling factor, chain, market cap, and price.
 
@@ -227,7 +225,7 @@ getCryptoCurrencies();
 
 <div ref="refAssetsCryptoCurrencies"/>
 
-### Get Assets Fiat Currencies
+## Get Assets Fiat Currencies
 
 Get Assets Fiat Currencies provides information about fiat currencies on various blockchains, including Ethereum, Binance Smart Chain, and Solana. The API returns data such as the fiat currency's name, symbol, scaling factor, character, and price.
 
@@ -319,7 +317,7 @@ getFiatCurrencies();
 
 <div ref="refAssetsFiatCurrencies"/>
 
-### Get LP Tokens
+## Get LP Tokens
 
 Get LP Tokens is fully the same structure as Get Assets Tokens but it’s like "Low Priority" tokens. The API returns data such as the LP token's symbol, scaling factor, address, chain, fees, defi protocols and external data.
 
@@ -436,13 +434,13 @@ const getAssetsLPTokens = async () => {
 
 <div ref="refAssetsLPTokens"/>
 
-### Composite Tokens
+## Composite Tokens
 
 <div align="center">Comming Soon!</div>
 
 <div ref="refAssetsCompositeTokens"/>
 
-### Subscription Service
+## Subscription Service
 
 Subscription Service is a service that allows you to subscribe to real-time updates for assets and prices. Flow the below steps to subscribe to the service:
 
