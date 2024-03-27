@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import LoadingIcon from "./LoadingIcon";
 import PlayIcon from "./PlayIcon";
-import { gql, InMemoryCache } from "@apollo/client";
-import { ApolloClient } from "@apollo/client/core/core.cjs";
+import { gql } from "@apollo/client";
+import { ApolloClient, InMemoryCache } from "@apollo/client/core/core.cjs";
 import { GraphQLWsLink } from "@apollo/client/link/subscriptions";
 import { createClient } from "graphql-ws";
 
