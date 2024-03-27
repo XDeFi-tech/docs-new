@@ -27,19 +27,21 @@ improving content clarity, or adding new topics, every contribution helps.
 - Push & Create PR: Push your changes to your fork and create a pull request
   to the main branch of this repository.
 
-Please ensure to review the detailed Contribution Guidelines above before
+Please ensure to review the detailed [Contribution Guidelines](./CONTRIBUTING.md) before
 making a pull request.
 
 ## Directory Structure
 
 - /.vitepress: Configuration files for the VitePress site.
+- /assets: Images, diagrams, and other media files used in the documentation.
 - /about: A category for learning more about XDEFI Technologies and $XDEFI token.
 - /campaigns: A category for Campaigns Service API
+- /assets-service: A category for Assets Service API
 - /developers: A category with tutorials and guides for deploying
   dApps and connect with XDEFI Wallet.
 - /routing: Technical reference materials for integrating our Routing aggregator API.
-- /public: Images, diagrams, and other media files used in the documentation.
-- /components: Custom components used in the documentation.
+- /public: Static assets like images, diagrams, and other media files.
+- /components: Custom React components integrated into the documentation.
 
 ## Feedback & Suggestions
 

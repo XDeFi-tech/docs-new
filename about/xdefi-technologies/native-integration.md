@@ -32,9 +32,9 @@
 
 The others **EVM's blockchains** are [supported non natively](./custom-integration) using Custom Network integration, allowing users and developers to interact and build on them.
 
-See more on [Adding a custom EVM network on XDEFI](./how-to-add-custom-network) documentation.
+See more on [Adding a custom EVM network on XDEFI](./add-custom-network) documentation.
 
-See more on [Building an EVM dApp](/developers/build-evm-dapp) with XDEFI documentation.
+See more on [Building an EVM dApp](/developers/ethereum) with XDEFI documentation.
 
 You can request an EVM native integration by sending us an [email](mailto:integration@xdefi.io).
 
@@ -59,9 +59,9 @@ _(Note that native integration requiere an upfront payment to start implementing
 
 The others **Cosmos chains** are [supported non natively](./custom-integration) using Custom Network integration, allowing users and developers to interact and build on them.
 
-See more on [Adding a custom Cosmos network on XDEFI](./how-to-add-custom-network) documentation.
+See more on [Adding a custom Cosmos network on XDEFI](./add-custom-network) documentation.
 
-See more on [Building a Cosmos dApp](/developers/build-cosmos-dapp) with XDEFI documentation.
+See more on [Building a Cosmos dApp](/developers/cosmos) with XDEFI documentation.
 
 You can request a Cosmos native integration by sending us an [email](mailto:integration@xdefi.io).
 
@@ -71,10 +71,10 @@ _(Note that native integration requiere an upfront payment to start implementing
 
 - Near Protocol (NEAR)
 
-See more on [Building a Near dApp](/developers/build-near-dapp) with XDEFI documentation.
+See more on [Building a Near dApp](/developers/near) with XDEFI documentation.
 
 ## Solana
 
 - Solana (SOL)
 
-See more on [Building a Solana dApp](/developers/build-solana-dapp) with XDEFI documentation.
+See more on [Building a Solana dApp](/developers/solana) with XDEFI documentation.
