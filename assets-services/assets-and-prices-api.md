@@ -436,7 +436,7 @@ const getAssetsLPTokens = async () => {
 
 ## Composite Tokens
 
-<div align="center">Comming Soon!</div>
+<div align="center">Coming soon!</div>
 
 <div ref="refAssetsCompositeTokens"/>
 
@@ -456,10 +456,19 @@ When you subscribe to the service, you will receive real-time updates for the as
 ::: code-group
 
 ```javascript [Example]
+import { gql, ApolloClient, InMemoryCache } from "@apollo/client";
+import { GraphQLWsLink } from "@apollo/client/link/subscriptions";
+import { createClient } from "graphql-ws";
 const socket = new WebSocket(
   "wss://subscription-service.dev.xdefi.services/graphql",
 );
-const query = `
+const wsLink = new GraphQLWsLink(
+  createClient({
+    url: "wss://subscription-service.dev.xdefi.services/graphql",
+  }),
+);
+
+const query = gql`
   subscription Subscription($ids: [String!]) {
     price(ids: $ids) {
       chain
@@ -487,48 +496,43 @@ const query = `
       marketCap
       scalingFactor
     }
-  }`;
+  }
+`;
 
 const vars = {
   ids: [],
 };
 
-const generateID = () => {
-  return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (c) => {
-    const r = (Math.random() * 16) | 0,
-      v = c == "x" ? r : (r & 0x3) | 0x8;
-    return v.toString(16);
-  });
-};
-
 const subscriptionServices = async () => {
-  socket.send(
-    JSON.stringify({
-      type: "connection_init",
-      payload: {},
-    }),
-  );
+  if (loading) {
+    setLoading(false);
+    return;
+  }
+  setLoading(true);
+  setResponse({});
 
-  socket.send(
-    JSON.stringify({
-      type: "subscribe",
-      id: generateID(),
-      payload: {
-        operationName: "Subscription",
-        httpMultipartParams: {
-          includeCookies: true,
-        },
-        query,
-        variables: vars,
+  const client = new ApolloClient({
+    link: wsLink,
+    cache: new InMemoryCache(),
+  });
+
+  client
+    .subscribe({
+      query,
+      variables: vars,
+    })
+    .subscribe({
+      next: (data) => {
+        console.log(data);
+        // Handle the data
       },
-    }),
-  );
-};
-
-socket.onmessage = (event) => {
-  const data = JSON.parse(event.data);
-  console.log(data);
-  // Handle the data
+      error: (error) => {
+        console.error(error);
+      },
+      complete: () => {
+        console.log("completed");
+      },
+    });
 };
 
 subscriptionServices();

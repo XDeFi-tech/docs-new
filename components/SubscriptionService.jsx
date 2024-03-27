@@ -1,96 +1,85 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import LoadingIcon from "./LoadingIcon";
 import PlayIcon from "./PlayIcon";
+import { gql, ApolloClient, InMemoryCache } from "@apollo/client";
+import { GraphQLWsLink } from "@apollo/client/link/subscriptions";
+import { createClient } from "graphql-ws";
 
 const SubscriptionServices = () => {
   const [response, setResponse] = useState({});
   const [loading, setLoading] = useState(false);
 
-  const socket = new WebSocket(
-    "wss://subscription-service.dev.xdefi.services/graphql",
+  const wsLink = new GraphQLWsLink(
+    createClient({
+      url: "wss://subscription-service.dev.xdefi.services/graphql",
+    }),
   );
 
-  const query = `subscription Subscription($ids: [String!]) {
-    price(ids: $ids) {
-      chain
-      id
-      price {
-        amount
-      }
-      symbol
-      type
-      name
-      contracts {
-        address
+  const query = gql`
+    subscription Subscription($ids: [String!]) {
+      price(ids: $ids) {
         chain
-        symbol
-        scalingFactor
-        defiProtocol {
-          icon
-          chain
-          name
-        }
         id
+        price {
+          amount
+        }
+        symbol
+        type
+        name
+        contracts {
+          address
+          chain
+          symbol
+          scalingFactor
+          defiProtocol {
+            icon
+            chain
+            name
+          }
+          id
+        }
+        icon
+        externalData
+        marketCap
+        scalingFactor
       }
-      icon
-      externalData
-      marketCap
-      scalingFactor
     }
-  }`;
+  `;
 
   const vars = {
     ids: [],
   };
 
-  const generateID = () => {
-    return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (c) => {
-      const r = (Math.random() * 16) | 0,
-        v = c == "x" ? r : (r & 0x3) | 0x8;
-      return v.toString(16);
-    });
-  };
-
   const subscriptionServices = async () => {
     if (loading) {
-      socket.close();
       setLoading(false);
       return;
     }
     setLoading(true);
     setResponse({});
 
-    socket.send(
-      JSON.stringify({
-        type: "connection_init",
-        payload: {},
-      }),
-    );
+    const client = new ApolloClient({
+      link: wsLink,
+      cache: new InMemoryCache(),
+    });
 
-    socket.send(
-      JSON.stringify({
-        type: "subscribe",
-        id: generateID(),
-        payload: {
-          operationName: "Subscription",
-          httpMultipartParams: {
-            includeCookies: true,
-          },
-          query,
-          variables: vars,
+    client
+      .subscribe({
+        query,
+        variables: vars,
+      })
+      .subscribe({
+        next: (data) => {
+          setResponse(data);
         },
-      }),
-    );
-    // socket.onopen = async () => {
-    // };
+        error: (error) => {
+          console.error(error);
+        },
+        complete: () => {
+          console.log("completed");
+        },
+      });
   };
-
-  useEffect(() => {
-    socket.onmessage = (message) => {
-      setResponse(message.payload.data);
-      setLoading(false);
-    };
-  }, []);
 
   return (
     <>
