@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import LoadingIcon from "./LoadingIcon";
 import PlayIcon from "./PlayIcon";
-import { gql, ApolloClient, InMemoryCache } from "@apollo/client";
+import * as pkg from '@apollo/client';
 import { GraphQLWsLink } from "@apollo/client/link/subscriptions";
 import { createClient } from "graphql-ws";
+
+const { gql, ApolloClient, InMemoryCache } = pkg;
 
 const SubscriptionServices = () => {
   const [response, setResponse] = useState({});
   const [loading, setLoading] = useState(false);
-
   const wsLink = new GraphQLWsLink(
     createClient({
       url: "wss://subscription-service.dev.xdefi.services/graphql",
