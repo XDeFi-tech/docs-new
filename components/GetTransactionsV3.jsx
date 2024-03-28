@@ -45,8 +45,6 @@ const GetTransactionsV3 = () => {
     }
   }`;
 
-  const vars = {};
-
   const testQuery = async () => {
     setLoading(true);
     setResponse({});
