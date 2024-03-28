@@ -724,6 +724,11 @@ function sidebarHome() {
       items: [],
     },
     {
+      text: "Indexers API",
+      link: "/indexers/indexers-api",
+      items: [],
+    },
+    {
       text: "Community",
       collapsed: true,
       items: [
