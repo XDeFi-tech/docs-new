@@ -2,49 +2,49 @@
 
 ## Overview
 
-XDEFI provide GraphQL API for developers to interact with the XDEFI Wallet. Some services that can be accessed through the API are: get balance, get gas fee, and get transaction. Make sure to install the XDEFI Wallet extension.
+XDEFI provides Indexers API for developers to fetch balances, transactions, fees across many blockchains supported by XDEFI Wallet.
 
 The base URL for all API endpoints is: `https://gql-router.xdefiservices.com/graphql`.
 
 <details>
-<summary>Here are the chains supported by the XDEFI Wallet:</summary>
+<summary>Here are the chains supported by the Indexers API:</summary>
 
-| Name                | Key                 | Base chain    | Chain ID (Cosmos) |
-| ------------------- | ------------------- | ------------- | ----------------- |
-| Akash               | `akash`             | CosmosChain   | `akashnet-2`      |
-| Arbitrum            | `arbitrum`          | EVM           |                   |
-| Aurora              | `aurora`            | EVM           |                   |
-| Avalanche           | `avalanche`         | EVM           |                   |
-| Axelar              | `axelar`            | CosmosChain   | `axelar-dojo-1`   |
-| Binance             | `binance`           | BinanceChain  |                   |
-| Binance Smart Chain | `binanceSmartChain` | EVM           |                   |
-| Bitcoin             | `bitcoin`           | BitcoinChain  |                   |
-| Bitcoin Cash        | `bitcoincash`       | BitcoinChain  |                   |
-| Canto EVM           | `cantoEVM`          | EVM           |                   |
-| Cosmos Hub          | `cosmos`            | CosmosChain   | `cosmoshub-4`     |
-| Crescent            | `crescent`          | CosmosChain   | `crescent-1`      |
-| Cronos EVM          | `cronosEVM`         | EVM           |                   |
-| Dogecoin            | `dogecoin`          | BitcoinChain  |                   |
-| Ethereum            | `ethereum`          | EVM           |                   |
-| Fantom              | `fantom`            | EVM           |                   |
-| Juno                | `juno`              | CosmosChain   | `juno-1`          |
-| Kava                | `kava`              | CosmosChain   | `kava-4`          |
-| Kujira              | `kujira`            | CosmosChain   | `kaiyo-1`         |
-| Litecoin            | `litecoin`          | BitcoinChain  |                   |
-| Mars                | `mars`              | CosmosChain   | `mars-1`          |
-| Maya Protocol       | `mayachain`         | MayaChain     |                   |
-| Near                | `near`              | NearChain     |                   |
-| Optimism            | `optimism`          | EVM           |                   |
-| Osmosis             | `osmosis`           | CosmosChain   | `osmosis-1`       |
-| Polygon             | `polygon`           | EVM           |                   |
-| Sei                 | `sei`               | CosmosChain   | `atlantic-2`      |
-| Solana              | `solana`            | SolanaChain   |                   |
-| Stargaze            | `stargaze`          | StargazeChain |                   |
-| Stride              | `stride`            | CosmosChain   | `stride-1`        |
-| Terra               | `terra`             | TerraChain    |                   |
-| Terra Classic       | `terraClassic`      | TerraChain    |                   |
-| ThorChain           | `thorchain`         | ThorChain     |                   |
-| Tron                | `tron`              | TronChain     |                   |
+| Name                | Key                 | Base chain    |
+| ------------------- | ------------------- | ------------- |
+| Akash               | `akash`             | CosmosChain   |
+| Arbitrum            | `arbitrum`          | EVM           |
+| Aurora              | `aurora`            | EVM           |
+| Avalanche           | `avalanche`         | EVM           |
+| Axelar              | `axelar`            | CosmosChain   |
+| Binance             | `binance`           | BinanceChain  |
+| Binance Smart Chain | `binanceSmartChain` | EVM           |
+| Bitcoin             | `bitcoin`           | BitcoinChain  |
+| Bitcoin Cash        | `bitcoincash`       | BitcoinChain  |
+| Canto EVM           | `cantoEVM`          | EVM           |
+| Cosmos Hub          | `cosmos`            | CosmosChain   |
+| Crescent            | `crescent`          | CosmosChain   |
+| Cronos EVM          | `cronosEVM`         | EVM           |
+| Dogecoin            | `dogecoin`          | BitcoinChain  |
+| Ethereum            | `ethereum`          | EVM           |
+| Fantom              | `fantom`            | EVM           |
+| Juno                | `juno`              | CosmosChain   |
+| Kava                | `kava`              | CosmosChain   |
+| Kujira              | `kujira`            | CosmosChain   |
+| Litecoin            | `litecoin`          | BitcoinChain  |
+| Mars                | `mars`              | CosmosChain   |
+| Maya Protocol       | `mayachain`         | MayaChain     |
+| Near                | `near`              | NearChain     |
+| Optimism            | `optimism`          | EVM           |
+| Osmosis             | `osmosis`           | CosmosChain   |
+| Polygon             | `polygon`           | EVM           |
+| Sei                 | `sei`               | CosmosChain   |
+| Solana              | `solana`            | SolanaChain   |
+| Stargaze            | `stargaze`          | StargazeChain |
+| Stride              | `stride`            | CosmosChain   |
+| Terra               | `terra`             | TerraChain    |
+| Terra Classic       | `terraClassic`      | TerraChain    |
+| ThorChain           | `thorchain`         | ThorChain     |
+| Tron                | `tron`              | TronChain     |
 
 </details>
 
@@ -57,7 +57,7 @@ The base URL for all API endpoints is: `https://gql-router.xdefiservices.com/gra
 ```javascript [EVM Chain]
 const GRAPHQL_ENDPOINT = "https://gql-router.xdefiservices.com/graphql";
 const query = `query GetBalances($address: String!, $first: Int, $after: String) {
-  ${chain.key} {
+  ${chain.key} { // [!code highlight]
     balances(address: $address, first: $first, after: $after) {
       amount {
         value
@@ -74,7 +74,7 @@ await fetch(GRAPHQL_ENDPOINT, {
   body: JSON.stringify({
     query,
     variables: {
-      address: window.xfi.ethereum.accounts[0] || window.ethereum.accounts[0],
+      address: address // Input address // [!code highlight]
       first: 1,
       after: null,
     },
@@ -90,7 +90,7 @@ await fetch(GRAPHQL_ENDPOINT, {
 ```javascript [CosmosChain]
 const GRAPHQL_ENDPOINT = "https://gql-router.xdefiservices.com/graphql";
 const query = `query GetBalances($address: String!, $tokenAddresses: [String!]) {
-  ${chain.key} {
+  ${chain.key} { // [!code highlight]
     balances(address: $address, tokenAddresses: $tokenAddresses) {
       amount {
         value
@@ -99,9 +99,6 @@ const query = `query GetBalances($address: String!, $tokenAddresses: [String!]) 
   }
 }`;
 
-await window.xfi.keplr.enable(chain.chainId);
-const offlineSigner = await window.xfi.keplr.getOfflineSigner(chain.chainId);
-const accounts = await offlineSigner.getAccounts();
 await fetch(GRAPHQL_ENDPOINT, {
   method: "POST",
   headers: {
@@ -110,7 +107,7 @@ await fetch(GRAPHQL_ENDPOINT, {
   body: JSON.stringify({
     query,
     variables: {
-      address: accounts[0].address,
+      address: address // Input address // [!code highlight]
       tokenAddresses: null,
     },
   }),
@@ -125,7 +122,7 @@ await fetch(GRAPHQL_ENDPOINT, {
 ```javascript [Other Chain]
 const GRAPHQL_ENDPOINT = "https://gql-router.xdefiservices.com/graphql";
 const query = `query GetBalances($address: String!) {
-  ${chain.key} {
+  ${chain.key} { // [!code highlight]
     balances(address: $address) {
       amount {
         value
@@ -134,28 +131,23 @@ const query = `query GetBalances($address: String!) {
   }
 }`;
 
-await window.xfi[chain.key].request(
-  { method: "request_accounts", params: [] },
-  (error, accounts) => {
-    fetch(GRAPHQL_ENDPOINT, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        query,
-        variables: {
-          address: accounts[0],
-        },
-      }),
-    })
-      .then((response) => response.json())
-      .then((result) => {
-        console.log(result);
-        // Do something with the result
-      });
+await fetch(GRAPHQL_ENDPOINT, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
   },
-);
+  body: JSON.stringify({
+    query,
+    variables: {
+      address: address, // Input address // [!code highlight]
+    },
+  }),
+})
+  .then((response) => response.json())
+  .then((result) => {
+    console.log(result);
+    // Do something with the result
+  });
 ```
 
 :::
@@ -169,7 +161,7 @@ await window.xfi[chain.key].request(
 ```javascript [EVM Chain]
 const GRAPHQL_ENDPOINT = "https://gql-router.xdefiservices.com/graphql";
 const query = `query GetTransactions($address: String!, $first: Int, $after: String) {
-  ${chain.key} {
+  ${chain.key} { // [!code highlight]
     transactions(address: $address, first: $first, after: $after) {
       edges {
         node {
@@ -202,7 +194,7 @@ await fetch(GRAPHQL_ENDPOINT, {
   body: JSON.stringify({
     query,
     variables: {
-      address: window.xfi.ethereum.accounts[0] || window.ethereum.accounts[0],
+      address: address // Input address // [!code highlight]
       first: 1,
       after: null,
     },
@@ -218,7 +210,7 @@ await fetch(GRAPHQL_ENDPOINT, {
 ```javascript [CosmosChain]
 const GRAPHQL_ENDPOINT = "https://gql-router.xdefiservices.com/graphql";
 const query = `query GetTransactions($address: String!, $first: Int, $after: String) {
-  ${chain.key} {
+  ${chain.key} { // [!code highlight]
     transactions(address: $address, first: $first, after: $after) {
       edges {
         node {
@@ -244,9 +236,6 @@ const query = `query GetTransactions($address: String!, $first: Int, $after: Str
   }
 }`;
 
-await window.xfi.keplr.enable(chain.chainId);
-const offlineSigner = await window.xfi.keplr.getOfflineSigner(chain.chainId);
-const accounts = await offlineSigner.getAccounts();
 await fetch(GRAPHQL_ENDPOINT, {
   method: "POST",
   headers: {
@@ -255,7 +244,7 @@ await fetch(GRAPHQL_ENDPOINT, {
   body: JSON.stringify({
     query,
     variables: {
-      address: accounts[0].address,
+      address: address // Input address // [!code highlight]
       first: 1,
       after: null,
     },
@@ -271,7 +260,7 @@ await fetch(GRAPHQL_ENDPOINT, {
 ```javascript [Other Chain]
 const GRAPHQL_ENDPOINT = "https://gql-router.xdefiservices.com/graphql";
 const query = `query GetTransactions($address: String!, $first: Int!, $after: String) {
-  ${chain.key} {
+  ${chain.key} { // [!code highlight]
     transactionsV3(address: $address, first: $first, after: $after) {
       edges {
         node {
@@ -301,30 +290,25 @@ const query = `query GetTransactions($address: String!, $first: Int!, $after: St
   }
 }`;
 
-await window.xfi[chain.key].request(
-  { method: "request_accounts", params: [] },
-  (error, accounts) => {
-    fetch(GRAPHQL_ENDPOINT, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        query,
-        variables: {
-          address: accounts[0],
-          first: 1,
-          after: null,
-        },
-      }),
-    })
-      .then((response) => response.json())
-      .then((result) => {
-        console.log(result);
-        // Do something with the result
-      });
+await fetch(GRAPHQL_ENDPOINT, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
   },
-);
+  body: JSON.stringify({
+    query,
+    variables: {
+      address: address // Input address // [!code highlight]
+      first: 1,
+      after: null,
+    },
+  }),
+})
+  .then((response) => response.json())
+  .then((result) => {
+    console.log(result);
+    // Do something with the result
+  });
 ```
 
 :::
@@ -338,7 +322,7 @@ await window.xfi[chain.key].request(
 ```javascript [Default Gas Fee]
 const GRAPHQL_ENDPOINT = "https://gql-router.xdefiservices.com/graphql";
 const query = `query GetGasFee {
-  ${chain.key} {
+  ${chain.key} { // [!code highlight]
     fee {
       high
       low
@@ -366,7 +350,7 @@ await fetch(GRAPHQL_ENDPOINT, {
 ```javascript [EIP1559 Gas Fee (Ethereum, Canto, Cronos)]
 const GRAPHQL_ENDPOINT = "https://gql-router.xdefiservices.com/graphql";
 const query = `query GetFee {
-  ${chain.key} {
+  ${chain.key} { // [!code highlight]
     fee {
       defaultGasPrice
       high {

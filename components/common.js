@@ -3,7 +3,6 @@ export const chainsSupported = [
     key: "akash",
     label: "Akash",
     baseChain: "CosmosChain",
-    chainId: "akashnet-2",
   },
   {
     key: "arbitrum",
@@ -24,7 +23,6 @@ export const chainsSupported = [
     key: "axelar",
     label: "Axelar",
     baseChain: "CosmosChain",
-    chainId: "axelar-dojo-1",
   },
   {
     key: "binance",
@@ -53,13 +51,11 @@ export const chainsSupported = [
     key: "cosmos",
     label: "Cosmos Hub",
     baseChain: "CosmosChain",
-    chainId: "cosmoshub-4",
   },
   {
     key: "crescent",
     label: "Crescent",
     baseChain: "CosmosChain",
-    chainId: "crescent-1",
   },
   {
     key: "cronosEVM",
@@ -73,39 +69,26 @@ export const chainsSupported = [
   {
     key: "ethereum",
     label: "Ethereum",
-    baseChain: "EVM",
   },
   {
     key: "fantom",
     label: "Fantom",
     baseChain: "EVM",
   },
-  // {
-  //   key: "gnosis",
-  //   label: "Gnosis",
-  //   baseChain: "EVM",
-  // },
   {
     key: "juno",
     label: "Juno",
     baseChain: "CosmosChain",
-    chainId: "juno-1",
   },
   {
     key: "kava",
     label: "Kava",
     baseChain: "CosmosChain",
-    chainId: "kava_2222-10",
   },
-  // {
-  //   key: "klaytn",
-  //   label: "Klaytn",
-  // },
   {
     key: "kujira",
     label: "Kujira",
     baseChain: "CosmosChain",
-    chainId: "kaiyo-1",
   },
   {
     key: "litecoin",
@@ -115,7 +98,6 @@ export const chainsSupported = [
     key: "mars",
     label: "Mars",
     baseChain: "CosmosChain",
-    chainId: "mars-1",
   },
   {
     key: "mayachain",
@@ -134,7 +116,6 @@ export const chainsSupported = [
     key: "osmosis",
     label: "Osmosis",
     baseChain: "CosmosChain",
-    chainId: "osmosis-1",
   },
   {
     key: "polygon",
@@ -145,7 +126,6 @@ export const chainsSupported = [
     key: "sei",
     label: "SEI",
     baseChain: "CosmosChain",
-    chainId: "atlantic-2",
   },
   {
     key: "solana",
@@ -159,7 +139,6 @@ export const chainsSupported = [
     key: "stride",
     label: "Stride",
     baseChain: "CosmosChain",
-    chainId: "stride-1",
   },
   {
     key: "terra",

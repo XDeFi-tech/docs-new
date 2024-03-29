@@ -7,10 +7,11 @@ const GetBalance = () => {
   const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState({});
 
-  const getBalanceCosmosBaseChain = async (chain) => {
+  const getBalanceCosmosBaseChain = async (chain, address) => {
     const query = `query GetBalances($address: String!, $tokenAddresses: [String!]) {
       ${chain.key} {
         balances(address: $address, tokenAddresses: $tokenAddresses) {
+          address
           amount {
             value
           }
@@ -18,11 +19,6 @@ const GetBalance = () => {
       }
     }`;
 
-    await window.xfi.keplr.enable(chain.chainId);
-    const offlineSigner = await window.xfi.keplr.getOfflineSigner(
-      chain.chainId,
-    );
-    const accounts = await offlineSigner.getAccounts();
     await fetch(GRAPHQL_ENDPOINT, {
       method: "POST",
       headers: {
@@ -31,7 +27,7 @@ const GetBalance = () => {
       body: JSON.stringify({
         query,
         variables: {
-          address: accounts[0].address,
+          address: address,
           tokenAddresses: null,
         },
       }),
@@ -48,10 +44,11 @@ const GetBalance = () => {
       });
   };
 
-  const getBalanceEVMChain = async (chain) => {
+  const getBalanceEVMChain = async (chain, address) => {
     const query = `query GetBalances($address: String!, $first: Int, $after: String) {
       ${chain.key} {
         balances(address: $address, first: $first, after: $after) {
+          address
           amount {
             value
           }
@@ -67,7 +64,7 @@ const GetBalance = () => {
       body: JSON.stringify({
         query,
         variables: {
-          address: window.ethereum.accounts[0],
+          address: address,
           first: 1,
           after: null,
         },
@@ -85,10 +82,11 @@ const GetBalance = () => {
       });
   };
 
-  const getBalanceDefaultChain = async (chain) => {
+  const getBalanceDefaultChain = async (chain, address) => {
     const query = `query GetBalances($address: String!) {
       ${chain.key} {
         balances(address: $address) {
+          address
           amount {
             value
           }
@@ -96,64 +94,59 @@ const GetBalance = () => {
       }
     }`;
 
-    await window.xfi[chain.key].request(
-      { method: "request_accounts", params: [] },
-      (error, accounts) => {
-        fetch(GRAPHQL_ENDPOINT, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            query,
-            variables: {
-              address: accounts[0],
-            },
-          }),
-        })
-          .then((response) => response.json())
-          .then((result) => {
-            setResponse(result);
-          })
-          .catch((error) => {
-            setResponse(error);
-          })
-          .finally(() => {
-            setLoading(false);
-          });
+    await fetch(GRAPHQL_ENDPOINT, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
       },
-    );
+      body: JSON.stringify({
+        query,
+        variables: {
+          address: address,
+        },
+      }),
+    })
+      .then((response) => response.json())
+      .then((result) => {
+        setResponse(result);
+      })
+      .catch((error) => {
+        setResponse(error);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   const testQuery = async () => {
     setLoading(true);
     setResponse({});
 
-    if (!window.xfi) {
-      alert(
-        "XDEFI Wallet not detected! Please install the XDEFI Wallet extension.",
-      );
+    const chain = JSON.parse(localStorage.getItem("chain"));
+    const address = localStorage.getItem("address");
+
+    if (!chain) {
+      alert("Please select a chain first!");
       setLoading(false);
       return;
-    } else {
-      const chain = JSON.parse(localStorage.getItem("chain"));
-      if (!chain) {
-        alert("Please select a chain first!");
-        setLoading(false);
-        return;
-      }
+    }
 
-      switch (chain.baseChain) {
-        case "CosmosChain":
-          getBalanceCosmosBaseChain(chain);
-          break;
-        case "EVM":
-          getBalanceEVMChain(chain);
-          break;
-        default:
-          getBalanceDefaultChain(chain);
-          break;
-      }
+    if (!address) {
+      alert("Please enter an address!");
+      setLoading(false);
+      return;
+    }
+
+    switch (chain.baseChain) {
+      case "CosmosChain":
+        getBalanceCosmosBaseChain(chain, address);
+        break;
+      case "EVM":
+        getBalanceEVMChain(chain, address);
+        break;
+      default:
+        getBalanceDefaultChain(chain, address);
+        break;
     }
   };
 

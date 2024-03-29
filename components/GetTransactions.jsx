@@ -7,7 +7,7 @@ const GetTransactions = ({ chain }) => {
   const [response, setResponse] = useState({});
   const [loading, setLoading] = useState(false);
 
-  const getTransactionCosmosBaseChain = async (chain) => {
+  const getTransactionCosmosBaseChain = async (chain, address) => {
     const query = `query GetTransactions($address: String!, $first: Int, $after: String) {
       ${chain.key} {
         transactions(address: $address, first: $first, after: $after) {
@@ -35,11 +35,6 @@ const GetTransactions = ({ chain }) => {
       }
     }`;
 
-    await window.xfi.keplr.enable(chain.chainId);
-    const offlineSigner = await window.xfi.keplr.getOfflineSigner(
-      chain.chainId,
-    );
-    const accounts = await offlineSigner.getAccounts();
     await fetch(GRAPHQL_ENDPOINT, {
       method: "POST",
       headers: {
@@ -48,7 +43,7 @@ const GetTransactions = ({ chain }) => {
       body: JSON.stringify({
         query,
         variables: {
-          address: accounts[0].address,
+          address: address,
           first: 1,
           after: null,
         },
@@ -66,7 +61,7 @@ const GetTransactions = ({ chain }) => {
       });
   };
 
-  const getTransactionEVMChain = async (chain) => {
+  const getTransactionEVMChain = async (chain, address) => {
     const query = `query GetTransactions($address: String!, $first: Int, $after: String) {
       ${chain.key} {
         transactions(address: $address, first: $first, after: $after) {
@@ -101,7 +96,7 @@ const GetTransactions = ({ chain }) => {
       body: JSON.stringify({
         query,
         variables: {
-          address: window.ethereum.accounts[0],
+          address: address,
           first: 1,
           after: null,
         },
@@ -119,7 +114,7 @@ const GetTransactions = ({ chain }) => {
       });
   };
 
-  const getTransactionDefaultChain = async (chain) => {
+  const getTransactionDefaultChain = async (chain, address) => {
     const query = `query GetTransactions($address: String!, $first: Int!, $after: String) {
       ${chain.key} {
         transactionsV3(address: $address, first: $first, after: $after) {
@@ -151,65 +146,60 @@ const GetTransactions = ({ chain }) => {
       }
     }`;
 
-    await window.xfi[chain.key].request(
-      { method: "request_accounts", params: [] },
-      (error, accounts) => {
-        fetch(GRAPHQL_ENDPOINT, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            query,
-            variables: {
-              address: accounts[0],
-              first: 1,
-              after: null,
-            },
-          }),
-        })
-          .then((response) => response.json())
-          .then((result) => {
-            setResponse(result);
-          })
-          .catch((error) => {
-            setResponse(error);
-          })
-          .finally(() => {
-            setLoading(false);
-          });
+    await fetch(GRAPHQL_ENDPOINT, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
       },
-    );
+      body: JSON.stringify({
+        query,
+        variables: {
+          address: address,
+          first: 1,
+          after: null,
+        },
+      }),
+    })
+      .then((response) => response.json())
+      .then((result) => {
+        setResponse(result);
+      })
+      .catch((error) => {
+        setResponse(error);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   const testQuery = async () => {
     setLoading(true);
     setResponse({});
 
-    if (!window.xfi) {
-      alert(
-        "XDEFI Wallet not detected! Please install the XDEFI Wallet extension.",
-      );
+    const chain = JSON.parse(localStorage.getItem("chain"));
+    const address = localStorage.getItem("address");
+
+    if (!chain) {
+      alert("Please select a chain first!");
       setLoading(false);
       return;
-    } else {
-      const chain = JSON.parse(localStorage.getItem("chain"));
-      if (!chain) {
-        alert("Please select a chain first!");
-        setLoading(false);
-        return;
-      }
-      switch (chain.baseChain) {
-        case "CosmosChain":
-          getTransactionCosmosBaseChain(chain);
-          break;
-        case "EVM":
-          getTransactionEVMChain(chain);
-          break;
-        default:
-          getTransactionDefaultChain(chain);
-          break;
-      }
+    }
+
+    if (!address) {
+      alert("Please enter an address!");
+      setLoading(false);
+      return;
+    }
+    switch (chain.baseChain) {
+      case "CosmosChain":
+        getTransactionCosmosBaseChain(chain, address);
+        break;
+      case "EVM":
+        getTransactionEVMChain(chain, address);
+        break;
+      default:
+        getTransactionDefaultChain(chain, address);
+        break;
     }
   };
 
