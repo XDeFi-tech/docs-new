@@ -2,24 +2,66 @@ import React, { useState } from "react";
 import LoadingIcon from "./LoadingIcon";
 import PlayIcon from "./PlayIcon";
 
-const GetGasFee = () => {
+const GetGasFee = ({ chain }) => {
   const GRAPHQL_ENDPOINT = "https://gql-router.xdefiservices.com/graphql";
   const [response, setResponse] = useState({});
   const [loading, setLoading] = useState(false);
-
-  const query = `query GetGasFee {
-    bitcoin {
-      fee {
-        high
-        low
-        medium
-      }
-    }
-  }`;
+  const [query, setQuery] = useState("");
 
   const testQuery = async () => {
     setLoading(true);
     setResponse({});
+
+    const chain = JSON.parse(localStorage.getItem("chain"));
+
+    if (!chain) {
+      alert("Please select a chain first!");
+      setLoading(false);
+      return;
+    }
+
+    let query = "";
+
+    switch (chain.key) {
+      case "ethereum":
+      case "cantoEVM":
+      case "cronosEVM":
+      case "gnosis":
+        query = `query GetFee {
+          ${chain.key} {
+            fee {
+              defaultGasPrice
+              high {
+                maxFeePerGas
+                baseFeePerGas
+                priorityFeePerGas
+              }
+              low {
+                baseFeePerGas
+                maxFeePerGas
+                priorityFeePerGas
+              }
+              medium {
+                baseFeePerGas
+                maxFeePerGas
+                priorityFeePerGas
+              }
+            }
+          }
+        }`;
+        break;
+      default:
+        query = `query GetGasFee {
+          ${chain.key} {
+            fee {
+              high
+              low
+              medium
+            }
+          }
+        }`;
+        break;
+    }
 
     await fetch(GRAPHQL_ENDPOINT, {
       method: "POST",

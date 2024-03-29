@@ -2,17 +2,34 @@ import React, { useState } from "react";
 import LoadingIcon from "./LoadingIcon";
 import PlayIcon from "./PlayIcon";
 
-const GetBalance = () => {
+const GetTransactions = ({ chain }) => {
   const GRAPHQL_ENDPOINT = "https://gql-router.xdefiservices.com/graphql";
-  const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState({});
+  const [loading, setLoading] = useState(false);
 
-  const getBalanceCosmosBaseChain = async (chain) => {
-    const query = `query GetBalances($address: String!, $tokenAddresses: [String!]) {
+  const getTransactionCosmosBaseChain = async (chain) => {
+    const query = `query GetTransactions($address: String!, $first: Int, $after: String) {
       ${chain.key} {
-        balances(address: $address, tokenAddresses: $tokenAddresses) {
-          amount {
-            value
+        transactions(address: $address, first: $first, after: $after) {
+          edges {
+            node {
+              blockHeight
+              hash
+              signers
+              status
+              timestamp
+              transfers {
+                amount {
+                  value
+                }
+                fromAddress
+                toAddress
+              }
+            }
+          }
+          pageInfo {
+            hasPreviousPage
+            hasNextPage
           }
         }
       }
@@ -32,7 +49,8 @@ const GetBalance = () => {
         query,
         variables: {
           address: accounts[0].address,
-          tokenAddresses: null,
+          first: 1,
+          after: null,
         },
       }),
     })
@@ -48,12 +66,28 @@ const GetBalance = () => {
       });
   };
 
-  const getBalanceEVMChain = async (chain) => {
-    const query = `query GetBalances($address: String!, $first: Int, $after: String) {
+  const getTransactionEVMChain = async (chain) => {
+    const query = `query GetTransactions($address: String!, $first: Int, $after: String) {
       ${chain.key} {
-        balances(address: $address, first: $first, after: $after) {
-          amount {
-            value
+        transactions(address: $address, first: $first, after: $after) {
+          edges {
+            node {
+              blockNumber
+              hash
+              status
+              timestamp
+              transfers {
+                amount {
+                  value
+                }
+                fromAddress
+                toAddress
+              }
+            }
+          }
+          pageInfo {
+            hasNextPage
+            hasPreviousPage
           }
         }
       }
@@ -85,12 +119,33 @@ const GetBalance = () => {
       });
   };
 
-  const getBalanceDefaultChain = async (chain) => {
-    const query = `query GetBalances($address: String!) {
+  const getTransactionDefaultChain = async (chain) => {
+    const query = `query GetTransactions($address: String!, $first: Int!, $after: String) {
       ${chain.key} {
-        balances(address: $address) {
-          amount {
-            value
+        transactionsV3(address: $address, first: $first, after: $after) {
+          edges {
+            node {
+              blockNumber
+              hash
+              status
+              timestamp
+              inputs {
+                amount {
+                  value
+                }
+                address
+              }
+              outputs {
+                amount {
+                  value
+                }
+                address
+              }
+            }
+          }
+          pageInfo {
+            hasNextPage
+            hasPreviousPage
           }
         }
       }
@@ -108,6 +163,8 @@ const GetBalance = () => {
             query,
             variables: {
               address: accounts[0],
+              first: 1,
+              after: null,
             },
           }),
         })
@@ -142,16 +199,15 @@ const GetBalance = () => {
         setLoading(false);
         return;
       }
-
       switch (chain.baseChain) {
         case "CosmosChain":
-          getBalanceCosmosBaseChain(chain);
+          getTransactionCosmosBaseChain(chain);
           break;
         case "EVM":
-          getBalanceEVMChain(chain);
+          getTransactionEVMChain(chain);
           break;
         default:
-          getBalanceDefaultChain(chain);
+          getTransactionDefaultChain(chain);
           break;
       }
     }
@@ -190,4 +246,4 @@ const GetBalance = () => {
   );
 };
 
-export default GetBalance;
+export default GetTransactions;
