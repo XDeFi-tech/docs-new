@@ -456,12 +456,12 @@ When you subscribe to the service, you will receive real-time updates for the as
 ::: code-group
 
 ```javascript [Example]
-import { gql, ApolloClient, InMemoryCache } from "@apollo/client";
+import * as pkg from "@apollo/client";
 import { GraphQLWsLink } from "@apollo/client/link/subscriptions";
 import { createClient } from "graphql-ws";
-const socket = new WebSocket(
-  "wss://subscription-service.dev.xdefi.services/graphql",
-);
+
+const { gql, ApolloClient, InMemoryCache } = pkg;
+
 const wsLink = new GraphQLWsLink(
   createClient({
     url: "wss://subscription-service.dev.xdefi.services/graphql",
