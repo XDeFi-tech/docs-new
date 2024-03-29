@@ -1,13 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import LoadingIcon from "./LoadingIcon";
 import PlayIcon from "./PlayIcon";
+import { chainsSupported } from "./common";
 
-const GetTransactions = ({ chain }) => {
+const GetTransactions = () => {
   const GRAPHQL_ENDPOINT = "https://gql-router.xdefiservices.com/graphql";
   const [response, setResponse] = useState({});
   const [loading, setLoading] = useState(false);
+  const [chainSelected, setChainSelected] = useState(undefined);
+  const [chain, setChain] = useState(undefined);
+  const [address, setAddress] = useState("");
 
-  const getTransactionCosmosBaseChain = async (chain, address) => {
+  useEffect(() => {
+    if (!chainSelected) {
+      setChain(undefined);
+      setAddress("");
+    } else {
+      chainsSupported.find((chain) => {
+        if (chain.key === chainSelected) {
+          setChain(chain);
+          setAddress(chain.exampleAddress || "");
+        }
+      });
+    }
+    setResponse({});
+  }, [chainSelected]);
+
+  const getTransactionCosmosBaseChain = async () => {
     const query = `query GetTransactions($address: String!, $first: Int, $after: String) {
       ${chain.key} {
         transactions(address: $address, first: $first, after: $after) {
@@ -61,7 +80,7 @@ const GetTransactions = ({ chain }) => {
       });
   };
 
-  const getTransactionEVMChain = async (chain, address) => {
+  const getTransactionEVMChain = async () => {
     const query = `query GetTransactions($address: String!, $first: Int, $after: String) {
       ${chain.key} {
         transactions(address: $address, first: $first, after: $after) {
@@ -114,7 +133,7 @@ const GetTransactions = ({ chain }) => {
       });
   };
 
-  const getTransactionDefaultChain = async (chain, address) => {
+  const getTransactionDefaultChain = async () => {
     const query = `query GetTransactions($address: String!, $first: Int!, $after: String) {
       ${chain.key} {
         transactionsV3(address: $address, first: $first, after: $after) {
@@ -176,9 +195,6 @@ const GetTransactions = ({ chain }) => {
     setLoading(true);
     setResponse({});
 
-    const chain = JSON.parse(localStorage.getItem("chain"));
-    const address = localStorage.getItem("address");
-
     if (!chain) {
       alert("Please select a chain first!");
       setLoading(false);
@@ -192,20 +208,55 @@ const GetTransactions = ({ chain }) => {
     }
     switch (chain.baseChain) {
       case "CosmosChain":
-        getTransactionCosmosBaseChain(chain, address);
+        getTransactionCosmosBaseChain();
         break;
       case "EVM":
-        getTransactionEVMChain(chain, address);
+        getTransactionEVMChain();
         break;
       default:
-        getTransactionDefaultChain(chain, address);
+        getTransactionDefaultChain();
         break;
     }
   };
 
   return (
     <>
-      <div className="flex justify-center">
+      <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4">
+          <span>Chain:</span>
+          <div className="border border-[#e2e2e3] dark:border-[#2e2e32] hover:border-[#3451b2] rounded-lg overflow-hidden w-fit">
+            <select
+              id="chain-select"
+              name="chain-select"
+              className="bg-gray-50 text-gray-900 px-2 py-1 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white"
+              onChange={(e) => setChainSelected(e.target.value)}
+            >
+              <option value={undefined}>Select a chain</option>
+              {chainsSupported.map((chain) => (
+                <option key={chain.key} value={chain.key}>
+                  {chain.label}
+                  {chain.baseChain && <> ({chain.baseChain})</>}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+        <div className="flex items-center gap-4">
+          <span>Address:</span>
+          <div className="border border-[#e2e2e3] dark:border-[#2e2e32] hover:border-[#3451b2] rounded-lg overflow-hidden w-fit">
+            <input
+              type="text"
+              id="address"
+              name="Address"
+              value={address}
+              className="bg-gray-50 text-gray-900 px-2 py-1 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white"
+              placeholder="Enter an address"
+              onChange={(e) => setAddress(e.target.value)}
+            />
+          </div>
+        </div>
+      </div>
+      <div className="flex justify-center mt-4">
         <button
           onClick={testQuery}
           className="flex justify-center items-center gap-2 bg-[#2770CB] text-white px-2 py-1 rounded"

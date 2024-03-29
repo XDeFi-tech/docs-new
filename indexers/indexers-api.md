@@ -31,24 +31,18 @@ The base URL for all API endpoints is: `https://gql-router.xdefiservices.com/gra
 | Kava                | `kava`              | CosmosChain   |
 | Kujira              | `kujira`            | CosmosChain   |
 | Litecoin            | `litecoin`          | BitcoinChain  |
-| Mars                | `mars`              | CosmosChain   |
 | Maya Protocol       | `mayachain`         | MayaChain     |
 | Near                | `near`              | NearChain     |
 | Optimism            | `optimism`          | EVM           |
 | Osmosis             | `osmosis`           | CosmosChain   |
 | Polygon             | `polygon`           | EVM           |
-| Sei                 | `sei`               | CosmosChain   |
 | Solana              | `solana`            | SolanaChain   |
 | Stargaze            | `stargaze`          | StargazeChain |
 | Stride              | `stride`            | CosmosChain   |
-| Terra               | `terra`             | TerraChain    |
-| Terra Classic       | `terraClassic`      | TerraChain    |
 | ThorChain           | `thorchain`         | ThorChain     |
 | Tron                | `tron`              | TronChain     |
 
 </details>
-
-<div ref="refIndexerAPIComponent"/>
 
 ## Get Balance
 
@@ -396,19 +390,14 @@ import { createElement } from 'react'
 import { createRoot } from 'react-dom/client'
 import { ref, onMounted } from 'vue'
 
-import IndexerAPIComponent from '../components/IndexerAPIComponent.jsx'
-
 import GetBalance from '../components/GetBalance.jsx'
 import GetTransactions from '../components/GetTransactions.jsx'
 import GetGasFee from '../components/GetGasFee.jsx'
 
-const refIndexerAPIComponent = ref()
 const refGetBalance = ref()
 const refGetTransaction = ref()
 const refGetGasFee = ref()
 onMounted(() => {
-  const rootIndexerAPIComponent = createRoot(refIndexerAPIComponent.value)
-  rootIndexerAPIComponent.render(createElement(IndexerAPIComponent, {}, null))
   const rootGetBalance = createRoot(refGetBalance.value)
   rootGetBalance.render(createElement(GetBalance, {}, null))
   const rootGetTransaction = createRoot(refGetTransaction.value)
