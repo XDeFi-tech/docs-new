@@ -64,6 +64,8 @@ await fetch(GRAPHQL_ENDPOINT, {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
+    "apollographql-client-name": "docs-indexers-api",
+    "apollographql-client-version": "v1.0",
   },
   body: JSON.stringify({
     query,
@@ -129,6 +131,8 @@ await fetch(GRAPHQL_ENDPOINT, {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
+    "apollographql-client-name": "docs-indexers-api",
+    "apollographql-client-version": "v1.0",
   },
   body: JSON.stringify({
     query,
@@ -148,7 +152,7 @@ await fetch(GRAPHQL_ENDPOINT, {
 
 <div ref="refGetBalance"/>
 
-## Get Transaction
+## Get Activity History
 
 ::: code-group
 
@@ -184,6 +188,8 @@ await fetch(GRAPHQL_ENDPOINT, {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
+    "apollographql-client-name": "docs-indexers-api",
+    "apollographql-client-version": "v1.0",
   },
   body: JSON.stringify({
     query,
@@ -234,6 +240,8 @@ await fetch(GRAPHQL_ENDPOINT, {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
+    "apollographql-client-name": "docs-indexers-api",
+    "apollographql-client-version": "v1.0",
   },
   body: JSON.stringify({
     query,
@@ -329,6 +337,8 @@ await fetch(GRAPHQL_ENDPOINT, {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
+    "apollographql-client-name": "docs-indexers-api",
+    "apollographql-client-version": "v1.0",
   },
   body: JSON.stringify({
     query,
@@ -369,6 +379,8 @@ await fetch(GRAPHQL_ENDPOINT, {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
+    "apollographql-client-name": "docs-indexers-api",
+    "apollographql-client-version": "v1.0",
   },
   body: JSON.stringify({
     query,
@@ -385,9 +397,9 @@ await fetch(GRAPHQL_ENDPOINT, {
 
 <div ref="refGetGasFee"/>
 
-## Get Unspent Transaction Outputs (UTXOs)
+## UTXOs (Bitcoin, Bitcoin Cash, Dogecoin, Litecoin)
 
-This service is only available for chains: Bitcoin, Bitcoin Cash, Dogecoin, and Litecoin.
+### Get Unspent Transaction Outputs (UTXOs)
 
 ::: code-group
 
@@ -413,6 +425,8 @@ await fetch(GRAPHQL_ENDPOINT, {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
+    "apollographql-client-name": "docs-indexers-api",
+    "apollographql-client-version": "v1.0",
   },
   body: JSON.stringify({
     query,
@@ -433,9 +447,7 @@ await fetch(GRAPHQL_ENDPOINT, {
 
 <div ref="refGetUTXOs"/>
 
-## Broadcast Transaction
-
-This service is only available for chains: Bitcoin, Bitcoin Cash, Dogecoin, and Litecoin.
+### Broadcast Transaction
 
 ::: code-group
 

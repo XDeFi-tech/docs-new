@@ -54,6 +54,8 @@ const BroadcastTransaction = () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "apollographql-client-name": "xdefi-docs",
+        "apollographql-client-version": "v1.0",
       },
       body: JSON.stringify({
         query,
