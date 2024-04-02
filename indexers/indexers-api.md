@@ -429,6 +429,8 @@ await fetch(GRAPHQL_ENDPOINT, {
   });
 ```
 
+:::
+
 <div ref="refGetUTXOs"/>
 
 ## Broadcast Transaction
@@ -463,6 +465,8 @@ await fetch(GRAPHQL_ENDPOINT, {
     // Do something with the result
   });
 ```
+
+:::
 
 <div ref="refBroadcastTransaction"/>
 
