@@ -1,4 +1,4 @@
-# Widget
+# Swap Widget
 
 [[toc]]
 
