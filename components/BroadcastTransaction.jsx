@@ -16,15 +16,14 @@ const BroadcastTransaction = () => {
   useEffect(() => {
     if (!chainSelected) {
       setChain(undefined);
-      setRawHex("");
     } else {
       chainsList.find((chain) => {
         if (chain.key === chainSelected) {
           setChain(chain);
-          setRawHex(chain.exampleRawHex || "");
         }
       });
     }
+    setRawHex("");
     setResponse({});
   }, [chainSelected]);
 
@@ -38,8 +37,8 @@ const BroadcastTransaction = () => {
       return;
     }
 
-    if (!address) {
-      alert("Please enter an address!");
+    if (!rawHex) {
+      alert("Please enter a raw transaction hex!");
       setLoading(false);
       return;
     }
