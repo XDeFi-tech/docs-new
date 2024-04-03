@@ -480,6 +480,8 @@ await fetch(GRAPHQL_ENDPOINT, {
 
 :::
 
+View more about raw transaction hex [here](https://www.blockchain.com/explorer/assets/btc/decode-transaction).
+
 <div ref="refBroadcastTransaction"/>
 
 <script setup>

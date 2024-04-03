@@ -46,15 +46,12 @@ export const chainsSupported = [
     label: "Bitcoin",
     exampleAddress: "bc1qzhdzx9nr5l98xm7aeu3xuycvy59ae2lws69dcf",
     UTXO: true,
-    exampleRawHex:
-      "02000000000101ba6af097edff97b2482669cbae20f8195c600bb67e14ffbcd884724a9ed11e460100000000fdffffff02dddcc0000000000022512064daf64bcb8e901ea80f672801425af4e75a5da1e967219b6ed5edc6c95aa2e3270100000000000016001415da231663a7ca736fddcf226e130c250bdcabee05402cf600ff9e6b0079aacabf95994a9a6186ac69988416830daa8cfdd56ee030c76631a84b083e6e402e8781537584c13c339bb00c65adeef79a53455e356327f640cf60daafb2b5672067d6776b9306f85b9f717f9ac59adc84b9dccb8c0670975ba2c29a5a9b8f8e9d8d7843a01031cc714dc33d4be6eb07d0dce55f315df39be840f1935616c3a2ca0f696b286cc1cc4489788c5adf576ee3ef0b597c75cf154e7a11b0eb1595c4b0d256778a295c6c2a592d620cd63b61e9726a4f64c2d6f800ee66204256422828e617eb8ab1dd78bafed13c02186f909e9dce12942ef1dfabd9c676ad204d7c39022b838bdb330da1003607886d108f60a498129f89dd551314905382d0ad20605fe1c12bf191ba44b738e00a146c0154673c772fb35f182c34614626f49002ac41c142bd12e5ccca5b830e755b1e9d7104bdf89819276746d7b5d42cb2a227bff08d71a260330d6936670ab7b1f0c0dbc5cb454399393466529527b9e60b9b10e19100000000",
   },
   {
     key: "bitcoincash",
     label: "Bitcoin Cash",
     exampleAddress: "qrcuqadqrzp2uztjl9wn5sthepkg22majyxw4gmv6p",
     UTXO: true,
-    exampleRawHex: "",
   },
   {
     key: "cantoEVM",
@@ -85,7 +82,6 @@ export const chainsSupported = [
     label: "Dogecoin",
     exampleAddress: "DBgHW1Shjyk91fusm9hm3HcryNBwaFwZbQ",
     UTXO: true,
-    exampleRawHex: "",
   },
   {
     key: "ethereum",
@@ -121,7 +117,6 @@ export const chainsSupported = [
     label: "Litecoin",
     exampleAddress: "ltc1q8g4sjzaexe3vslzs3tuz7ndj38pdf20yph2ygs",
     UTXO: true,
-    exampleRawHex: "",
   },
   {
     key: "mayachain",
