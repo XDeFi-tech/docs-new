@@ -45,11 +45,13 @@ export const chainsSupported = [
     key: "bitcoin",
     label: "Bitcoin",
     exampleAddress: "bc1qzhdzx9nr5l98xm7aeu3xuycvy59ae2lws69dcf",
+    UTXO: true,
   },
   {
     key: "bitcoincash",
     label: "Bitcoin Cash",
     exampleAddress: "qrcuqadqrzp2uztjl9wn5sthepkg22majyxw4gmv6p",
+    UTXO: true,
   },
   {
     key: "cantoEVM",
@@ -79,6 +81,7 @@ export const chainsSupported = [
     key: "dogecoin",
     label: "Dogecoin",
     exampleAddress: "DBgHW1Shjyk91fusm9hm3HcryNBwaFwZbQ",
+    UTXO: true,
   },
   {
     key: "ethereum",
@@ -113,6 +116,7 @@ export const chainsSupported = [
     key: "litecoin",
     label: "Litecoin",
     exampleAddress: "ltc1q8g4sjzaexe3vslzs3tuz7ndj38pdf20yph2ygs",
+    UTXO: true,
   },
   {
     key: "mayachain",

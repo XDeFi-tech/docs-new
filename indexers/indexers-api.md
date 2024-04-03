@@ -9,7 +9,7 @@ The base URL for all API endpoints is: `https://gql-router.xdefiservices.com/gra
 <details>
 <summary>Here are the chains supported by the Indexers API:</summary>
 
-| Name                | Key                 | Base chain    |
+| Chain               | Key                 | Base chain    |
 | ------------------- | ------------------- | ------------- |
 | Akash               | `akash`             | CosmosChain   |
 | Arbitrum            | `arbitrum`          | EVM           |
@@ -20,10 +20,10 @@ The base URL for all API endpoints is: `https://gql-router.xdefiservices.com/gra
 | Binance Smart Chain | `binanceSmartChain` | EVM           |
 | Bitcoin             | `bitcoin`           | BitcoinChain  |
 | Bitcoin Cash        | `bitcoincash`       | BitcoinChain  |
-| Canto EVM           | `cantoEVM`          | EVM           |
+| Canto               | `cantoEVM`          | EVM           |
 | Cosmos Hub          | `cosmos`            | CosmosChain   |
 | Crescent            | `crescent`          | CosmosChain   |
-| Cronos EVM          | `cronosEVM`         | EVM           |
+| Cronos              | `cronosEVM`         | EVM           |
 | Dogecoin            | `dogecoin`          | BitcoinChain  |
 | Ethereum            | `ethereum`          | EVM           |
 | Fantom              | `fantom`            | EVM           |
@@ -64,6 +64,8 @@ await fetch(GRAPHQL_ENDPOINT, {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
+    "apollographql-client-name": "docs-indexers-api",
+    "apollographql-client-version": "v1.0",
   },
   body: JSON.stringify({
     query,
@@ -129,6 +131,8 @@ await fetch(GRAPHQL_ENDPOINT, {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
+    "apollographql-client-name": "docs-indexers-api",
+    "apollographql-client-version": "v1.0",
   },
   body: JSON.stringify({
     query,
@@ -148,7 +152,7 @@ await fetch(GRAPHQL_ENDPOINT, {
 
 <div ref="refGetBalance"/>
 
-## Get Transaction
+## Get Activity History
 
 ::: code-group
 
@@ -184,6 +188,8 @@ await fetch(GRAPHQL_ENDPOINT, {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
+    "apollographql-client-name": "docs-indexers-api",
+    "apollographql-client-version": "v1.0",
   },
   body: JSON.stringify({
     query,
@@ -234,6 +240,8 @@ await fetch(GRAPHQL_ENDPOINT, {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
+    "apollographql-client-name": "docs-indexers-api",
+    "apollographql-client-version": "v1.0",
   },
   body: JSON.stringify({
     query,
@@ -329,6 +337,8 @@ await fetch(GRAPHQL_ENDPOINT, {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
+    "apollographql-client-name": "docs-indexers-api",
+    "apollographql-client-version": "v1.0",
   },
   body: JSON.stringify({
     query,
@@ -369,6 +379,8 @@ await fetch(GRAPHQL_ENDPOINT, {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
+    "apollographql-client-name": "docs-indexers-api",
+    "apollographql-client-version": "v1.0",
   },
   body: JSON.stringify({
     query,
@@ -385,6 +397,93 @@ await fetch(GRAPHQL_ENDPOINT, {
 
 <div ref="refGetGasFee"/>
 
+## UTXOs (Bitcoin, Bitcoin Cash, Dogecoin, Litecoin)
+
+### Get Unspent Transaction Outputs (UTXOs)
+
+::: code-group
+
+```javascript [Get UTXOs]
+const GRAPHQL_ENDPOINT = "https://gql-router.xdefiservices.com/graphql";
+const query = `query GetUnspentTxOutputsV5($address: String!, $page: Int!) {
+  ${chain.key} { // [!code highlight]
+    unspentTxOutputsV5(address: $address, page: $page) {
+      oIndex
+      oTxHash
+      value {
+        value
+      }
+      scriptHex
+      oTxHex
+      isCoinbase
+      address
+    }
+  }
+}`;
+
+await fetch(GRAPHQL_ENDPOINT, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    "apollographql-client-name": "docs-indexers-api",
+    "apollographql-client-version": "v1.0",
+  },
+  body: JSON.stringify({
+    query,
+    variables: {
+      address: address, // Input address // [!code highlight]
+      page: 1,
+    },
+  }),
+})
+  .then((response) => response.json())
+  .then((result) => {
+    console.log(result);
+    // Do something with the result
+  });
+```
+
+:::
+
+<div ref="refGetUTXOs"/>
+
+### Broadcast Transaction
+
+::: code-group
+
+```javascript [Broadcast Transaction]
+const GRAPHQL_ENDPOINT = "https://gql-router.xdefiservices.com/graphql";
+const query = `query BroadcastTransaction($rawHex: String!) {
+  ${chain.key} { // [!code highlight]
+    broadcastTransaction(rawHex: $rawHex)
+  }
+}`;
+
+await fetch(GRAPHQL_ENDPOINT, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    query,
+    variables: {
+      rawHex: rawHex, // Input raw transaction hex // [!code highlight]
+    },
+  }),
+})
+  .then((response) => response.json())
+  .then((result) => {
+    console.log(result);
+    // Do something with the result
+  });
+```
+
+:::
+
+View more about raw transaction hex [here](https://www.blockchain.com/explorer/assets/btc/decode-transaction).
+
+<div ref="refBroadcastTransaction"/>
+
 <script setup>
 import { createElement } from 'react'
 import { createRoot } from 'react-dom/client'
@@ -393,10 +492,14 @@ import { ref, onMounted } from 'vue'
 import GetBalance from '../components/GetBalance.jsx'
 import GetTransactions from '../components/GetTransactions.jsx'
 import GetGasFee from '../components/GetGasFee.jsx'
+import GetUTXOs from '../components/GetUTXOs.jsx'
+import BroadcastTransaction from '../components/BroadcastTransaction.jsx'
 
 const refGetBalance = ref()
 const refGetTransaction = ref()
 const refGetGasFee = ref()
+const refGetUTXOs = ref()
+const refBroadcastTransaction = ref()
 onMounted(() => {
   const rootGetBalance = createRoot(refGetBalance.value)
   rootGetBalance.render(createElement(GetBalance, {}, null))
@@ -404,5 +507,9 @@ onMounted(() => {
   rootGetTransaction.render(createElement(GetTransactions, {}, null))
   const rootGetGasFee = createRoot(refGetGasFee.value)
   rootGetGasFee.render(createElement(GetGasFee, {}, null))
+  const rootGetUTXOs = createRoot(refGetUTXOs.value)
+  rootGetUTXOs.render(createElement(GetUTXOs, {}, null))
+  const rootBroadcastTransaction = createRoot(refBroadcastTransaction.value)
+  rootBroadcastTransaction.render(createElement(BroadcastTransaction, {}, null))
 })
 </script>

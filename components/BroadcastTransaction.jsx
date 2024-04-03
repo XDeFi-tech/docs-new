@@ -3,23 +3,27 @@ import LoadingIcon from "./LoadingIcon";
 import PlayIcon from "./PlayIcon";
 import { chainsSupported } from "./common";
 
-const GetGasFee = () => {
+const BroadcastTransaction = () => {
   const GRAPHQL_ENDPOINT = "https://gql-router.xdefiservices.com/graphql";
   const [response, setResponse] = useState({});
   const [loading, setLoading] = useState(false);
   const [chainSelected, setChainSelected] = useState(undefined);
   const [chain, setChain] = useState(undefined);
+  const [rawHex, setRawHex] = useState("");
+
+  const chainsList = chainsSupported.filter((chain) => chain.UTXO);
 
   useEffect(() => {
     if (!chainSelected) {
       setChain(undefined);
     } else {
-      chainsSupported.find((chain) => {
+      chainsList.find((chain) => {
         if (chain.key === chainSelected) {
           setChain(chain);
         }
       });
     }
+    setRawHex("");
     setResponse({});
   }, [chainSelected]);
 
@@ -33,58 +37,30 @@ const GetGasFee = () => {
       return;
     }
 
-    let query = "";
-
-    switch (chain.key) {
-      case "ethereum":
-      case "cantoEVM":
-      case "cronosEVM":
-      case "gnosis":
-        query = `query GetFee {
-          ${chain.key} {
-            fee {
-              defaultGasPrice
-              high {
-                maxFeePerGas
-                baseFeePerGas
-                priorityFeePerGas
-              }
-              low {
-                baseFeePerGas
-                maxFeePerGas
-                priorityFeePerGas
-              }
-              medium {
-                baseFeePerGas
-                maxFeePerGas
-                priorityFeePerGas
-              }
-            }
-          }
-        }`;
-        break;
-      default:
-        query = `query GetGasFee {
-          ${chain.key} {
-            fee {
-              high
-              low
-              medium
-            }
-          }
-        }`;
-        break;
+    if (!rawHex) {
+      alert("Please enter a raw transaction hex!");
+      setLoading(false);
+      return;
     }
+
+    const query = `query BroadcastTransaction($rawHex: String!) {
+      ${chain.key} {
+        broadcastTransaction(rawHex: $rawHex)
+      }
+    }`;
 
     await fetch(GRAPHQL_ENDPOINT, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "apollographql-client-name": "docs-indexers-api",
+        "apollographql-client-name": "xdefi-docs",
         "apollographql-client-version": "v1.0",
       },
       body: JSON.stringify({
         query,
+        variables: {
+          rawHex: rawHex,
+        },
       }),
     })
       .then((response) => response.json())
@@ -112,13 +88,27 @@ const GetGasFee = () => {
               onChange={(e) => setChainSelected(e.target.value)}
             >
               <option value={undefined}>Select a chain</option>
-              {chainsSupported.map((chain) => (
+              {chainsList.map((chain) => (
                 <option key={chain.key} value={chain.key}>
                   {chain.label}
                   {chain.baseChain && <> ({chain.baseChain})</>}
                 </option>
               ))}
             </select>
+          </div>
+        </div>
+        <div className="flex items-center gap-4">
+          <span>Raw Transaction Hex:</span>
+          <div className="border border-[#e2e2e3] dark:border-[#2e2e32] hover:border-[#3451b2] rounded-lg overflow-hidden w-fit">
+            <input
+              type="text"
+              id="raw-hex"
+              name="Raw Hex"
+              value={rawHex}
+              className="bg-gray-50 text-gray-900 px-2 py-1 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white"
+              placeholder="Enter an raw transaction hex"
+              onChange={(e) => setRawHex(e.target.value)}
+            />
           </div>
         </div>
       </div>
@@ -153,4 +143,4 @@ const GetGasFee = () => {
   );
 };
 
-export default GetGasFee;
+export default BroadcastTransaction;

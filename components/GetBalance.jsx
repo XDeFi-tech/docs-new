@@ -42,6 +42,8 @@ const GetBalance = () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "apollographql-client-name": "docs-indexers-api",
+        "apollographql-client-version": "v1.0",
       },
       body: JSON.stringify({
         query,
@@ -79,6 +81,8 @@ const GetBalance = () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "apollographql-client-name": "docs-indexers-api",
+        "apollographql-client-version": "v1.0",
       },
       body: JSON.stringify({
         query,
@@ -117,6 +121,8 @@ const GetBalance = () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "apollographql-client-name": "docs-indexers-api",
+        "apollographql-client-version": "v1.0",
       },
       body: JSON.stringify({
         query,

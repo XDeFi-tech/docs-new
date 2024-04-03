@@ -3,20 +3,25 @@ import LoadingIcon from "./LoadingIcon";
 import PlayIcon from "./PlayIcon";
 import { chainsSupported } from "./common";
 
-const GetGasFee = () => {
+const GetUTXOs = () => {
   const GRAPHQL_ENDPOINT = "https://gql-router.xdefiservices.com/graphql";
   const [response, setResponse] = useState({});
   const [loading, setLoading] = useState(false);
   const [chainSelected, setChainSelected] = useState(undefined);
   const [chain, setChain] = useState(undefined);
+  const [address, setAddress] = useState("");
+
+  const chainsList = chainsSupported.filter((chain) => chain.UTXO);
 
   useEffect(() => {
     if (!chainSelected) {
       setChain(undefined);
+      setAddress("");
     } else {
-      chainsSupported.find((chain) => {
+      chainsList.find((chain) => {
         if (chain.key === chainSelected) {
           setChain(chain);
+          setAddress(chain.exampleAddress || "");
         }
       });
     }
@@ -33,48 +38,27 @@ const GetGasFee = () => {
       return;
     }
 
-    let query = "";
-
-    switch (chain.key) {
-      case "ethereum":
-      case "cantoEVM":
-      case "cronosEVM":
-      case "gnosis":
-        query = `query GetFee {
-          ${chain.key} {
-            fee {
-              defaultGasPrice
-              high {
-                maxFeePerGas
-                baseFeePerGas
-                priorityFeePerGas
-              }
-              low {
-                baseFeePerGas
-                maxFeePerGas
-                priorityFeePerGas
-              }
-              medium {
-                baseFeePerGas
-                maxFeePerGas
-                priorityFeePerGas
-              }
-            }
-          }
-        }`;
-        break;
-      default:
-        query = `query GetGasFee {
-          ${chain.key} {
-            fee {
-              high
-              low
-              medium
-            }
-          }
-        }`;
-        break;
+    if (!address) {
+      alert("Please enter an address!");
+      setLoading(false);
+      return;
     }
+
+    const query = `query GetUnspentTxOutputsV5($address: String!, $page: Int!) {
+      bitcoin {
+        unspentTxOutputsV5(address: $address, page: $page) {
+          oIndex
+          oTxHash
+          value {
+            value
+          }
+          scriptHex
+          oTxHex
+          isCoinbase
+          address
+        }
+      }
+    }`;
 
     await fetch(GRAPHQL_ENDPOINT, {
       method: "POST",
@@ -85,6 +69,10 @@ const GetGasFee = () => {
       },
       body: JSON.stringify({
         query,
+        variables: {
+          address: address,
+          page: 1,
+        },
       }),
     })
       .then((response) => response.json())
@@ -112,13 +100,27 @@ const GetGasFee = () => {
               onChange={(e) => setChainSelected(e.target.value)}
             >
               <option value={undefined}>Select a chain</option>
-              {chainsSupported.map((chain) => (
+              {chainsList.map((chain) => (
                 <option key={chain.key} value={chain.key}>
                   {chain.label}
                   {chain.baseChain && <> ({chain.baseChain})</>}
                 </option>
               ))}
             </select>
+          </div>
+        </div>
+        <div className="flex items-center gap-4">
+          <span>Address:</span>
+          <div className="border border-[#e2e2e3] dark:border-[#2e2e32] hover:border-[#3451b2] rounded-lg overflow-hidden w-fit">
+            <input
+              type="text"
+              id="address"
+              name="Address"
+              value={address}
+              className="bg-gray-50 text-gray-900 px-2 py-1 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white"
+              placeholder="Enter an address"
+              onChange={(e) => setAddress(e.target.value)}
+            />
           </div>
         </div>
       </div>
@@ -153,4 +155,4 @@ const GetGasFee = () => {
   );
 };
 
-export default GetGasFee;
+export default GetUTXOs;
