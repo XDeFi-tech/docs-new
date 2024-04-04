@@ -729,6 +729,11 @@ function sidebarHome() {
       items: [],
     },
     {
+      text: "Staking API",
+      link: "/staking/staking-api",
+      items: [],
+    },
+    {
       text: "Community",
       collapsed: true,
       items: [

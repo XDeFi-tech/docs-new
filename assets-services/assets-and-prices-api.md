@@ -12,7 +12,7 @@ The Assets and Prices API is a free API that provides real-time and historical d
 
 The API is available for a wide range of blockchains, including Ethereum, Binance Smart Chain, and Solana, and supports a variety of assets, such as tokens, coins, and NFTs.
 
-The base URL for all API endpoints is: `https://gql-router.xdefiservices.com/graphql`.
+The base URL for all API endpoints is: https://gql-router.xdefiservices.com/graphql
 
 ## Get Assets Tokens
 

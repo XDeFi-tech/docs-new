@@ -11,7 +11,7 @@ Welcome to the XDEFI Campaigns Service API documentation. This API allows third-
 
 ### Base URL
 
-The base URL for all API endpoints is: `https://compaign-ts.xdefi.services/api`
+The base URL for all API endpoints is: https://compaign-ts.xdefi.services/api
 
 ### Workflow
 

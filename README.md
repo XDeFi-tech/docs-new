@@ -33,15 +33,18 @@ making a pull request.
 ## Directory Structure
 
 - /.vitepress: Configuration files for the VitePress site.
+- /public: Static assets like images, diagrams, and other media files.
 - /assets: Images, diagrams, and other media files used in the documentation.
+- /components: Custom React components integrated into the documentation.
 - /about: A category for learning more about XDEFI Technologies and $XDEFI token.
 - /campaigns: A category for Campaigns Service API
-- /assets-service: A category for Assets Service API
 - /developers: A category with tutorials and guides for deploying
-  dApps and connect with XDEFI Wallet.
 - /routing: Technical reference materials for integrating our Routing aggregator API.
-- /public: Static assets like images, diagrams, and other media files.
-- /components: Custom React components integrated into the documentation.
+- /assets-service: A category for Assets Service API
+  dApps and connect with XDEFI Wallet.
+- /indexers: A category for Indexers API
+- /gas-tank: A category for Gas Tank API
+- /staking: A category for Staking API
 
 ## Feedback & Suggestions
 

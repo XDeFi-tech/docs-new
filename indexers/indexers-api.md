@@ -4,7 +4,7 @@
 
 XDEFI provides Indexers API for developers to fetch balances, transactions, fees across many blockchains supported by XDEFI Wallet.
 
-The base URL for all API endpoints is: `https://gql-router.xdefiservices.com/graphql`.
+The base URL for all API endpoints is: https://gql-router.xdefiservices.com/graphql.
 
 <details>
 <summary>Here are the chains supported by the Indexers API:</summary>
@@ -463,6 +463,8 @@ await fetch(GRAPHQL_ENDPOINT, {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
+    "apollographql-client-name": "docs-indexers-api",
+    "apollographql-client-version": "v1.0",
   },
   body: JSON.stringify({
     query,
