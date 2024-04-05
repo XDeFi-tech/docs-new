@@ -222,9 +222,9 @@ function nav() {
       items: [
         {
           text: "About XDEFI Technologies",
-          link: "/about/xdefi-technologies/xdefi-technologies",
+          link: "/about/xdefi-technologies/introduction",
         },
-        { text: "About $XDEFI token", link: "/about/xdefi-token/xdefi-token" },
+        { text: "About $XDEFI token", link: "/about/xdefi-token/introduction" },
         { text: "Developers", link: "/developers/introduction" },
         {
           text: "XDEFI Wallet Integration",
@@ -254,6 +254,10 @@ function nav() {
 
 function sidebarHome() {
   return [
+    {
+      text: "General Documentation",
+      link: "https://docs.xdefi.io/docs",
+    },
     {
       text: "About XDEFI",
       link: "/about/xdefi",
@@ -695,7 +699,29 @@ function sidebarHome() {
       ],
     },
     {
-      text: "Routing API",
+      text: "Blockchain Data APIs",
+      link: "/indexers/indexers-api",
+      collapsed: true,
+      items: [
+        {
+          text: "Indexers API",
+          link: "/indexers/indexers-api",
+          items: [],
+        },
+        {
+          text: "Assets and Prices API",
+          link: "/assets-services/assets-and-prices-api",
+          items: [],
+        },
+        {
+          text: "Staking API",
+          link: "/staking/staking-api",
+          items: [],
+        },
+      ],
+    },
+    {
+      text: "Swap Routing API",
       link: "/routing/introduction",
       collapsed: true,
       items: [
@@ -714,24 +740,16 @@ function sidebarHome() {
       ],
     },
     {
-      text: "Campaigns Service API",
+      text: "Partners APIs",
       link: "/campaigns/campaigns-service-api",
-      items: [],
-    },
-    {
-      text: "Assets and Prices API",
-      link: "/assets-services/assets-and-prices-api",
-      items: [],
-    },
-    {
-      text: "Indexers API",
-      link: "/indexers/indexers-api",
-      items: [],
-    },
-    {
-      text: "Staking API",
-      link: "/staking/staking-api",
-      items: [],
+      collapsed: true,
+      items: [
+        {
+          text: "Campaigns Service API",
+          link: "/campaigns/campaigns-service-api",
+          items: [],
+        },
+      ],
     },
     {
       text: "Community",
@@ -747,11 +765,6 @@ function sidebarHome() {
           link: "https://www.coingecko.com/en/coins/xdefi",
         },
       ],
-    },
-    {
-      text: "User Documentation",
-      link: "https://docs.xdefi.io",
-      items: [],
     },
   ];
 }
