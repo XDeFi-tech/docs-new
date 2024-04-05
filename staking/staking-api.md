@@ -8,7 +8,7 @@ The base URL for all API endpoints is: https://gql-router.dev.xdefi.services/gra
 
 Below are the services provided by the staking API.
 
-## Cosmos
+## CosmosChains
 
 Our staking API extends comprehensive support to a wide array of Cosmos chains using Stride, enabling seamless interactions with their staking functionalities. Supported assets include `ATOM`, `OSMO`, `JUNO`, `STARS`, `LUNA`, `SEI`, `AXL`, `KAVA`, `AKASH`, `STRD`, `KUJI`, and `CRE`.
 
@@ -269,7 +269,7 @@ await fetch(GRAPHQL_ENDPOINT, {
 
 <div ref="refCreateNativeStakingTx" />
 
-## Ethereum
+## EVMs
 
 ### Liquid staking
 
