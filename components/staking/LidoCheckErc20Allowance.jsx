@@ -4,7 +4,8 @@ import PlayIcon from "../PlayIcon";
 import { otherSupportedAssets as assetSupported } from "../common";
 
 const LidoCheckErc20Allowance = () => {
-  const GRAPHQL_ENDPOINT = "https://gql-router.dev.xdefiservices.com/graphql";
+  const GRAPHQL_ENDPOINT =
+    "https://gql-router.dev.${process.env.VITE_BASE_SERVICE}/graphql";
   const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState({});
   const [assetSelected, setAssetSelected] = useState(undefined);

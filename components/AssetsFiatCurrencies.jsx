@@ -3,7 +3,7 @@ import LoadingIcon from "./LoadingIcon";
 import PlayIcon from "./PlayIcon";
 
 const FiatCurrencies = () => {
-  const GRAPHQL_ENDPOINT = "https://gql-router.xdefiservices.com/graphql";
+  const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
   const [response, setResponse] = useState({});
   const [loading, setLoading] = useState(false);
 

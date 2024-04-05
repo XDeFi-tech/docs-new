@@ -29,13 +29,13 @@ First, given a pair tokenA/tokenB, with assets belonging to the same chain or se
 ## Connecting to the API
 
 Before connecting to the API, one needs to go through the XDEFI VPN to access it or to whitelist the IP address.
-API endpoints share the same root URL: https://routingapi.xdefiservices.com/.
+API endpoints share the same root URL: https://routingapi.xdefi.services/.
 
 To check the health status of the API just send a GET request to the above URL:
 ::: code-group
 
 ```ts [Request]
-URL = "https://routingapi.xdefiservices.com";
+URL = "https://routingapi.xdefi.services";
 
 response = await fetch(URL);
 

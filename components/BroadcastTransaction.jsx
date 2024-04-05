@@ -4,7 +4,7 @@ import PlayIcon from "./PlayIcon";
 import { chainsSupported } from "./common";
 
 const BroadcastTransaction = () => {
-  const GRAPHQL_ENDPOINT = "https://gql-router.xdefiservices.com/graphql";
+  const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
   const [response, setResponse] = useState({});
   const [loading, setLoading] = useState(false);
   const [chainSelected, setChainSelected] = useState(undefined);

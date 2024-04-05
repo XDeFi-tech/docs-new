@@ -4,7 +4,7 @@
 
 XDEFI provides Indexers API for developers to fetch balances, transactions, fees across many blockchains supported by XDEFI Wallet.
 
-The base URL for all API endpoints is: https://gql-router.xdefiservices.com/graphql.
+The base URL for all API endpoints is: https://gql-router.xdefi.services/graphql.
 
 <details>
 <summary>Here are the chains supported by the Indexers API:</summary>
@@ -49,7 +49,7 @@ The base URL for all API endpoints is: https://gql-router.xdefiservices.com/grap
 ::: code-group
 
 ```javascript [EVM Chain]
-const GRAPHQL_ENDPOINT = "https://gql-router.xdefiservices.com/graphql";
+const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
 const query = `query GetBalances($address: String!, $first: Int, $after: String) {
   ${chain.key} { // [!code highlight]
     balances(address: $address, first: $first, after: $after) {
@@ -84,7 +84,7 @@ await fetch(GRAPHQL_ENDPOINT, {
 ```
 
 ```javascript [CosmosChain]
-const GRAPHQL_ENDPOINT = "https://gql-router.xdefiservices.com/graphql";
+const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
 const query = `query GetBalances($address: String!, $tokenAddresses: [String!]) {
   ${chain.key} { // [!code highlight]
     balances(address: $address, tokenAddresses: $tokenAddresses) {
@@ -116,7 +116,7 @@ await fetch(GRAPHQL_ENDPOINT, {
 ```
 
 ```javascript [Other Chain]
-const GRAPHQL_ENDPOINT = "https://gql-router.xdefiservices.com/graphql";
+const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
 const query = `query GetBalances($address: String!) {
   ${chain.key} { // [!code highlight]
     balances(address: $address) {
@@ -157,7 +157,7 @@ await fetch(GRAPHQL_ENDPOINT, {
 ::: code-group
 
 ```javascript [EVM Chain]
-const GRAPHQL_ENDPOINT = "https://gql-router.xdefiservices.com/graphql";
+const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
 const query = `query GetTransactions($address: String!, $first: Int, $after: String) {
   ${chain.key} { // [!code highlight]
     transactions(address: $address, first: $first, after: $after) {
@@ -208,7 +208,7 @@ await fetch(GRAPHQL_ENDPOINT, {
 ```
 
 ```javascript [CosmosChain]
-const GRAPHQL_ENDPOINT = "https://gql-router.xdefiservices.com/graphql";
+const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
 const query = `query GetTransactions($address: String!, $first: Int, $after: String) {
   ${chain.key} { // [!code highlight]
     transactions(address: $address, first: $first, after: $after) {
@@ -260,7 +260,7 @@ await fetch(GRAPHQL_ENDPOINT, {
 ```
 
 ```javascript [Other Chain]
-const GRAPHQL_ENDPOINT = "https://gql-router.xdefiservices.com/graphql";
+const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
 const query = `query GetTransactions($address: String!, $first: Int!, $after: String) {
   ${chain.key} { // [!code highlight]
     transactionsV3(address: $address, first: $first, after: $after) {
@@ -322,7 +322,7 @@ await fetch(GRAPHQL_ENDPOINT, {
 ::: code-group
 
 ```javascript [Default Gas Fee]
-const GRAPHQL_ENDPOINT = "https://gql-router.xdefiservices.com/graphql";
+const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
 const query = `query GetGasFee {
   ${chain.key} { // [!code highlight]
     fee {
@@ -352,7 +352,7 @@ await fetch(GRAPHQL_ENDPOINT, {
 ```
 
 ```javascript [EIP1559 Gas Fee (Ethereum, Canto, Cronos)]
-const GRAPHQL_ENDPOINT = "https://gql-router.xdefiservices.com/graphql";
+const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
 const query = `query GetFee {
   ${chain.key} { // [!code highlight]
     fee {
@@ -404,7 +404,7 @@ await fetch(GRAPHQL_ENDPOINT, {
 ::: code-group
 
 ```javascript [Get UTXOs]
-const GRAPHQL_ENDPOINT = "https://gql-router.xdefiservices.com/graphql";
+const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
 const query = `query GetUnspentTxOutputsV5($address: String!, $page: Int!) {
   ${chain.key} { // [!code highlight]
     unspentTxOutputsV5(address: $address, page: $page) {
@@ -452,7 +452,7 @@ await fetch(GRAPHQL_ENDPOINT, {
 ::: code-group
 
 ```javascript [Broadcast Transaction]
-const GRAPHQL_ENDPOINT = "https://gql-router.xdefiservices.com/graphql";
+const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
 const query = `query BroadcastTransaction($rawHex: String!) {
   ${chain.key} { // [!code highlight]
     broadcastTransaction(rawHex: $rawHex)

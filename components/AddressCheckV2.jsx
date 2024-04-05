@@ -3,7 +3,7 @@ import LoadingIcon from "./LoadingIcon";
 import PlayIcon from "./PlayIcon";
 
 export default function AddressCheckV2() {
-  const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
+  const GRAPHQL_ENDPOINT = `https://gql-router.${process.env.VITE_BASE_SERVICE}/graphql`;
   const [response, setResponse] = useState({});
   const [loading, setLoading] = useState(false);
 

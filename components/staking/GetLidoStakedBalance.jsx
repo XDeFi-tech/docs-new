@@ -4,7 +4,7 @@ import PlayIcon from "../PlayIcon";
 import { otherSupportedAssets as assetSupported } from "../common";
 
 const GetLidoStakedBalance = () => {
-  const GRAPHQL_ENDPOINT = "https://gql-router.dev.xdefiservices.com/graphql";
+  const GRAPHQL_ENDPOINT = "https://gql-router.dev.xdefi.services/graphql";
   const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState({});
   const [assetSelected, setAssetSelected] = useState(undefined);

@@ -2,25 +2,29 @@
 
 ## Overview
 
-XDEFI provides a staking API that allows developers to interact with the staking network. The API is designed to be simple and easy to use, with a focus on providing a high level of abstraction to the underlying blockchain network.
+XDEFI offers a staking API that enables developers to engage with the staking features across multiple blockchain networks. This API is crafted for simplicity and ease of use, emphasizing a high degree of abstraction from the complexities of the underlying blockchains..
 
-The base URL for all API endpoints is: https://gql-router.dev.xdefiservices.com/graphql
+The base URL for all API endpoints is: https://gql-router.dev.xdefi.services/graphql
 
 Below are the services provided by the staking API.
 
-## For CosmosChains
+## Cosmos
 
-### Get balance of staked asset on STRIDE
+Our staking API extends comprehensive support to a wide array of Cosmos chains using Stride, enabling seamless interactions with their staking functionalities. Supported assets include `ATOM`, `OSMO`, `JUNO`, `STARS`, `LUNA`, `SEI`, `AXL`, `KAVA`, `AKASH`, `STRD`, `KUJI`, and `CRE`.
+
+### Liquid staking
+
+#### Get balance of staked asset on STRIDE
 
 You can use the `getStrideStakedAssetBalance` query to get the balance of a staked asset on STRIDE. The query takes the following parameters:
 
 - `strideAddress`: The STRIDE address for which to get the balance.
-- `asset`: The asset for which to get the balance. Supported assets: `ATOM`, `OSMO`, `JUNO`, `STARS`, `LUNA`, `SEI`, `AXL`, `KAVA`, `AKASH`, `STRD`, `KUJI`, `CRE`
+- `asset`: The asset for which to get the balance.
 
 ::: code-group
 
 ```javascript [GetStrideStakedAssetBalance]
-const GRAPHQL_ENDPOINT = "https://gql-router.dev.xdefiservices.com/graphql";
+const GRAPHQL_ENDPOINT = "https://gql-router.dev.xdefi.services/graphql";
 const query = `query GetStrideStakedAssetBalance($strideAddress: String!, $asset: SupportedAssets!) {
   staking {
     getStrideStakedAssetBalance(asset: $asset, strideAddress: $strideAddress) {
@@ -57,7 +61,7 @@ await fetch(GRAPHQL_ENDPOINT, {
 
 <div ref="refGetStrideStakedAssetBalance" />
 
-### Create staking TX on STRIDE from any Cosmos Chain
+#### Create Staking Transaction on Stride from any Cosmos Chain
 
 You can use the `createStrideLiquidStakingTx` mutation to create a staking transaction on STRIDE from any Cosmos chain. The mutation takes the following parameters:
 
@@ -65,14 +69,14 @@ You can use the `createStrideLiquidStakingTx` mutation to create a staking trans
 - `amount`: The amount of the asset to stake.
 - `senderAddr`: The address of the sender.
 - `senderPubkeyHex`: The public key of the sender.
-- `asset`: The asset to stake. Supported assets: `ATOM`, `OSMO`, `JUNO`, `STARS`, `LUNA`, `SEI`, `AXL`, `KAVA`, `AKASH`, `STRD`, `KUJI`, `CRE`
+- `asset`: The asset to stake.
 - `timeoutHeight`: The timeout height for the transaction.
 - `gasLimit`: The gas limit for the transaction.
 
 ::: code-group
 
 ```javascript [CreateStrideLiquidStakingTx]
-const GRAPHQL_ENDPOINT = "https://gql-router.dev.xdefiservices.com/graphql";
+const GRAPHQL_ENDPOINT = "https://gql-router.dev.xdefi.services/graphql";
 const query = `query CreateStrideLiquidStakingTx($input: StrideStakingInput!) {
   staking {
   createStrideLiquidStakingTx(input: $input)
@@ -112,17 +116,19 @@ await fetch(GRAPHQL_ENDPOINT, {
 
 <div ref="refCreateStrideLiquidStakingTx" />
 
-### Get Cosmos Delegations
+### Native staking
+
+#### Get Cosmos Delegations
 
 You can use the `getCosmosDelegations` query to get the delegations of a Cosmos address. The query takes the following parameters:
 
-- `asset`: The asset for which to get the delegations. Supported assets: `ATOM`, `OSMO`, `JUNO`, `STARS`, `LUNA`, `SEI`, `AXL`, `KAVA`, `AKASH`, `STRD`, `KUJI`, `CRE`
+- `asset`: The asset for which to get the delegations.
 - `address`: The address for which to get the delegations.
 
 ::: code-group
 
 ```javascript [GetCosmosDelegations]
-const GRAPHQL_ENDPOINT = "https://gql-router.dev.xdefiservices.com/graphql";
+const GRAPHQL_ENDPOINT = "https://gql-router.dev.xdefi.services/graphql";
 const query = `query getCosmosDelegations($asset: SupportedAssets!, $address: String!) {
   staking {
     getCosmosDelegations(address: $address, asset: $asset) {
@@ -161,11 +167,11 @@ await fetch(GRAPHQL_ENDPOINT, {
 
 <div ref="refGetCosmosDelegations" />
 
-### Create native staking TX and delegate to validator (Meria, StakeLab or Custom validator’s address)
+#### Create native staking TX and delegate to validator (Meria, StakeLab or Custom validator’s address)
 
 You can use the `createCosmosDelegateTx` mutation to create a native staking transaction and delegate to a validator. The mutation takes the following parameters:
 
-- `asset`: The asset to stake. Supported assets: `ATOM`, `OSMO`, `JUNO`, `STARS`, `LUNA`, `SEI`, `AXL`, `KAVA`, `AKASH`, `STRD`, `KUJI`, `CRE`
+- `asset`: The asset to stake.
 - `validator`: The validator to delegate to. Supported validators: `Meria`, `StakeLab` or `null` (Custom). If validator is `Custom`, you need to provide the `validatorAddress` parameter.
 - `validatorAddress`: The address of the custom validator.
 - `amount`: The amount to stake.
@@ -177,7 +183,7 @@ You can use the `createCosmosDelegateTx` mutation to create a native staking tra
 ::: code-group
 
 ```javascript [Meria/StakeLab Validator]
-const GRAPHQL_ENDPOINT = "https://gql-router.dev.xdefiservices.com/graphql";
+const GRAPHQL_ENDPOINT = "https://gql-router.dev.xdefi.services/graphql";
 const query = `query CreateCosmosDelegateTx($delegationInput: CosmosDelegationInput!, $validatorAddress: String, $provider: Providers) {
   staking {
     createCosmosDelegateTx(
@@ -218,7 +224,7 @@ await fetch(GRAPHQL_ENDPOINT, {
 ```
 
 ```javascript [Custom validator’s address]
-const GRAPHQL_ENDPOINT = "https://gql-router.dev.xdefiservices.com/graphql";
+const GRAPHQL_ENDPOINT = "https://gql-router.dev.xdefi.services/graphql";
 const query = `query CreateCosmosDelegateTx($delegationInput: CosmosDelegationInput!, $validatorAddress: String, $provider: Providers) {
   staking {
     createCosmosDelegateTx(
@@ -263,9 +269,13 @@ await fetch(GRAPHQL_ENDPOINT, {
 
 <div ref="refCreateNativeStakingTx" />
 
-## For EVMs
+## Ethereum
 
-### Get balance of stakes asset on LIDO for stETH
+### Liquid staking
+
+Our staking API extends comprehensive support to Ethereum chains using LIDO, enabling seamless interactions with their staking functionalities. Supported assets include `ETH` and `MATIC_ERC20`.
+
+#### Get balance of stakes asset on LIDO for stETH
 
 You can use the `getLidoStakedAssetBalance` query to get the balance of a staked asset on LIDO. The query takes the following parameters:
 
@@ -275,7 +285,7 @@ You can use the `getLidoStakedAssetBalance` query to get the balance of a staked
 ::: code-group
 
 ```javascript [GetLidoStakedBalance]
-const GRAPHQL_ENDPOINT = "https://gql-router.dev.xdefiservices.com/graphql";
+const GRAPHQL_ENDPOINT = "https://gql-router.dev.xdefi.services/graphql";
 const query = `query GetLidoStakedBalance($asset: SupportedAssets!, $address: String!) {
   staking {
     getLidoStakedBalance(address: $address, asset: $asset) {
@@ -313,11 +323,11 @@ await fetch(GRAPHQL_ENDPOINT, {
 
 <div ref="refGetLidoStakedBalance" />
 
-### Create staking Tx for ETH/ERC20 on LIDO
+#### Create staking Tx for ETH/ERC20 on LIDO
 
 You can use the `createLidoStakeTx` query to create a staking transaction on LIDO. The query takes the following parameters:
 
-- `asset`: The asset to stake. Supported assets: `ETH`, `MATIC_ERC20`
+- `asset`: The asset to stake.
 - `address`: The address of the sender.
 - `stakeValue`: The amount to stake.
 - `nonce`: The nonce for the transaction.
@@ -325,7 +335,7 @@ You can use the `createLidoStakeTx` query to create a staking transaction on LID
 ::: code-group
 
 ```javascript [CreateLidoStakeTx]
-const GRAPHQL_ENDPOINT = "https://gql-router.dev.xdefiservices.com/graphql";
+const GRAPHQL_ENDPOINT = "https://gql-router.dev.xdefi.services/graphql";
 const query = `query CreateLidoStakeTx($input: LidoStakingInput!) {
   staking {
     createLidoStakeTx(input: $input) {
@@ -369,7 +379,7 @@ await fetch(GRAPHQL_ENDPOINT, {
 
 <div ref="refCreateLidoStakeTx" />
 
-### Check the allowance for staking erc20 MATIC to stMATIC contract
+#### Check the allowance for staking erc20 MATIC to stMATIC contract
 
 You can use the `lidoCheckErc20Allowance` query to check the allowance for staking erc20 MATIC to the stMATIC contract. The query takes the following parameters:
 
@@ -379,7 +389,7 @@ You can use the `lidoCheckErc20Allowance` query to check the allowance for staki
 ::: code-group
 
 ```javascript [LidoCheckErc20Allowance]
-const GRAPHQL_ENDPOINT = "https://gql-router.dev.xdefiservices.com/graphql";
+const GRAPHQL_ENDPOINT = "https://gql-router.dev.xdefi.services/graphql";
 const query = `query LidoCheckErc20Allowance($ownerAddress: String!, $asset: SupportedAssets!) {
   staking {
     lidoCheckErc20Allowance(input: {ownerAddress: $ownerAddress, asset: $asset})
@@ -412,7 +422,7 @@ await fetch(GRAPHQL_ENDPOINT, {
 
 <div ref="refLidoCheckErc20Allowance" />
 
-### Approve Tx to increase allowance for stMATIC to spend MATIC from the address
+#### Approve Tx to increase allowance for stMATIC to spend MATIC from the address
 
 You can use the `createErc20ApproveTx` query to create an approval transaction to increase the allowance for stMATIC to spend MATIC from the address. The query takes the following parameters:
 
@@ -425,7 +435,20 @@ You can use the `createErc20ApproveTx` query to create an approval transaction t
 ::: code-group
 
 ```javascript [CreateErc20ApproveTx]
-const GRAPHQL_ENDPOINT = "https://gql-router.dev.xdefiservices.com/graphql";
+const GRAPHQL_ENDPOINT = "https://gql-router.dev.xdefi.services/graphql";
+const query = `query createErc20ApproveTx($input: Erc20ApproveInput!) {
+  staking {
+    createErc20ApproveTx(input: $input) {
+      chainId
+      data
+      fromAddress
+      nonce
+      toAddress
+      value
+    }
+  }
+}`;
+
 await fetch(GRAPHQL_ENDPOINT, {
   method: "POST",
   headers: {
