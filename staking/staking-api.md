@@ -2,7 +2,9 @@
 
 ## Overview
 
-XDEFI offers a staking API that enables developers to engage with the staking features across multiple blockchain networks. This API is crafted for simplicity and ease of use, emphasizing a high degree of abstraction from the complexities of the underlying blockchains..
+Staking is a process that involves holding funds in a cryptocurrency wallet to support the operations of a blockchain network. In return, users receive rewards for their contributions to the network. These rewards are also referred to as staking yields or interest.
+
+XDEFI offers a staking API that enables developers to engage with the staking features across multiple blockchain networks. This API is crafted for simplicity and ease of use, emphasizing a high degree of abstraction from the complexities of the underlying blockchains.
 
 The base URL for all API endpoints is: https://gql-router.dev.xdefi.services/graphql
 
@@ -13,6 +15,8 @@ Below are the services provided by the staking API.
 Our staking API extends comprehensive support to a wide array of Cosmos chains using STRIDE, enabling seamless interactions with their staking functionalities. Supported assets include `ATOM`, `OSMO`, `JUNO`, `STARS`, `LUNA`, `SEI`, `AXL`, `KAVA`, `AKASH`, `STRD`, `KUJI`, and `CRE`.
 
 ### Liquid staking (STRIDE)
+
+Stride is a liquid staking solution within the Cosmos ecosystem, designed to enhance the utility and liquidity of staked tokens. By offering liquid staking services, Stride enables users across any Cosmos chain to stake their tokens and receive liquid staked tokens in return.
 
 #### Get balance of staked asset on STRIDE
 
@@ -117,6 +121,8 @@ await fetch(GRAPHQL_ENDPOINT, {
 <div ref="refCreateStrideLiquidStakingTx" />
 
 ### Native staking
+
+Native staking allows users to delegate their assets to validators on the Cosmos network. The staking API provides support for native staking on the Cosmos network, enabling users to delegate their assets to validators.
 
 #### Get Cosmos Delegations
 
@@ -271,9 +277,11 @@ await fetch(GRAPHQL_ENDPOINT, {
 
 ## Ethereum Chains
 
-Our staking API extends comprehensive support to Ethereum chains using LIDO, enabling seamless interactions with their staking functionalities. Supported assets include `ETH` and `MATIC_ERC20`.
+Our staking API extends comprehensive support to Ethereum chains using LIDO, enabling seamless interactions with their staking functionalities. Supported assets include `ETH` (Ethereum) and `MATIC_ERC20` (Polygon).
 
 ### Liquid staking (LIDO)
+
+Lido (LDO) is a liquid staking protocol designed to bring enhanced liquidity and accessibility to staked assets on various Proof of Stake (PoS) blockchains, including Ethereum, and Polygon.
 
 #### Get balance of stakes asset on LIDO for stETH
 

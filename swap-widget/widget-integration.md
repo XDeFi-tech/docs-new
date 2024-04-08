@@ -1,7 +1,5 @@
 # Swap Widget
 
-[[toc]]
-
 ## Overview
 
 This documentation provides instructions for web developers to seamlessly integrate our swap widget into their webpages using an iframe.

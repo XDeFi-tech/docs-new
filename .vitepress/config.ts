@@ -709,7 +709,7 @@ function sidebarHome() {
           items: [],
         },
         {
-          text: "Assets and Prices API",
+          text: "Assets & Prices API",
           link: "/assets-services/assets-and-prices-api",
           items: [],
         },
@@ -721,7 +721,7 @@ function sidebarHome() {
       ],
     },
     {
-      text: "Swap Routing API",
+      text: "Routing API",
       link: "/routing/introduction",
       collapsed: true,
       items: [
@@ -733,11 +733,17 @@ function sidebarHome() {
           link: "/routing/query-mutation-details",
         },
         { text: "Step-by-step Swap example", link: "/routing/swap-example" },
-        {
-          text: "Integration Widget",
-          link: "/routing/widget-integration",
-        },
       ],
+    },
+    {
+      text: "Gas Tank API",
+      link: "/gas-tank/gas-tank-api",
+      items: [],
+    },
+    {
+      text: "Swap Widget",
+      link: "/swap-widget/widget-integration",
+      items: [],
     },
     {
       text: "Partners APIs",
@@ -750,6 +756,11 @@ function sidebarHome() {
           items: [],
         },
       ],
+    },
+    {
+      text: "Chains Lib",
+      link: "/chains-lib/chains-lib",
+      items: [],
     },
     {
       text: "Community",
