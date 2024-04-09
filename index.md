@@ -19,19 +19,18 @@ hero:
       link: /about/xdefi-technologies/introduction
 
 features:
-  - title: About XDEFI
-    details: Discover XDEFI technologies tools for building the future of interopable networks and dApps.
-    link: /about/xdefi-technologies/introduction
-
   - title: Developers
-    details: Learn how to create multichain and crosschain applications using the most powerfull wallet.
+    details: Learn how to create multichain and crosschain applications using the most powerful wallet.
     link: /developers/introduction
 
+  - title: XDEFI Wallet Integration
+    details: Integrate the XDEFI Wallet into your web app, mobile app and inject the wallet into your Dapp.
+    link: /developers/xdefi-wallet-integration
   - title: Routing API
-    details: Implement our Widget to swap and bridge any assets accross our supported networks.
+    details: Swap and bridge across dozens of protocols. Build on top of the API. Earn with Swap Widget.
     link: /routing/introduction
 
-  - title: Campaigns Service API
-    details: Allow third-party websites to connect a list of addresses from an external source to the XDEFI
-    link: /campaigns/campaigns-service-api
+  - title: Blockchain APIs
+    details: Access our blockchain APIs to interact with the supported networks and retrieve data.
+    link: /indexers/indexers-api
 ---

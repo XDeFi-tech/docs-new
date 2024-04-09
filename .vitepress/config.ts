@@ -263,6 +263,11 @@ function nav() {
 
 function sidebarHome() {
   return [
+    {
+      text: "🔰 General Documentation",
+      link: "https://docs.xdefi.io/docs",
+      items: [],
+    },
     // {
     //   text: "About XDEFI",
     //   link: "/about/xdefi",
@@ -719,6 +724,10 @@ function sidebarHome() {
           link: "/routing/query-mutation-details",
         },
         { text: "🔹 Swap example", link: "/routing/swap-example" },
+        {
+          text: "🔹 Swap Widget",
+          link: "/swap-widget/widget-integration",
+        },
       ],
     },
     {
@@ -749,11 +758,6 @@ function sidebarHome() {
       items: [],
     },
     {
-      text: "🔄 Swap Widget",
-      link: "/swap-widget/widget-integration",
-      items: [],
-    },
-    {
       text: "🛠️ Partners APIs",
       link: "/campaigns/campaigns-service-api",
       collapsed: true,
@@ -768,11 +772,6 @@ function sidebarHome() {
     {
       text: "📒 Chains Lib",
       link: "/chains-lib/chains-lib",
-      items: [],
-    },
-    {
-      text: "🔰 General Documentation",
-      link: "https://docs.xdefi.io/docs",
       items: [],
     },
     {
