@@ -263,11 +263,6 @@ function nav() {
 
 function sidebarHome() {
   return [
-    {
-      text: "🔰 General Documentation",
-      link: "https://docs.xdefi.io/docs",
-      items: [],
-    },
     // {
     //   text: "About XDEFI",
     //   link: "/about/xdefi",
@@ -709,7 +704,25 @@ function sidebarHome() {
       ],
     },
     {
-      text: "🌐 Blockchain Data APIs",
+      text: "🔅 Routing API",
+      link: "/routing/introduction",
+      collapsed: true,
+      items: [
+        { text: "🔹 Introduction", link: "/routing/introduction" },
+        { text: "🔹 Endpoints", link: "/routing/endpoints" },
+        {
+          text: "🔹 Routing Graph QL API",
+          link: "/routing/routing-graph-ql-api",
+        },
+        {
+          text: "🔹 Query and Mutation details",
+          link: "/routing/query-mutation-details",
+        },
+        { text: "🔹 Swap example", link: "/routing/swap-example" },
+      ],
+    },
+    {
+      text: "🌐 Blockchain APIs",
       link: "/indexers/indexers-api",
       collapsed: true,
       items: [
@@ -728,24 +741,6 @@ function sidebarHome() {
           link: "/staking/staking-api",
           items: [],
         },
-      ],
-    },
-    {
-      text: "🔅 Routing API",
-      link: "/routing/introduction",
-      collapsed: true,
-      items: [
-        { text: "🔹 Introduction", link: "/routing/introduction" },
-        { text: "🔹 Endpoints", link: "/routing/endpoints" },
-        {
-          text: "🔹 Routing Graph QL API",
-          link: "/routing/routing-graph-ql-api",
-        },
-        {
-          text: "🔹 Query and Mutation details",
-          link: "/routing/query-mutation-details",
-        },
-        { text: "🔹 Swap example", link: "/routing/swap-example" },
       ],
     },
     {
@@ -773,6 +768,11 @@ function sidebarHome() {
     {
       text: "📒 Chains Lib",
       link: "/chains-lib/chains-lib",
+      items: [],
+    },
+    {
+      text: "🔰 General Documentation",
+      link: "https://docs.xdefi.io/docs",
       items: [],
     },
     {
