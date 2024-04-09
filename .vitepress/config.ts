@@ -133,7 +133,7 @@ export default {
       text: "Edit this page on GitHub",
     },
 
-    siteTitle: "XDEFI Dev Docs",
+    siteTitle: "📚 XDEFI Dev Docs",
 
     socialLinks: [
       { icon: "github", link: "https://github.com/XDeFi-tech" },
@@ -220,17 +220,26 @@ function nav() {
     {
       text: "Quick start",
       items: [
-        {
-          text: "About XDEFI Technologies",
-          link: "/about/xdefi-technologies/introduction",
-        },
-        { text: "About $XDEFI token", link: "/about/xdefi-token/introduction" },
+        // {
+        //   text: "About XDEFI Technologies",
+        //   link: "/about/xdefi-technologies/introduction",
+        // },
+        // { text: "About $XDEFI token", link: "/about/xdefi-token/introduction" },
         { text: "Developers", link: "/developers/introduction" },
         {
           text: "XDEFI Wallet Integration",
           link: "/developers/xdefi-wallet-integration",
         },
         { text: "Routing API", link: "/routing/introduction" },
+        {
+          text: "Gas Tank API",
+          link: "/gas-tank/gas-tank-api",
+        },
+        { text: "Swap Widget", link: "/swap-widget/widget-integration" },
+        {
+          text: "Chains Lib",
+          link: "/chains-lib/chains-lib",
+        },
         {
           text: "Campaigns Service API",
           link: "/campaigns/campaigns-service-api",
@@ -255,147 +264,148 @@ function nav() {
 function sidebarHome() {
   return [
     {
-      text: "General Documentation",
+      text: "🔰 General Documentation",
       link: "https://docs.xdefi.io/docs",
+      items: [],
     },
+    // {
+    //   text: "About XDEFI",
+    //   link: "/about/xdefi",
+    //   collapsed: true,
+    //   items: [
+    //     {
+    //       text: "XDEFI Technologies",
+    //       link: "/about/xdefi-technologies/introduction",
+    //       collapsed: true,
+    //       items: [
+    //         {
+    //           text: "Introduction",
+    //           link: "/about/xdefi-technologies/introduction",
+    //         },
+    //         {
+    //           text: "Blockchains",
+    //           link: "/about/xdefi-technologies/supported-blockchains",
+    //           collapsed: true,
+    //           items: [
+    //             {
+    //               text: "Native integration",
+    //               link: "/about/xdefi-technologies/native-integration",
+    //             },
+    //             {
+    //               text: "Custom integration",
+    //               link: "/about/xdefi-technologies/custom-integration",
+    //             },
+    //           ],
+    //         },
+    //         {
+    //           text: "FAQ",
+    //           link: "/about/xdefi-technologies/faq",
+    //         },
+    //         {
+    //           text: "Hardware Wallets",
+    //           link: "/about/xdefi-technologies/supported-hardware-wallets",
+    //         },
+    //         {
+    //           text: "How to",
+    //           collapsed: true,
+    //           items: [
+    //             {
+    //               text: "Add a Custom Network",
+    //               link: "/about/xdefi-technologies/add-custom-network",
+    //             },
+    //             {
+    //               text: "Change Custom RPC",
+    //               link: "/about/xdefi-technologies/change-custom-rpc",
+    //             },
+    //           ],
+    //         },
+    //         {
+    //           text: "NFT's",
+    //           link: "/about/xdefi-technologies/supported-nfts",
+    //         },
+    //         {
+    //           text: "Products",
+    //           collapsed: true,
+    //           items: [
+    //             {
+    //               text: "Extension Wallet",
+    //               link: "/about/xdefi-technologies/extension-wallet",
+    //             },
+    //             {
+    //               text: "Mobile Wallet",
+    //               link: "/about/xdefi-technologies/mobile-wallet",
+    //             },
+    //             {
+    //               text: "Routing API",
+    //               link: "/about/xdefi-technologies/routing-api",
+    //             },
+    //             {
+    //               text: "Web App",
+    //               link: "/about/xdefi-technologies/web-app",
+    //             },
+    //           ],
+    //         },
+    //         {
+    //           text: "Security",
+    //           collapsed: true,
+    //           items: [
+    //             {
+    //               text: "Audits",
+    //               link: "/about/xdefi-technologies/audits",
+    //             },
+    //             {
+    //               text: "Bug Bounty Program",
+    //               link: "/about/xdefi-technologies/bug-bounty-program",
+    //             },
+    //           ],
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       text: "$XDEFI Token",
+    //       link: "/about/xdefi-token/introduction",
+    //       collapsed: true,
+    //       items: [
+    //         {
+    //           text: "Introduction",
+    //           link: "/about/xdefi-token/introduction",
+    //         },
+    //         {
+    //           text: "Buy $XDEFI",
+    //           link: "/about/xdefi-token/buy-xdefi",
+    //         },
+    //         {
+    //           text: "Revenue",
+    //           link: "/about/xdefi-token/revenue",
+    //         },
+    //         {
+    //           text: "Staking",
+    //           link: "/about/xdefi-token/staking",
+    //         },
+    //         {
+    //           text: "Tokenomics",
+    //           link: "/about/xdefi-token/tokenomics",
+    //         },
+    //         {
+    //           text: "Utility",
+    //           link: "/about/xdefi-token/utility",
+    //         },
+    //       ],
+    //     },
+    //   ],
+    // },
     {
-      text: "About XDEFI",
-      link: "/about/xdefi",
-      collapsed: true,
-      items: [
-        {
-          text: "XDEFI Technologies",
-          link: "/about/xdefi-technologies/introduction",
-          collapsed: true,
-          items: [
-            {
-              text: "Introduction",
-              link: "/about/xdefi-technologies/introduction",
-            },
-            {
-              text: "Blockchains",
-              link: "/about/xdefi-technologies/supported-blockchains",
-              collapsed: true,
-              items: [
-                {
-                  text: "Native integration",
-                  link: "/about/xdefi-technologies/native-integration",
-                },
-                {
-                  text: "Custom integration",
-                  link: "/about/xdefi-technologies/custom-integration",
-                },
-              ],
-            },
-            {
-              text: "FAQ",
-              link: "/about/xdefi-technologies/faq",
-            },
-            {
-              text: "Hardware Wallets",
-              link: "/about/xdefi-technologies/supported-hardware-wallets",
-            },
-            {
-              text: "How to",
-              collapsed: true,
-              items: [
-                {
-                  text: "Add a Custom Network",
-                  link: "/about/xdefi-technologies/add-custom-network",
-                },
-                {
-                  text: "Change Custom RPC",
-                  link: "/about/xdefi-technologies/change-custom-rpc",
-                },
-              ],
-            },
-            {
-              text: "NFT's",
-              link: "/about/xdefi-technologies/supported-nfts",
-            },
-            {
-              text: "Products",
-              collapsed: true,
-              items: [
-                {
-                  text: "Extension Wallet",
-                  link: "/about/xdefi-technologies/extension-wallet",
-                },
-                {
-                  text: "Mobile Wallet",
-                  link: "/about/xdefi-technologies/mobile-wallet",
-                },
-                {
-                  text: "Routing API",
-                  link: "/about/xdefi-technologies/routing-api",
-                },
-                {
-                  text: "Web App",
-                  link: "/about/xdefi-technologies/web-app",
-                },
-              ],
-            },
-            {
-              text: "Security",
-              collapsed: true,
-              items: [
-                {
-                  text: "Audits",
-                  link: "/about/xdefi-technologies/audits",
-                },
-                {
-                  text: "Bug Bounty Program",
-                  link: "/about/xdefi-technologies/bug-bounty-program",
-                },
-              ],
-            },
-          ],
-        },
-        {
-          text: "$XDEFI Token",
-          link: "/about/xdefi-token/introduction",
-          collapsed: true,
-          items: [
-            {
-              text: "Introduction",
-              link: "/about/xdefi-token/introduction",
-            },
-            {
-              text: "Buy $XDEFI",
-              link: "/about/xdefi-token/buy-xdefi",
-            },
-            {
-              text: "Revenue",
-              link: "/about/xdefi-token/revenue",
-            },
-            {
-              text: "Staking",
-              link: "/about/xdefi-token/staking",
-            },
-            {
-              text: "Tokenomics",
-              link: "/about/xdefi-token/tokenomics",
-            },
-            {
-              text: "Utility",
-              link: "/about/xdefi-token/utility",
-            },
-          ],
-        },
-      ],
-    },
-    {
-      text: "Developers",
+      text: "💻 Developers",
       link: "/developers/introduction",
       items: [],
     },
     {
-      text: "XDEFI Wallet Integration",
+      text: "⚙️ XDEFI Wallet Integration",
       link: "/developers/xdefi-wallet-integration",
       collapsed: true,
       items: [
         {
-          text: "Extension",
+          text: "🔹 Extension",
           link: "/developers/extension-wallet",
           collapsed: true,
           items: [
@@ -454,7 +464,7 @@ function sidebarHome() {
           ],
         },
         {
-          text: "Mobile",
+          text: "🔹 Mobile",
           link: "/developers/mobile-wallet",
           collapsed: true,
           items: [
@@ -509,7 +519,7 @@ function sidebarHome() {
           ],
         },
         {
-          text: "Libraries Integration",
+          text: "🔹 Libraries Integration",
           link: "/developers/libraries-integration",
           collapsed: true,
           items: [
@@ -536,7 +546,7 @@ function sidebarHome() {
           ],
         },
         {
-          text: "Blockchains Integration",
+          text: "🔹 Blockchains Integration",
           link: "/developers/blockchains-integration",
           collapsed: true,
           items: [
@@ -699,80 +709,83 @@ function sidebarHome() {
       ],
     },
     {
-      text: "Blockchain Data APIs",
+      text: "🌐 Blockchain Data APIs",
       link: "/indexers/indexers-api",
       collapsed: true,
       items: [
         {
-          text: "Indexers API",
+          text: "🔹 Indexers API",
           link: "/indexers/indexers-api",
           items: [],
         },
         {
-          text: "Assets & Prices API",
+          text: "🔹 Assets & Prices API",
           link: "/assets-services/assets-and-prices-api",
           items: [],
         },
         {
-          text: "Staking API",
+          text: "🔹 Staking API",
           link: "/staking/staking-api",
           items: [],
         },
       ],
     },
     {
-      text: "Routing API",
+      text: "🔅 Routing API",
       link: "/routing/introduction",
       collapsed: true,
       items: [
-        { text: "Introduction", link: "/routing/introduction" },
-        { text: "Endpoints", link: "/routing/endpoints" },
-        { text: "Routing Graph QL API", link: "/routing/routing-graph-ql-api" },
+        { text: "🔹 Introduction", link: "/routing/introduction" },
+        { text: "🔹 Endpoints", link: "/routing/endpoints" },
         {
-          text: "Query and Mutation details",
+          text: "🔹 Routing Graph QL API",
+          link: "/routing/routing-graph-ql-api",
+        },
+        {
+          text: "🔹 Query and Mutation details",
           link: "/routing/query-mutation-details",
         },
-        { text: "Step-by-step Swap example", link: "/routing/swap-example" },
+        { text: "🔹 Swap example", link: "/routing/swap-example" },
       ],
     },
     {
-      text: "Gas Tank API",
+      text: "⛽ Gas Tank API",
       link: "/gas-tank/gas-tank-api",
       items: [],
     },
     {
-      text: "Swap Widget",
+      text: "🔄 Swap Widget",
       link: "/swap-widget/widget-integration",
       items: [],
     },
     {
-      text: "Partners APIs",
+      text: "🛠️ Partners APIs",
       link: "/campaigns/campaigns-service-api",
       collapsed: true,
       items: [
         {
-          text: "Campaigns Service API",
+          text: "🔹 Campaigns Service API",
           link: "/campaigns/campaigns-service-api",
           items: [],
         },
       ],
     },
     {
-      text: "Chains Lib",
+      text: "📒 Chains Lib",
       link: "/chains-lib/chains-lib",
       items: [],
     },
     {
-      text: "Community",
+      text: "🔖 Community",
       collapsed: true,
       items: [
-        { text: "X", link: "https://twitter.com/xdefi_wallet" },
-        { text: "Discord", link: "https://discord.gg/xdefi" },
-        { text: "Telegram", link: "https://t.me/xdefi_announcements" },
-        { text: "GitHub", link: "https://github.com/XDeFi-tech" },
-        { text: "Blog", link: "https://xdefi.io/blog" },
+        { text: "🔹 X", link: "https://twitter.com/xdefi_wallet" },
+        { text: "🔹 Discord", link: "https://discord.gg/xdefi" },
+        { text: "🔹 Telegram", link: "https://t.me/xdefi_announcements" },
+        { text: "🔹 GitHub", link: "https://github.com/XDeFi-tech" },
+        { text: "🔹 Blog", link: "https://xdefi.io/blog" },
         {
-          text: "$XDEFI on Coingecko",
+          text: "🔹 $XDEFI on Coingecko",
           link: "https://www.coingecko.com/en/coins/xdefi",
         },
       ],
