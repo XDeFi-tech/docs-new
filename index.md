@@ -14,9 +14,9 @@ hero:
     - theme: brand
       text: Build with XDEFI
       link: /developers/introduction
-    - theme: alt
-      text: Introduction
-      link: /about/xdefi-technologies/introduction
+    # - theme: alt
+    #   text: Introduction
+    #   link: /about/xdefi-technologies/introduction
 
 features:
   - title: Developers
