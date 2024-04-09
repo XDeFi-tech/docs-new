@@ -174,3 +174,72 @@ export const chainsSupported = [
     exampleAddress: "TPtBq2DHJifyyn2suCu5Mj5xudfNtfxD4f",
   },
 ];
+export const cosmosSupportedAssets = [
+  {
+    key: "ATOM",
+    label: "ATOM",
+  },
+  {
+    key: "OSMO",
+    label: "OSMO",
+  },
+  {
+    key: "JUNO",
+    label: "JUNO",
+  },
+  {
+    key: "STARS",
+    label: "STARS",
+  },
+  {
+    key: "LUNA",
+    label: "LUNA",
+  },
+  {
+    key: "SEI",
+    label: "SEI",
+  },
+  {
+    key: "AXL",
+    label: "AXL",
+  },
+  {
+    key: "KAVA",
+    label: "KAVA",
+  },
+  {
+    key: "AKASH",
+    label: "AKASH",
+  },
+  {
+    key: "STRD",
+    label: "STRD",
+  },
+  {
+    key: "KUJI",
+    label: "KUJI",
+  },
+  {
+    key: "CRE",
+    label: "CRE",
+  },
+];
+
+export const otherSupportedAssets = [
+  {
+    key: "ETH",
+    label: "ETH",
+  },
+  {
+    key: "MATIC_ERC20",
+    label: "MATIC_ERC20",
+  },
+  {
+    key: "AVAX",
+    label: "AVAX",
+  },
+  {
+    key: "SOL",
+    label: "SOL",
+  },
+];

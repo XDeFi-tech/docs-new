@@ -222,9 +222,9 @@ function nav() {
       items: [
         {
           text: "About XDEFI Technologies",
-          link: "/about/xdefi-technologies/xdefi-technologies",
+          link: "/about/xdefi-technologies/introduction",
         },
-        { text: "About $XDEFI token", link: "/about/xdefi-token/xdefi-token" },
+        { text: "About $XDEFI token", link: "/about/xdefi-token/introduction" },
         { text: "Developers", link: "/developers/introduction" },
         {
           text: "XDEFI Wallet Integration",
@@ -254,6 +254,10 @@ function nav() {
 
 function sidebarHome() {
   return [
+    {
+      text: "General Documentation",
+      link: "https://docs.xdefi.io/docs",
+    },
     {
       text: "About XDEFI",
       link: "/about/xdefi",
@@ -695,6 +699,28 @@ function sidebarHome() {
       ],
     },
     {
+      text: "Blockchain Data APIs",
+      link: "/indexers/indexers-api",
+      collapsed: true,
+      items: [
+        {
+          text: "Indexers API",
+          link: "/indexers/indexers-api",
+          items: [],
+        },
+        {
+          text: "Assets & Prices API",
+          link: "/assets-services/assets-and-prices-api",
+          items: [],
+        },
+        {
+          text: "Staking API",
+          link: "/staking/staking-api",
+          items: [],
+        },
+      ],
+    },
+    {
       text: "Routing API",
       link: "/routing/introduction",
       collapsed: true,
@@ -707,25 +733,33 @@ function sidebarHome() {
           link: "/routing/query-mutation-details",
         },
         { text: "Step-by-step Swap example", link: "/routing/swap-example" },
+      ],
+    },
+    {
+      text: "Gas Tank API",
+      link: "/gas-tank/gas-tank-api",
+      items: [],
+    },
+    {
+      text: "Swap Widget",
+      link: "/swap-widget/widget-integration",
+      items: [],
+    },
+    {
+      text: "Partners APIs",
+      link: "/campaigns/campaigns-service-api",
+      collapsed: true,
+      items: [
         {
-          text: "Integration Widget",
-          link: "/routing/widget-integration",
+          text: "Campaigns Service API",
+          link: "/campaigns/campaigns-service-api",
+          items: [],
         },
       ],
     },
     {
-      text: "Campaigns Service API",
-      link: "/campaigns/campaigns-service-api",
-      items: [],
-    },
-    {
-      text: "Assets and Prices API",
-      link: "/assets-services/assets-and-prices-api",
-      items: [],
-    },
-    {
-      text: "Indexers API",
-      link: "/indexers/indexers-api",
+      text: "Chains Lib",
+      link: "/chains-lib/chains-lib",
       items: [],
     },
     {
@@ -742,11 +776,6 @@ function sidebarHome() {
           link: "https://www.coingecko.com/en/coins/xdefi",
         },
       ],
-    },
-    {
-      text: "User Documentation",
-      link: "https://docs.xdefi.io",
-      items: [],
     },
   ];
 }

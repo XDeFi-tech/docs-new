@@ -65,7 +65,7 @@ Querying this endpoint to fetch the list of tokens/chains one can bridge to from
 ::: code-group
 
 ```js [JavaScript]
-const GRAPHQL_ENDPOINT = "https://gql-router.staging.xdefiservices.com/graphql";
+const GRAPHQL_ENDPOINT = "https://gql-router.staging.xdefi.services/graphql";
 const query = `
   query BridgeableTokens($bridgeToken: BridgeTokenInput) {
     routingV2 {

@@ -11,7 +11,7 @@ Welcome to the XDEFI Campaigns Service API documentation. This API allows third-
 
 ### Base URL
 
-The base URL for all API endpoints is: `https://compaign-ts.xdefi.services/api`
+The base URL for all API endpoints is: https://campaign-ts.xdefi.services/api
 
 ### Workflow
 
@@ -21,7 +21,7 @@ The high-level workflow for the XDEFI Campaigns Service API is as follows:
 2. XDEFI maintains an internal list of user addresses that have opted into the Campaigns feature in XDEFI Wallet.
 3. The Campaigns Service API cross-references the third-party list of addresses with the internal list of opted-in addresses.
 4. If there is a match between a third-party address and an opted-in address, the corresponding EVM address is identified.
-5. A request is made to the Campaigns Service API from a website like Galxe, using an endpoint such as `https://compaign-ts.xdefi.services/api/campaigns/{campaign_name}/address/{evm_address}/`.
+5. A request is made to the Campaigns Service API from a website like Galxe, using an endpoint such as `https://campaign-ts.xdefi.services/api/campaigns/{campaign_name}/address/{evm_address}/`.
 6. The request includes a user's EVM address.
 7. If the user's EVM address meets both criteria:
    - The EVM address is in the XDEFI list of opted-in addresses (indicating participation in the campaign).
@@ -32,7 +32,7 @@ Note: The requested address will always be in the EVM format, but the correspond
 
 ### Swagger Documentation
 
-You can find the Swagger documentation for the XDEFI Campaigns Service API [here](https://compaign-ts.xdefi.services/documentation/v1.0.0).
+You can find the Swagger documentation for the XDEFI Campaigns Service API [here](https://campaign-ts.xdefi.services/documentation/v1.0.0).
 
 ## Endpoints
 
@@ -73,7 +73,7 @@ The request body should include the following parameters:
 
 ```js [Example Request]
 POST /events HTTP/1.1
-Host: compaign-ts.xdefi.services/api
+Host: campaign-ts.xdefi.services/api
 Content-Type: application/json
 
 {
@@ -117,7 +117,7 @@ Check if all partners have reported the address for a given campaign.
 
 ```js [Example Request]
 GET /campaign/mycampaign/address/0x1234567890abcdef HTTP/1.1
-Host: compaign-ts.xdefi.services/api
+Host: campaign-ts.xdefi.services/api
 ```
 
 ```json [Example Response]
