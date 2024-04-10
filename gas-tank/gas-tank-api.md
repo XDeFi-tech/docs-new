@@ -2,7 +2,7 @@
 
 The Gas Tank is a versatile platform that empowers users to manage gas tank balances seamlessly across different blockchain networks. This project facilitates actions such as depositing, withdrawing, internal transferring, and consuming gas tank balances, allowing users to efficiently utilize their resources on EVM, Cosmos-like, and UTXO chains. With support for multiple blockchain environments, The Gas Tank offers users a unified solution for gas utilization across diverse networks.
 
-The base URL for all Gas Tank API is: https://gas-tank.xdefiservices.com
+The base URL for all Gas Tank API is: https://gas-tank.xdefi.services
 
 Below are the available services provided by the Gas Tank API. To use the Gas Tank API, you need to have Authorization Token.
 
@@ -15,7 +15,7 @@ This endpoint facilitates the generation of JWT tokens for multiple wallet addre
 ::: code-group
 
 ```javascript [Login]
-const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
+const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
 
 await fetch(`${GAS_TANK_ENDPOINT}/v2/auth/login`, {
   method: "POST",
@@ -51,7 +51,7 @@ Clients can use this endpoint to obtain a new JWT token without re-authenticatin
 ::: code-group
 
 ```javascript [Resfresh Token]
-const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
+const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
 
 await fetch(`${GAS_TANK_ENDPOINT}/v2/auth/refresh`, {
   method: "POST",
@@ -79,7 +79,7 @@ await fetch(`${GAS_TANK_ENDPOINT}/v2/auth/refresh`, {
 ::: code-group
 
 ```javascript [Get All Tokens]
-const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
+const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
 
 await fetch(`${GAS_TANK_ENDPOINT}/chains/tokens`, {
   method: "GET",
@@ -97,7 +97,7 @@ await fetch(`${GAS_TANK_ENDPOINT}/chains/tokens`, {
 ::: code-group
 
 ```javascript [Get Chains Status]
-const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
+const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
 ```
 
 :::
@@ -107,7 +107,7 @@ const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
 ::: code-group
 
 ```javascript []
-const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
+const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
 ```
 
 :::
@@ -119,7 +119,7 @@ const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
 ::: code-group
 
 ```javascript []
-const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
+const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
 ```
 
 :::
@@ -129,7 +129,7 @@ const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
 ::: code-group
 
 ```javascript []
-const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
+const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
 ```
 
 :::
@@ -139,7 +139,7 @@ const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
 ::: code-group
 
 ```javascript []
-const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
+const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
 ```
 
 :::
@@ -149,7 +149,7 @@ const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
 ::: code-group
 
 ```javascript []
-const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
+const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
 ```
 
 :::
@@ -159,7 +159,7 @@ const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
 ::: code-group
 
 ```javascript []
-const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
+const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
 ```
 
 :::
@@ -169,7 +169,7 @@ const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
 ::: code-group
 
 ```javascript []
-const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
+const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
 ```
 
 :::
@@ -179,7 +179,7 @@ const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
 ::: code-group
 
 ```javascript []
-const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
+const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
 ```
 
 :::
@@ -189,7 +189,7 @@ const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
 ::: code-group
 
 ```javascript []
-const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
+const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
 ```
 
 :::
@@ -199,7 +199,7 @@ const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
 ::: code-group
 
 ```javascript []
-const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
+const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
 ```
 
 :::
@@ -209,7 +209,7 @@ const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
 ::: code-group
 
 ```javascript []
-const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
+const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
 ```
 
 :::
@@ -219,7 +219,7 @@ const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
 ::: code-group
 
 ```javascript []
-const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
+const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
 ```
 
 :::
@@ -229,7 +229,7 @@ const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
 ::: code-group
 
 ```javascript []
-const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
+const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
 ```
 
 :::
@@ -239,7 +239,7 @@ const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
 ::: code-group
 
 ```javascript []
-const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
+const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
 ```
 
 :::
@@ -249,7 +249,7 @@ const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
 ::: code-group
 
 ```javascript []
-const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
+const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
 ```
 
 :::
@@ -259,7 +259,7 @@ const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
 ::: code-group
 
 ```javascript []
-const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
+const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
 ```
 
 :::
@@ -269,7 +269,7 @@ const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
 ::: code-group
 
 ```javascript []
-const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
+const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
 ```
 
 :::
@@ -279,7 +279,7 @@ const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
 ::: code-group
 
 ```javascript []
-const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
+const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
 ```
 
 :::
@@ -291,7 +291,7 @@ const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
 ::: code-group
 
 ```javascript []
-const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
+const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
 ```
 
 :::
@@ -301,7 +301,7 @@ const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
 ::: code-group
 
 ```javascript []
-const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
+const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
 ```
 
 :::
