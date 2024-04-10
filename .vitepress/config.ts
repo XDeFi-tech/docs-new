@@ -235,7 +235,6 @@ function nav() {
           text: "Gas Tank API",
           link: "/gas-tank/gas-tank-api",
         },
-        { text: "Swap Widget", link: "/swap-widget/widget-integration" },
         {
           text: "Chains Lib",
           link: "/chains-lib/chains-lib",

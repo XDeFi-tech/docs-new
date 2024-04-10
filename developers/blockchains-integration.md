@@ -1,6 +1,6 @@
 ---
 prev:
-  text: "Mobile Wallet Integration"
+  text: "🔹 Mobile Wallet Integration"
   link: "./mobile-wallet"
 next:
   text: "Ethereum (ETH)"

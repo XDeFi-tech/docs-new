@@ -1,6 +1,6 @@
 ---
 prev:
-  text: "Extension Wallet Integration"
+  text: "🔹 Extension Wallet Integration"
   link: "/developers/extension-wallet"
 next:
   text: "Binance"

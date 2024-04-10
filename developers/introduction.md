@@ -1,7 +1,7 @@
 ---
 prev:
-  text: "XDEFI Technologies"
-  link: "/about/xdefi-technologies/introduction"
+  text: "📚 XDEFI Dev Docs"
+  link: "/"
 ---
 
 # Developers
