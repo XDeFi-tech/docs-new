@@ -1,6 +1,6 @@
 ---
 prev:
-  text: "Developers"
+  text: "💻 Developers"
   link: "/developers/introduction"
 next:
   text: "Detect XDEFI Providers"

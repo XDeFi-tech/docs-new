@@ -99,7 +99,7 @@ const CreateErc20ApproveTx = () => {
   return (
     <>
       <div className="flex items-center gap-4">
-        <div className="flex items-center gap-10">
+        <div className="flex items-center gap-10 max-sm:flex-col max-sm:items-start max-sm:gap-4">
           <div className="flex items-center gap-4">
             <span>Asset:</span>
             <div className="border border-[#e2e2e3] dark:border-[#2e2e32] hover:border-[#3451b2] rounded-lg overflow-hidden w-fit">
@@ -114,58 +114,58 @@ const CreateErc20ApproveTx = () => {
               </select>
             </div>
           </div>
-          <div className="flex flex-col gap-2">
-            <div className="flex items-center gap-4">
-              <div className="w-[180px]">From Address:</div>
+          <div className="flex flex-col gap-2 max-sm:gap-4">
+            <div className="flex items-center gap-4 max-sm:flex-col max-sm:items-start max-sm:gap-2">
+              <div className="sm:w-[180px]">From Address:</div>
               <div className="border border-[#e2e2e3] dark:border-[#2e2e32] hover:border-[#3451b2] rounded-lg overflow-hidden w-fit">
                 <input
                   type="text"
                   id="fromAddress"
                   name="fromAddress"
                   value={fromAddress}
-                  className="bg-gray-50 text-gray-900 px-2 py-1 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white"
+                  className="max-sm:w-[300px] bg-gray-50 text-gray-900 px-2 py-1 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white"
                   placeholder="Enter an address"
                   onChange={(e) => setFromAddress(e.target.value)}
                 />
               </div>
             </div>
-            <div className="flex items-center gap-4">
-              <div className="w-[180px]">Spender Address:</div>
+            <div className="flex items-center gap-4 max-sm:flex-col max-sm:items-start max-sm:gap-2">
+              <div className="sm:w-[180px]">Spender Address:</div>
               <div className="border border-[#e2e2e3] dark:border-[#2e2e32] hover:border-[#3451b2] rounded-lg overflow-hidden w-fit">
                 <input
                   type="text"
                   id="spenderAddress"
                   name="spenderAddress"
                   value={spenderAddress}
-                  className="bg-gray-50 text-gray-900 px-2 py-1 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white"
+                  className="max-sm:w-[300px] bg-gray-50 text-gray-900 px-2 py-1 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white"
                   placeholder="Enter an spender address"
                   onChange={(e) => setSpenderAddress(e.target.value)}
                 />
               </div>
             </div>
-            <div className="flex items-center gap-4">
-              <div className="w-[180px]">Amount:</div>
+            <div className="flex items-center gap-4 max-sm:flex-col max-sm:items-start max-sm:gap-2">
+              <div className="sm:w-[180px]">Amount:</div>
               <div className="border border-[#e2e2e3] dark:border-[#2e2e32] hover:border-[#3451b2] rounded-lg overflow-hidden w-fit">
                 <input
                   type="number"
                   id="amount"
                   name="amount"
                   value={amount}
-                  className="bg-gray-50 text-gray-900 px-2 py-1 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white"
+                  className="max-sm:w-[300px] bg-gray-50 text-gray-900 px-2 py-1 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white"
                   placeholder="Enter amount"
                   onChange={(e) => setAmount(e.target.value)}
                 />
               </div>
             </div>
-            <div className="flex items-center gap-4">
-              <div className="w-[180px]">Nonce:</div>
+            <div className="flex items-center gap-4 max-sm:flex-col max-sm:items-start max-sm:gap-2">
+              <div className="sm:w-[180px]">Nonce:</div>
               <div className="border border-[#e2e2e3] dark:border-[#2e2e32] hover:border-[#3451b2] rounded-lg overflow-hidden w-fit">
                 <input
                   type="number"
                   id="nonce"
                   name="nonce"
                   value={nonce}
-                  className="bg-gray-50 text-gray-900 px-2 py-1 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white"
+                  className="max-sm:w-[300px] bg-gray-50 text-gray-900 px-2 py-1 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white"
                   placeholder="Enter nonce"
                   onChange={(e) => setNonce(e.target.value)}
                 />
@@ -193,13 +193,15 @@ const CreateErc20ApproveTx = () => {
           )}
         </button>
       </div>
-      <div className="my-4 rounded-lg max-h-[600px] overflow-auto bg-[#F6F6F7] text-[#24292E] dark:bg-[#161618] dark:text-[#E1E4E8]">
+      <div className="my-4 rounded-lg bg-[#F6F6F7] text-[#24292E] dark:bg-[#161618] dark:text-[#E1E4E8]">
         <div className="px-5 border-b border-[#e2e2e3] dark:border-black">
           <span className="inline-block border-b-2 border-[#3451b2] dark:border-[#a8b1ff] text-[14px] leading-[48px]">
             Response
           </span>
         </div>
-        <pre className="p-5">{JSON.stringify(response, null, 2)}</pre>
+        <pre className="p-5 max-h-[600px] overflow-auto">
+          {JSON.stringify(response, null, 2)}
+        </pre>
       </div>
     </>
   );

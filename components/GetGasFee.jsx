@@ -101,7 +101,7 @@ const GetGasFee = () => {
 
   return (
     <>
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 max-sm:flex-col max-sm:items-start">
         <div className="flex items-center gap-4">
           <span>Chain:</span>
           <div className="border border-[#e2e2e3] dark:border-[#2e2e32] hover:border-[#3451b2] rounded-lg overflow-hidden w-fit">
@@ -141,13 +141,15 @@ const GetGasFee = () => {
           )}
         </button>
       </div>
-      <div className="my-4 rounded-lg max-h-[600px] overflow-auto bg-[#F6F6F7] text-[#24292E] dark:bg-[#161618] dark:text-[#E1E4E8]">
+      <div className="my-4 rounded-lg bg-[#F6F6F7] text-[#24292E] dark:bg-[#161618] dark:text-[#E1E4E8]">
         <div className="px-5 border-b border-[#e2e2e3] dark:border-black">
           <span className="inline-block border-b-2 border-[#3451b2] dark:border-[#a8b1ff] text-[14px] leading-[48px]">
             Response
           </span>
         </div>
-        <pre className="p-5">{JSON.stringify(response, null, 2)}</pre>
+        <pre className="p-5 max-h-[600px] overflow-auto">
+          {JSON.stringify(response, null, 2)}
+        </pre>
       </div>
     </>
   );

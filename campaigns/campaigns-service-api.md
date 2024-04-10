@@ -1,8 +1,7 @@
 ---
-prev:
-  text: Routing API
-  link: /routing/introduction
-next: false
+next:
+  text: 📒 Chains Lib
+  link: /chains-lib/chains-lib
 ---
 
 # Campaigns Service API

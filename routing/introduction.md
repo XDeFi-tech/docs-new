@@ -1,9 +1,9 @@
 ---
 prev:
-  text: "XDEFI Wallet Integration"
+  text: "⚙️ XDEFI Wallet Integration"
   link: "/developers/xdefi-wallet-integration"
 next:
-  text: "Endpoints"
+  text: "🔹 Endpoints"
   link: "./endpoints"
 ---
 

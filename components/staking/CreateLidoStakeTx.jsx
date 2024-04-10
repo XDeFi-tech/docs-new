@@ -96,7 +96,7 @@ const CreateLidoStakeTx = () => {
   return (
     <>
       <div className="flex items-center gap-4">
-        <div className="flex items-center gap-10">
+        <div className="flex items-center gap-10 max-sm:flex-col max-sm:items-start max-sm:gap-4">
           <div className="flex items-center gap-4">
             <span>Asset:</span>
             <div className="border border-[#e2e2e3] dark:border-[#2e2e32] hover:border-[#3451b2] rounded-lg overflow-hidden w-fit">
@@ -112,44 +112,44 @@ const CreateLidoStakeTx = () => {
               </select>
             </div>
           </div>
-          <div className="flex flex-col gap-2">
-            <div className="flex items-center gap-4">
-              <div className="w-[180px]">Address:</div>
+          <div className="flex flex-col gap-2 max-sm:gap-4">
+            <div className="flex items-center gap-4 max-sm:flex-col max-sm:items-start max-sm:gap-2">
+              <div className="sm:w-[180px]">Address:</div>
               <div className="border border-[#e2e2e3] dark:border-[#2e2e32] hover:border-[#3451b2] rounded-lg overflow-hidden w-fit">
                 <input
                   type="text"
                   id="address"
                   name="address"
                   value={address}
-                  className="bg-gray-50 text-gray-900 px-2 py-1 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white"
+                  className="max-sm:w-[300px] bg-gray-50 text-gray-900 px-2 py-1 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white"
                   placeholder="Enter an address"
                   onChange={(e) => setAddress(e.target.value)}
                 />
               </div>
             </div>
-            <div className="flex items-center gap-4">
-              <div className="w-[180px]">Stake Value:</div>
+            <div className="flex items-center gap-4 max-sm:flex-col max-sm:items-start max-sm:gap-2">
+              <div className="sm:w-[180px]">Stake Value:</div>
               <div className="border border-[#e2e2e3] dark:border-[#2e2e32] hover:border-[#3451b2] rounded-lg overflow-hidden w-fit">
                 <input
                   type="number"
                   id="stakeValue"
                   name="stakeValue"
                   value={stakeValue}
-                  className="bg-gray-50 text-gray-900 px-2 py-1 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white"
+                  className="max-sm:w-[300px] bg-gray-50 text-gray-900 px-2 py-1 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white"
                   placeholder="Enter stake value"
                   onChange={(e) => setStakeValue(e.target.value)}
                 />
               </div>
             </div>
-            <div className="flex items-center gap-4">
-              <div className="w-[180px]">Nonce:</div>
+            <div className="flex items-center gap-4 max-sm:flex-col max-sm:items-start max-sm:gap-2">
+              <div className="sm:w-[180px]">Nonce:</div>
               <div className="border border-[#e2e2e3] dark:border-[#2e2e32] hover:border-[#3451b2] rounded-lg overflow-hidden w-fit">
                 <input
                   type="number"
                   id="nonce"
                   name="nonce"
                   value={nonce}
-                  className="bg-gray-50 text-gray-900 px-2 py-1 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white"
+                  className="max-sm:w-[300px] bg-gray-50 text-gray-900 px-2 py-1 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white"
                   placeholder="Enter nonce"
                   onChange={(e) => setNonce(e.target.value)}
                 />
@@ -177,13 +177,15 @@ const CreateLidoStakeTx = () => {
           )}
         </button>
       </div>
-      <div className="my-4 rounded-lg max-h-[600px] overflow-auto bg-[#F6F6F7] text-[#24292E] dark:bg-[#161618] dark:text-[#E1E4E8]">
+      <div className="my-4 rounded-lg bg-[#F6F6F7] text-[#24292E] dark:bg-[#161618] dark:text-[#E1E4E8]">
         <div className="px-5 border-b border-[#e2e2e3] dark:border-black">
           <span className="inline-block border-b-2 border-[#3451b2] dark:border-[#a8b1ff] text-[14px] leading-[48px]">
             Response
           </span>
         </div>
-        <pre className="p-5">{JSON.stringify(response, null, 2)}</pre>
+        <pre className="p-5 max-h-[600px] overflow-auto">
+          {JSON.stringify(response, null, 2)}
+        </pre>
       </div>
     </>
   );
