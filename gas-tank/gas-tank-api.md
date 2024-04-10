@@ -16,6 +16,28 @@ This endpoint facilitates the generation of JWT tokens for multiple wallet addre
 
 ```javascript [Login]
 const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
+
+await fetch(`${GAS_TANK_ENDPOINT}/v2/auth/login`, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: [
+    {
+      address: address1, // Address of the user // [!code highlight]
+      signature: signature1, // Signature // [!code highlight]
+    },
+    {
+      address: address2, // [!code highlight]
+      signature: signature2, // [!code highlight]
+    },
+    ...
+  ],
+})
+  .then((response) => {
+    console.log(response);
+    // Handle & do something with the response
+  })
 ```
 
 :::
@@ -30,6 +52,20 @@ Clients can use this endpoint to obtain a new JWT token without re-authenticatin
 
 ```javascript [Resfresh Token]
 const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
+
+await fetch(`${GAS_TANK_ENDPOINT}/v2/auth/refresh`, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: {
+    refresh: refreshToken, // Refresh token // [!code highlight]
+  },
+})
+  .then((response) => {
+    console.log(response);
+    // Handle & do something with the response
+  })
 ```
 
 :::
@@ -44,11 +80,17 @@ const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
 
 ```javascript [Get All Tokens]
 const GAS_TANK_ENDPOINT = "https://gas-tank.xdefiservices.com";
+
+await fetch(`${GAS_TANK_ENDPOINT}/chains/tokens`, {
+  method: "GET",
+})
+  .then((response) => {
+    console.log(response);
+    // Handle & do something with the response
+  })
 ```
 
 :::
-
-<div ref="refGetAllTokens" />
 
 ### Get chains Operational status
 
