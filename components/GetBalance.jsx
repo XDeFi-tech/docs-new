@@ -202,7 +202,7 @@ const GetBalance = () => {
               id="address"
               name="Address"
               value={address}
-              className="max-sm:w-300px] bg-gray-50 text-gray-900 px-2 py-1 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white"
+              className="max-sm:w-[300px] bg-gray-50 text-gray-900 px-2 py-1 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white"
               placeholder="Enter an address"
               onChange={(e) => setAddress(e.target.value)}
             />
