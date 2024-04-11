@@ -6,7 +6,7 @@ next:
 
 # Gas Tank API Documentation
 
-The Gas Tank is a versatile platform that empowers users to manage gas tank balances seamlessly across different blockchain networks. This project facilitates actions such as depositing, withdrawing, internal transferring, and consuming gas tank balances, allowing users to efficiently utilize their resources on EVM, Cosmos-like, and UTXO chains. With support for multiple blockchain environments, The Gas Tank offers users a unified solution for gas utilization across diverse networks. Check the [Gas Tank API Swagger](https://gas-tank.xdefiservices.com/docs/) for more information.
+The Gas Tank is a versatile platform that empowers users to manage gas tank balances seamlessly across different blockchain networks. This project facilitates actions such as depositing, withdrawing, internal transferring, and consuming gas tank balances, allowing users to efficiently utilize their resources on EVM, Cosmos-like, and UTXO chains. With support for multiple blockchain environments, The Gas Tank offers users a unified solution for gas utilization across diverse networks. Check the [Gas Tank API Swagger](https://gas-tank.xdefi.services/docs/) for more information.
 
 The base URL for all Gas Tank API is: https://gas-tank.xdefi.services
 
