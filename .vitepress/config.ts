@@ -754,7 +754,29 @@ function sidebarHome() {
     {
       text: "⛽ Gas Tank API",
       link: "/gas-tank/gas-tank-api",
-      items: [],
+      collapsed: true,
+      items: [
+        {
+          text: "🔹 Introduction",
+          link: "/gas-tank/gas-tank-api",
+        },
+        {
+          text: "🔹 Authentication services",
+          link: "/gas-tank/gas-tank-api#authentication",
+        },
+        {
+          text: "🔹 Chains services",
+          link: "/gas-tank/gas-tank-api#chains",
+        },
+        {
+          text: "🔹 Balance & Transactions",
+          link: "/gas-tank/gas-tank-api#balance-transactions",
+        },
+        {
+          text: "🔹 Other services",
+          link: "/gas-tank/gas-tank-api#other-services",
+        },
+      ],
     },
     {
       text: "🛠️ Partners APIs",
