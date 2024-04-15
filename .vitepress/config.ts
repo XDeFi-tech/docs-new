@@ -88,7 +88,7 @@ export default {
       {},
       `
       window.embeddedChatbotConfig = {
-        chatbotId: "oWzAQXB_6l884D2bWUWxB",
+        chatbotId: "EQaK-bS8IoS60vEkoYKQm",
         domain: "www.chatbase.co"
       }
       `,
@@ -97,7 +97,7 @@ export default {
       "script",
       {
         src: "https://www.chatbase.co/embed.min.js",
-        chatbotId: "oWzAQXB_6l884D2bWUWxB",
+        chatbotId: "EQaK-bS8IoS60vEkoYKQm",
         id: "",
         defer: true,
       },
