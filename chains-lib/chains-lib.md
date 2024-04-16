@@ -1,6 +1,6 @@
 # Chains Lib Documentation
 
-[Chainslib](https://github.com/XDeFi-tech/chains) is a TypeScript library is designed to provide a unified interface for working with multiple blockchain networks, allowing developers to interact with various blockchain chains seamlessly. It supports a wide range of features and blockchain networks, making it a versatile tool for blockchain development.
+[Chainslib](https://github.com/XDeFi-tech/chains-lib) is a TypeScript library is designed to provide a unified interface for working with multiple blockchain networks, allowing developers to interact with various blockchain chains seamlessly. It supports a wide range of features and blockchain networks, making it a versatile tool for blockchain development.
 
 ## Features
 
