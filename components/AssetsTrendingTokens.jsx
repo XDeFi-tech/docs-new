@@ -3,7 +3,7 @@ import LoadingIcon from './LoadingIcon';
 import PlayIcon from './PlayIcon';
 
 const AssetsTrendingTokens = (
-  { type } // Add type prop
+  { type }
 ) => {
   const GRAPHQL_ENDPOINT = 'https://gql-router.xdefi.services/graphql';
   const [response, setResponse] = useState({});
@@ -39,6 +39,10 @@ const AssetsTrendingTokens = (
         price {
           amount
           scalingFactor
+          dailyHigh
+          dailyLow
+          allTimeLow
+          allTimeHigh
         }
         symbol
         type
@@ -55,6 +59,10 @@ const AssetsTrendingTokens = (
         price {
           amount
           scalingFactor
+          dailyHigh
+          dailyLow
+          allTimeLow
+          allTimeHigh
         }
         symbol
         type
@@ -66,10 +74,10 @@ const AssetsTrendingTokens = (
     let query = ``
 
     switch (type) {
-      case 'gainer':
+      case 'gainers':
         query = gainerQuery;
         break;
-      case 'loser':
+      case 'losers':
         query = loserQuery;
         break;
       default:

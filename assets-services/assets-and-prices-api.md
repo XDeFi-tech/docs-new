@@ -513,6 +513,10 @@ const query = `query Gainers {
       price {
         amount
         scalingFactor
+        dailyHigh
+        dailyLow
+        allTimeLow
+        allTimeHigh
       }
       symbol
       type
@@ -562,6 +566,10 @@ const query = `query Losers {
       price {
         amount
         scalingFactor
+        dailyHigh
+        dailyLow
+        allTimeLow
+        allTimeHigh
       }
       symbol
       type
