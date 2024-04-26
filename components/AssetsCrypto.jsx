@@ -1,76 +1,51 @@
-import React, { useState } from "react";
-import LoadingIcon from "./LoadingIcon";
-import PlayIcon from "./PlayIcon";
+import React, { useState } from 'react';
+import LoadingIcon from './LoadingIcon';
+import PlayIcon from './PlayIcon';
 
-const AssetsTokens = () => {
-  const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
+const AssetsCrypto = () => {
+  const GRAPHQL_ENDPOINT = 'https://gql-router.xdefi.services/graphql';
   const [response, setResponse] = useState({});
   const [loading, setLoading] = useState(false);
 
   const query = `
-  query Tokens($page: ConnectionArgs!, $after: DateTime, $afterPrice: DateTime, $filter: TokenFilter) {
+  query CryptoAssets($input: [CryptoAssetArgs!]!) {
     assets {
-      tokens(page: $page, after: $after, afterPrice: $afterPrice, filter: $filter) {
-        pageData {
-          count
-          limit
-          offset
+      cryptoAssets(input: $input) {
+        chain
+        contract
+        decimals
+        id
+        image
+        name
+        price {
+          scalingFactor
+          amount
         }
-        page {
-          pageInfo {
-            endCursor
-            hasNextPage
-          }
-          edges {
-            node {
-              id
-              name
-              symbol
-              icon
-              marketCap
-              price {
-                amount
-                scalingFactor
-              }
-              contracts {
-                symbol
-                scalingFactor
-                address
-                chain
-                id
-              }
-            }
-          }
-        }
+        symbol
+        type
       }
     }
   }`;
 
   const vars = {
-    page: {
-      first: 5,
-      before: null,
-      after: null,
-      last: null,
-    },
-    after: null,
-    afterPrice: null,
-    filter: {
-      address: null,
-      chains: null,
-      ids: null,
-      symbols: null,
-    },
+    input: [
+      {
+        chain: "Bitcoin", 
+      },
+      {
+        chain: "Ethereum", 
+      },
+    ],
   };
 
-  const getAssetsTokens = async () => {
+  const getAssetsCrypto = async () => {
     setLoading(true);
     setResponse({});
 
     await fetch(GRAPHQL_ENDPOINT, {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
         query,
@@ -93,7 +68,7 @@ const AssetsTokens = () => {
     <>
       <div className="flex justify-center">
         <button
-          onClick={getAssetsTokens}
+          onClick={getAssetsCrypto}
           className="flex justify-center items-center gap-2 bg-[#2770CB] text-white px-2 py-1 rounded"
           disabled={loading}
         >
@@ -122,4 +97,4 @@ const AssetsTokens = () => {
   );
 };
 
-export default AssetsTokens;
+export default AssetsCrypto;
