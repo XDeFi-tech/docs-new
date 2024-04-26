@@ -125,6 +125,47 @@ getAssetsTokens();
 
 <div ref="refAssetsTokens"/>
 
+## Get Assets Supported Chains
+
+Get Assets Supported Chains provides information about the supported chains for assets on the platform. The API return a list of supported chains, including Ethereum, Binance Smart Chain, Solana, and others.
+
+[Query GraphQL directly here](https://gql-router.xdefi.services/graphql?explorerURLState=N4IgJg9gxgrgtgUwHYBcQC4QEcYIE4CeABAMowAO5EeKCYAwgBYCGAlkgM5HAA6SRRZhw4IUXXvwFEOFKjTpM2nPgIC%2BfVSAA0IAG7M8rZgCMANgg4YQ2kIwTMw%2BS5htUOKAGanWAc0YoAeXJ8ZhRWCCQSKENyNBdVIA)
+
+::: code-group
+
+```javascript [Example]
+const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
+const query = `
+  query SupportedChains {
+    assets {
+      supportedChains
+    }
+  }`;
+
+const getSupportedChains = async () => {
+  await fetch(GRAPHQL_ENDPOINT, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      query,
+    }),
+  })
+    .then((response) => response.json())
+    .then((result) => {
+      console.log(result);
+      // Handle the result
+    });
+};
+
+getSupportedChains();
+```
+
+:::
+
+<div ref="refAssetsSupportedChains"/>
+
 ## Get Assets Crypto Currencies
 
 Get Assets Crypto Currencies provides information about cryptocurrencies on various blockchains, including Ethereum, Binance Smart Chain, and Solana. The API returns data such as the cryptocurrency's name, symbol, icon, type, external data, scaling factor, chain, market cap, and price.
@@ -225,6 +266,85 @@ getCryptoCurrencies();
 
 <div ref="refAssetsCryptoCurrencies"/>
 
+## Get Crypto Assets
+
+Get Crypto Assets provides information about crypto assets on various blockchains, including Ethereum, Binance Smart Chain, and Solana. The API returns data such as the crypto asset's name, symbol, icon, type, external data, scaling factor, chain, market cap, and price.
+
+[Query GraphQL directly here](https://gql-router.xdefi.services/graphql?explorerURLState=N4IgJg9gxgrgtgUwHYBcQC4QEcYIE4CeABAMKEAOKEAggM60Iq0AUAJAJZLkwrpEDaZApRr1G1PAHNaAQgC6MgJRFgAHSREiAQzFMV6zZqgUqdBk2aduvIhy49lajYaMALLZwMuiUCKjxaUCheLmAIUOxwWgA2tCGG7GDxmpFakgjJREhaiJnkeOxQCPrO3kS0UDGckgBigVR4mZq05Fp4ANbRnBml3jkQMKiZAL6ZtARwAEYQ0Zkowj0uo87LwyAANCAAbm3sWpPRCLQYIE6aqiBWPBd8-PFn3hdQ7p4YRBcAoiiu%2BAjwF-Flpo5Oo1psflownhjpgNiByBBaCgAGZdSSuFAAeXI%2BC0KHYfgAysZ2JQTiBhkA)
+
+Chains supported in [Get Assets Supported Chains](#get-assets-supported-chains)
+
+::: code-group
+
+```javascript [Example]
+const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
+const query = `
+  query CryptoAssets($input: [CryptoAssetArgs!]!) {
+  assets {
+    cryptoAssets(input: $input) {
+      chain
+      contract
+      decimals
+      id
+      image
+      name
+      price {
+        scalingFactor
+        amount
+      }
+      symbol
+      type
+    }
+  }
+}`;
+
+const vars = {
+  input: [
+    {
+      chain: "Bitcoin", // [!code highlight]
+    },
+    {
+      chain: "Ethereum", // [!code highlight]
+    },
+  ],
+};
+
+const getCryptoAssets = async () => {
+  await fetch(GRAPHQL_ENDPOINT, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      query,
+      variables: vars,
+    }),
+  })
+    .then((response) => response.json())
+    .then((result) => {
+      console.log(result);
+      // Handle the result
+    });
+};
+
+getCryptoAssets();
+```
+
+```js [Variables]
+{
+  input: [
+    {
+      chain: String,
+    },
+    ...
+  ]
+}
+```
+
+:::
+
+<div ref="refAssetsCrypto"/>
+
 ## Get Assets Fiat Currencies
 
 Get Assets Fiat Currencies provides information about fiat currencies on various blockchains, including Ethereum, Binance Smart Chain, and Solana. The API returns data such as the fiat currency's name, symbol, scaling factor, character, and price.
@@ -268,14 +388,14 @@ const query = `
 
 const vars = {
   page: {
-    first: 5,
-    after: null,
+    first: 5, // [!code highlight]
+    after: null, // [!code highlight]
   },
   filter: {
-    ids: null,
+    ids: null, // [!code highlight]
   },
-  after: null,
-  afterPrice: null,
+  after: null, // [!code highlight]
+  afterPrice: null, // [!code highlight]
 };
 
 const getFiatCurrencies = async () => {
@@ -316,6 +436,170 @@ getFiatCurrencies();
 :::
 
 <div ref="refAssetsFiatCurrencies"/>
+
+## Get Trending Tokens
+
+Get Trending Tokens provides information about trending tokens Top Market Cap/Gainers/Losers. The API returns data such as the token's symbol, scaling factor, address, chain, fees, defi protocols, and external data. 
+
+### Get Top Market Cap Tokens
+
+[Query GraphQL directly here](https://gql-router.xdefi.services/graphql?explorerURLState=N4IgJg9gxgrgtgUwHYBcQC4QEcYIE4CeABACoQAOAsgIZ4DWCKAwteUcADpJFHUDOfRn3ZcePFBRr1GLNp25ie-QSgCSYUYqJQAFtQCWSPpsVJqiE2PJ59UBCIVbecCDFSXFfKNQA2hgOYAYtRQEngeYnC0DMysAErUSHQRPGAGPgQAEvr%2BOilEafoZADIQAO75vj4k%2BoilFY5aVTWI2bkRAL4RfARwAEYQPhEoBOQIll0Kkx0gADQgAG60%2BtR9Pgh8GCBzIDoI1GD4m5g75BB8KABmfrkoAPJjeNQo%2BhBIAMpQNuRoJx1AA)
+
+::: code-group
+
+```javascript [Example]
+const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
+
+const query = `query TopMarketCap {
+  assets {
+    topMarketCap {
+      assetId
+      chains
+      name
+      price {
+        amount
+        scalingFactor
+        marketCapRank
+        dailyHigh
+        dailyLow
+        allTimeLow
+        allTimeHigh
+      }
+      symbol
+      type
+    }
+  }
+}`;
+
+const getTopMarketCapTokens = async () => {
+  await fetch(GRAPHQL_ENDPOINT, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      query,
+    }),
+  })
+    .then((response) => response.json())
+    .then((result) => {
+      console.log(result);
+      // Handle the result
+    });
+};
+
+getTopMarketCapTokens();
+```
+
+:::
+
+<div ref="refAssetsTrendingTopMarket"/>
+
+### Get Gainers Tokens
+
+[Query GraphQL directly here](https://gql-router.xdefi.services/graphql?explorerURLState=N4IgJg9gxgrgtgUwHYBcQC4QEcYIE4CeABADIQDO%2B5RwAOkkUQIbmUrV0ONEA2FVNet24s2ASTBDhRKAAsmASyTkpwpE0SruABzwKoCQV2nM4EGKi3DyUJjyUBzAGJMoKCHitEAvl-IE4ACMIHi8UAm0ELV8uGO8QABoQADcmPSZAngRyDBBEkFkEJjAqXPztChQAM3sHWRQAeUi8JhQFCCQAZSg9bTRMEG8gA)
+
+::: code-group
+
+```javascript [Example]
+const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
+
+const query = `query Gainers {
+  assets {
+    gainers {
+      assetId
+      chains
+      name
+      price {
+        amount
+        scalingFactor
+        dailyHigh
+        dailyLow
+        allTimeLow
+        allTimeHigh
+      }
+      symbol
+      type
+    }
+  }
+}`;
+
+const getGainersTokens = async () => {
+  await fetch(GRAPHQL_ENDPOINT, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      query,
+    }),
+  })
+    .then((response) => response.json())
+    .then((result) => {
+      console.log(result);
+      // Handle the result
+    });
+};
+
+getGainersTokens();
+```
+
+:::
+
+<div ref="refAssetsTrendingGainers"/>
+
+### Get Losers Tokens
+
+[Query GraphQL directly here](https://gql-router.xdefi.services/graphql?explorerURLState=N4IgJg9gxgrgtgUwHYBcQC4QEcYIE4CeABAOICGAlkvgM5HAA6SRRZNNCKdjzLRA5pWp5uTPnzYcUASTBjxRKAAshNeeKRlE6vgAc8FKAno7xWiDFSm%2BNKGQA2VfgDEyUFBDzWAvtZoE4ACMIe2sUAl0EHV9eGO8QABoQADcyAzJA%2BwQaDBBEkCUEMjBaXPzdCBoUADNHfiUUAHlIvDIUCggkAGUoA100TBBvIA)
+
+::: code-group
+
+```javascript [Example]
+const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
+
+const query = `query Losers {
+  assets {
+    losers {
+      assetId
+      chains
+      name
+      price {
+        amount
+        scalingFactor
+        dailyHigh
+        dailyLow
+        allTimeLow
+        allTimeHigh
+      }
+      symbol
+      type
+    }
+  }
+}`;
+
+const getLosersTokens = async () => {
+  await fetch(GRAPHQL_ENDPOINT, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      query,
+    }),
+  })
+    .then((response) => response.json())
+    .then((result) => {
+      console.log(result);
+      // Handle the result
+    });
+};
+
+getLosersTokens();
+```
+
+:::
+
+<div ref="refAssetsTrendingLosers"/>
 
 ## Get LP Tokens
 
@@ -548,23 +832,41 @@ import { createRoot } from 'react-dom/client'
 import { ref, onMounted } from 'vue'
 
 import AssetsTokens from '../components/AssetsTokens.jsx'
+import AssetsSupportedChains from '../components/AssetsSupportedChains.jsx'
 import AssetsCryptoCurrencies from '../components/AssetsCryptoCurrencies.jsx'
+import AssetsCrypto from '../components/AssetsCrypto.jsx'
 import AssetsFiatCurrencies from '../components/AssetsFiatCurrencies.jsx'
+import AssetsTrendingTokens from '../components/AssetsTrendingTokens.jsx'
 import AssetsLPTokens from '../components/AssetsLPTokens.jsx'
 import SubscriptionService from '../components/SubscriptionService.jsx'
 
 const refAssetsTokens = ref()
+const refAssetsSupportedChains = ref()
 const refAssetsCryptoCurrencies = ref()
 const refAssetsFiatCurrencies = ref()
+const refAssetsCrypto = ref()
+const refAssetsTrendingTopMarket = ref()
+const refAssetsTrendingGainers = ref()
+const refAssetsTrendingLosers = ref()
 const refAssetsLPTokens = ref()
 const refSubscriptionService = ref()
 onMounted(() => {
   const rootAssetsTokens = createRoot(refAssetsTokens.value)
   rootAssetsTokens.render(createElement(AssetsTokens, {}, null))
+  const rootAssetsSupportedChains = createRoot(refAssetsSupportedChains.value)
+  rootAssetsSupportedChains.render(createElement(AssetsSupportedChains, {}, null))
   const rootAssetsCryptoCurrencies = createRoot(refAssetsCryptoCurrencies.value)
   rootAssetsCryptoCurrencies.render(createElement(AssetsCryptoCurrencies, {}, null))
   const rootAssetsFiatCurrencies = createRoot(refAssetsFiatCurrencies.value)
   rootAssetsFiatCurrencies.render(createElement(AssetsFiatCurrencies, {}, null))
+  const rootAssetsCrypto = createRoot(refAssetsCrypto.value)
+  rootAssetsCrypto.render(createElement(AssetsCrypto, {}, null))
+  const rootAssetsTrendingTopMarket = createRoot(refAssetsTrendingTopMarket.value)
+  rootAssetsTrendingTopMarket.render(createElement(AssetsTrendingTokens, { type: 'top' }, null))
+  const rootAssetsTrendingGainers = createRoot(refAssetsTrendingGainers.value)
+  rootAssetsTrendingGainers.render(createElement(AssetsTrendingTokens, { type: 'gainers' }, null))
+  const rootAssetsTrendingLosers = createRoot(refAssetsTrendingLosers.value)
+  rootAssetsTrendingLosers.render(createElement(AssetsTrendingTokens, { type: 'losers' }, null))
   const rootAssetsLPTokens = createRoot(refAssetsLPTokens.value)
   rootAssetsLPTokens.render(createElement(AssetsLPTokens, {}, null))
   const rootSubscriptionService = createRoot(refSubscriptionService.value)
