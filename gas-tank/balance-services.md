@@ -121,6 +121,8 @@ await fetch(`${GAS_TANK_ENDPOINT}/balances/totals`, {
 
 This endpoint allows users to increase their balance on the Gas Tank platform.
 
+To increase the balance, you need to sign the message with the private key of the address you want to increase the balance for. `v`, `r`, `s` are the signature fields of the message signed by the address owner.
+
 ::: code-group
 
 ```javascript [Request]
@@ -158,6 +160,8 @@ await fetch(`${GAS_TANK_ENDPOINT}/balances/increase`, {
 ### Withdraw balance
 
 This endpoint allows users to withdraw their balance from the Gas Tank platform.
+
+To withdraw the balance, you need to sign the message with the private key of the address you want to withdraw the balance from. The `signature` field is the signature of the message signed by the address owner.
 
 ::: code-group
 
@@ -228,6 +232,8 @@ await fetch(`${GAS_TANK_ENDPOINT}/balances/transfer`, {
 ### Consume balance
 
 This endpoint allows users to consume their balance on the Gas Tank platform.
+
+To consume the balance, you need to sign the message with the private key of the address you want to consume the balance from. The `signature` field is the signature of the message signed by the address owner.
 
 ::: code-group
 

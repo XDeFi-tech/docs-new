@@ -74,9 +74,9 @@ await fetch(`${GAS_TANK_ENDPOINT}/balances/info`, {
 
 :::
 
-### Check the health status of the application
+### Check the status of the application
 
-This endpoint provides information about the health status of the Gas Tank application.
+This endpoint provides information about the status of the Gas Tank application and its dependencies.
 
 ::: code-group
 
