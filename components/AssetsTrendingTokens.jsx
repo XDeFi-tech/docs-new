@@ -1,80 +1,93 @@
-import React, { useState } from "react";
-import LoadingIcon from "./LoadingIcon";
-import PlayIcon from "./PlayIcon";
+import React, { useState } from 'react';
+import LoadingIcon from './LoadingIcon';
+import PlayIcon from './PlayIcon';
 
-const AssetsTokens = () => {
-  const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
+const AssetsTrendingTokens = (
+  { type } // Add type prop
+) => {
+  const GRAPHQL_ENDPOINT = 'https://gql-router.xdefi.services/graphql';
   const [response, setResponse] = useState({});
   const [loading, setLoading] = useState(false);
 
-  const query = `
-  query Tokens($page: ConnectionArgs!, $after: DateTime, $afterPrice: DateTime, $filter: TokenFilter) {
+  const topMarketCapQuery = `query TopMarketCap {
     assets {
-      tokens(page: $page, after: $after, afterPrice: $afterPrice, filter: $filter) {
-        pageData {
-          count
-          limit
-          offset
+      topMarketCap {
+        assetId
+        chains
+        name
+        price {
+          amount
+          scalingFactor
+          marketCapRank
+          dailyHigh
+          dailyLow
+          allTimeLow
+          allTimeHigh
         }
-        page {
-          pageInfo {
-            endCursor
-            hasNextPage
-          }
-          edges {
-            node {
-              id
-              name
-              symbol
-              icon
-              marketCap
-              price {
-                amount
-                scalingFactor
-              }
-              contracts {
-                symbol
-                scalingFactor
-                address
-                chain
-                id
-              }
-            }
-          }
-        }
+        symbol
+        type
       }
     }
   }`;
 
-  const vars = {
-    page: {
-      first: 5,
-      before: null,
-      after: null,
-      last: null,
-    },
-    after: null,
-    afterPrice: null,
-    filter: {
-      address: null,
-      chains: null,
-      ids: null,
-      symbols: null,
-    },
-  };
+  const gainerQuery = `query Gainers {
+    assets {
+      gainers {
+        assetId
+        chains
+        name
+        price {
+          amount
+          scalingFactor
+        }
+        symbol
+        type
+      }
+    }
+  }`;
 
-  const getAssetsTokens = async () => {
+  const loserQuery = `query Losers {
+    assets {
+      losers {
+        assetId
+        chains
+        name
+        price {
+          amount
+          scalingFactor
+        }
+        symbol
+        type
+      }
+    }
+  }`;
+
+  const getAssetsTrendingTokens = async () => {
+    let query = ``
+
+    switch (type) {
+      case 'gainer':
+        query = gainerQuery;
+        break;
+      case 'loser':
+        query = loserQuery;
+        break;
+      default:
+        query = topMarketCapQuery;
+        break;
+    
+    }
+
     setLoading(true);
     setResponse({});
 
     await fetch(GRAPHQL_ENDPOINT, {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        query,
-        variables: vars,
+        query: query,
       }),
     })
       .then((response) => response.json())
@@ -93,7 +106,7 @@ const AssetsTokens = () => {
     <>
       <div className="flex justify-center">
         <button
-          onClick={getAssetsTokens}
+          onClick={getAssetsTrendingTokens}
           className="flex justify-center items-center gap-2 bg-[#2770CB] text-white px-2 py-1 rounded"
           disabled={loading}
         >
@@ -122,4 +135,4 @@ const AssetsTokens = () => {
   );
 };
 
-export default AssetsTokens;
+export default AssetsTrendingTokens;
