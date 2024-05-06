@@ -123,10 +123,19 @@ This endpoint allows users to increase their balance on the Gas Tank platform.
 
 To increase the balance, you need to sign the message with the private key of the address you want to increase the balance for. `v`, `r`, `s` are the signature fields of the message signed by the address owner.
 
+You can sign a string of data using [ethers.js](https://docs.ethers.org/v5), below is an example of [how to sign a message using ethers.js](https://docs.ethers.org/v5/getting-started/#getting-started--signing) and increase the balance.
+
 ::: code-group
 
 ```javascript [Request]
+import { ethers } from "ethers";
+
 const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
+const message = "0x1234"; // Message to sign // [!code highlight]
+const privateKey = "0x1234"; // Private key of the address // [!code highlight]
+const wallet = new ethers.Wallet(privateKey);
+const signature = await wallet.signMessage(message);
+const { v, r, s } = ethers.utils.splitSignature(signature);
 
 await fetch(`${GAS_TANK_ENDPOINT}/balances/increase`, {
   method: "POST",
@@ -163,10 +172,18 @@ This endpoint allows users to withdraw their balance from the Gas Tank platform.
 
 To withdraw the balance, you need to sign the message with the private key of the address you want to withdraw the balance from. The `signature` field is the signature of the message signed by the address owner.
 
+Same as the [Increase balance](#increase-balance), you can sign a string of data using [ethers.js](https://docs.ethers.org/v5/getting-started/), below is an example of [how to sign a message using ethers.js](https://docs.ethers.org/v5/getting-started/#getting-started--signing) and withdraw the balance.
+
 ::: code-group
 
 ```javascript [Request]
+import { ethers } from "ethers";
+
 const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
+const message = "0x1234"; // Message to sign // [!code highlight]
+const privateKey = "0x1234"; // Private key of the address // [!code highlight]
+const wallet = new ethers.Wallet(privateKey);
+const signature = await wallet.signMessage(message);
 
 await fetch(`${GAS_TANK_ENDPOINT}/balances/withdraw`, {
   method: "POST",
@@ -235,10 +252,18 @@ This endpoint allows users to consume their balance on the Gas Tank platform.
 
 To consume the balance, you need to sign the message with the private key of the address you want to consume the balance from. The `signature` field is the signature of the message signed by the address owner.
 
+Same as the [Increase balance](#increase-balance)/[Withdraw balance](#withdraw-balance), you can sign a string of data using [ethers.js](https://docs.ethers.org/v5/getting-started/), below is an example of [how to sign a message using ethers.js](https://docs.ethers.org/v5/getting-started/#getting-started--signing) and consume the balance.
+
 ::: code-group
 
 ```javascript [Request]
+import { ethers } from "ethers";
+
 const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
+const message = "0x1234"; // Message to sign // [!code highlight]
+const privateKey = "0x1234"; // Private key of the address // [!code highlight]
+const wallet = new ethers.Wallet(privateKey);
+const signature = await wallet.signMessage(message);
 
 await fetch(`${GAS_TANK_ENDPOINT}/balances/consume`, {
   method: "POST",
