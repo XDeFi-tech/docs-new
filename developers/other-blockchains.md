@@ -79,16 +79,25 @@ Above code will return `Promise<Signature | RPC: 2.0>`
 #### Transfer
 
 ```javascript
+
 window.xfi[chainId].request(
   {
     method: "transfer",
     params: [
       {
-        asset: "string",
-        from: "string",
+        asset: {
+          chain: "string",
+          symbol: "string",
+          ticker: "string",
+        }
+        from: {
+          amount: number,
+          decimals: number,
+        },
         recipient: "string",
         amount: "string",
         memo: "string",
+        gasLimit: number, // Optional
       },
     ],
   },
