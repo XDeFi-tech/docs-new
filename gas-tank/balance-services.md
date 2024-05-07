@@ -132,7 +132,7 @@ import { ethers } from "ethers";
 
 const web3 = new Web3(window.ethereum);
 const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
-const address = "0x1234567890123456789012345678901234567890"; // Address to deposit balance // [!code
+const address = "0x1234567890123456789012345678901234567890"; // Address to deposit balance // [!code highlight]
 const message = web3.utils.sha3("Deposit balance to Gas Tank"); // Message to sign // [!code highlight]
 const privateKey = "0x1234"; // Private key of the address // [!code highlight]
 const wallet = new ethers.Wallet(privateKey);
@@ -226,7 +226,7 @@ import { ethers } from "ethers";
 
 const web3 = new Web3(window.ethereum);
 const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
-const address = "0x1234567890123456789012345678901234567890"; // Address to transfer balance // [!code
+const address = "0x1234567890123456789012345678901234567890"; // Address to transfer balance // [!code highlight]
 const message = web3.utils.sha3("Transfer balance from Gas Tank"); // Message to sign // [!code highlight]
 const privateKey = "0x1234"; // Private key of the address // [!code highlight]
 const wallet = new ethers.Wallet(privateKey);
