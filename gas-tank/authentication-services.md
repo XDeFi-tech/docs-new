@@ -4,10 +4,23 @@
 
 This endpoint facilitates the generation of JWT tokens for multiple wallet addresses in a single request. The request payload should consist of an array of objects, each containing an address and its corresponding signature. Upon successful validation of the signatures, the server will generate JWT tokens for the provided addresses.
 
+To get signatures, you can use `personal_sign` method from web3.js or ethers.js. Below is an example of how to get a signature using web3.js:
+
 ::: code-group
 
 ```javascript [Request]
+const web3 = new Web3(window.ethereum);
 const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
+
+const address1 = "0x1234567890123456789012345678901234567890";
+const message1 = "Sign this message to authenticate your address with Gas Tank";
+
+const signature1 = await web3.eth.personal.sign(message1, address1);
+
+const address2 = "0x0987654321098765432109876543210987654321";
+const message2 = "Sign this message to authenticate your address with Gas Tank";
+
+const signature2 = await web3.eth.personal.sign(message2, address2);
 
 await fetch(`${GAS_TANK_ENDPOINT}/v2/auth/login`, {
   method: "POST",

@@ -117,13 +117,13 @@ await fetch(`${GAS_TANK_ENDPOINT}/balances/totals`, {
 
 :::
 
-### Increase balance
+### Deposit balance
 
-This endpoint allows users to increase their balance on the Gas Tank platform.
+This endpoint allows users to deposit balance to the Gas Tank platform.
 
-To increase the balance, you need to sign the message with the private key of the address you want to increase the balance for. `v`, `r`, `s` are the signature fields of the message signed by the address owner.
+To deposit the balance, you need to sign the message with the private key of the address you want to deposit the balance for. `v`, `r`, `s` are the signature fields of the message signed by the address owner.
 
-You can sign a string of data using [ethers.js](https://docs.ethers.org/v5), below is an example of [how to sign a message using ethers.js](https://docs.ethers.org/v5/getting-started/#getting-started--signing) and increase the balance.
+You can sign a string of data using [ethers.js](https://docs.ethers.org/v5), below is an example of [how to sign a message using ethers.js](https://docs.ethers.org/v5/getting-started/#getting-started--signing) and deposit the balance.
 
 ::: code-group
 
@@ -157,7 +157,7 @@ await fetch(`${GAS_TANK_ENDPOINT}/balances/increase`, {
   },
 })
   .then((response) => {
-    // Balance increased successfully
+    // Balance deposit successfully
   })
   .catch((error) => {
     // Catch & handle the error
@@ -172,15 +172,17 @@ This endpoint allows users to withdraw their balance from the Gas Tank platform.
 
 To withdraw the balance, you need to sign the message with the private key of the address you want to withdraw the balance from. The `signature` field is the signature of the message signed by the address owner.
 
-Same as the [Increase balance](#increase-balance), you can sign a string of data using [ethers.js](https://docs.ethers.org/v5/getting-started/), below is an example of [how to sign a message using ethers.js](https://docs.ethers.org/v5/getting-started/#getting-started--signing) and withdraw the balance.
+Same as the [Deposit balance](#deposit-balance), you can sign a string of data using [ethers.js](https://docs.ethers.org/v5/getting-started/), below is an example of [how to sign a message using ethers.js](https://docs.ethers.org/v5/getting-started/#getting-started--signing) and withdraw the balance.
 
 ::: code-group
 
 ```javascript [Request]
 import { ethers } from "ethers";
 
+const web3 = new Web3(window.ethereum);
 const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
-const message = "0x1234"; // Message to sign // [!code highlight]
+const address = "0x1234567890123456789012345678901234567890"; // Address to withdraw balance // [!code highlight]
+const message = web3.utils.sha3("Withdraw balance from Gas Tank"); // Message to sign // [!code highlight]
 const privateKey = "0x1234"; // Private key of the address // [!code highlight]
 const wallet = new ethers.Wallet(privateKey);
 const signature = await wallet.signMessage(message);
@@ -192,13 +194,13 @@ await fetch(`${GAS_TANK_ENDPOINT}/balances/withdraw`, {
     "Authorization": `Bearer ${jwtToken}`, // JWT token // [!code highlight]
   },
   body: {
-    address: "string", // [!code highlight]
+    address: address, // [!code highlight]
     tokenAddress: "string", // [!code highlight]
     amount: "string", // [!code highlight]
     chain: "string", // [!code highlight]
     recipient: "string", // [!code highlight]
-    message: "string", // [!code highlight]
-    signature: "string" // [!code highlight]
+    message: message, // [!code highlight]
+    signature: signature // [!code highlight]
   },
 })
   .then((response) => {
@@ -218,7 +220,15 @@ This endpoint allows users to create an internal transfer task on the Gas Tank p
 ::: code-group
 
 ```javascript [Request]
+import { ethers } from "ethers";
+
+const web3 = new Web3(window.ethereum);
 const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
+const address = "0x1234567890123456789012345678901234567890"; // Address to transfer balance // [!code
+const message = web3.utils.sha3("Transfer balance from Gas Tank"); // Message to sign // [!code highlight]
+const privateKey = "0x1234"; // Private key of the address // [!code highlight]
+const wallet = new ethers.Wallet(privateKey);
+const signature = await wallet.signMessage(message);
 
 await fetch(`${GAS_TANK_ENDPOINT}/balances/transfer`, {
   method: "POST",
@@ -227,13 +237,13 @@ await fetch(`${GAS_TANK_ENDPOINT}/balances/transfer`, {
     Authorization: `Bearer ${jwtToken}`, // JWT token // [!code highlight]
   },
   body: {
-    address: "string", // [!code highlight]
+    address: address, // [!code highlight]
     tokenAddress: "string", // [!code highlight]
     amount: "string", // [!code highlight]
     chain: "string", // [!code highlight]
     recipient: "string", // [!code highlight]
-    message: "string", // [!code highlight]
-    signature: "string", // [!code highlight]
+    message: message, // [!code highlight]
+    signature: signature, // [!code highlight]
   },
 })
   .then((response) => {
@@ -252,15 +262,17 @@ This endpoint allows users to consume their balance on the Gas Tank platform.
 
 To consume the balance, you need to sign the message with the private key of the address you want to consume the balance from. The `signature` field is the signature of the message signed by the address owner.
 
-Same as the [Increase balance](#increase-balance)/[Withdraw balance](#withdraw-balance), you can sign a string of data using [ethers.js](https://docs.ethers.org/v5/getting-started/), below is an example of [how to sign a message using ethers.js](https://docs.ethers.org/v5/getting-started/#getting-started--signing) and consume the balance.
+Same as the [Deposit balance](#deposit-balance)/[Withdraw balance](#withdraw-balance), you can sign a string of data using [ethers.js](https://docs.ethers.org/v5/getting-started/), below is an example of [how to sign a message using ethers.js](https://docs.ethers.org/v5/getting-started/#getting-started--signing) and consume the balance.
 
 ::: code-group
 
 ```javascript [Request]
 import { ethers } from "ethers";
 
+const web3 = new Web3(window.ethereum);
 const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
-const message = "0x1234"; // Message to sign // [!code highlight]
+const address = "0x1234567890123456789012345678901234567890"; // Address to consume balance // [!code highlight]
+const message = web3.utils.sha3("Consume balance from Gas Tank"); // Message to sign // [!code highlight]
 const privateKey = "0x1234"; // Private key of the address // [!code highlight]
 const wallet = new ethers.Wallet(privateKey);
 const signature = await wallet.signMessage(message);
@@ -272,12 +284,12 @@ await fetch(`${GAS_TANK_ENDPOINT}/balances/consume`, {
     Authorization: `Bearer ${jwtToken}`, // JWT token // [!code highlight]
   },
   body: {
-    address: "string", // [!code highlight]
+    address: address, // [!code highlight]
     minDestinationAmount: "string", // [!code highlight]
     destinationAddress: "string", // [!code highlight]
     destinationChain: "string", // [!code highlight]
-    message: "string", // [!code highlight]
-    signature: "string", // [!code highlight]
+    message: message, // [!code highlight]
+    signature: signature, // [!code highlight]
   },
 })
   .then((response) => {
@@ -338,7 +350,7 @@ await fetch(`${GAS_TANK_ENDPOINT}/balances/consume/quote`, {
 
 ### Get user balance queue update
 
-This endpoint allows users to get the balance queue update for a specific address.
+This endpoint allows users to get the balance queue update for any job ongoing (e.g., deposit, withdrawal, transfer, consume).
 
 ::: code-group
 
@@ -400,7 +412,7 @@ await fetch(`${GAS_TANK_ENDPOINT}/transactions`, {
 
 ### Get balance queue update by ID
 
-This endpoint allows users to get the balance queue update for a specific ID.
+This endpoint allows users to get the balance queue update for a specific ID (e.g., deposit, withdrawal, transfer, consume).
 
 ::: code-group
 
