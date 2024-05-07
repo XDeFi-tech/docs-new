@@ -146,16 +146,16 @@ await fetch(`${GAS_TANK_ENDPOINT}/balances/increase`, {
     "Authorization": `Bearer ${jwtToken}`, // JWT token // [!code highlight]
   },
   body: {
-    address: "string", // [!code highlight]
+    address: address, // [!code highlight]
     tokenAddress: "string", // [!code highlight]
     chain: "string", // [!code highlight]
     owner: "string", // [!code highlight]
     spender: "string", // [!code highlight]
     value: "string", // [!code highlight]
     deadline: 0, // [!code highlight]
-    v: 0, // [!code highlight]
-    r: "string", // [!code highlight]
-    s: "string" // [!code highlight]
+    v: v, // [!code highlight]
+    r: r, // [!code highlight]
+    s: s // [!code highlight]
   },
 })
   .then((response) => {
