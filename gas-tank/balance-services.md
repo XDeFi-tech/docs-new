@@ -130,8 +130,10 @@ You can sign a string of data using [ethers.js](https://docs.ethers.org/v5), bel
 ```javascript [Request]
 import { ethers } from "ethers";
 
+const web3 = new Web3(window.ethereum);
 const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
-const message = "0x1234"; // Message to sign // [!code highlight]
+const address = "0x1234567890123456789012345678901234567890"; // Address to deposit balance // [!code
+const message = web3.utils.sha3("Deposit balance to Gas Tank"); // Message to sign // [!code highlight]
 const privateKey = "0x1234"; // Private key of the address // [!code highlight]
 const wallet = new ethers.Wallet(privateKey);
 const signature = await wallet.signMessage(message);
