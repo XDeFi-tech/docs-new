@@ -761,15 +761,15 @@ function sidebarHome() {
           link: "/gas-tank/gas-tank-api",
         },
         {
-          text: "🔹 Authentication services",
+          text: "🔹 Authentication",
           link: "/gas-tank/gas-tank-api#authentication",
         },
         {
-          text: "🔹 Chains services",
+          text: "🔹 Chains / Tokens / Status",
           link: "/gas-tank/gas-tank-api#chains",
         },
         {
-          text: "🔹 Balance & Transactions",
+          text: "🔹 Balances & Gas top-up: Deposit, Withdraw, Send Gas",
           link: "/gas-tank/gas-tank-api#balance-transactions",
         },
         {

@@ -82,7 +82,7 @@ await fetch(`${GAS_TANK_ENDPOINT}/balances/${address}`, { // Address to retrieve
 
 :::
 
-### Get total balances by JWT
+### Get total balances using JWT
 
 This endpoint returns a list of total balances for the specified JWT.
 
