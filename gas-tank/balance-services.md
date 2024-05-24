@@ -145,7 +145,7 @@ await fetch(`${GAS_TANK_ENDPOINT}/balances/increase`, {
     "Content-Type": "application/json"
     "Authorization": `Bearer ${jwtToken}`, // JWT token // [!code highlight]
   },
-  body: {
+  body: JSON.stringify({
     address: address, // [!code highlight]
     tokenAddress: "string", // [!code highlight]
     chain: "string", // [!code highlight]
@@ -156,7 +156,7 @@ await fetch(`${GAS_TANK_ENDPOINT}/balances/increase`, {
     v: v, // [!code highlight]
     r: r, // [!code highlight]
     s: s // [!code highlight]
-  },
+  }),
 })
   .then((response) => {
     // Balance deposit successfully
@@ -195,7 +195,7 @@ await fetch(`${GAS_TANK_ENDPOINT}/balances/withdraw`, {
     "Content-Type": "application/json"
     "Authorization": `Bearer ${jwtToken}`, // JWT token // [!code highlight]
   },
-  body: {
+  body: JSON.stringify({
     address: address, // [!code highlight]
     tokenAddress: "string", // [!code highlight]
     amount: "string", // [!code highlight]
@@ -203,7 +203,7 @@ await fetch(`${GAS_TANK_ENDPOINT}/balances/withdraw`, {
     recipient: "string", // [!code highlight]
     message: message, // [!code highlight]
     signature: signature // [!code highlight]
-  },
+  }),
 })
   .then((response) => {
     // Balance withdrawn successfully
@@ -238,7 +238,7 @@ await fetch(`${GAS_TANK_ENDPOINT}/balances/transfer`, {
     "Content-Type": "application/json",
     Authorization: `Bearer ${jwtToken}`, // JWT token // [!code highlight]
   },
-  body: {
+  body: JSON.stringify({
     address: address, // [!code highlight]
     tokenAddress: "string", // [!code highlight]
     amount: "string", // [!code highlight]
@@ -246,7 +246,7 @@ await fetch(`${GAS_TANK_ENDPOINT}/balances/transfer`, {
     recipient: "string", // [!code highlight]
     message: message, // [!code highlight]
     signature: signature, // [!code highlight]
-  },
+  }),
 })
   .then((response) => {
     // Internal transfer task created successfully
@@ -285,14 +285,14 @@ await fetch(`${GAS_TANK_ENDPOINT}/balances/consume`, {
     "Content-Type": "application/json",
     Authorization: `Bearer ${jwtToken}`, // JWT token // [!code highlight]
   },
-  body: {
+  body: JSON.stringify({
     address: address, // [!code highlight]
     minDestinationAmount: "string", // [!code highlight]
     destinationAddress: "string", // [!code highlight]
     destinationChain: "string", // [!code highlight]
     message: message, // [!code highlight]
     signature: signature, // [!code highlight]
-  },
+  }),
 })
   .then((response) => {
     // Balance consumed successfully
@@ -319,11 +319,11 @@ await fetch(`${GAS_TANK_ENDPOINT}/balances/consume/quote`, {
     "Content-Type": "application/json",
     Authorization: `Bearer ${jwtToken}`, // JWT token // [!code highlight]
   },
-  body: {
+  body: JSON.stringify({
     address: "string", // [!code highlight]
     minDestinationAmount: "string", // [!code highlight]
     destinationChain: "string", // [!code highlight]
-  },
+  }),
 })
   .then((response) => {
     console.log(response);
