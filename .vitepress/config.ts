@@ -765,12 +765,16 @@ function sidebarHome() {
           link: "/gas-tank/gas-tank-api#authentication",
         },
         {
+          text: "🔹 Messages",
+          link: "/gas-tank/gas-tank-api#messages",
+        },
+        {
           text: "🔹 Chains / Tokens / Status",
-          link: "/gas-tank/gas-tank-api#chains",
+          link: "/gas-tank/gas-tank-api#chains-token-status",
         },
         {
           text: "🔹 Balances & Gas top-up: Deposit, Withdraw, Send Gas",
-          link: "/gas-tank/gas-tank-api#balance-transactions",
+          link: "/gas-tank/gas-tank-api#balance-transactions-deposit-withdraw-send-gas",
         },
         {
           text: "🔹 Other services",

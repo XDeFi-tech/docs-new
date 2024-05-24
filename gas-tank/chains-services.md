@@ -1,4 +1,4 @@
-## Chains / Status
+## Chains / Token / Status
 
 ### Get all Tokens
 

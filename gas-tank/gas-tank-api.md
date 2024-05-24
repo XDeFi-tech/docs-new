@@ -14,6 +14,8 @@ Below are the available services provided by the Gas Tank API. You need to have 
 
 <!--@include: ./authentication-services.md-->
 
+<!--@include: ./messages-service.md-->
+
 <!--@include: ./chains-services.md-->
 
 <!--@include: ./balance-services.md-->
