@@ -1,4 +1,4 @@
-## Balance & Transactions
+## Balance & Transactions - Deposit, Withdraw, Send Gas
 
 ### Get all balance entries for user
 
