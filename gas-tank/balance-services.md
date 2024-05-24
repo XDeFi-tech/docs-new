@@ -258,52 +258,6 @@ await fetch(`${GAS_TANK_ENDPOINT}/balances/transfer`, {
 
 :::
 
-### Consume balance
-
-This endpoint allows users to consume their balance on the Gas Tank platform.
-
-To consume the balance, you need to sign the message with the private key of the address you want to consume the balance from. The `signature` field is the signature of the message signed by the address owner and `message` is generated in [Construct Consume Message](#construct-consume-message).
-
-Same as the [Deposit balance](#deposit-balance)/[Withdraw balance](#withdraw-balance), you can sign a string of data using [ethers.js](https://docs.ethers.org/v5/getting-started/), below is an example of [how to sign a message using ethers.js](https://docs.ethers.org/v5/getting-started/#getting-started--signing) and consume the balance.
-
-::: code-group
-
-```javascript [Request]
-import { ethers } from "ethers";
-
-const web3 = new Web3(window.ethereum);
-const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
-const address = "0x1234567890123456789012345678901234567890"; // Address to consume balance // [!code highlight]
-const message = message; // Message is generated in Construct Consume Message
-const privateKey = "0x1234"; // Private key of the address // [!code highlight]
-const wallet = new ethers.Wallet(privateKey);
-const signature = await wallet.signMessage(message);
-
-await fetch(`${GAS_TANK_ENDPOINT}/balances/consume`, {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-    Authorization: `Bearer ${jwtToken}`, // JWT token // [!code highlight]
-  },
-  body: JSON.stringify({
-    address: address, // [!code highlight]
-    minDestinationAmount: "string", // [!code highlight]
-    destinationAddress: "string", // [!code highlight]
-    destinationChain: "string", // [!code highlight]
-    message: message, // [!code highlight]
-    signature: signature, // [!code highlight]
-  }),
-})
-  .then((response) => {
-    // Balance consumed successfully
-  })
-  .catch((error) => {
-    // Catch & handle the error
-  });
-```
-
-:::
-
 ### Get a quote for consuming balance
 
 This endpoint allows users to generate a quote for consuming their balance on the Gas Tank platform.
@@ -346,6 +300,51 @@ await fetch(`${GAS_TANK_ENDPOINT}/balances/consume/quote`, {
     }
   ]
 }
+```
+:::
+
+### Consume balance
+
+This endpoint allows users to consume their balance on the Gas Tank platform.
+
+To consume the balance, you need to sign the message with the private key of the address you want to consume the balance from. The `signature` field is the signature of the message signed by the address owner and `message` is generated in [Construct Consume Message](#construct-consume-message).
+
+Same as the [Deposit balance](#deposit-balance)/[Withdraw balance](#withdraw-balance), you can sign a string of data using [ethers.js](https://docs.ethers.org/v5/getting-started/), below is an example of [how to sign a message using ethers.js](https://docs.ethers.org/v5/getting-started/#getting-started--signing) and consume the balance.
+
+::: code-group
+
+```javascript [Request]
+import { ethers } from "ethers";
+
+const web3 = new Web3(window.ethereum);
+const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
+const address = "0x1234567890123456789012345678901234567890"; // Address to consume balance // [!code highlight]
+const message = message; // Message is generated in Construct Consume Message
+const privateKey = "0x1234"; // Private key of the address // [!code highlight]
+const wallet = new ethers.Wallet(privateKey);
+const signature = await wallet.signMessage(message);
+
+await fetch(`${GAS_TANK_ENDPOINT}/balances/consume`, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: `Bearer ${jwtToken}`, // JWT token // [!code highlight]
+  },
+  body: JSON.stringify({
+    address: address, // [!code highlight]
+    minDestinationAmount: "string", // [!code highlight]
+    destinationAddress: "string", // [!code highlight]
+    destinationChain: "string", // [!code highlight]
+    message: message, // [!code highlight]
+    signature: signature, // [!code highlight]
+  }),
+})
+  .then((response) => {
+    // Balance consumed successfully
+  })
+  .catch((error) => {
+    // Catch & handle the error
+  });
 ```
 
 :::
