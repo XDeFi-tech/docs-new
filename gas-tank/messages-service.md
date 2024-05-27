@@ -15,10 +15,10 @@ await fetch(`${GAS_TANK_ENDPOINT}/msg/increase`, {
     "Content-Type": "application/json",
   },
   body: JSON.stringify({
-    owner: "string", // [!code highlight]
-    tokenAddress: "string", // [!code highlight]
-    amount: "string", // [!code highlight]
-    chain: "string", // [!code highlight]
+    owner: "0xOwnerWalletAddress", // The wallet address of the owner // [!code highlight]
+    tokenAddress: "0xTokenContractAddress", // The contract address of the token // [!code highlight]
+    amount: "1", // Amount of the token to deposit // [!code highlight]
+    chain: "ethereum", // The blockchain network, e.g., 'ethereum' // [!code highlight]
   }),
 }).then((response) => {
   console.log(response);
@@ -50,11 +50,11 @@ await fetch(`${GAS_TANK_ENDPOINT}/msg/withdraw`, {
     "Content-Type": "application/json",
   },
   body: JSON.stringify({
-    address: "string", // [!code highlight]
-    tokenAddress: "string", // [!code highlight]
-    amount: "string", // [!code highlight]
-    chain: "string", // [!code highlight]
-    recipient: "string", // [!code highlight]
+    address: "0xYourWalletAddress", // Your wallet address // [!code highlight]
+    tokenAddress: "0xTokenContractAddress", // The contract address of the token // [!code highlight]
+    amount: "1", // Amount of the token to withdraw // [!code highlight]
+    chain: "ethereum", // The blockchain network, e.g., 'ethereum' // [!code highlight]
+    recipient: "0xRecipientWalletAddress", // The recipient's wallet address // [!code highlight]
   }),
 }).then((response) => {
   console.log(response);
@@ -86,11 +86,11 @@ await fetch(`${GAS_TANK_ENDPOINT}/msg/internal-transfer`, {
     "Content-Type": "application/json",
   },
   body: JSON.stringify({
-    address: "string", // [!code highlight]
-    tokenAddress: "string", // [!code highlight]
-    amount: "string", // [!code highlight]
-    chain: "string", // [!code highlight]
-    recipient: "string", // [!code highlight]
+    address: "0xYourWalletAddress", // Your wallet address // [!code highlight]
+    tokenAddress: "0xTokenContractAddress", // The contract address of the token // [!code highlight]
+    amount: "1", // Amount of the token to transfer // [!code highlight]
+    chain: "ethereum", // The blockchain network, e.g., 'ethereum' // [!code highlight]
+    recipient: "0xRecipientWalletAddress", // The recipient's wallet address // [!code highlight]
   }),
 }).then((response) => {
   console.log(response);
@@ -122,9 +122,9 @@ await fetch(`${GAS_TANK_ENDPOINT}/msg/consume`, {
     "Content-Type": "application/json",
   },
   body: JSON.stringify({
-    address: "string", // [!code highlight]
-    minDestinationAmount: "string", // [!code highlight]
-    destinationChain: "string", // [!code highlight]
+    address: "0xYourWalletAddress", // Your wallet address // [!code highlight]
+    minDestinationAmount: "1", // Minimum amount of the token to consume // [!code highlight]
+    destinationChain: "ethereum", // The blockchain network, e.g., 'ethereum' // [!code highlight]
   }),
 }).then((response) => {
   console.log(response);

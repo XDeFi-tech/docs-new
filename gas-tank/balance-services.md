@@ -147,12 +147,12 @@ await fetch(`${GAS_TANK_ENDPOINT}/balances/increase`, {
   },
   body: JSON.stringify({
     address: address, // [!code highlight]
-    tokenAddress: "string", // [!code highlight]
-    chain: "string", // [!code highlight]
-    owner: "string", // [!code highlight]
-    spender: "string", // [!code highlight]
-    value: "string", // [!code highlight]
-    deadline: 0, // [!code highlight]
+    tokenAddress: "string", // Token contract address for deposit // [!code highlight]
+    chain: "string", // The blockchain network [!code highlight]
+    owner: "string", // The owner's address (can match the 'address' field) [!code highlight]
+    spender: "string", // Gas Tank's internal address [!code highlight]
+    value: "string", // Amount of deposited token [!code highlight]
+    deadline: 0, // Date for checking the validity of the signature [!code highlight]
     v: v, // [!code highlight]
     r: r, // [!code highlight]
     s: s // [!code highlight]
@@ -197,10 +197,10 @@ await fetch(`${GAS_TANK_ENDPOINT}/balances/withdraw`, {
   },
   body: JSON.stringify({
     address: address, // [!code highlight]
-    tokenAddress: "string", // [!code highlight]
-    amount: "string", // [!code highlight]
-    chain: "string", // [!code highlight]
-    recipient: "string", // [!code highlight]
+    tokenAddress: "string", // Token contract address for withdraw [!code highlight]
+    amount: "string", // Amount of withdraw token [!code highlight]
+    chain: "string", // The blockchain network [!code highlight]
+    recipient: "string", // The recipient's wallet address [!code highlight]
     message: message, // [!code highlight]
     signature: signature // [!code highlight]
   }),
@@ -240,10 +240,10 @@ await fetch(`${GAS_TANK_ENDPOINT}/balances/transfer`, {
   },
   body: JSON.stringify({
     address: address, // [!code highlight]
-    tokenAddress: "string", // [!code highlight]
-    amount: "string", // [!code highlight]
-    chain: "string", // [!code highlight]
-    recipient: "string", // [!code highlight]
+    tokenAddress: "string", // Token contract address for transfer [!code highlight]
+    amount: "string", // Amount of transfer [!code highlight]
+    chain: "string", // The blockchain network [!code highlight]
+    recipient: "string", // The recipient's wallet address  [!code highlight]
     message: message, // [!code highlight]
     signature: signature, // [!code highlight]
   }),
@@ -274,9 +274,9 @@ await fetch(`${GAS_TANK_ENDPOINT}/balances/consume/quote`, {
     Authorization: `Bearer ${jwtToken}`, // JWT token // [!code highlight]
   },
   body: JSON.stringify({
-    address: "string", // [!code highlight]
-    minDestinationAmount: "string", // [!code highlight]
-    destinationChain: "string", // [!code highlight]
+    address: "string", // Your wallet address // [!code highlight]
+    minDestinationAmount: "string", // Minimum amount of the token to consume // [!code highlight]
+    destinationChain: "string", // The blockchain network // [!code highlight]
   }),
 })
   .then((response) => {
@@ -332,9 +332,9 @@ await fetch(`${GAS_TANK_ENDPOINT}/balances/consume`, {
   },
   body: JSON.stringify({
     address: address, // [!code highlight]
-    minDestinationAmount: "string", // [!code highlight]
-    destinationAddress: "string", // [!code highlight]
-    destinationChain: "string", // [!code highlight]
+    minDestinationAmount: "string", // Minimum amount of the token to consume // [!code highlight]
+    destinationAddress: "string", // The recipient's wallet address // [!code highlight]
+    destinationChain: "string", // The blockchain network // [!code highlight]
     message: message, // [!code highlight]
     signature: signature, // [!code highlight]
   }),
