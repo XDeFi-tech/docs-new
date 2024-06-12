@@ -1,6 +1,14 @@
 # CosmosKit XDEFI Integration
 
-First, your app need to install 2 packages for the XDEFI:
+### Get started
+
+Best way to get started with CosmosKit is to scaffold new app from terminal with [create-cosmos-app](https://github.com/cosmology-tech/create-cosmos-app)
+
+```bash
+yarn create cosmos-app
+```
+
+Next, you will need to install 2 packages for the XDEFI:
 
 - `@cosmos-kit/xdefi`
 - `@cosmos-kit/xdefi-extension`
@@ -25,7 +33,7 @@ import { wallets as xdefi } from "@cosmos-kit/xdefi";
 
 ### add to your provider
 
-```js
+```javascript
 function MyCosmosApp({ Component, pageProps }: AppProps) {
   return (
       <ChainProvider
@@ -41,3 +49,11 @@ function MyCosmosApp({ Component, pageProps }: AppProps) {
 
 export default MyCosmosApp;
 ```
+
+### we're done!
+
+![image](images/cosmos-kit/cosmos-kit-xdefi-integration.jpg)
+
+### Additional resources
+
+- [CosmosKit docs](https://docs.cosmoskit.com/)
