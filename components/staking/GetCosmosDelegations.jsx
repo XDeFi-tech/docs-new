@@ -4,7 +4,7 @@ import PlayIcon from "../PlayIcon";
 import { cosmosSupportedAssets as assetSupported } from "../common";
 
 const GetCosmosDelegations = () => {
-  const GRAPHQL_ENDPOINT = "https://gql-router.dev.xdefi.services/graphql";
+  const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
   const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState({});
   const [assetSelected, setAssetSelected] = useState(undefined);

@@ -756,7 +756,33 @@ function sidebarHome() {
     {
       text: "⛽ Gas Tank API",
       link: "/gas-tank/gas-tank-api",
-      items: [],
+      collapsed: true,
+      items: [
+        {
+          text: "🔹 Introduction",
+          link: "/gas-tank/gas-tank-api",
+        },
+        {
+          text: "🔹 Authentication",
+          link: "/gas-tank/gas-tank-api#authentication",
+        },
+        {
+          text: "🔹 Messages",
+          link: "/gas-tank/gas-tank-api#messages",
+        },
+        {
+          text: "🔹 Chains / Tokens / Status",
+          link: "/gas-tank/gas-tank-api#chains-token-status",
+        },
+        {
+          text: "🔹 Balances & Gas top-up: Deposit, Withdraw, Send Gas",
+          link: "/gas-tank/gas-tank-api#balance-transactions-deposit-withdraw-send-gas",
+        },
+        {
+          text: "🔹 Other services",
+          link: "/gas-tank/gas-tank-api#other-services",
+        },
+      ],
     },
     {
       text: "🛠️ Partners APIs",
