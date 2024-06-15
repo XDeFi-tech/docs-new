@@ -140,7 +140,7 @@ export default {
     socialLinks: [
       { icon: "github", link: "https://github.com/XDeFi-tech" },
       { icon: "twitter", link: "https://twitter.com/xdefi_wallet" },
-      { icon: "discord", link: "https://discord.com/invite/xdefiwallet" },
+      { icon: "discord", link: "https://discord.com/invite/xdefi" },
       { icon: { svg: telegramSVG }, link: "https://t.me/xdefi_announcements" },
     ],
 
