@@ -1,5 +1,7 @@
 # Extension Wallet Tron Integration
 
+Note: *Tron support is currently not available. It will be available from v30 (end of Q3 2024).*
+
 Develop Tron dApps
 
 Example dApp using Tron: [https://main.d2ladgp2r2c4c2.amplifyapp.com/](https://main.d2ladgp2r2c4c2.amplifyapp.com/)
