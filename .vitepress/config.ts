@@ -431,8 +431,16 @@ function sidebarHome() {
               link: "/developers/extension-bitcoin-cash",
             },
             {
+              text: "Cosmos",
+              link: "/developers/extension-cosmos",
+            },
+            {
               text: "Dogecoin",
               link: "/developers/extension-dogecoin",
+            },
+            {
+              text: "Ethereum (EVM's)",
+              link: "/developers/extension-evms",
             },
             {
               text: "Litecoin",
@@ -455,12 +463,8 @@ function sidebarHome() {
               link: "/developers/extension-thorchain",
             },
             {
-              text: "Ethereum (EVM's)",
-              link: "/developers/extension-evms",
-            },
-            {
-              text: "Cosmos",
-              link: "/developers/extension-cosmos",
+              text: "Tron",
+              link: "/developers/extension-tron",
             },
           ],
         },

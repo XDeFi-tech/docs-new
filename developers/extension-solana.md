@@ -2,7 +2,7 @@
 
 Develop Solana dApps
 
-Example dApp using Solana: [https://xdefi-example-dapps.herokuapp.com/multichain/](https://xdefi-example-dapps.herokuapp.com/multichain/) ( [https://github.com/XDeFi-tech/examples-dapps-sdk](https://github.com/XDeFi-tech/examples-dapps-sdk) )
+Example dApp using Solana: [https://main.d2ladgp2r2c4c2.amplifyapp.com/](https://main.d2ladgp2r2c4c2.amplifyapp.com/)
 
 ### Solana Provider
 
