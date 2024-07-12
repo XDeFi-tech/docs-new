@@ -1,6 +1,8 @@
 # Extension Wallet Thorchain Integration
 
-### Develop Thorchain dApps
+Develop Thorchain dApps
+
+### Transfer request
 
 - [Transfer request](/extension-detect-xdefi-providers#request-parameters-description)
 
