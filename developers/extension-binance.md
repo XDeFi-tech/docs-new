@@ -2,12 +2,14 @@
 
 Develop Binance dApps
 
+*Note: Binance won't be supported in Summer 2024*
+
 ### Transfer request
 
 - [Parameters description](./extension-detect-xdefi-providers#request-parameters-description)
 
 ```javascript
-const { asset, from, recipient, amount, memo } \= {
+const { asset, from, recipient, amount, memo } = {
   asset: {
     chain: "BNB",
     symbol: "BNB",
@@ -36,7 +38,7 @@ window.xfi.binance.request({
 
 (error, result) => {
   console.debug(error, result);
-  this.lastResult \= { error, result };
+  this.lastResult = { error, result };
 });
 ```
 

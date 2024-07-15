@@ -139,7 +139,7 @@ export default {
 
     socialLinks: [
       { icon: "github", link: "https://github.com/XDeFi-tech" },
-      { icon: "twitter", link: "https://twitter.com/xdefi_wallet" },
+      { icon: "x", link: "https://x.com/xdefi_wallet" },
       { icon: "discord", link: "https://discord.com/invite/xdefi" },
       { icon: { svg: telegramSVG }, link: "https://t.me/xdefi_announcements" },
     ],
@@ -521,6 +521,10 @@ function sidebarHome() {
               text: "Cosmos",
               link: "/developers/mobile-cosmos",
             },
+            {
+              text: "Tron",
+              link: "/developers/mobile-tron",
+            },
           ],
         },
         {
@@ -709,6 +713,10 @@ function sidebarHome() {
               text: "Thorchain (RUNE)",
               link: "/developers/thorchain",
             },
+            {
+              text: "Tron (TRX)",
+              link: "/developers/tron",
+            },
           ],
         },
       ],
@@ -809,7 +817,7 @@ function sidebarHome() {
       text: "🔖 Community",
       collapsed: true,
       items: [
-        { text: "🔹 X", link: "https://twitter.com/xdefi_wallet" },
+        { text: "🔹 X", link: "https://x.com/xdefi_wallet" },
         { text: "🔹 Discord", link: "https://discord.gg/xdefi" },
         { text: "🔹 Telegram", link: "https://t.me/xdefi_announcements" },
         { text: "🔹 GitHub", link: "https://github.com/XDeFi-tech" },

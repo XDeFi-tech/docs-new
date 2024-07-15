@@ -38,6 +38,7 @@ You can access a single ecosystem integration with his set of tutorial from here
 - Solana
 - Terra
 - THORChain
+- Tron
 
 ## Libraries integration
 
