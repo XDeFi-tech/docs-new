@@ -13,7 +13,7 @@ Next, you will need to install 2 packages for the XDEFI:
 - `@cosmos-kit/xdefi`
 - `@cosmos-kit/xdefi-extension`
 
-`@cosmos-kit/xdefi` export all available xdefi wallets (currently only extension available), while if you only want to add a particular one, choose `@cosmos-kit/xdefi-extension`
+`@cosmos-kit/xdefi` export all available Ctrl Wallets (currently only extension available), while if you only want to add a particular one, choose `@cosmos-kit/xdefi-extension`
 
 > Note: all these packages export `wallets` and it's an array of `MainWalletBase`
 

@@ -27,6 +27,6 @@ The documentation will separate different subjects handled by XDEFI that you can
 -
 -
 
-## XDEFI Wallet
+## Ctrl Wallet
 
-XDEFI Wallet is a multichain Wallet that allow users to interact with the [supported blockchains](./blockchains.md), manage their assets and [NFT's](./supported-nfts) and access dApps.
+Ctrl Wallet is a multichain Wallet that allow users to interact with the [supported blockchains](./blockchains.md), manage their assets and [NFT's](./supported-nfts) and access dApps.

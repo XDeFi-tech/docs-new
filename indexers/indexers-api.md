@@ -2,7 +2,7 @@
 
 ## Overview
 
-XDEFI provides Indexers API for developers to fetch balances, transactions, fees across many blockchains supported by XDEFI Wallet.
+XDEFI provides Indexers API for developers to fetch balances, transactions, fees across many blockchains supported by Ctrl Wallet.
 
 The base URL for all API endpoints is: https://gql-router.xdefi.services/graphql.
 

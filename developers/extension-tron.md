@@ -8,7 +8,7 @@ Example dApp using Tron: [https://main.d2ladgp2r2c4c2.amplifyapp.com/](https://m
 
 ### Tron Provider
 
-XDEFI Wallet provider exposes different methods in `window.xfi.tron` or `window.tron`
+Ctrl Wallet provider exposes different methods in `window.xfi.tron` or `window.tron`
 
 Below are functions supported by the provider `window.tron` or `window.xfi.tron`.
 

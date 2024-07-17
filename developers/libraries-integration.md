@@ -9,7 +9,7 @@ next:
 
 # Libraries Integration
 
-XDEFI Wallet is also integrated in a large panel of libraries to make it accessible to any developer's needs.
+Ctrl Wallet is also integrated in a large panel of libraries to make it accessible to any developer's needs.
 
 You can access the list from here:
 

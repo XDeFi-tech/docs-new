@@ -1,6 +1,6 @@
 ---
 prev:
-  text: "📚 XDEFI Dev Docs"
+  text: "📚 Ctrl Dev Docs"
   link: "/"
 ---
 
@@ -14,9 +14,9 @@ You will found here direct access to all subtopics depending on your needs.
 
 Don't hesitate to join our [Discord channel](https://discord.gg/xdefi) and ask any questions related to your developer experience with the community.
 
-## XDEFI Wallet integration
+## Ctrl Wallet integration
 
-Here is our current list of XDEFI Wallet integration:
+Here is our current list of Ctrl Wallet integration:
 
 - [Extension Wallet](./extension-wallet)
 - [Mobile Wallet](./mobile-wallet)
@@ -42,7 +42,7 @@ You can access a single ecosystem integration with his set of tutorial from here
 
 ## Libraries integration
 
-XDEFI Wallet is also integrated in a large panel of libraries to make it accessible to any developer's needs.
+Ctrl Wallet is also integrated in a large panel of libraries to make it accessible to any developer's needs.
 
 You can acces the list from here:
 

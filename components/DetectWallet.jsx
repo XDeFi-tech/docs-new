@@ -6,7 +6,7 @@ const DetectWallet = ({ chainId, subChainId }) => {
   const detectWallet = async () => {
     if (window.xfi) {
       if (!window.xfi[chainId]) {
-        alert("XDEFI Wallet not connected to the correct network!");
+        alert("Ctrl Wallet not connected to the correct network!");
         return;
       }
       if (chainId === "ethereum") {
@@ -29,7 +29,7 @@ const DetectWallet = ({ chainId, subChainId }) => {
         (error, accounts) => setAddress(accounts[0]),
       );
     } else {
-      alert("XDEFI Wallet not detected!");
+      alert("Ctrl Wallet not detected!");
     }
   };
 

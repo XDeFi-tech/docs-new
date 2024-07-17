@@ -2,7 +2,7 @@
 
 _Easy way to DeFi_
 
-XDEFI Technologies provide an all in one interface accessible from desktop to manage your assets from all networks supported within XDEFI Wallet.
+XDEFI Technologies provide an all in one interface accessible from desktop to manage your assets from all networks supported within Ctrl Wallet.
 
 The platform is divided in 6 tabs:
 

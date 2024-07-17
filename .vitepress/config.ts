@@ -9,7 +9,7 @@ const { BASE: base = "/" } = process.env;
 // https://vitepress.dev/concepts/site-config
 export default {
   lang: "en-US",
-  title: "XDEFI Dev Docs",
+  title: "Ctrl Dev Docs",
   description: "One Wallet for all your assets.",
   lastUpdated: true,
   cleanUrls: true,
@@ -135,7 +135,7 @@ export default {
       text: "Edit this page on GitHub",
     },
 
-    siteTitle: "📚 XDEFI Dev Docs",
+    siteTitle: "📚 Ctrl Dev Docs",
 
     socialLinks: [
       { icon: "github", link: "https://github.com/XDeFi-tech" },
@@ -206,8 +206,8 @@ export default {
         name: "og:title",
         content:
           pageData.frontmatter.layout === "home"
-            ? `XDEFI Dev Docs`
-            : `${pageData.title} | XDEFI Dev Docs`,
+            ? `Ctrl Dev Docs`
+            : `${pageData.title} | Ctrl Dev Docs`,
       },
       {
         name: "og:description",
@@ -229,8 +229,8 @@ function nav() {
         // { text: "About $XDEFI token", link: "/about/xdefi-token/introduction" },
         { text: "Developers", link: "/developers/introduction" },
         {
-          text: "XDEFI Wallet Integration",
-          link: "/developers/xdefi-wallet-integration",
+          text: "Ctrl Wallet Integration",
+          link: "/developers/ctrl-wallet-integration",
         },
         { text: "Routing API", link: "/routing/introduction" },
         {
@@ -401,8 +401,8 @@ function sidebarHome() {
       items: [],
     },
     {
-      text: "⚙️ XDEFI Wallet Integration",
-      link: "/developers/xdefi-wallet-integration",
+      text: "⚙️ Ctrl Wallet Integration",
+      link: "/developers/ctrl-wallet-integration",
       collapsed: true,
       items: [
         {
@@ -751,17 +751,14 @@ function sidebarHome() {
         {
           text: "🔹 Indexers API",
           link: "/indexers/indexers-api",
-          items: [],
         },
         {
           text: "🔹 Assets & Prices API",
           link: "/assets-services/assets-and-prices-api",
-          items: [],
         },
         {
           text: "🔹 Staking API",
           link: "/staking/staking-api",
-          items: [],
         },
       ],
     },

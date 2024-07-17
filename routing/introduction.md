@@ -1,7 +1,7 @@
 ---
 prev:
-  text: "⚙️ XDEFI Wallet Integration"
-  link: "/developers/xdefi-wallet-integration"
+  text: "⚙️ Ctrl Wallet Integration"
+  link: "/developers/ctrl-wallet-integration"
 next:
   text: "🔹 Endpoints"
   link: "./endpoints"

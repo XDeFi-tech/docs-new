@@ -4,7 +4,7 @@
 
 ## XDEFI Routing
 
-- [XDEFI Wallet](https://chrome.google.com/webstore/detail/xdefi-wallet/hmeobnfnfcmdkdcmlblgagmfpfboieaf)
+- [Ctrl Wallet](https://chrome.google.com/webstore/detail/xdefi-wallet/hmeobnfnfcmdkdcmlblgagmfpfboieaf)
 - [XDEFI Web App](https://app.xdefi.io/)
   ::: info
   You can implement our Routing API to easy swap any asset into **$XDEFI**. Follow [our documentation](/routing/widget) to implement it on any platform in few lines of code.

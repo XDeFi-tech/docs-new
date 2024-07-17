@@ -4,15 +4,15 @@ layout: home
 titleTemplate: ":title"
 
 hero:
-  name: "XDEFI"
+  name: "Ctrl Wallet"
   text: "One wallet for all your assets."
   tagline: Leverage XDEFI Technologies to securely store, swap, and send Crypto and NFTs across hundreds of blockchains (UTXO's, EVM's, Cosmos chains, Solana, Near) for your users benefits.
   image:
-    src: /img/xdefi.svg
-    alt: XDEFI
+    src: /img/Logo Ctrl.svg
+    alt: Ctrl Wallet Logo
   actions:
     - theme: brand
-      text: Build with XDEFI
+      text: Build with Ctrl Wallet
       link: /developers/introduction
     # - theme: alt
     #   text: Introduction
@@ -23,9 +23,9 @@ features:
     details: Learn how to create multichain and crosschain applications using the most powerful wallet.
     link: /developers/introduction
 
-  - title: XDEFI Wallet Integration
-    details: Integrate the XDEFI Wallet into your web app, mobile app and inject the wallet into your Dapp.
-    link: /developers/xdefi-wallet-integration
+  - title: Ctrl Wallet Integration
+    details: Integrate the Ctrl Wallet into your web app, mobile app and inject the wallet into your Dapp.
+    link: /developers/ctrl-wallet-integration
   - title: Routing API
     details: Swap and bridge across dozens of protocols. Build on top of the API. Earn with Swap Widget.
     link: /routing/introduction

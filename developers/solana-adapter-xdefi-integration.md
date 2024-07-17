@@ -13,11 +13,11 @@ create-solana-dapp supports `React` and `NextJs` version. We'll use `NextJs` ver
 
 ### XDEFIWalletAdapter vs Wallet Standard
 
-XDEFI wallet implements [Wallet Standard](https://github.com/wallet-standard/wallet-standard) and does not require any specific adapter to get started with Solana and XDEFI Wallet.
+Ctrl Wallet implements [Wallet Standard](https://github.com/wallet-standard/wallet-standard) and does not require any specific adapter to get started with Solana and Ctrl Wallet.
 
 > You can read more about Wallet Standard [here](https://docs.phantom.app/developer-powertools/wallet-standard).
 
-However, XDEFIWalletAdapter provide XDEFI Wallet installation info when XDEFI Wallet is not installed. Which might be useful in many cases.
+However, XDEFIWalletAdapter provide Ctrl Wallet installation info when Ctrl Wallet is not installed. Which might be useful in many cases.
 So, in case you want maintain supported wallets list, you'll need to use Adapters for parlicular wallets or maintain your own wallet connect modal with supported wallets list.
 
 Here how looks when you have no adapter provided to `WalletProvider` and no wallet installed
@@ -36,7 +36,7 @@ Solana provides wallet adapters in two flavors: individual packages for each wal
 npm install @solana/wallet-adapter-wallets@latest
 ```
 
-Once installed, you can add XDEFI Wallet by making adding this part of code:
+Once installed, you can add Ctrl Wallet by making adding this part of code:
 
 ```tsx
 import {
@@ -89,7 +89,7 @@ const onError = useCallback((error: WalletError, walletAdapter?: Adapter) => {
 
 ```
 
-> Now, when user will try to connect XDEFI Wallet while it is not installed, user will be taken to XDEFI Wallet home page in a new window.
+> Now, when user will try to connect Ctrl Wallet while it is not installed, user will be taken to Ctrl Wallet home page in a new window.
 
 ### Additional Resources
 

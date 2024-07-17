@@ -2,7 +2,7 @@
 
 ## Introduction
 
-XDEFI Technologies build and maintain an in house Routing API to make seamless transfer accross all the [blockchains supported](./supported-blockchains) by XDEFI Wallet. The Routing API has been developed to be quickly and easily implemented on any platform using [different format to fit developers needs](/routing/introduction).
+XDEFI Technologies build and maintain an in house Routing API to make seamless transfer accross all the [blockchains supported](./supported-blockchains) by Ctrl Wallet. The Routing API has been developed to be quickly and easily implemented on any platform using [different format to fit developers needs](/routing/introduction).
 
 The routing API integrate a multitude of AMMs, DEX aggregators and Bridge solutions.
 
@@ -28,7 +28,7 @@ The list below retrieve all the current platforms using XDEFI Technologies Routi
 
 ### Wallets
 
-- [XDEFI Wallet](https://www.xdefi.io)
+- [Ctrl Wallet](https://www.xdefi.io)
 
 ### Applications
 

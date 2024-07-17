@@ -40,7 +40,7 @@ making a pull request.
 - /campaigns: A category for Campaigns Service API
 - /developers: A category with tutorials and guides for deploying
 - /routing: Technical reference materials for integrating our Routing aggregator API.
-- /assets-service: A category for Assets Service API dApps and connect with XDEFI Wallet.
+- /assets-service: A category for Assets Service API dApps and connect with Ctrl Wallet.
 - /indexers: A category for Indexers API
 - /gas-tank: A category for Gas Tank API
 - /staking: A category for Staking API

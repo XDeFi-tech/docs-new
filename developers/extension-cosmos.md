@@ -2,7 +2,7 @@
 
 Develop Cosmos based chains dApps
 
-XDEFI Wallet integrates Cosmos based chains.
+Ctrl Wallet integrates Cosmos based chains.
 
 It allows dApps to be developed on Cosmos based chains.
 
@@ -10,7 +10,7 @@ It injects a Keplr Provider in `window.xfi.keplr` and if Keplr isn't instantiate
 
 ### Use cosmos-kit
 
-XDEFI Wallet is part of [cosmos-kit](https://github.com/cosmology-tech/cosmos-kit) package to help you connect to many different wallets.
+Ctrl Wallet is part of [cosmos-kit](https://github.com/cosmology-tech/cosmos-kit) package to help you connect to many different wallets.
 
 Here is an [example](https://github.com/cosmology-tech/cosmos-kit/blob/main/packages/example/pages/_app.tsx#L34) of how to use cosmos-kit.
 
