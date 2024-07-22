@@ -41,18 +41,18 @@
     #05C92F,
     #05C92F
   );
-  --vp-home-hero-image-filter: blur(40px);
+  --vp-home-hero-image-filter: blur(50px);
 }
 
 @media (min-width: 640px) {
   :root {
-    --vp-home-hero-image-filter: blur(56px);
+    --vp-home-hero-image-filter: blur(60px);
   }
 }
 
 @media (min-width: 960px) {
   :root {
-    --vp-home-hero-image-filter: blur(72px);
+    --vp-home-hero-image-filter: blur(90px);
   }
 }
 
