@@ -65,7 +65,7 @@ export default {
     ],
     ['meta', { httpEquiv: 'Content-Language', content: 'en' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:image', content: '/XDEFI-og.png' }],
+    ['meta', { name: 'twitter:image', content: '/img/Ctrl-og.png' }],
     [
       'meta',
       {
@@ -80,8 +80,8 @@ export default {
         content: 'https://docs.xdefi.io',
       },
     ],
-    ['meta', { name: 'og:image', content: '/public/img/XDEFI-og.png' }],
-    ['meta', { name: 'apple-mobile-web-app-title', content: 'XDEFI' }],
+    ['meta', { name: 'og:image', content: '/img/Ctrl-og.png' }],
+    ['meta', { name: 'apple-mobile-web-app-title', content: 'Ctrl' }],
     [
       'script',
       {},
@@ -178,7 +178,7 @@ export default {
           items: [],
         },
         // {
-        //   text: "About XDEFI",
+        //   text: "About Ctrl",
         //   link: "/about/xdefi",
         //   collapsed: true,
         //   items: [
