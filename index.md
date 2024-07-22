@@ -13,7 +13,7 @@ hero:
     alt: Ctrl Wallet Logo
   actions:
     - theme: brand
-      text: Build with Ctrl Wallet
+      text: Build with Ctrl
       link: /developers/introduction
     # - theme: alt
     #   text: Introduction
