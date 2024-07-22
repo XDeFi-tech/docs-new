@@ -9,7 +9,7 @@ hero:
   tagline: Leverage XDEFI Technologies to securely store, swap, and send Crypto and NFTs across hundreds of blockchains (UTXO's, EVM's, Cosmos chains, Solana, Near) for your users benefits
   image:
     light: /img/Logo Ctrl.svg
-    dark: /img/Logo Ctrl.svg
+    dark: /img/Logo Ctrl White.svg
     alt: Ctrl Wallet Logo
   actions:
     - theme: brand
