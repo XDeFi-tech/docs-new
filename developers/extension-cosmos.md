@@ -212,7 +212,7 @@ const cosmJS = new SigningCosmosClient(
 
 ### Suggest Chain _(Experimental Feature)_
 
-XDEFI follows the same `suggest-chain`, `suggest-chain-info` interface as [Keplr's suggest-chain method](https://docs.keplr.app/api/suggest-chain.html). This allows frontends to add their chain to the wallet, if the user should accept it.
+Ctrl (fka XDEFI) follows the same `suggest-chain`, `suggest-chain-info` interface as [Keplr's suggest-chain method](https://docs.keplr.app/api/suggest-chain.html). This allows frontends to add their chain to the wallet, if the user should accept it.
 
 The dApps can achieve by either making a connection request with the chainID, and if the user doesn't already have it and it is supported by chain-registry, we will ask them to add it.
 

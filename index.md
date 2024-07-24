@@ -6,7 +6,7 @@ titleTemplate: ":title"
 hero:
   name: "Ctrl Wallet (ex-XDEFI)"
   text: "One wallet for all your assets"
-  tagline: Leverage XDEFI Technologies to securely store, swap, and send Crypto and NFTs across hundreds of blockchains (UTXO's, EVM's, Cosmos chains, Solana, Near) for your users benefits
+  tagline: Leverage Ctrl Technologies to securely store, swap, and send Crypto and NFTs across hundreds of blockchains (UTXO's, EVM's, Cosmos chains, Solana, Near) for your users benefits
   image:
     light: /img/Logo Ctrl.svg
     dark: /img/Logo Ctrl White.svg

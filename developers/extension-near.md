@@ -4,7 +4,7 @@ Develop NEAR dApps
 
 ### NEAR wallet-selector
 
-XDEFI is a provider available in NEAR [wallet-selector](https://github.com/near/wallet-selector) project. This allows dApp developer to allow Ctrl Wallet users to connect to their dApp with a single click.
+Ctrl (fka XDEFI) is a provider available in NEAR [wallet-selector](https://github.com/near/wallet-selector) project. This allows dApp developer to allow Ctrl Wallet users to connect to their dApp with a single click.
 
 ### window.xfi.near object
 

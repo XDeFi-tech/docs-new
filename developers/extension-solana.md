@@ -12,7 +12,7 @@ Below are the different functions exposed in the provider `window.solana` `windo
 
 #### `isXDEFI`
 
-`isXDEFI` returns true if the provider is XDEFI.
+`isXDEFI` returns true if the provider is Ctrl (fka XDEFI).
 
 #### `connect(): Promise<{publicKey: PublicKey}>`
 

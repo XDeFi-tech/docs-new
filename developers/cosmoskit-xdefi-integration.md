@@ -1,4 +1,4 @@
-# CosmosKit XDEFI Integration
+# CosmosKit Ctrl (fka XDEFI) Integration
 
 ### Get started
 
@@ -8,7 +8,7 @@ Best way to get started with CosmosKit is to scaffold new app from terminal with
 yarn create cosmos-app
 ```
 
-Next, you will need to install 2 packages for the XDEFI:
+Next, you will need to install 2 packages for the Ctrl (fka XDEFI):
 
 - `@cosmos-kit/xdefi`
 - `@cosmos-kit/xdefi-extension`

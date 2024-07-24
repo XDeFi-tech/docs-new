@@ -1,4 +1,4 @@
-# BlockNative XDEFI Integration
+# BlockNative Ctrl (fka XDEFI) Integration
 
 In this tutorial we're going to build dApp which supports multiple wallets using the [Web3-Onboard](https://onboard.blocknative.com) library.
 

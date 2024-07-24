@@ -11,11 +11,11 @@ Develop EVM based dApps
 
 - [web3 vue example](https://github.com/XDeFi-tech/examples-dapps-sdk/tree/main/ethereum/web3/web3-example-vue)
 
-### Integrate Ethereum dApps with XDEFI
+### Integrate Ethereum dApps with Ctrl (fka XDEFI)
 
 #### `window.xfi.ethereum`
 
-XDEFI injects `window.xfi.ethereum` as an [EIP-1193](https://eips.ethereum.org/EIPS/eip-1193) compatible provider;
+Ctrl (fka XDEFI) injects `window.xfi.ethereum` as an [EIP-1193](https://eips.ethereum.org/EIPS/eip-1193) compatible provider;
 
 As a dApp developer, you can check if `window.xfi && window.xfi.ethereum` is defined.
 
@@ -31,7 +31,7 @@ You can use it with regular ethereum libraries such as web3 or ethersjs.
 let web3 = window.xfi && window.xfi.ethereum && new Web3(window.xfi.ethereum);
 
 if (!web3) {
-  // XDEFI is not injected
+  // Ctrl (fka XDEFI) is not injected
 }
 ```
 
@@ -44,7 +44,7 @@ const provider =
   new ethers.providers.Web3Provider(window.xfi.ethereum);
 
 if (!provider) {
-  // XDEFI is not injected
+  // Ctrl (fka XDEFI) is not injected
 }
 ```
 

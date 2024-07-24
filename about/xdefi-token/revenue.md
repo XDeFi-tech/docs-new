@@ -7,7 +7,7 @@ The economic model of **$XDEFI** token is as good as the ability to generate rev
 
 ## Trading Activity
 
-**XDEFI** generates revenue from swaps and bridge (applications/platforms using it are listed [here](../xdefi-technologies/routing-api#current-platforms-using-the-routing-api)).
+**Ctrl (fka XDEFI)** generates revenue from swaps and bridge (applications/platforms using it are listed [here](../xdefi-technologies/routing-api#current-platforms-using-the-routing-api)).
 
 -> 75% of the net revenue generated from all swaps, bridging and staking are used to buy **$XDEFI** on the open market.
 
@@ -32,7 +32,7 @@ In the near-term, **$XDEFI** staking rewards will continue to be supplemented wi
 
 ## Staking Activity
 
-XDEFI Technologies will implement staking within wallet throught partners during 2024.
+Ctrl (fka XDEFI) Technologies will implement staking within wallet throught partners during 2024.
 
 Here is our current list of partner:
 

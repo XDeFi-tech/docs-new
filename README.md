@@ -1,6 +1,6 @@
 # XDEFI Technologies Documentation Site
 
-Welcome to the official documentation repository for XDEFI Technologies.
+Welcome to the official documentation repository for Ctrl (fka XDEFI) Technologies.
 
 Here you'll find comprehensive guides, tutorials, and reference materials
 to help you make easy integration and usage of our products (Wallets (extension and mobile), routing aggregator API).
@@ -36,7 +36,7 @@ making a pull request.
 - /public: Static assets like images, diagrams, and other media files.
 - /assets: Images, diagrams, and other media files used in the documentation.
 - /components: Custom React components integrated into the documentation.
-- /about: A category for learning more about XDEFI Technologies and $XDEFI token.
+- /about: A category for learning more about Ctrl (fka XDEFI) Technologies and $XDEFI token.
 - /campaigns: A category for Campaigns Service API
 - /developers: A category with tutorials and guides for deploying
 - /routing: Technical reference materials for integrating our Routing aggregator API.

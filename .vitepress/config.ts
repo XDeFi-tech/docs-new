@@ -183,7 +183,7 @@ export default {
         //   collapsed: true,
         //   items: [
         //     {
-        //       text: "XDEFI Technologies",
+        //       text: "Ctrl (fka XDEFI) Technologies",
         //       link: "/about/xdefi-technologies/introduction",
         //       collapsed: true,
         //       items: [
@@ -323,7 +323,7 @@ export default {
                   link: '/developers/extension-wallet',
                 },
                 {
-                  text: 'Detect XDEFI Providers',
+                  text: 'Detect Ctrl (fka XDEFI) Providers',
                   link: '/developers/extension-detect-xdefi-providers',
                 },
                 {

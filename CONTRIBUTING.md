@@ -8,7 +8,7 @@ First off, thank you for considering contributing to this project. It's people l
 
 Following these guidelines helps to communicate that you respect the time of the developers managing and developing this open-source project. In return, they should reciprocate that respect in addressing your issue, assessing changes, and helping you finalize your pull requests.
 
-XDEFI Technologies is a community-driven project, and we welcome contributions from the community. Whether you're fixing a typo, adding a new feature, or changing the documentation, we'd love to have your contributions.
+Ctrl (fka XDEFI) Technologies is a community-driven project, and we welcome contributions from the community. Whether you're fixing a typo, adding a new feature, or changing the documentation, we'd love to have your contributions.
 
 Please, don't use the issue tracker for personal support requests. Instead, use the [Ctrl Discord](https://discord.gg/xdefi) for support.
 

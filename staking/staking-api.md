@@ -4,7 +4,7 @@
 
 Staking is a process that involves holding funds in a cryptocurrency wallet to support the operations of a blockchain network. In return, users receive rewards for their contributions to the network. These rewards are also referred to as staking yields or interest.
 
-XDEFI offers a staking API that enables developers to engage with the staking features across multiple blockchain networks. This API is crafted for simplicity and ease of use, emphasizing a high degree of abstraction from the complexities of the underlying blockchains.
+Ctrl (fka XDEFI) offers a staking API that enables developers to engage with the staking features across multiple blockchain networks. This API is crafted for simplicity and ease of use, emphasizing a high degree of abstraction from the complexities of the underlying blockchains.
 
 The base URL for all API endpoints is: https://gql-router.xdefi.services/graphql
 
