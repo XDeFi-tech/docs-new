@@ -6,13 +6,13 @@ Example dApp using Solana: [https://main.d2ladgp2r2c4c2.amplifyapp.com/](https:/
 
 ### Solana Provider
 
-Similarly to the Phantom Provider, XDEFI Wallet provider exposes different methods in `window.solana` or `window.xfi.solana`
+Similarly to the Phantom Provider, Ctrl Wallet provider exposes different methods in `window.solana` or `window.xfi.solana`
 
 Below are the different functions exposed in the provider `window.solana` `window.xfi.solana`.
 
 #### `isXDEFI`
 
-`isXDEFI` returns true if the provider is XDEFI.
+`isXDEFI` returns true if the provider is Ctrl (fka XDEFI).
 
 #### `connect(): Promise<{publicKey: PublicKey}>`
 

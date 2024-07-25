@@ -1,6 +1,6 @@
 ---
 prev:
-  text: "📚 XDEFI Dev Docs"
+  text: "📚 Ctrl Dev Docs"
   link: "/"
 ---
 
@@ -8,22 +8,22 @@ prev:
 
 ## Introduction
 
-Welcome developers! You are now ready to implement XDEFI and level up the reach and scalability of your dApp in an interopable and non stop evolving ecosystem of blockchains.
+Welcome developers! You are now ready to implement Ctrl (fka XDEFI) and level up the reach and scalability of your dApp in an interopable and non stop evolving ecosystem of blockchains.
 
 You will found here direct access to all subtopics depending on your needs.
 
 Don't hesitate to join our [Discord channel](https://discord.gg/xdefi) and ask any questions related to your developer experience with the community.
 
-## XDEFI Wallet integration
+## Ctrl Wallet integration
 
-Here is our current list of XDEFI Wallet integration:
+Here is our current list of Ctrl Wallet integration:
 
 - [Extension Wallet](./extension-wallet)
 - [Mobile Wallet](./mobile-wallet)
 
 ## Blockchains integration
 
-XDEFI is the largest multichain wallet that provide hundreds of blockchains accessibility.
+Ctrl (fka XDEFI) is the largest multichain wallet that provide hundreds of blockchains accessibility.
 
 You can access a single ecosystem integration with his set of tutorial from here:
 
@@ -42,7 +42,7 @@ You can access a single ecosystem integration with his set of tutorial from here
 
 ## Libraries integration
 
-XDEFI Wallet is also integrated in a large panel of libraries to make it accessible to any developer's needs.
+Ctrl Wallet is also integrated in a large panel of libraries to make it accessible to any developer's needs.
 
 You can acces the list from here:
 

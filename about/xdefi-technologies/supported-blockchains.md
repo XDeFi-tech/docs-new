@@ -2,7 +2,7 @@
 
 ## Supported Blockchains
 
-XDEFI Wallet make it possible for users to access, interact and build with more ecosystems and blockchains than any other wallet in the market. There is two different way for blockchains to be supported within our wallet.
+Ctrl Wallet make it possible for users to access, interact and build with more ecosystems and blockchains than any other wallet in the market. There is two different way for blockchains to be supported within our wallet.
 
 ### [Native integration](./native-integration)
 

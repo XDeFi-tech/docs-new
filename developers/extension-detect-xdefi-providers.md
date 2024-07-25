@@ -1,16 +1,16 @@
-# Detect XDEFI Providers
+# Detect Ctrl (fka XDEFI) Providers
 
-The XDeFi browser extension will inject objects called `xfi` and `ethereum` on the `window` object of any web application the user visits. To detect if a browser extension using this API is installed, you can check for the existence of the `xfi` and `ethereum` object.
+The Ctrl (fka XDEFI) browser extension will inject objects called `xfi` and `ethereum` on the `window` object of any web application the user visits. To detect if a browser extension using this API is installed, you can check for the existence of the `xfi` and `ethereum` object.
 
-### Multichain dApp example
+### DApp example
 
-[Multichain vue example](https://github.com/XDeFi-tech/examples-dapps-sdk/tree/main/multichain/multichain-vue-example)
+DApp xample: https://github.com/XDeFi-tech/examples-dapps-sdk
 
 ### Detection example
 
 ```javascript
 if ("xfi" in window) {
-  // Detecting the XDeFi providers: xfi and ethereum
+  // Detecting the Ctrl (fka XDEFI) providers: xfi and ethereum
   console.log(window.xfi, window.ethereum);
   console.log(window.xfi, window.xfi && window.xfi.ethereum);
   this.ethereum = window.ethereum;

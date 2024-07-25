@@ -6,6 +6,6 @@ next:
 
 # Ethereum (ETH)
 
-Welcome to the XDEFI Wallet Ethereum integration guide. This guide will help you to integrate your Ethereum-based DApp with XDEFI Wallet.
+Welcome to the Ctrl Wallet Ethereum integration guide. This guide will help you to integrate your Ethereum-based DApp with Ctrl Wallet.
 
 <!--@include: ./_evm.md-->

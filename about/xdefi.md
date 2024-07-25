@@ -1,4 +1,4 @@
 # About
 
-- [XDEFI Technologies](./xdefi-technologies/introduction)
-- [XDEFI Token](./xdefi-token/introduction)
+- [Ctrl (fka XDEFI) Technologies](./xdefi-technologies/introduction)
+- [$XDEFI Token](./xdefi-token/introduction)

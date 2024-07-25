@@ -2,7 +2,7 @@
 
 Security is the first and most important manner for Wallets provider.
 
-At XDEFI Technologies, we want our users using XDEFI Wallet to interact safely on our large list of [supported blockchains](./supported-blockchains) and also feel secure
+At Ctrl (fka XDEFI) Technologies, we want our users using Ctrl Wallet to interact safely on our large list of [supported blockchains](./supported-blockchains) and also feel secure
 
 _Note that we will always recommend you for more security to use one of our [supported Hardware wallets](./supported-hardware-wallets)._
 

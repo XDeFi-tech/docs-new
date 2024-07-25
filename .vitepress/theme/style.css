@@ -3,34 +3,30 @@
  * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
  */
 
-/**
- * Colors
- * -------------------------------------------------------------------------- */
-
+/* Link */
 :root {
-  --vp-c-brand: #335de5;
-  --vp-c-brand-light: #486feb;
-  --vp-c-brand-lighter: #587cef;
-  --vp-c-brand-lightest: #6786eb;
-  --vp-c-brand-dark: #2855e8;
-  --vp-c-brand-darker: #1f50ec;
-  --vp-c-brand-dimm: rgba(123, 43, 249, 0.08);
+  --vp-c-brand-1: #05C92F;
+  --vp-c-brand-2: #05C92F;
+  --vp-c-brand-3: #05C92F;
 }
+
 
 /**
  * Component: Button
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-button-brand-border: var(--vp-c-brand-light);
-  --vp-button-brand-text: var(--vp-c-white);
-  --vp-button-brand-bg: var(--vp-c-brand);
-  --vp-button-brand-hover-border: var(--vp-c-brand-light);
-  --vp-button-brand-hover-text: var(--vp-c-white);
-  --vp-button-brand-hover-bg: var(--vp-c-brand-light);
-  --vp-button-brand-active-border: var(--vp-c-brand-light);
-  --vp-button-brand-active-text: var(--vp-c-white);
-  --vp-button-brand-active-bg: var(--vp-button-brand-bg);
+  --vp-button-brand-border: #001405;
+  --vp-button-brand-text: #001405;
+  --vp-button-brand-bg: #05C92F;
+
+  --vp-button-brand-hover-border: #001405;
+  --vp-button-brand-hover-text: #001405;
+  --vp-button-brand-hover-bg: #05C92F;
+
+  --vp-button-brand-active-border: #001405;
+  --vp-button-brand-active-text: #001405;
+  --vp-button-brand-active-bg: #05C92F;
 }
 
 /**
@@ -38,30 +34,25 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(
-    220deg,
-    #335de5 80%,
-    #486feb
-  );
+  --vp-home-hero-name-color: #05C92F;
 
   --vp-home-hero-image-background-image: linear-gradient(
     -45deg,
-    #335de5 80%,
-    #486feb 50%
+    #05C92F,
+    #05C92F
   );
-  --vp-home-hero-image-filter: blur(40px);
+  --vp-home-hero-image-filter: blur(50px);
 }
 
 @media (min-width: 640px) {
   :root {
-    --vp-home-hero-image-filter: blur(56px);
+    --vp-home-hero-image-filter: blur(60px);
   }
 }
 
 @media (min-width: 960px) {
   :root {
-    --vp-home-hero-image-filter: blur(72px);
+    --vp-home-hero-image-filter: blur(90px);
   }
 }
 
@@ -70,16 +61,16 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-custom-block-tip-border: var(--vp-c-brand);
-  --vp-custom-block-tip-text: var(--vp-c-brand-darker);
-  --vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
+  --vp-custom-block-tip-border: #05C92F;
+  --vp-custom-block-tip-text: #05C92F;
+  --vp-custom-block-tip-bg: rgba(123, 43, 249, 0.08);
   --tab-text-color: #000;
 }
 
 .dark {
-  --vp-custom-block-tip-border: var(--vp-c-brand);
-  --vp-custom-block-tip-text: var(--vp-c-brand-lightest);
-  --vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
+  --vp-custom-block-tip-border: #05C92F;
+  --vp-custom-block-tip-text: #05C92F;
+  --vp-custom-block-tip-bg: rgba(123, 43, 249, 0.08);
   --tab-text-color: #000;
 }
 
@@ -88,16 +79,12 @@
  * -------------------------------------------------------------------------- */
 
 .DocSearch {
-  --docsearch-primary-color: var(--vp-c-brand) !important;
+  --docsearch-primary-color: #05C92F !important;
 }
 
 @font-face {
-  font-family: "TomatoGroteskSemiBold";
-  src: url("/fonts/TomatoGrotesk/TomatoGrotesk-SemiBold.otf") format("opentype");
-}
-
-:root {
-  --font-primary: "TomatoGroteskSemiBold", sans-serif;
+  font-family: "Tomato Grotesk";
+  src: url("/fonts/TomatoGrotesk/TomatoGrotesk-Bold.otf") format("opentype");
 }
 
 h1,
@@ -106,7 +93,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-primary);
+  font-family: "Tomato Grotesk", Arial, sans-serif;
+}
+
+code {
+  color: #3451b2 !important;
 }
 
 .youtube-wrapper {

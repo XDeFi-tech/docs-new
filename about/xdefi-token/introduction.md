@@ -1,6 +1,6 @@
 ---
 prev:
-  text: "About XDEFI"
+  text: "About Ctrl"
   link: "/about/xdefi"
 ---
 

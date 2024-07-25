@@ -14,23 +14,23 @@ Returns a list of supported chains (i.e. chains you can swap assets within or ch
 
 ```bash
 [
-"BNB",
-"BTC",
-"BCH",
-"LTC",
-"ETH",
-"THOR",
-"DOGE",
-"BSC",
-"POLYGON",
-"FTM",
-"AVAX",
-"ARBITRUM",
-"AURORA",
-"NEAR",
-"SOL",
-"COSMOS",
-"OSMOSIS"
+  "BNB",
+  "BTC",
+  "BCH",
+  "LTC",
+  "ETH",
+  "THOR",
+  "DOGE",
+  "BSC",
+  "POLYGON",
+  "FTM",
+  "AVAX",
+  "ARBITRUM",
+  "AURORA",
+  "NEAR",
+  "SOL",
+  "COSMOS",
+  "OSMOSIS"
 ]
 ```
 
@@ -46,7 +46,7 @@ Returns a list of all supported tokens in the following format:
 "name": "POLYGON.EASY",
 "address": "0xdb3b3b147a030f032633f6c4bebf9a2fb5a882b5",
 "list_providers": [
-"b86510b8-a730-44cd-977e-748df4fddc08"
+  "b86510b8-a730-44cd-977e-748df4fddc08"
 ],
 "decimal": 18
 ```
@@ -65,10 +65,10 @@ List of available providers for swapping and bridging:
 
 ```bash
 {
-"id": "9cbdfbc0-c5b7-4814-b8cb-04d0b083b3a6",
-"name": "Thorchain",
-"time": "60",
-"icon": "https://miro.medium.com/max/3150/1*KkoJRE6ICrE70mNegVeY_Q.png"
+  "id": "9cbdfbc0-c5b7-4814-b8cb-04d0b083b3a6",
+  "name": "Thorchain",
+  "time": "60",
+  "icon": "https://miro.medium.com/max/3150/1*KkoJRE6ICrE70mNegVeY_Q.png"
 }
 ```
 
