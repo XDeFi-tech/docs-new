@@ -24,7 +24,7 @@ These tokens can be used to supplement **$XDEFI** staking rewards, provide grant
 
 ### 28% to Early Investors
 
-XDEFI’s early investors who funded the initial development of XDEFI Wallet. The investments took place over two private funding rounds in 2021 and 2022.
+XDEFI’s early investors who funded the initial development of Ctrl Wallet. The investments took place over two private funding rounds in 2021 and 2022.
 ::: info
 These tokens are subject to a 3-year schedule.
 :::
@@ -51,7 +51,7 @@ These tokens are subject to a 3-year vesting schedule beginning in April 2022.
 :::
 
 ::: info
-Initially we allocated 16% of **$XDEFI** tokens to a Play to (L)earn initiative that would incentivise users to learn how to use XDEFI Wallet and how to explore DeFi safely.
+Initially we allocated 16% of **$XDEFI** tokens to a Play to (L)earn initiative that would incentivise users to learn how to use Ctrl Wallet and how to explore DeFi safely.
 
 We still intend to pursue this initiative, but we plan to do so at a smaller scale than initially envisioned.
 

@@ -91,7 +91,7 @@ const fetchChainV2 = async () => {
 fetchChainV2();
 ```
 
-In demo we use "ETH" as a chain name.
+In demo we use `ETH` as a chain name.
 
 <div ref="refChainV2GraphQL"></div>
 

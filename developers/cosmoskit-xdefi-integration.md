@@ -1,4 +1,4 @@
-# CosmosKit XDEFI Integration
+# CosmosKit Ctrl (fka XDEFI) Integration
 
 ### Get started
 
@@ -8,12 +8,12 @@ Best way to get started with CosmosKit is to scaffold new app from terminal with
 yarn create cosmos-app
 ```
 
-Next, you will need to install 2 packages for the XDEFI:
+Next, you will need to install 2 packages for the Ctrl (fka XDEFI):
 
 - `@cosmos-kit/xdefi`
 - `@cosmos-kit/xdefi-extension`
 
-`@cosmos-kit/xdefi` export all available xdefi wallets (currently only extension available), while if you only want to add a particular one, choose `@cosmos-kit/xdefi-extension`
+`@cosmos-kit/xdefi` export all available Ctrl Wallets (currently only extension available), while if you only want to add a particular one, choose `@cosmos-kit/xdefi-extension`
 
 > Note: all these packages export `wallets` and it's an array of `MainWalletBase`
 

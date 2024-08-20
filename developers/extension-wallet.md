@@ -9,7 +9,7 @@ next:
 
 # Extension Wallet Integration
 
-XDEFI Wallet injects into the window object to dapps multiple wallet providers to send requests (signing, send and broadcast, get accounts information) to the browser extension.
+Ctrl Wallet injects into the window object to dapps multiple wallet providers to send requests (signing, send and broadcast, get accounts information) to the browser extension.
 
 - window.xfi
   - window.xfi.binance : [Binance Beacon Chain provider](./extension-binance)
@@ -21,5 +21,6 @@ XDEFI Wallet injects into the window object to dapps multiple wallet providers t
   - window.xfi.solana : [Solana provider](./extension-solana)
   - window.xfi.terra : [Terra provider](./extension-terra)
   - window.xfi.thorchain: [Thorchain provider](./extension-thorchain)
+  - window.xfi.tron: [Tron provider](./extension-tron)
 - window.ethereum : [Ethereum provider](./extension-evms)
 - window.keplr : [Keplr/Cosmos chains provider](./extension-cosmos)

@@ -9,7 +9,7 @@ next:
 
 # Blockchains Integration
 
-XDEFI is the largest multichain wallet that provides hundreds of blockchains accessibility.
+Ctrl (fka XDEFI) is the largest multichain wallet that provides hundreds of blockchains accessibility.
 
 - EVM Chains
   - [Ethereum (ETH)](./ethereum)
@@ -51,4 +51,5 @@ XDEFI is the largest multichain wallet that provides hundreds of blockchains acc
   - [Solana (SOL)](./solana)
   - [Terra (LUNA)](./terra)
   - [THORChain (RUNE)](./thorchain)
+  - [Tron (TRX)](./tron)
   - More coming ...
