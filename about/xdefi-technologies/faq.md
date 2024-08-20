@@ -2,31 +2,31 @@
 
 [[toc]]
 
-## Does XDEFI have control of my coins?
+## Does Ctrl (fka XDEFI) have control of my coins?
 
-XDEFI Wallet is a non-custodial wallet.
+Ctrl Wallet is a non-custodial wallet.
 
 Assets and NFT's are store on the different blockchains you are using and not in the wallet like the fiat money you can handle in a portfolio. Your wallet act as a signer and only allows you to view and manage them by interacting with the blockchains used.
 
-XDEFI Wallet **doesn't** have access to your secret phrase, password or recovery code.
+Ctrl Wallet **doesn't** have access to your secret phrase, password or recovery code.
 
 You are in **complete control of your information and your wallet**, so please keep your secret phrase safe and store it offline!
 
-## How do I connect to a dApp if I don't see the XDEFI Wallet logo?
+## How do I connect to a dApp if I don't see the Ctrl Wallet logo?
 
-XDEFI Wallet can connect to all dApps on all [supported blockchains](./supported-blockchains.md).
+Ctrl Wallet can connect to all dApps on all [supported blockchains](./supported-blockchains.md).
 
-In many cases you will see the XDEFI Wallet logo when you go to `connect wallet`.  
+In many cases you will see the Ctrl Wallet logo when you go to `connect wallet`.  
 If you do not see it, you can still connect to the dapp by clicking on the first wallet in the list, usually MetaMask, Keplr or Phantom.
-Please make sure you have **prioritize XDEFI** feature turned on in your XDEFI Wallet settings.
+Please make sure you have **prioritize Ctrl (fka XDEFI)** feature turned on in your Ctrl Wallet settings.
 
-## Can I migrate my MetaMask or Keplr wallet to XDEFI Wallet?
+## Can I migrate my MetaMask or Keplr wallet to Ctrl Wallet?
 
-**Yes**, you can migrate any wallet to XDEFI Wallet using your wallet's seed phrase. This process only takes a few seconds, and all of your assets and NFTs will immediately appear in XDEFI Wallet.
+**Yes**, you can migrate any wallet to Ctrl Wallet using your wallet's seed phrase. This process only takes a few seconds, and all of your assets and NFTs will immediately appear in Ctrl Wallet.
 
 Please see our quick start guides here: https://www.xdefi.io/support-category/xdefi-wallet-quick-start/
 
-## How do I join the XDEFI Referral Program?
+## How do I join the Ctrl (fka XDEFI) Referral Program?
 
 The program is currently available on our [WebApp](https://www.app.xdefi.io/referral) and makes you **earn 30% commission** on all swaps made by your referrees.
 
@@ -50,9 +50,9 @@ You can now share your referral link to your friends!
 
 ### Program Summary
 
-Each referrer will receive a unique referral link, such as go.xdefi.io/reference, which will be stored in a secure database along with the referrer’s Ethereum address (being the Ethereum address provided by the referrer to XDEFI Wallet at the start of the referral program).
+Each referrer will receive a unique referral link, such as go.xdefi.io/reference, which will be stored in a secure database along with the referrer’s Ethereum address (being the Ethereum address provided by the referrer to Ctrl Wallet at the start of the referral program).
 
-Please use your personal link when inviting people to install XDEFI Wallet, you don't wanna comissions from them!
+Please use your personal link when inviting people to install Ctrl Wallet, you don't wanna comissions from them!
 
 ## How do I stake my $XDEFI tokens?
 

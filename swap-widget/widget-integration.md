@@ -23,8 +23,8 @@ Remember to replace the placeholder with your referral code.
   width="500px"
   height="700px"
   frameborder="0"
-  style="border: none"
-></iframe>
+  style="border: none">
+</iframe>
 ```
 
 ## Configuration

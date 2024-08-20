@@ -1,26 +1,26 @@
-### Detect XDEFI Wallet with Ethereum Base Chain
+### Detect Ctrl Wallet with Ethereum Base Chain
 
-To detect whether your browser is running XDEFI Wallet, you can use the following code:
+To detect whether your browser is running Ctrl Wallet, you can use the following code:
 
 ```javascript
 if (
   (typeof window.ethereum !== "undefined" && window.ethereum?._XDEFI) ||
   window.xfi
 ) {
-  console.log("XDEFI Wallet detected");
+  console.log("Ctrl Wallet detected");
   // Your code here
 }
 ```
 
-Notice: `window.ethereum` is a standard Ethereum provider object, and `window.ethereum._XDEFI` is a property added by XDEFI Wallet. If `window.ethereum` is not available, you can also check `window.xfi` which is a global object added by XDEFI Wallet.
+Notice: `window.ethereum` is a standard Ethereum provider object, and `window.ethereum._XDEFI` is a property added by Ctrl Wallet. If `window.ethereum` is not available, you can also check `window.xfi` which is a global object added by Ctrl Wallet.
 
-The XDEFI Wallet on Ethereum JavaScript provider API is specified by [EIP-1193](https://eips.ethereum.org/EIPS/eip-1193) and [EIP-6963](https://eips.ethereum.org/EIPS/eip-6963). Support `window.ethereum` only and removal `window.web3`
+The Ctrl Wallet on Ethereum JavaScript provider API is specified by [EIP-1193](https://eips.ethereum.org/EIPS/eip-1193) and [EIP-6963](https://eips.ethereum.org/EIPS/eip-6963). Support `window.ethereum` only and removal `window.web3`
 
 <div ref="refDetectWallet"/>
 
-### Connect/Disconnect to XDEFI Wallet
+### Connect/Disconnect to Ctrl Wallet
 
-To connect to XDEFI Wallet (access the user's [blockchain - like Ethereum] account(s)), you can use the following code:
+To connect to Ctrl Wallet (access the user's [blockchain - like Ethereum] account(s)), you can use the following code:
 
 ```javascript
 // Connect & get accounts
@@ -35,7 +35,7 @@ window.ethereum.request({method: 'wallet_getPermissions'});
 window.ethereum.request({method: 'wallet_requestPermissions'});
 ```
 
-To disconnect from XDEFI Wallet, please use:
+To disconnect from Ctrl Wallet, please use:
 
 ```javascript
 window.ethereum.disconnect();
@@ -43,7 +43,7 @@ window.ethereum.disconnect();
 
 ### Experience functions
 
-When your account is connected to XDEFI Wallet, let's start experiencing more functions.
+When your account is connected to Ctrl Wallet, let's start experiencing more functions.
 
 #### Get the current account
 

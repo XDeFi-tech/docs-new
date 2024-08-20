@@ -9,7 +9,7 @@ next:
 
 # Mobile Wallet Integration
 
-XDEFI Wallet injects into the window object to dapps multiple wallet providers to send requests (signing, send and broadcast, get accounts information) to the browser mobile.
+Ctrl Wallet injects into the window object to dapps multiple wallet providers to send requests (signing, send and broadcast, get accounts information) to the browser mobile.
 
 - window.xfi
   - window.xfi.binance : [Binance Beacon Chain provider](./mobile-binance)
@@ -21,5 +21,6 @@ XDEFI Wallet injects into the window object to dapps multiple wallet providers t
   - window.xfi.solana : [Solana provider](./mobile-solana)
   - window.xfi.terra : [Terra provider](./mobile-terra)
   - window.xfi.thorchain: [Thorchain provider](./mobile-thorchain)
+  - window.xfi.tron: [Thorchain provider](./mobile-tron)
 - window.ethereum : [Ethereum provider](./mobile-ethereum)
 - window.keplr : [Keplr/Cosmos chains provider](./mobile-cosmos)

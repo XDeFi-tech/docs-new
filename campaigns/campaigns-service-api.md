@@ -6,7 +6,7 @@ next:
 
 # Campaigns Service API
 
-Welcome to the XDEFI Campaigns Service API documentation. This API allows third-party websites to connect a list of addresses from an external source to the XDEFI Wallet's internal list of opted-in ad
+Welcome to the XDEFI Campaigns Service API documentation. This API allows third-party websites to connect a list of addresses from an external source to the Ctrl Wallet's internal list of opted-in ad
 
 ### Base URL
 
@@ -17,7 +17,7 @@ The base URL for all API endpoints is: https://campaign-ts.xdefi.services/api
 The high-level workflow for the XDEFI Campaigns Service API is as follows:
 
 1. A third-party website sends a list of addresses from any XDEFI-supported chain to the Campaigns Service API. These addresses fulfill certain criteria determined by the third-party website.
-2. XDEFI maintains an internal list of user addresses that have opted into the Campaigns feature in XDEFI Wallet.
+2. XDEFI maintains an internal list of user addresses that have opted into the Campaigns feature in Ctrl Wallet.
 3. The Campaigns Service API cross-references the third-party list of addresses with the internal list of opted-in addresses.
 4. If there is a match between a third-party address and an opted-in address, the corresponding EVM address is identified.
 5. A request is made to the Campaigns Service API from a website like Galxe, using an endpoint such as `https://campaign-ts.xdefi.services/api/campaigns/{campaign_name}/address/{evm_address}/`.

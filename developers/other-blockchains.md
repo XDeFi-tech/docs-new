@@ -16,26 +16,26 @@ Native blockchains supported
 | Terra            | `terra`       | `window.xfi.terra`       |
 | THORChain        | `thorchain`   | `window.xfi.thorchain`   |
 
-### Detect XDEFI Wallet
+### Detect Ctrl Wallet
 
-To detect whether your browser is running XDEFI Wallet, you can use the following code:
+To detect whether your browser is running Ctrl Wallet, you can use the following code:
 
 ```javascript
 if (window.xfi) {
-  console.log("XDEFI Wallet detected");
+  console.log("Ctrl Wallet detected");
   // Your code here
 }
 ```
 
-Notice: `window.xfi` which is a global object added by XDEFI Wallet.
+Notice: `window.xfi` which is a global object added by Ctrl Wallet.
 
-Below is an example of how to detect XDEFI Wallet with Bitcoin (BTC): `window.xfi.bitcoin`
+Below is an example of how to detect Ctrl Wallet with Bitcoin (BTC): `window.xfi.bitcoin`
 
 <div ref="refDetectWallet"/>
 
-### Connect to XDEFI Wallet
+### Connect to Ctrl Wallet
 
-To connect to XDEFI Wallet (access the user's [blockchain - like Ethereum] account(s)), you can use the following code:
+To connect to Ctrl Wallet (access the user's [blockchain - like Ethereum] account(s)), you can use the following code:
 
 ```javascript
 // Connect & get accounts
@@ -54,7 +54,7 @@ window.xfi[chainId].request(
 
 ### Experience functions
 
-When your account is connected to XDEFI Wallet, let's start experiencing more functions.
+When your account is connected to Ctrl Wallet, let's start experiencing more functions.
 
 #### Get the current account
 

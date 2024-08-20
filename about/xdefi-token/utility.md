@@ -5,7 +5,7 @@
 
 ## Staking
 
-**XDEFI Technologies** created a staking contract that follows a **veModel**, which is a design originally pioneered by Curve. It allows token holders to stake and earn a share of XDEFI Technologies products revenues.
+**Ctrl (fka XDEFI) Technologies** created a staking contract that follows a **veModel**, which is a design originally pioneered by Curve. It allows token holders to stake and earn a share of Ctrl (fka XDEFI) Technologies products revenues.
 
 **XDEFI** generates revenue from swaps (both in-wallet and [platforms integrating the Routing API](../xdefi-technologies/routing-api#current-platforms-using-the-routing-api)), as well as single-sided staking (Zaps), which is a feature of our Web App.
 

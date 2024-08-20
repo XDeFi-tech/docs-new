@@ -1,3 +1,3 @@
 # Extension Wallet Terra Integration
 
-Unmaintained and deprecated for Terra. Please consider using alternative solutions.
+Deprecated for Terra since Summer 2024. Please consider using alternative solutions.
