@@ -664,10 +664,10 @@ export default {
               text: '🔹 Assets & Prices API',
               link: '/assets-services/assets-and-prices-api',
             },
-            {
-              text: '🔹 Staking API',
-              link: '/staking/staking-api',
-            },
+            // {
+            //   text: '🔹 Staking API',
+            //   link: '/staking/staking-api',
+            // },
           ],
         },
         {
