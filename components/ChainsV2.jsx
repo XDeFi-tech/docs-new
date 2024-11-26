@@ -3,7 +3,7 @@ import LoadingIcon from "./LoadingIcon";
 import PlayIcon from "./PlayIcon";
 
 export default function ChainsV2() {
-  const ENDPOINT = "https://routingapi.xdefi.services/";
+  const ENDPOINT = "https://routingapi.xdefiservices.com/";
   const [response, setResponse] = useState([]);
   const [loading, setLoading] = useState(false);
 
