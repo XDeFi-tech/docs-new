@@ -16,7 +16,7 @@ Both of these queries return information about assets available in one (chain, g
 While `chainsV2` has no parameters, `chainV2` takes one of the following chain names:
 
 ```js [JavaScript]
-const ENDPOINT = "https://routingapi.xdefi.services/";
+const ENDPOINT = "https://routingapi.xdefiservices.com/";
 
 const fetchChainsV2 = async () => {
   fetch(ENDPOINT + "chains")
