@@ -100,3 +100,40 @@ if (window.xfi && window.xfi.bitcoin) {
   });
 }
 ```
+
+### Sign PSBT (Partially Signed Bitcoin Transaction)
+
+The `sign_psbt` method allows you to sign a Partially Signed Bitcoin Transaction (PSBT). This is useful for creating and signing complex Bitcoin transactions.
+
+#### Parameters:
+- `psbt`: A base64 encoded PSBT string
+- `signInputs`: An object containing:
+  - Address-input index pairs (key: address, value: array of input indices to sign)
+- `allowedSignHash`: Signing hash type
+- `broadcast`: Boolean indicating whether to broadcast the transaction after signing (default: false)
+
+```javascript
+window.xfi.bitcoin.request({
+  method: 'sign_psbt',
+  params: {
+    psbt: 'cHN...',
+    signInputs: {
+      "bc1q...": [0],
+    },
+    allowedSignHash: 1,
+    broadcast: false,
+  },
+});
+```
+
+#### Result example
+
+```json
+{
+  "status": "success",
+  "result": {
+    "psbt": "signed_psbt_base64_string",
+    "txid": "transaction_id_if_broadcast_true"
+  }
+}
+```
