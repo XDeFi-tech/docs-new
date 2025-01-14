@@ -82,25 +82,25 @@ export default {
     ],
     ['meta', { name: 'og:image', content: '/img/Ctrl-og.png' }],
     ['meta', { name: 'apple-mobile-web-app-title', content: 'Ctrl' }],
-    [
-      'script',
-      {},
-      `
-      window.embeddedChatbotConfig = {
-        chatbotId: "EQaK-bS8IoS60vEkoYKQm",
-        domain: "www.chatbase.co"
-      }
-      `,
-    ],
-    [
-      'script',
-      {
-        src: 'https://www.chatbase.co/embed.min.js',
-        chatbotId: 'EQaK-bS8IoS60vEkoYKQm',
-        id: '',
-        defer: true,
-      },
-    ],
+    // [
+    //   'script',
+    //   {},
+    //   `
+    //   window.embeddedChatbotConfig = {
+    //     chatbotId: "EQaK-bS8IoS60vEkoYKQm",
+    //     domain: "www.chatbase.co"
+    //   }
+    //   `,
+    // ],
+    // [
+    //   'script',
+    //   {
+    //     src: 'https://www.chatbase.co/embed.min.js',
+    //     chatbotId: 'EQaK-bS8IoS60vEkoYKQm',
+    //     id: '',
+    //     defer: true,
+    //   },
+    // ],
     [
       'script',
       {
