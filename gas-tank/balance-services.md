@@ -514,9 +514,9 @@ await fetch(
 
 :::
 
-### Get fee for a given amount
+### Get fee for a given chain
 
-This endpoint allows users to get the fee for a given amount in a specific chain.
+This endpoint allows users to get the fee for a specific chain.
 
 ::: code-group
 
@@ -524,12 +524,11 @@ This endpoint allows users to get the fee for a given amount in a specific chain
 const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
 
 await fetch(
-  `${GAS_TANK_ENDPOINT}/fees/${chain}`, // Chain to get fee // [!code highlight]
+  `${GAS_TANK_ENDPOINT}/v2/fees/${chain}`, // Chain to get fee // [!code highlight]
   {
     method: "POST",
     headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${jwtToken}`, // JWT token // [!code highlight]
+      "Content-Type": "application/json"
     },
   },
 )
@@ -544,10 +543,60 @@ await fetch(
 
 ```json [Response]
 {
-  "high": "string",
-  "medium": "string",
-  "low": "string"
+  "symbol": "string", // Chain native symbol [BTC, USD] // [!code highlight]
+  "decimals": "integer",
+  "value": {
+    "high": "string",
+    "medium": "string",
+    "low": "string"
+  }
 }
 ```
+
+There is also a query parameter to get the fee in USD. You can use `${GAS_TANK_ENDPOINT}/v2/fees/${chain}?currency=USD` to specify the currency.
+
+### Get fees for all supported chains
+
+This endpoint allows users to get the fees for all Gas Tank supported chains.
+
+::: code-group
+
+```javascript [Request]
+const GAS_TANK_ENDPOINT = "https://gas-tank.xdefi.services";
+
+await fetch(
+  `${GAS_TANK_ENDPOINT}/v2/fees`, // Chain to get fee // [!code highlight]
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+  },
+)
+  .then((response) => {
+    console.log(response);
+    // Handle & do something with the response
+  })
+  .catch((error) => {
+    // Catch & handle the error
+  });
+```
+
+```json [Response]
+{
+  "chain": { // Chain keys [ETH, USD] // [!code highlight]
+    "symbol": "string", // Chain native symbol [ETH, USD] // [!code highlight]
+    "decimals": "integer",
+    "value": {
+      "high": "string",
+      "medium": "string",
+      "low": "string"
+    }
+  },
+  ...
+}
+```
+
+There is also a query parameter to get the fees in USD. You can use `${GAS_TANK_ENDPOINT}/v2/fees?currency=USD` to specify the currency.
 
 :::

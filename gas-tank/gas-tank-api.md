@@ -20,4 +20,6 @@ Below are the available services provided by the Gas Tank API. You need to have 
 
 <!--@include: ./balance-services.md-->
 
+<!--@include: ./gas-fee.md-->
+
 <!--@include: ./other-services.md-->

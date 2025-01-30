@@ -696,6 +696,10 @@ export default {
               link: '/gas-tank/gas-tank-api#balance-transactions-deposit-withdraw-send-gas',
             },
             {
+              text: '🔹 Gas Fee Calculation Across Different Blockchains',
+              link: '/gas-tank/gas-tank-api#gas-fee-calculation-across-different-blockchains',
+            },
+            {
               text: '🔹 Other services',
               link: '/gas-tank/gas-tank-api#other-services',
             },
