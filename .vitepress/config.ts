@@ -680,6 +680,10 @@ export default {
               link: '/gas-tank/gas-tank-api',
             },
             {
+              text: '🔹 Gas Tank Platform Actions',
+              link: '/gas-tank/gas-tank-api#gas-tank-platform-actions',
+            },
+            {
               text: '🔹 Authentication',
               link: '/gas-tank/gas-tank-api#authentication',
             },
