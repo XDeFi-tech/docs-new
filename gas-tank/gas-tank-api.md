@@ -12,6 +12,8 @@ The base URL for all Gas Tank API is: https://gas-tank.xdefi.services
 
 Below are the available services provided by the Gas Tank API. You need to have a valid JWT token to access the services. You can get the JWT token by using the _[Multiple Address Login](#multiple-address-login)_ endpoint.
 
+<!--@include: ./gas-tank-platform.md-->
+
 <!--@include: ./authentication-services.md-->
 
 <!--@include: ./messages-service.md-->
