@@ -101,6 +101,57 @@ if (window.xfi && window.xfi.bitcoin) {
 }
 ```
 
+### Get Addresses (sats-connect)
+
+The `getAddresses` method allows you to retrieve Bitcoin addresses and their associated details using the sats-connect interface.
+
+#### Parameters
+- `purposes`: An array of address purposes to retrieve (e.g., payment, stacks, ordinals)
+- `message`(optional): A message to be displayed to the user in the request prompt.
+
+
+
+#### Example
+
+```javascript
+//Approach 1: using sats-connect
+import { AddressPurpose, request } from "sats-connect";
+
+const response = await request('getAddresses', {
+  purposes: [AddressPurpose.Payment]
+});
+
+//Approach 2: using xfi inpage provider
+window.xfi.bitcoin.request({
+  method: 'request_accounts_and_keys',
+  params: {
+    purposes: ['payment']
+  }
+});
+```
+
+#### Response
+Returns an array of address objects with the following properties:
+- `address`: The Bitcoin address string
+- `publicKey`: The public key associated with the address
+- `purpose`: The purpose of the address (e.g., "payment")
+- `addressType`: The type of Bitcoin address (e.g., "P2WPKH")
+- `walletType`: The type of wallet (e.g., "software")
+
+#### Response Example
+
+```json
+[
+  {
+    "address": "bitcoin_address",
+    "publicKey": "public_key",
+    "purpose": "payment",
+    "addressType": "P2WPKH",
+    "walletType": "software"
+  }
+]
+```
+
 ### Sign PSBT (Partially Signed Bitcoin Transaction)
 
 The `sign_psbt` method allows you to sign a Partially Signed Bitcoin Transaction (PSBT). This is useful for creating and signing complex Bitcoin transactions.
@@ -113,6 +164,19 @@ The `sign_psbt` method allows you to sign a Partially Signed Bitcoin Transaction
 - `broadcast`: Boolean indicating whether to broadcast the transaction after signing (default: false)
 
 ```javascript
+//Approach 1: using sats-connect
+import { request } from "sats-connect";
+
+const response = await request('signPsbt', {
+  psbt: 'cHN...',
+  signInputs: {
+    "bitcoin_address": [0],
+  },
+  allowedSignHash: 1,
+  broadcast: false,
+});
+
+//Approach 2: using xfi inpage provider
 window.xfi.bitcoin.request({
   method: 'sign_psbt',
   params: {
