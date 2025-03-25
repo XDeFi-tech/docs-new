@@ -3,24 +3,24 @@ prev:
   text: "🔹 Extension Wallet Integration"
   link: "/developers/extension-wallet"
 next:
-  text: "Binance"
-  link: "./mobile-binance"
+  text: "Bitcoin"
+  link: "./mobile-bitcoin"
 ---
 
 # Mobile Wallet Integration
 
-Ctrl Wallet injects into the window object to dapps multiple wallet providers to send requests (signing, send and broadcast, get accounts information) to the browser mobile.
+This document provides details on integrating and interacting with the **Ctrl Mobile Wallet**, which supports multiple blockchain networks and decentralized applications (dApps) via Reown (aka WalletConnect).
 
-- window.xfi
-  - window.xfi.binance : [Binance Beacon Chain provider](./mobile-binance)
-  - window.xfi.bitcoin : [Bitcoin provider](./mobile-bitcoin)
-  - window.xfi.bitcoincash : [Bitcoin Cash provider](./mobile-bitcoin-cash)
-  - window.xfi.dogecoin: [Dogecoin provider](./mobile-dogecoin)
-  - window.xfi.litecoin : [Litecoin provider](./mobile-litecoin)
-  - window.xfi.near : [NEAR provider](./mobile-near)
-  - window.xfi.solana : [Solana provider](./mobile-solana)
-  - window.xfi.terra : [Terra provider](./mobile-terra)
-  - window.xfi.thorchain: [Thorchain provider](./mobile-thorchain)
-  - window.xfi.tron: [Thorchain provider](./mobile-tron)
-- window.ethereum : [Ethereum provider](./mobile-ethereum)
-- window.keplr : [Keplr/Cosmos chains provider](./mobile-cosmos)
+## What is Reown?
+Reown (aka WalletConnect) is an open protocol for connecting desktop DApps to mobile wallets using end-to-end encryption by scanning a QR code. It allows users to interact with any DApp without compromising their private keys. For more details, visit the [Reown documentation](https://reown.com/).
+
+## Supported Chains
+- **List of Chains**: 
+  - [Bitcoin](./mobile-bitcoin) 
+  - [Ethereum (EVM's)](./mobile-ethereum)
+  - [Solana](./mobile-solana)
+  - [Cosmos](./mobile-cosmos)
+  - [Litecoin](./mobile-litecoin)
+  - [Dogecoin](./mobile-dogecoin)
+  - [Bitcoin Cash](./mobile-bitcoin-cash)
+  - [Tron](./mobile-tron)
