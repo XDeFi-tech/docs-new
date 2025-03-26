@@ -22,3 +22,7 @@ Reown (aka WalletConnect) is an open protocol for connecting desktop DApps to mo
   - [Cosmos](./mobile-cosmos)
   - [Litecoin](./mobile-litecoin)
   - [Tron](./mobile-tron)
+
+## Testing Wallet
+
+To test the wallet integration, visit the [Test Dapp](https://react-app.walletconnect.com).
