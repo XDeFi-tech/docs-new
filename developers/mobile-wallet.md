@@ -14,14 +14,18 @@ This document provides details on integrating and interacting with the **Ctrl Mo
 ## What is Reown?
 Reown (aka WalletConnect) is an open protocol for connecting desktop DApps to mobile wallets using end-to-end encryption by scanning a QR code. It allows users to interact with any DApp without compromising their private keys. For more details, visit the [Reown documentation](https://reown.com/).
 
-## Supported Chains
-- **List of Chains**: 
-  - [Bitcoin](./mobile-bitcoin) 
-  - [Ethereum (EVM's)](./mobile-ethereum)
-  - [Solana](./mobile-solana)
-  - [Cosmos](./mobile-cosmos)
-  - [Litecoin](./mobile-litecoin)
-  - [Tron](./mobile-tron)
+## Supported Chains with Dapp Connectors
+
+| Chain            | Extension Wallet | Mobile Wallet Dapp            |
+|------------------|:----------------:|:-----------------------------:|
+| Bitcoin          | ✅               | ✅                            |
+| Bitcoin Cash     | ✅               | ❌                            |
+| Dogecoin         | ✅               | ✅                            |
+| Litecoin         | ✅               | ✅                            |
+| Ethereum (EVM's) | ✅               | ✅                            |
+| Solana           | ✅               | ✅                            |
+| Cosmos           | ✅               | ✅                            |
+| Tron             | ✅               | ✅                            |
 
 ## Testing Wallet
 
