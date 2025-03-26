@@ -20,14 +20,14 @@ import { createAppKit } from '@reown/appkit'
 import { BitcoinAdapter } from '@reown/appkit-adapter-bitcoin'
 import { defineChain } from '@reown/appkit/networks'
 
-const litecoin = defineChain({
+const dogecoin = defineChain({
   id: '1a91e3dace36e2be3bf030a65679fe821',
   caipNetworkId: 'bip122:1a91e3dace36e2be3bf030a65679fe821',
   chainNamespace: 'bip122',
   name: 'Dogecoin',
   nativeCurrency: {
     name: 'Dogecoin',
-    symbol: 'DOGE',
+    symbol: 'DOGE', 
     decimals: 8
   },
   rpcUrls: {

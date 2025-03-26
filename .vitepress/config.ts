@@ -386,16 +386,8 @@ export default {
                   link: '/developers/mobile-wallet',
                 },
                 {
-                  text: 'Binance',
-                  link: '/developers/mobile-binance',
-                },
-                {
                   text: 'Bitcoin',
                   link: '/developers/mobile-bitcoin',
-                },
-                {
-                  text: 'Bitcoin Cash',
-                  link: '/developers/mobile-bitcoin-cash',
                 },
                 {
                   text: 'Dogecoin',
@@ -406,20 +398,8 @@ export default {
                   link: '/developers/mobile-litecoin',
                 },
                 {
-                  text: 'NEAR',
-                  link: '/developers/mobile-near',
-                },
-                {
                   text: 'Solana',
                   link: '/developers/mobile-solana',
-                },
-                {
-                  text: 'Terra',
-                  link: '/developers/mobile-terra',
-                },
-                {
-                  text: 'Thorchain',
-                  link: '/developers/mobile-thorchain',
                 },
                 {
                   text: "Ethereum (EVM's)",
