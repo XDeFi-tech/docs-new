@@ -8,10 +8,6 @@ It injects a CIP-30 compatible provider in `window.cardano.ctrl` and follows the
 
 - [CIP-30: Cardano dApp-Wallet Web Bridge documentation](https://cips.cardano.org/cip/CIP-30)
 
-### Example dApp
-
-- [Cardano Web3 example](https://github.com/XDeFi-tech/examples-dapps-sdk/tree/main/cardano)
-
 ### How to detect XDEFI's Cardano provider
 
 As the official [CIP-30 guide](https://cips.cardano.org/cip/CIP-30) mentioned:
