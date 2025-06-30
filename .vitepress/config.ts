@@ -723,13 +723,13 @@ export default {
           collapsed: true,
           items: [
             { text: '🔹 X', link: 'https://x.com/ctrl_wallet' },
-            { text: '🔹 Discord', link: 'https://discord.gg/xdefi' },
-            { text: '🔹 Telegram', link: 'https://t.me/xdefi_announcements' },
+            { text: '🔹 Discord', link: 'https://discord.gg/ctrlwallet' },
+            { text: '🔹 Telegram', link: 'https://t.me/ctrl_wallet' },
             { text: '🔹 GitHub', link: 'https://github.com/XDeFi-tech' },
-            { text: '🔹 Blog', link: 'https://xdefi.io/blog' },
+            { text: '🔹 Blog', link: 'https://ctrl.xyz/news' },
             {
-              text: '🔹 $XDEFI on Coingecko',
-              link: 'https://www.coingecko.com/en/coins/xdefi',
+              text: '🔹 $CTRL on Coingecko',
+              link: 'https://www.coingecko.com/en/coins/ctrl-wallet',
             },
           ],
         },

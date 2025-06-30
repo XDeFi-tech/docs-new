@@ -10,7 +10,7 @@ Following these guidelines helps to communicate that you respect the time of the
 
 Ctrl (fka XDEFI) Technologies is a community-driven project, and we welcome contributions from the community. Whether you're fixing a typo, adding a new feature, or changing the documentation, we'd love to have your contributions.
 
-Please, don't use the issue tracker for personal support requests. Instead, use the [Ctrl Discord](https://discord.gg/xdefi) for support.
+Please, don't use the issue tracker for personal support requests. Instead, use the [Ctrl Discord](https://discord.gg/ctrlwallet) for support.
 
 ## Ground Rules
 
@@ -60,9 +60,9 @@ When suggesting a feature, please provide as much detail as possible. Explain wh
 
 ## Community
 
-Discussions about the documentation take place on the [Ctrl Discord](https://discord.gg/xdefi).
+Discussions about the documentation take place on the [Ctrl Discord](https://discord.gg/ctrlwallet).
 
-We also available on [X](https://x.com/ctrl_wallet) and [Telegram](https://t.me/xdefi_announcements).
+We also available on [X](https://x.com/ctrl_wallet) and [Telegram](https://t.me/ctrl_wallet).
 
 ## Code of Conduct
 
