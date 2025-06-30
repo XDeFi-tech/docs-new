@@ -339,6 +339,10 @@ export default {
                   link: '/developers/extension-bitcoin-cash',
                 },
                 {
+                  text: 'Cardano',
+                  link: '/developers/extension-cardano',
+                },
+                {
                   text: 'Cosmos',
                   link: '/developers/extension-cosmos',
                 },
@@ -390,8 +394,24 @@ export default {
                   link: '/developers/mobile-bitcoin',
                 },
                 {
+                  text: 'Bitcoin Cash',
+                  link: '/developers/mobile-bitcoin-cash',
+                },
+                {
+                  text: 'Cardano',
+                  link: '/developers/mobile-cardano',
+                },
+                {
+                  text: 'Cosmos',
+                  link: '/developers/mobile-cosmos',
+                },
+                {
                   text: 'Dogecoin',
                   link: '/developers/mobile-dogecoin',
+                },
+                {
+                  text: "Ethereum (EVM's)",
+                  link: '/developers/mobile-ethereum',
                 },
                 {
                   text: 'Litecoin',
@@ -400,14 +420,6 @@ export default {
                 {
                   text: 'Solana',
                   link: '/developers/mobile-solana',
-                },
-                {
-                  text: "Ethereum (EVM's)",
-                  link: '/developers/mobile-ethereum',
-                },
-                {
-                  text: 'Cosmos',
-                  link: '/developers/mobile-cosmos',
                 },
                 {
                   text: 'Tron',
@@ -710,14 +722,14 @@ export default {
           text: '🔖 Community',
           collapsed: true,
           items: [
-            { text: '🔹 X', link: 'https://x.com/xdefi_wallet' },
-            { text: '🔹 Discord', link: 'https://discord.gg/xdefi' },
-            { text: '🔹 Telegram', link: 'https://t.me/xdefi_announcements' },
+            { text: '🔹 X', link: 'https://x.com/ctrl_wallet' },
+            { text: '🔹 Discord', link: 'https://discord.gg/ctrlwallet' },
+            { text: '🔹 Telegram', link: 'https://t.me/ctrl_wallet' },
             { text: '🔹 GitHub', link: 'https://github.com/XDeFi-tech' },
-            { text: '🔹 Blog', link: 'https://xdefi.io/blog' },
+            { text: '🔹 Blog', link: 'https://ctrl.xyz/news' },
             {
-              text: '🔹 $XDEFI on Coingecko',
-              link: 'https://www.coingecko.com/en/coins/xdefi',
+              text: '🔹 $CTRL on Coingecko',
+              link: 'https://www.coingecko.com/en/coins/ctrl-wallet',
             },
           ],
         },
@@ -730,9 +742,9 @@ export default {
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/XDeFi-tech' },
-      { icon: 'x', link: 'https://x.com/xdefi_wallet' },
-      { icon: 'discord', link: 'https://discord.com/invite/xdefi' },
-      { icon: { svg: telegramSVG }, link: 'https://t.me/xdefi_announcements' },
+      { icon: 'x', link: 'https://x.com/ctrl_wallet' },
+      { icon: 'discord', link: 'https://discord.gg/ctrlwallet' },
+      { icon: { svg: telegramSVG }, link: 'https://t.me/ctrl_wallet' },
     ],
 
     editLink: {

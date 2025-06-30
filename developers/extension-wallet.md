@@ -24,3 +24,6 @@ Ctrl Wallet injects into the window object to dapps multiple wallet providers to
   - window.xfi.tron: [Tron provider](./extension-tron)
 - window.ethereum : [Ethereum provider](./extension-evms)
 - window.keplr : [Keplr/Cosmos chains provider](./extension-cosmos)
+- window.cardano
+  - window.cardano.ctrl: [Cardano provider](./extension-cardano)
+  - window.cardano.xdefi: [Cardano provider](./extension-cardano)

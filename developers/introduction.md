@@ -12,7 +12,7 @@ Welcome developers! You are now ready to implement Ctrl (fka XDEFI) and level up
 
 You will found here direct access to all subtopics depending on your needs.
 
-Don't hesitate to join our [Discord channel](https://discord.gg/xdefi) and ask any questions related to your developer experience with the community.
+Don't hesitate to join our [Discord channel](https://discord.gg/ctrlwallet) and ask any questions related to your developer experience with the community.
 
 ## Ctrl Wallet integration
 
