@@ -62,7 +62,7 @@ When suggesting a feature, please provide as much detail as possible. Explain wh
 
 Discussions about the documentation take place on the [Ctrl Discord](https://discord.gg/xdefi).
 
-We also available on [X](https://x.com/xdefi_wallet) and [Telegram](https://t.me/xdefi_announcements).
+We also available on [X](https://x.com/ctrl_wallet) and [Telegram](https://t.me/xdefi_announcements).
 
 ## Code of Conduct
 
