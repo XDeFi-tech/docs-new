@@ -413,6 +413,10 @@ export default {
                   text: 'Tron',
                   link: '/developers/mobile-tron',
                 },
+                {
+                  text: 'Cardano',
+                  link: '/developers/mobile-cardano',
+                },
               ],
             },
             {
