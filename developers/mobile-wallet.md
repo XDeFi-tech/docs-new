@@ -26,6 +26,7 @@ Reown (aka WalletConnect) is an open protocol for connecting desktop DApps to mo
 | Solana           | ✅               | ✅                            |
 | Cosmos           | ✅               | ✅                            |
 | Tron             | ✅               | ✅                            |
+| Cardano          | ✅               | ✅                            |
 
 ## Testing Wallet
 
