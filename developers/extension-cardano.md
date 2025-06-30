@@ -6,8 +6,7 @@ It injects a CIP-30 compatible provider in `window.cardano.ctrl` and follows the
 
 ### Introduction
 
-- [CIP-30 specification](https://cips.cardano.org/cip/CIP-30)
-- [Cardano dApp-Wallet Web Bridge documentation](https://cips.cardano.org/cip/CIP-30)
+- [CIP-30: Cardano dApp-Wallet Web Bridge documentation](https://cips.cardano.org/cip/CIP-30)
 
 ### Example dApp
 
@@ -123,7 +122,7 @@ Returns UTXOs suitable for use as collateral inputs for transactions with Plutus
 #### Get Used Addresses
 
 ```javascript
-getUsedAddresses(paginate?: Paginate): Promise<cbor<Address>[]>
+getUsedAddresses(paginate?: Paginate): Promise<Address[]>
 ```
 
 Returns a list of all used addresses controlled by the wallet. These are addresses that have been included in some on-chain transaction. See [CIP-30 getUsedAddresses](https://cips.cardano.org/cip/CIP-30).
@@ -131,7 +130,7 @@ Returns a list of all used addresses controlled by the wallet. These are address
 #### Get Unused Addresses
 
 ```javascript
-getUnusedAddresses(): Promise<cbor<Address>[]>
+getUnusedAddresses(): Promise<Address[]>
 ```
 
 Returns a list of unused addresses controlled by the wallet. See [CIP-30 getUnusedAddresses](https://cips.cardano.org/cip/CIP-30).
@@ -139,7 +138,7 @@ Returns a list of unused addresses controlled by the wallet. See [CIP-30 getUnus
 #### Get Change Address
 
 ```javascript
-getChangeAddress(): Promise<cbor<Address>>
+getChangeAddress(): Promise<Address>
 ```
 
 Returns an address owned by the wallet that should be used as a change address to return leftover assets during transaction creation. See [CIP-30 getChangeAddress](https://cips.cardano.org/cip/CIP-30).
@@ -147,7 +146,7 @@ Returns an address owned by the wallet that should be used as a change address t
 #### Get Reward Addresses
 
 ```javascript
-getRewardAddresses(): Promise<cbor<Address>[]>
+getRewardAddresses(): Promise<Address[]>
 ```
 
 Returns the reward addresses owned by the wallet. This can return multiple addresses for multi-stake-keys wallets. See [CIP-30 getRewardAddresses](https://cips.cardano.org/cip/CIP-30).
