@@ -86,7 +86,7 @@ Before withdrawing, users should understand:
 
 #### **Key Points**
 ✅ **Users can get native gas coins** to fund on-chain transactions.  
-✅ **Supports EVM, UTXO, Cosmos, Solana, Near, ThorChain, Tron, etc.**  
+✅ **Supports EVM, UTXO, Cosmos, Solana, ThorChain, Tron, etc.**  
 ✅ **Transaction fees apply** (similar to withdrawals).
 
 #### **Consume Process**

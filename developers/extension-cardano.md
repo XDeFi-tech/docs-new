@@ -8,10 +8,6 @@ It injects a CIP-30 compatible provider in `window.cardano.ctrl` and follows the
 
 - [CIP-30: Cardano dApp-Wallet Web Bridge documentation](https://cips.cardano.org/cip/CIP-30)
 
-### Example dApp
-
-- [Cardano Web3 example](https://github.com/XDeFi-tech/examples-dapps-sdk/tree/main/cardano)
-
 ### How to detect XDEFI's Cardano provider
 
 As the official [CIP-30 guide](https://cips.cardano.org/cip/CIP-30) mentioned:
@@ -30,11 +26,11 @@ window.onload = async () => {
 
     // You can get the balance using getBalance method
     const balance = await api.getBalance();
-    
+
     // Get all used addresses
     const usedAddresses = await api.getUsedAddresses();
-    
-    console.log('Wallet connected successfully');
+
+    console.log("Wallet connected successfully");
   }
 };
 ```
@@ -57,21 +53,20 @@ You can use it with regular Cardano libraries such as cardano-serialization-lib.
 // Check if Ctrl (fka XDEFI) is available
 if (window.cardano && window.cardano.ctrl) {
   const cardanoWallet = window.cardano.ctrl;
-  
+
   // Enable the wallet (request connection)
   try {
     const api = await cardanoWallet.enable();
-    console.log('Connected to Ctrl wallet');
-    
+    console.log("Connected to Ctrl wallet");
+
     // Now you can use the API methods
     const balance = await api.getBalance();
     const addresses = await api.getUsedAddresses();
-    
   } catch (error) {
-    console.error('Failed to connect:', error);
+    console.error("Failed to connect:", error);
   }
 } else {
-  console.log('Ctrl (fka XDEFI) is not installed');
+  console.log("Ctrl (fka XDEFI) is not installed");
 }
 ```
 

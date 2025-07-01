@@ -107,14 +107,6 @@ UTXO-based chains use a different fee model where fees depend on the **size** of
 2. Multiply it by the predefined **gas limit** for the specific Cosmos chain.
 3. Convert the fee into the desired token.
 
-##### **E. Near Protocol**
-- Near’s gas fees are based on a **fixed gas unit model**.
-- The base fee is calculated using **Tgas (teragas)**, where **1 Tgas = 0.0001 Ⓝ NEAR**.
-
-✅ **How We Calculate Fees:**
-1. Multiply the gas price by **Near’s predefined gas limit** (e.g., **150 Tgas** for simple transactions).
-2. Convert to the desired token.
-
 ##### **F. Multi-Chain Protocols (ThorChain, MayaChain)**
 - These protocols have a **fixed native transaction fee**.
 - The fee amount is the same regardless of transaction complexity.
@@ -156,7 +148,6 @@ Since fees are usually quoted in the blockchain’s native currency, they may ne
 | **Bitcoin, Litecoin, Dogecoin (UTXO)** | Fee per byte | `Transaction Size × Fee Rate` |
 | **Solana** | Fixed Fee | `Fixed amount per transaction` |
 | **Cosmos (Osmosis, Terra, etc.)** | Gas Limit × Gas Price | `Gas Used × Gas Price` |
-| **Near Protocol** | Fixed Gas Units | `Gas Used × Gas Price (Tgas)` |
 | **Multi-Chain (ThorChain, MayaChain)** | Fixed Fee | `Fixed amount per transaction` |
 
 ---

@@ -32,7 +32,6 @@ The base URL for all API endpoints is: https://gql-router.xdefi.services/graphql
 | Kujira              | `kujira`            | CosmosChain   |
 | Litecoin            | `litecoin`          | BitcoinChain  |
 | Maya Protocol       | `mayachain`         | MayaChain     |
-| Near                | `near`              | NearChain     |
 | Optimism            | `optimism`          | EVM           |
 | Osmosis             | `osmosis`           | CosmosChain   |
 | Polygon             | `polygon`           | EVM           |
