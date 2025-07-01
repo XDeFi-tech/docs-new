@@ -5,7 +5,6 @@
 - [UTXO's](#utxo-s)
 - [EVM's](#evm-s)
 - [Cosmos chains](#cosmos-chains)
-- [Near](#near)
 - [Solana](#solana)
 
 ## UTXO's
@@ -66,12 +65,6 @@ See more on [Building a Cosmos dApp](/developers/cosmos) with XDEFI documentatio
 You can request a Cosmos native integration by sending us an [email](mailto:integration@xdefi.io).
 
 _(Note that native integration requiere an upfront payment to start implementing it)_
-
-## Near
-
-- Near Protocol (NEAR)
-
-See more on [Building a Near dApp](/developers/near) with XDEFI documentation.
 
 ## Solana
 

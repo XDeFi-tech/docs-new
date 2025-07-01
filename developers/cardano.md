@@ -1,6 +1,6 @@
-# NEAR (NEAR)
+# Cardano (ADA)
 
-<!--@include: ./_xfi.md{,12}--> And `near` is the `chainId` for NEAR Protocol.
+<!--@include: ./_xfi.md{,12}--> And `cardano` is the `chainId` for Cardano.
 
 <div ref="refDetectWallet"/>
 
@@ -18,7 +18,7 @@ const refConnectWallet = ref()
 onMounted(() => {
   const rootDetectWallet = createRoot(refDetectWallet.value)
   rootDetectWallet.render(createElement(DetectWallet, {
-    chainId: 'near',
+    chainId: 'cardano',
   }, null))
 })
 </script>

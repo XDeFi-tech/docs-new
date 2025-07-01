@@ -12,7 +12,7 @@ export default {
   description: 'One Wallet for all your assets.',
   lastUpdated: true,
   cleanUrls: true,
-  ignoreDeadLinks: true,
+  ignoreDeadLinks: false,
   base: base,
   markdown: {
     math: true,
@@ -359,16 +359,8 @@ export default {
                   link: '/developers/extension-litecoin',
                 },
                 {
-                  text: 'NEAR',
-                  link: '/developers/extension-near',
-                },
-                {
                   text: 'Solana',
                   link: '/developers/extension-solana',
-                },
-                {
-                  text: 'Terra',
-                  link: '/developers/extension-terra',
                 },
                 {
                   text: 'Thorchain',
@@ -392,10 +384,6 @@ export default {
                 {
                   text: 'Bitcoin',
                   link: '/developers/mobile-bitcoin',
-                },
-                {
-                  text: 'Bitcoin Cash',
-                  link: '/developers/mobile-bitcoin-cash',
                 },
                 {
                   text: 'Cardano',
@@ -586,6 +574,10 @@ export default {
                   link: '/developers/bnb-beacon-chain',
                 },
                 {
+                  text: 'Cardano (ADA)',
+                  link: '/developers/cardano',
+                },
+                {
                   text: 'Dogecoin (DOGE)',
                   link: '/developers/dogecoin',
                 },
@@ -598,16 +590,8 @@ export default {
                   link: '/developers/maya',
                 },
                 {
-                  text: 'NEAR (NEAR)',
-                  link: '/developers/near',
-                },
-                {
                   text: 'Solana (SOL)',
                   link: '/developers/solana',
-                },
-                {
-                  text: 'Terra (LUNA)',
-                  link: '/developers/terra',
                 },
                 {
                   text: 'Thorchain (RUNE)',
