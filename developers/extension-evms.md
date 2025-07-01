@@ -7,10 +7,6 @@ Develop EVM based dApps
 - [web3.js introduction](https://web3js.readthedocs.io/en/v1.3.4/getting-started.html)
 - [ether.js introduction](https://docs.ethers.io/v5/getting-started/)
 
-### Example dApp
-
-- [web3 vue example](https://github.com/XDeFi-tech/examples-dapps-sdk/tree/main/ethereum/web3/web3-example-vue)
-
 ### Integrate Ethereum dApps with Ctrl (fka XDEFI)
 
 #### `window.xfi.ethereum`

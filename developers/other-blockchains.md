@@ -11,9 +11,7 @@ Native blockchains supported
 | Dogecoin         | `dogecoin`    | `window.xfi.dogecoin`    |
 | Litecoin         | `litecoin`    | `window.xfi.litecoin`    |
 | Maya Protocol    | `mayachain`   | `window.xfi.mayachain`   |
-| NEAR Protocol    | `near`        | `window.xfi.near`        |
 | Solana           | `solana`      | `window.xfi.solana`      |
-| Terra            | `terra`       | `window.xfi.terra`       |
 | THORChain        | `thorchain`   | `window.xfi.thorchain`   |
 
 ### Detect Ctrl Wallet

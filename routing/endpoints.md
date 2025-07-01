@@ -27,7 +27,6 @@ Returns a list of supported chains (i.e. chains you can swap assets within or ch
   "AVAX",
   "ARBITRUM",
   "AURORA",
-  "NEAR",
   "SOL",
   "COSMOS",
   "OSMOSIS"

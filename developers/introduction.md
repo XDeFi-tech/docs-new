@@ -30,13 +30,12 @@ You can access a single ecosystem integration with his set of tutorial from here
 - BNB Smart Chain
 - Bitcoin
 - Bitcoin Cash
+- Cardano
 - Cosmos
 - Dogecoin
 - Litecoin
 - Maya Protocol
-- NEAR Protocol
 - Solana
-- Terra
 - THORChain
 - Tron
 
