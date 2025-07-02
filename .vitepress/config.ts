@@ -473,12 +473,28 @@ export default {
                       link: '/developers/avalanche',
                     },
                     {
+                      text: 'Base (ETH)',
+                      link: '/developers/base',
+                    },
+                    {
+                      text: 'Beam (BEAM)',
+                      link: '/developers/beam',
+                    },
+                    {
+                      text: 'Blast (ETH)',
+                      link: '/developers/blast',
+                    },
+                    {
                       text: 'BNB Smart Chain (BNB)',
                       link: '/developers/bnb-smart-chain',
                     },
                     {
                       text: 'Canto (CANTO)',
                       link: '/developers/canto',
+                    },
+                    {
+                      text: 'Celo (CELO)',
+                      link: '/developers/celo',
                     },
                     {
                       text: 'Cronos (CRO)',
@@ -493,12 +509,44 @@ export default {
                       link: '/developers/gnosis',
                     },
                     {
+                      text: 'Klaytn (KLAY)',
+                      link: '/developers/klaytn',
+                    },
+                    {
+                      text: 'Linea (ETH)',
+                      link: '/developers/linea',
+                    },
+                    {
+                      text: 'Manta (ETH)',
+                      link: '/developers/manta',
+                    },
+                    {
+                      text: 'Mantle (MNT)',
+                      link: '/developers/mantle',
+                    },
+                    {
+                      text: 'OpBNB (ETH)',
+                      link: '/developers/opbnb',
+                    },
+                    {
                       text: 'Optimism (ETH)',
                       link: '/developers/optimism',
                     },
                     {
-                      text: 'Polygon (MATIC)',
+                      text: 'Polygon (POL)',
                       link: '/developers/polygon',
+                    },
+                    {
+                      text: 'Scroll (ETH)',
+                      link: '/developers/scroll',
+                    },
+                    {
+                      text: 'ZetaChain (ZETA)',
+                      link: '/developers/zetachain',
+                    },
+                    {
+                      text: 'ZkSync (ETH)',
+                      link: '/developers/zksync',
                     },
                   ],
                 },
@@ -540,10 +588,6 @@ export default {
                       link: '/developers/kujira',
                     },
                     {
-                      text: 'Mars (MARS)',
-                      link: '/developers/mars',
-                    },
-                    {
                       text: 'Osmosis (OSMO)',
                       link: '/developers/osmosis',
                     },
@@ -559,6 +603,10 @@ export default {
                       text: 'Stride (STRD)',
                       link: '/developers/stride',
                     },
+                    {
+                      text: 'Terra (LUNA)',
+                      link: '/developers/terra',
+                    },
                   ],
                 },
                 {
@@ -568,10 +616,6 @@ export default {
                 {
                   text: 'Bitcoin Cash (BCH)',
                   link: '/developers/bitcoin-cash',
-                },
-                {
-                  text: 'BNB Beacon Chain (BNB)',
-                  link: '/developers/bnb-beacon-chain',
                 },
                 {
                   text: 'Cardano (ADA)',
@@ -738,13 +782,13 @@ export default {
 
     transformHead(assets: string[]): HeadConfig[] {
       const tomatogroteskLightFont = assets.find(
-        (file) => /TomatoGrotesk-Light\.\w+\.otf/
+        file => /TomatoGrotesk-Light\.\w+\.otf/,
       );
       const tomatogroteskRegularFont = assets.find(
-        (file) => /TomatoGrotesk-Regular\.\w+\.otf/
+        file => /TomatoGrotesk-Regular\.\w+\.otf/,
       );
       const tomatogroteskBoldFont = assets.find(
-        (file) => /TomatoGrotesk-Bold\.\w+\.otf/
+        file => /TomatoGrotesk-Bold\.\w+\.otf/,
       );
 
       const headConfig: HeadConfig[] = [];
