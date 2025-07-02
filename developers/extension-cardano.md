@@ -8,14 +8,14 @@ It injects a CIP-30 compatible provider in `window.cardano.ctrl` and follows the
 
 - [CIP-30: Cardano dApp-Wallet Web Bridge documentation](https://cips.cardano.org/cip/CIP-30)
 
-### How to detect XDEFI's Cardano provider
+### How to detect CTRL's Cardano provider
 
 As the official [CIP-30 guide](https://cips.cardano.org/cip/CIP-30) mentioned:
 
 ```javascript
 window.onload = async () => {
   if (!window.cardano?.ctrl) {
-    alert("Please install XDEFI extension");
+    alert('Please install CTRL extension');
   } else {
     const cardanoWallet = window.cardano.ctrl;
 
@@ -30,7 +30,7 @@ window.onload = async () => {
     // Get all used addresses
     const usedAddresses = await api.getUsedAddresses();
 
-    console.log("Wallet connected successfully");
+    console.log('Wallet connected successfully');
   }
 };
 ```
@@ -57,16 +57,16 @@ if (window.cardano && window.cardano.ctrl) {
   // Enable the wallet (request connection)
   try {
     const api = await cardanoWallet.enable();
-    console.log("Connected to Ctrl wallet");
+    console.log('Connected to Ctrl wallet');
 
     // Now you can use the API methods
     const balance = await api.getBalance();
     const addresses = await api.getUsedAddresses();
   } catch (error) {
-    console.error("Failed to connect:", error);
+    console.error('Failed to connect:', error);
   }
 } else {
-  console.log("Ctrl (fka XDEFI) is not installed");
+  console.log('Ctrl (fka XDEFI) is not installed');
 }
 ```
 

@@ -29,7 +29,7 @@ XDEFI’s early investors who funded the initial development of Ctrl Wallet. The
 These tokens are subject to a 3-year schedule.
 :::
 
-### 15% to the XDEFI team
+### 15% to the Ctrl (fka XDEFI) team
 
 Current and future team members allocation.
 ::: info

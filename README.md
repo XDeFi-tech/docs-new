@@ -1,4 +1,4 @@
-# XDEFI Technologies Documentation Site
+# Ctrl (fka XDEFI) Technologies Documentation Site
 
 Welcome to the official documentation repository for Ctrl (fka XDEFI) Technologies.
 
