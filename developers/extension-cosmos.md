@@ -14,16 +14,16 @@ Ctrl Wallet is part of [cosmos-kit](https://github.com/cosmology-tech/cosmos-kit
 
 Here is an [example](https://github.com/cosmology-tech/cosmos-kit/blob/main/packages/example/pages/_app.tsx#L34) of how to use cosmos-kit.
 
-### How to detect XDEFI’s Keplr provider
+### How to detect CTRL’s Keplr provider
 
 As the official Keplr guide mentioned [here](https://docs.keplr.app/api/);
 
 ```javascript
 window.onload = async () => {
   if (!window.xfi?.keplr) {
-    alert("Please install XDEFI extension");
+    alert('Please install CTRL extension');
   } else {
-    const chainId = "cosmoshub-4";
+    const chainId = 'cosmoshub-4';
     const keplr = window.xfi.keplr;
 
     // Enabling before using the Keplr is recommended.
@@ -41,7 +41,7 @@ window.onload = async () => {
 
     // Initialize the gaia api with the offline signer that is injected by Keplr extension.
     const cosmJS = new SigningCosmosClient(
-      "https://lcd-cosmoshub.keplr.app",
+      'https://lcd-cosmoshub.keplr.app',
       accounts[0].address,
       offlineSigner,
     );
@@ -61,9 +61,9 @@ if (window.keplr.isXDEFI) {
 }
 ```
 
-#### Chains supported on XDEFI
+#### Chains supported on CTRL
 
-As of release v26, XDEFI supports the following chains (chainId).
+As of release v26, CTRL supports the following chains (chainId).
 
 - Cosmos Hub, `cosmoshub-4`
 - Osmosis, `osmosis-1`
@@ -204,7 +204,7 @@ const accounts = await offlineSigner.getAccounts();
 
 // Initialize the gaia api with the offline signer that is injected by Keplr extension.
 const cosmJS = new SigningCosmosClient(
-  "https://lcd-cosmoshub.keplr.app/rest",
+  'https://lcd-cosmoshub.keplr.app/rest',
   accounts[0].address,
   offlineSigner,
 );
@@ -254,42 +254,42 @@ You can then make a request follows and add the custom chain:
 
 ```javascript
 await window.xfi.keplr.experimentalSuggestChain({
-  chainId: "my-test-chain",
-  chainName: "my test chain",
+  chainId: 'my-test-chain',
+  chainName: 'my test chain',
   bech32Config: {
-    bech32PrefixAccAddr: "cosmos",
-    bech32PrefixAccPub: "cosmospub",
-    bech32PrefixValAddr: "cosmosvaloper",
-    bech32PrefixValPub: "cosmosvaloperpub",
-    bech32PrefixConsAddr: "cosmosvalcons",
-    bech32PrefixConsPub: "cosmosvalconspub",
+    bech32PrefixAccAddr: 'cosmos',
+    bech32PrefixAccPub: 'cosmospub',
+    bech32PrefixValAddr: 'cosmosvaloper',
+    bech32PrefixValPub: 'cosmosvaloperpub',
+    bech32PrefixConsAddr: 'cosmosvalcons',
+    bech32PrefixConsPub: 'cosmosvalconspub',
   },
   bip44: {
     coinType: 118,
   },
   currencies: [
     {
-      coinDenom: "stake",
-      coinMinimalDenom: "stake",
+      coinDenom: 'stake',
+      coinMinimalDenom: 'stake',
       coinDecimals: 6,
-      coinGeckoId: "cosmos",
+      coinGeckoId: 'cosmos',
       coinImageUrl:
-        "https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.png",
+        'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.png',
       feeCurrency: true,
     },
   ],
   feeCurrencies: [
     {
-      coinDenom: "stake",
-      coinMinimalDenom: "stake",
+      coinDenom: 'stake',
+      coinMinimalDenom: 'stake',
       coinDecimals: 6,
-      coinGeckoId: "cosmos",
+      coinGeckoId: 'cosmos',
       coinImageUrl:
-        "https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.png",
+        'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.png',
       feeCurrency: true,
     },
   ],
-  rest: "http://127.0.0.1:1317",
-  rpc: "http://127.0.0.1:9090",
+  rest: 'http://127.0.0.1:1317',
+  rpc: 'http://127.0.0.1:9090',
 });
 ```

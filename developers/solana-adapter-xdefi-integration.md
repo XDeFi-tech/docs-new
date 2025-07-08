@@ -1,4 +1,4 @@
-# Solana Adapter XDEFI Integration
+# Solana Adapter Ctrl (fka XDEFI) Integration
 
 ### Get started
 

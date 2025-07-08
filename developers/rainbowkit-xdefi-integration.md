@@ -1,4 +1,4 @@
-# RainbowKit XDEFI Integration
+# RainbowKit Ctrl (fka XDEFI) Integration
 
 ### Get started
 
@@ -43,15 +43,15 @@ const wallets = [
 You can then pass your curated list of wallets to RainbowKit `getDefaultConfig`.
 
 ```javascript
-import { getDefaultConfig } from "@rainbow-me/rainbowkit";
+import { getDefaultConfig } from '@rainbow-me/rainbowkit';
 
 const wallets = [
   {
-    groupName: "Recommended",
+    groupName: 'Recommended',
     wallets: [xdefiWallet],
   },
   {
-    groupName: "Other",
+    groupName: 'Other',
     wallets: [walletConnectWallet, injectedWallet],
   },
 ];

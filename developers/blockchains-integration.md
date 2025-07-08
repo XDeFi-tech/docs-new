@@ -1,10 +1,10 @@
 ---
 prev:
-  text: "🔹 Mobile Wallet Integration"
-  link: "./mobile-wallet"
+  text: '🔹 Mobile Wallet Integration'
+  link: './mobile-wallet'
 next:
-  text: "Ethereum (ETH)"
-  link: "./ethereum"
+  text: 'Ethereum (ETH)'
+  link: './ethereum'
 ---
 
 # Blockchains Integration
@@ -12,18 +12,30 @@ next:
 Ctrl (fka XDEFI) is the largest multichain wallet that provides hundreds of blockchains accessibility.
 
 - EVM Chains
+
   - [Ethereum (ETH)](./ethereum)
   - [Arbitrum (AETH)](./arbitrum)
   - [Aurora (AURORA)](./aurora)
   - [Avalanche (AVAX)](./avalanche)
+  - [Blast (ETH)](./blast)
   - [Binance Smart Chain (BSC)](./bnb-smart-chain)
   - [Canto Network (CANTO)](./canto)
+  - [Celo (CELO)](./celo)
   - [Cronos (CRO)](./cronos)
   - [Fantom (FTM)](./fantom)
   - [Gnosis (xDAI)](./gnosis)
+  - [Klaytn (KLAY)](./klaytn)
+  - [Linea (ETH)](./linea)
+  - [Manta (ETH)](./manta)
+  - [Mantle (MNT)](./mantle)
+  - [OpBNB (ETH)](./opbnb)
   - [Optimism (OPTIMISM)](./optimism)
-  - [Polygon (MATIC)](./polygon)
+  - [Polygon (POL)](./polygon)
+  - [Scroll (ETH)](./scroll)
+  - [ZetaChain (ZETA)](./zetachain)
+  - [ZkSync (ETH)](./zksync)
   - ...
+
 - Cosmos Chains
   - [Cosmos Hub (ATOM)](./cosmos)
   - [Akash (AKT)](./akash)
@@ -33,18 +45,15 @@ Ctrl (fka XDEFI) is the largest multichain wallet that provides hundreds of bloc
   - [Juno (JUNO)](./juno)
   - [Kava (KAVA)](./kava)
   - [Kujira (KUJI)](./kujira)
-  - [Mars (MARS)](./mars)
   - [Osmosis (OSMO)](./osmosis)
   - [Sei Testnet (SEI)](./sei)
   - [Stargaze (STARS)](./stargaze)
   - [Stride (STRD)](./stride)
   - ...
 - Other Chains
-  - [BNB Beacon Chain (BNB)](./bnb-beacon-chain)
   - [Bitcoin (BTC)](./bitcoin)
   - [Bitcoin Cash (BCH)](./bitcoin-cash)
   - [Cardano (ADA)](./cardano)
-  - [Cosmos (ATOM)](./cosmos)
   - [Dogecoin (DOGE)](./dogecoin)
   - [Litecoin (LTC)](./litecoin)
   - [Maya Protocol (MAYA)](./maya)
