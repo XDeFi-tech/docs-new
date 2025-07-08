@@ -28,12 +28,12 @@ Ctrl (fka XDEFI) is the largest multichain wallet that provides hundreds of bloc
   - [Linea (ETH)](./linea)
   - [Manta (ETH)](./manta)
   - [Mantle (MNT)](./mantle)
-  - [OpBNB (ETH)](./opBNB)
+  - [OpBNB (ETH)](./opbnb)
   - [Optimism (OPTIMISM)](./optimism)
   - [Polygon (POL)](./polygon)
   - [Scroll (ETH)](./scroll)
-  - [ZetaChain (ZETA)](./zetaChain)
-  - [ZkSync (ETH)](./zkSync)
+  - [ZetaChain (ZETA)](./zetachain)
+  - [ZkSync (ETH)](./zksync)
   - ...
 
 - Cosmos Chains
