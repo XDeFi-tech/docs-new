@@ -473,14 +473,6 @@ export default {
                       link: '/developers/avalanche',
                     },
                     {
-                      text: 'Base (ETH)',
-                      link: '/developers/base',
-                    },
-                    {
-                      text: 'Beam (BEAM)',
-                      link: '/developers/beam',
-                    },
-                    {
                       text: 'Blast (ETH)',
                       link: '/developers/blast',
                     },
@@ -602,10 +594,6 @@ export default {
                     {
                       text: 'Stride (STRD)',
                       link: '/developers/stride',
-                    },
-                    {
-                      text: 'Terra (LUNA)',
-                      link: '/developers/terra',
                     },
                   ],
                 },

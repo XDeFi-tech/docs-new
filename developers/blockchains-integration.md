@@ -17,8 +17,6 @@ Ctrl (fka XDEFI) is the largest multichain wallet that provides hundreds of bloc
   - [Arbitrum (AETH)](./arbitrum)
   - [Aurora (AURORA)](./aurora)
   - [Avalanche (AVAX)](./avalanche)
-  - [Base (ETH)](./base)
-  - [Beam (BEAM)](./beam)
   - [Blast (ETH)](./blast)
   - [Binance Smart Chain (BSC)](./bnb-smart-chain)
   - [Canto Network (CANTO)](./canto)
@@ -51,7 +49,6 @@ Ctrl (fka XDEFI) is the largest multichain wallet that provides hundreds of bloc
   - [Sei Testnet (SEI)](./sei)
   - [Stargaze (STARS)](./stargaze)
   - [Stride (STRD)](./stride)
-  - [Terra (LUNA)](./terra)
   - ...
 - Other Chains
   - [Bitcoin (BTC)](./bitcoin)
