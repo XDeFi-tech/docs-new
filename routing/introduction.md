@@ -17,7 +17,6 @@ _Comprehensive description of the routing service and its endpoints_
 - [Endpoints](./endpoints)
 - [Routing Graph QL API](./routing-graph-ql-api)
 - [Query and Mutation details](./query-mutation-details)
-- [Step by step Swap example](./swap-example)
 
 ## Introduction
 
