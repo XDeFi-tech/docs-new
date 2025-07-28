@@ -652,11 +652,6 @@ export default {
               text: '🔹 Query and Mutation details',
               link: '/routing/query-mutation-details',
             },
-            { text: '🔹 Swap example', link: '/routing/swap-example' },
-            {
-              text: '🔹 Swap Widget',
-              link: '/swap-widget/widget-integration',
-            },
           ],
         },
         {
