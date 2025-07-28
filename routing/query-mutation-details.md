@@ -7,7 +7,6 @@ _Deep-dive into our Graph QL schema_
 In the [previous section](./routing-graph-ql-api), we saw an overview of queries and mutations publicly available.
 
 Here we'll zoom into each one of them and present their inputs and outputs and also show some usage examples.
-A step-by-step full example of how routing works is available in the [next section](./swap-example).
 
 ### chainsV2 & chainV2
 
@@ -20,8 +19,8 @@ const ENDPOINT = "https://routingapi.xdefiservices.com/";
 
 const fetchChainsV2 = async () => {
   fetch(ENDPOINT + "chains")
-    .then((response) => response.json())
-    .then((result) => {
+    .then(response => response.json())
+    .then(result => {
       console.log(result);
     });
 };
@@ -101,8 +100,8 @@ const fetchTokenV2 = async () => {
       variables: vars,
     }),
   })
-    .then((response) => response.json())
-    .then((result) => {
+    .then(response => response.json())
+    .then(result => {
       console.log(result);
     });
 };
@@ -153,8 +152,8 @@ const fetchTokensV2 = async () => {
       variables: vars,
     }),
   })
-    .then((response) => response.json())
-    .then((result) => {
+    .then(response => response.json())
+    .then(result => {
       console.log(result);
     });
 };
@@ -360,8 +359,8 @@ const fetchAddressCheckV2 = async () => {
       variables: vars,
     }),
   })
-    .then((response) => response.json())
-    .then((result) => {
+    .then(response => response.json())
+    .then(result => {
       console.log(result);
     });
 };
@@ -425,8 +424,8 @@ const fetchReferrerSummary = async () => {
       query: query,
     }),
   })
-    .then((response) => response.json())
-    .then((result) => {
+    .then(response => response.json())
+    .then(result => {
       console.log(result);
     });
 };
@@ -483,8 +482,8 @@ const fetchDailyVolume = async () => {
       variables: vars,
     }),
   })
-    .then((response) => response.json())
-    .then((result) => {
+    .then(response => response.json())
+    .then(result => {
       console.log(result);
     });
 };
@@ -616,8 +615,8 @@ const fetchClaimFees = async () => {
       query: query,
     }),
   })
-    .then((response) => response.json())
-    .then((result) => {
+    .then(response => response.json())
+    .then(result => {
       console.log(result);
     });
 };

@@ -425,16 +425,16 @@ export default {
                   link: '/developers/libraries-integration',
                 },
                 {
-                  text: 'BlockNative',
-                  link: '/developers/blocknative-xdefi-integration',
-                },
-                {
                   text: 'CosmosKit',
                   link: '/developers/cosmoskit-xdefi-integration',
                 },
                 {
                   text: 'RainbowKit',
                   link: '/developers/rainbowkit-xdefi-integration',
+                },
+                {
+                  text: 'Sats-Connect',
+                  link: '/developers/sats-connect-xdefi-integration',
                 },
                 {
                   text: 'Solana Adapter',
@@ -651,11 +651,6 @@ export default {
             {
               text: '🔹 Query and Mutation details',
               link: '/routing/query-mutation-details',
-            },
-            { text: '🔹 Swap example', link: '/routing/swap-example' },
-            {
-              text: '🔹 Swap Widget',
-              link: '/swap-widget/widget-integration',
             },
           ],
         },

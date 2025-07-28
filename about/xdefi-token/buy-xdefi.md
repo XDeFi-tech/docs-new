@@ -6,9 +6,6 @@
 
 - [Ctrl Wallet](https://chrome.google.com/webstore/detail/xdefi-wallet/hmeobnfnfcmdkdcmlblgagmfpfboieaf)
 - [Ctrl Web App](https://ctrl.xyz/)
-  ::: info
-  You can implement our Routing API to easy swap any asset into **$XDEFI**. Follow [our documentation](/swap-widget/widget-integration) to implement it on any platform in few lines of code.
-  :::
 
 ## DEX
 
