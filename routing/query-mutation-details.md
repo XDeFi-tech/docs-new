@@ -15,10 +15,10 @@ Both of these queries return information about assets available in one (chain, g
 While `chainsV2` has no parameters, `chainV2` takes one of the following chain names:
 
 ```js [JavaScript]
-const ENDPOINT = 'https://routingapi.xdefiservices.com/';
+const ENDPOINT = "https://routingapi.xdefiservices.com/";
 
 const fetchChainsV2 = async () => {
-  fetch(ENDPOINT + 'chains')
+  fetch(ENDPOINT + "chains")
     .then(response => response.json())
     .then(result => {
       console.log(result);
@@ -68,7 +68,7 @@ Both queries return objects of type `RoutingTokenTypeV2` defined in the above se
 ::: code-group
 
 ```js [JavaScript]
-const GRAPHQL_ENDPOINT = 'https://gql-router.xdefi.services/graphql';
+const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
 const query = `
 query TokenV2($tokenV2Id: String!) {
   routingV2 {
@@ -87,13 +87,13 @@ query TokenV2($tokenV2Id: String!) {
 }`;
 
 const vars = {
-  tokenV2Id: '2a1456da-6642-4293-b383-baefcdf4c22e',
+  tokenV2Id: "2a1456da-6642-4293-b383-baefcdf4c22e",
 };
 const fetchTokenV2 = async () => {
   await fetch(GRAPHQL_ENDPOINT, {
-    method: 'POST',
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({
       query,
@@ -126,7 +126,7 @@ fetchTokenV2();
 ::: code-group
 
 ```js [JavaScript]
-const GRAPHQL_ENDPOINT = 'https://gql-router.xdefi.services/graphql';
+const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
 const query = `
 query TokensV2($names: [String!]) {
   routingV2 {
@@ -139,13 +139,13 @@ query TokensV2($names: [String!]) {
 }`;
 
 const vars = {
-  names: ['AVAX.AVAX', 'AVAX.STG'],
+  names: ["AVAX.AVAX", "AVAX.STG"],
 };
 const fetchTokensV2 = async () => {
   await fetch(GRAPHQL_ENDPOINT, {
-    method: 'POST',
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({
       query,
@@ -324,7 +324,7 @@ The address is then checked:
 ::: code-group
 
 ```js [JavaScript]
-const GRAPHQL_ENDPOINT = 'https://gql-router.xdefi.services/graphql';
+const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
 const query = `
 query AddressCheckV2($address: AddressRouteInputTypeV2!) {
   routingV2 {
@@ -344,15 +344,15 @@ query AddressCheckV2($address: AddressRouteInputTypeV2!) {
 
 const vars = {
   address: {
-    address: '0x7045916CEEFf58547E80E31d2c60ae5F67D63027',
-    chain: 'ETH',
+    address: "0x7045916CEEFf58547E80E31d2c60ae5F67D63027",
+    chain: "ETH",
   },
 };
 const fetchAddressCheckV2 = async () => {
   await fetch(GRAPHQL_ENDPOINT, {
-    method: 'POST',
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({
       query,
@@ -386,9 +386,9 @@ fetchAddressCheckV2();
 Rather than taking an input, this query relies on the header being passed through the `POST` request.
 
 ```js
-const GRAPHQL_ENDPOINT = 'https://gql-router.xdefi.services/graphql';
-const ACCOUNT_ADDRESS = 'Your account address';
-const SIGNED_MESSAGE = 'The message signed with registered address';
+const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
+const ACCOUNT_ADDRESS = "Your account address";
+const SIGNED_MESSAGE = "The message signed with registered address";
 
 const query = `
 query ReferralFeeSummary {
@@ -415,9 +415,9 @@ query ReferralFeeSummary {
 
 const fetchReferrerSummary = async () => {
   await fetch(GRAPHQL_ENDPOINT, {
-    method: 'POST',
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
       Authorization: `${ACCOUNT_ADDRESS}:${SIGNED_MESSAGE}`,
     },
     query: JSON.stringify({
@@ -456,8 +456,8 @@ This query takes a date in the format `"YYYY-MM-DD"` and return for each date af
 ::: code-group
 
 ```js [JavaScript]
-import moment from 'moment';
-const GRAPHQL_ENDPOINT = 'https://gql-router.xdefi.services/graphql';
+import moment from "moment";
+const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
 const query = `
 query Volume($startDate: String!) {
   routingV2 {
@@ -469,13 +469,13 @@ query Volume($startDate: String!) {
 }`;
 
 const vars = {
-  startDate: moment().subtract(1, 'weeks').format('YYYY-MM-DD'),
+  startDate: moment().subtract(1, "weeks").format("YYYY-MM-DD"),
 };
 const fetchDailyVolume = async () => {
   await fetch(GRAPHQL_ENDPOINT, {
-    method: 'POST',
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({
       query,
@@ -590,9 +590,9 @@ For referral programme participants, this triggers a claim of a fraction of the 
 This mutation does not take an input but rather relies on the header which should include an `Authorization` field (similar to the `referralSummary` query)
 
 ```js
-const GRAPHQL_ENDPOINT = 'https://gql-router.xdefi.services/graphql';
-const ACCOUNT_ADDRESS = 'Your account address';
-const SIGNED_MESSAGE = 'The message signed with registered address';
+const GRAPHQL_ENDPOINT = "https://gql-router.xdefi.services/graphql";
+const ACCOUNT_ADDRESS = "Your account address";
+const SIGNED_MESSAGE = "The message signed with registered address";
 
 const query = `
 mutation claimFees {
@@ -606,9 +606,9 @@ mutation claimFees {
 
 const fetchClaimFees = async () => {
   await fetch(GRAPHQL_ENDPOINT, {
-    method: 'POST',
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
       Authorization: `${ACCOUNT_ADDRESS}:${SIGNED_MESSAGE}`,
     },
     query: JSON.stringify({
